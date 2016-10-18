@@ -1,0 +1,48 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+{% block jumbotron %}
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h1>{{this.title}}</h1>
+          <p>{{this.abstract}}</p>
+       </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-2" role="main">
+    <main>
+      {% for item in this.content %}
+
+            <div class="article">
+                <h3>
+                  <strong>{{item.role}}</strong>
+                </h3>
+                <h4>
+                  {{ item.company }}
+                </h4>
+                <p>{{ item.summary }}</p>
+                <ul>
+                  {% for bullet in item.bullets %}
+                  <li>{{ bullet }}</li>
+                  {% endfor %}
+                </ul>
+            </div>
+
+      {% endfor %}
+    </div>
+  </main>
+  </div>
+</div>
+<div class="container">
+  {{ this.body }}
+</div>
+
+{% endblock %}
