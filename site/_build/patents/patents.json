@@ -1,0 +1,665 @@
+[
+  {
+    "title": " Enhancing data in a screenshot",
+    "dates": {
+      "Priority": "2008-03-28",
+      "Filing": "2016-01-25",
+      "Publication": "2016-05-19"
+    },
+    "abstract": " A computer-implemented method of enhancing data in a screenshot can include capturing a screenshot of content presented on a display and identifying within the content at least a first element comprising first semantic data. A first …"
+  },
+  {
+    "title": " Ambient project management",
+    "dates": {
+      "Priority": "2008-05-23",
+      "Filing": "2015-08-20",
+      "Publication": "2015-12-10"
+    },
+    "abstract": " A computer-implemented method of ambient ad hoc project management can include defining a project and associating a project decay function with the project, wherein the project decay function regulates a rate at which project health …"
+  },
+  {
+    "title": " Preventative traffic congestion social networking improvement system within a …",
+    "dates": {
+      "Priority": "2008-06-02",
+      "Filing": "2014-03-13",
+      "Grant": "2016-09-27",
+      "Publication": "2016-09-27"
+    },
+    "abstract": " A method, system, and computer program product for transmitting traffic congestion routing data to a community of global positioning system (GPS) devices. Community routing logic of a community routing system (CRS) receives a route …"
+  },
+  {
+    "title": " Indexing digitized speech with words represented in the digitized speech",
+    "dates": {
+      "Priority": "2007-03-20",
+      "Filing": "2014-03-11",
+      "Grant": "2015-09-01",
+      "Publication": "2015-09-01"
+    },
+    "abstract": " Indexing digitized speech with words represented in the digitized speech, with a multimodal digital audio editor operating on a multimodal device supporting modes of user interaction, the modes of user interaction including a voice mode …"
+  },
+  {
+    "title": " Jump scrolling",
+    "dates": {
+      "Priority": "2012-10-23",
+      "Filing": "2013-10-23",
+      "Publication": "2014-04-30"
+    },
+    "abstract": " Techniques for jumping to a specific location in a list of items displayed at a touch-sensitive display of a computing device may include outputting, for display at the touch-sensitive display, a first sub-portion of a list of items, …"
+  },
+  {
+    "title": " Enabling access to data files unsupported by a computing device",
+    "dates": {
+      "Priority": "2009-12-15",
+      "Grant": "2013-02-12",
+      "Publication": "2013-02-12"
+    },
+    "abstract": " A computer implemented method, apparatus, and computer program product for managing access to data files. A first computer device sends a data file to a web server which hosts the data file. Responsive to sending the data file to the web …"
+  },
+  {
+    "title": " System and method for indicating overscrolling in a mobile device",
+    "dates": {
+      "Priority": "2012-08-16",
+      "Filing": "2013-01-29",
+      "Grant": "2013-12-10",
+      "Publication": "2013-12-10"
+    },
+    "abstract": " A system and method for indicating overscrolling in a mobile device is provided. The method may include outputting, at a display operatively coupled to a computing device, a graphical representation of at least one content item. The …"
+  },
+  {
+    "title": " Information technology for finding a location based on an image at another …",
+    "dates": {
+      "Priority": "2009-07-29",
+      "Grant": "2013-01-29",
+      "Publication": "2013-01-29"
+    },
+    "abstract": " A computer system displays an image of a first geographic location by a computer system, receives a user selection of a portion of the image of the first geographic location, processes the user-selected image portion to identify a meaning …"
+  },
+  {
+    "title": " Context-based grammars for automated speech recognition",
+    "dates": {
+      "Priority": "2006-06-13",
+      "Publication": "2013-01-03"
+    },
+    "abstract": " Methods, apparatus, and computer program products for providing a context-based grammar for automatic speech recognition, including creating by a multimodal application a context, the context comprising words associated with user activity …"
+  },
+  {
+    "title": " Voice response unit shortcutting",
+    "dates": {
+      "Priority": "2008-09-02",
+      "Filing": "2012-08-21",
+      "Grant": "2014-01-21",
+      "Publication": "2014-01-21"
+    },
+    "abstract": " Call specific information input by a user and user information pre-stored in a database are mapped to a voice response unit (VRU) map associated with a targeted VRU. A call with the targeted VRU is initiated and the targeted VRU is …"
+  },
+  {
+    "title": " Apparatus, system, and method for an inline display of related blog postings",
+    "dates": {
+      "Priority": "2007-03-05",
+      "Grant": "2012-07-24",
+      "Publication": "2012-07-24"
+    },
+    "abstract": " An apparatus, system, and method for an inline display of related blog postings. The apparatus, system, and method include searching a first blog for material common to the first blog and to a second blog and adding a link to the common …"
+  },
+  {
+    "title": " System, method, and apparatus for proximity-based authentication for managing …",
+    "dates": {
+      "Priority": "2009-06-16",
+      "Publication": "2012-07-12"
+    },
+    "abstract": " A computer program product that includes a computer useable storage medium to store a computer readable program for proximity-based authentication for managing personal data that, when executed on a computer, causes the computer to …"
+  },
+  {
+    "title": " Dynamic point and extend user interface",
+    "dates": {
+      "Priority": "2008-12-30",
+      "Grant": "2012-07-10",
+      "Publication": "2012-07-10"
+    },
+    "abstract": " A computer-implemented method of extending a user interface of an executing application can include placing the user interface in a configure mode that allows functionality of the user interface to be extended and visually distinguishing …"
+  },
+  {
+    "title": " Browser context based search disambiguation using existing category taxonomy",
+    "dates": {
+      "Priority": "2006-04-06",
+      "Grant": "2012-07-03",
+      "Publication": "2012-07-03"
+    },
+    "abstract": " A mechanism is provided for context based search disambiguation using existing category taxonomy. A client provides additional cues for search term disambiguation through the context of the specific user's browser. A bookmark or favorites …"
+  },
+  {
+    "title": " Signaling correspondence between a meeting agenda and a meeting discussion",
+    "dates": {
+      "Priority": "2008-04-24",
+      "Grant": "2012-07-03",
+      "Publication": "2012-07-03"
+    },
+    "abstract": " Signaling correspondence between a meeting agenda and a meeting discussion includes: receiving a meeting agenda specifying one or more topics for a meeting; analyzing, for each topic, one or more documents to identify topic keywords for …"
+  },
+  {
+    "title": " Sorting E-Mail Documents Based on Free Text Field Content",
+    "dates": {
+      "Priority": "2008-09-24",
+      "Filing": "2012-04-13",
+      "Publication": "2012-08-02"
+    },
+    "abstract": " A request is received to sort multiple e-mail documents according to least frequently used words in the multiple e-mail documents. The multiple e-mail documents are analyzed to identify which of the multiple e-mail documents use at least …"
+  },
+  {
+    "title": " Templates and style sheets for audio broadcasts",
+    "dates": {
+      "Priority": "2007-01-03",
+      "Grant": "2011-09-06",
+      "Publication": "2011-09-06"
+    },
+    "abstract": " An audio broadcast creation client applies the concept of style sheets to audio data intended for audio broadcasts. The creation client associates style sheet elements to sections of the audio broadcast. An audio broadcast rendering …"
+  },
+  {
+    "title": " Cooperative non-repudiated message exchange in a network environment",
+    "dates": {
+      "Priority": "2005-12-16",
+      "Grant": "2011-08-16",
+      "Publication": "2011-08-16"
+    },
+    "abstract": " A system and method of performing cooperative non-repudiated message exchange from a first system to a second system in a computer network comprises checking for discrepancies between a current system time in the second system with an …"
+  },
+  {
+    "title": " Harmonizing webpage information",
+    "dates": {
+      "Priority": "2009-12-07",
+      "Publication": "2011-06-09"
+    },
+    "abstract": " A descriptive webpage about an entity is harmonized with other electronically published information about the entity. A descriptive webpage, which includes an entity profile about an entity, is located. Other electronically published …"
+  },
+  {
+    "title": " Instant Messaging Exchange Incorporating User-generated Multimedia Content",
+    "dates": {
+      "Priority": "2009-09-29",
+      "Publication": "2011-03-31"
+    },
+    "abstract": " A method for displaying multimedia content created by a user of a first computerized messaging device to a user of a second computerized messaging device communicatively coupled to the first computerized messaging device by a network …"
+  },
+  {
+    "title": " E-mail address verification system",
+    "dates": {
+      "Priority": "2009-09-04",
+      "Publication": "2011-03-10"
+    },
+    "abstract": " A system for verifying a sender's intent to send an e-mail message to a recipient includes a sender computer having memory and a processor, a sender mail server having memory and a processor, wherein the sender mail server is connected to …"
+  },
+  {
+    "title": " Enabling a user to choose a representative landmark to display at a particular …",
+    "dates": {
+      "Priority": "2009-07-29",
+      "Publication": "2011-02-03"
+    },
+    "abstract": " A user is enabled to choose a particular landmark to display on a particular view of a digital map instead of a landmark chosen by a digital map designer. This particular landmark may then represent all landmarks that are in close …"
+  },
+  {
+    "title": " Automated viewable selectable change history manipulation",
+    "dates": {
+      "Priority": "2009-07-07",
+      "Publication": "2011-01-13"
+    },
+    "abstract": " A set of edited changes associated with an editable file is displayed on a display associated with a computing device in response to receipt of a request via a user input device to display the plurality of edited changes. A contextual …"
+  },
+  {
+    "title": " GUI interface for subscribers to subscribe to topics of messages published by a …",
+    "dates": {
+      "Priority": "2002-07-26",
+      "Grant": "2010-11-09",
+      "Publication": "2010-11-09"
+    },
+    "abstract": " Presenting a Pub/Sub service GUI interface to a subscribers computer system, the GUI interface comprising one or more topics to which the subscriber can subscribe, the Pub/sub service having a list of subscribers subscribing to a topic."
+  },
+  {
+    "title": " Predictive personal video recorder operation",
+    "dates": {
+      "Priority": "2009-05-01",
+      "Publication": "2010-11-04"
+    },
+    "abstract": " A predictive personal video recorder (PVR) can include a tuner, a buffer, a predictive tuner, and a predictive buffer. The tuner can be configured to allow viewing of a currently-selected digital video channel chosen from a plurality of …"
+  },
+  {
+    "title": " Apparatus for managing outputs of applications",
+    "dates": {
+      "Priority": "2006-08-17",
+      "Grant": "2010-11-02",
+      "Publication": "2010-11-02"
+    },
+    "abstract": " An apparatus for managing outputs of a first application and a second application is provided. Each application is operable to execute on a data processing system and output of the first application is executed on the data processing …"
+  },
+  {
+    "title": " Enabling remote locale specific operations in multiple locale and user …",
+    "dates": {
+      "Priority": "2007-11-30",
+      "Grant": "2010-10-19",
+      "Publication": "2010-10-19"
+    },
+    "abstract": " A computer-implemented method of negotiating locale settings among a plurality of users communicating over a communication network can include determining a locale for each of a plurality of remotely located users, identifying at least …"
+  },
+  {
+    "title": " Automated dynamic differential data processing",
+    "dates": {
+      "Priority": "2009-03-28",
+      "Publication": "2010-09-30"
+    },
+    "abstract": " A request for differential data relative to a first data element within a group of data elements is received via a user input device. A first differential data value for each of the group of data elements relative to the first data …"
+  },
+  {
+    "title": " Scrollbar user interface for multitouch devices",
+    "dates": {
+      "Priority": "2009-03-28",
+      "Publication": "2010-09-30"
+    },
+    "abstract": " Two sliding user interactions along a display surface of a multitouch input display device are detected in approximately opposite directions proximate to a display location of a scroll element displayed on a graphical user interface (GUI) …"
+  },
+  {
+    "title": " Voice response unit proxy utilizing dynamic web interaction",
+    "dates": {
+      "Priority": "2008-10-03",
+      "Publication": "2010-04-08"
+    },
+    "abstract": " A system, method and program product for providing a voice response unit (VRU) proxy. A system is provided that includes: a graphical user interface (GUI) for dynamically displaying information from a VRU and for receiving data from a …"
+  },
+  {
+    "title": " Voice response unit harvesting",
+    "dates": {
+      "Priority": "2008-09-16",
+      "Publication": "2010-03-18"
+    },
+    "abstract": " A system, method and program product for providing voice response unit (VRU) harvesting. A system is provided that includes: an account management system for allowing a user to identify a set of VRUs and associated data desired from each …"
+  },
+  {
+    "title": " Defining sectional boundaries of a webpage",
+    "dates": {
+      "Priority": "2008-07-23",
+      "Publication": "2010-01-28"
+    },
+    "abstract": " Disclosed are a method, system and computer program product for defining sectional boundaries of a webpage to enable efficient navigation of the content on a user device. Logical sections in a webpage are defined by comparing structured …"
+  },
+  {
+    "title": " Recipient side grouping of addresses",
+    "dates": {
+      "Priority": "2008-07-17",
+      "Publication": "2010-01-21"
+    },
+    "abstract": " A method for grouping addressees of a message based on groups defined by a recipient of the message includes receiving a message including a plurality of addressees; determining the addresses of the addressees; comparing the addresses to …"
+  },
+  {
+    "title": " System for effective meeting invitee response status",
+    "dates": {
+      "Priority": "2008-05-27",
+      "Publication": "2009-12-03"
+    },
+    "abstract": " A system for visually representing an event as part of a larger schedule (e.g., calendar). The representation of the particular event may include an indicator configured to display invitee status. Functionality may also be configured to …"
+  },
+  {
+    "title": " Endorsing e-mail messages using social network verification",
+    "dates": {
+      "Priority": "2007-12-31",
+      "Publication": "2009-10-22"
+    },
+    "abstract": " Embodiments of the present invention provide a method, system and computer program product for e-mail message endorsement in an e-mail management system. In an embodiment of the invention, a method for e-mail message endorsement in an e- …"
+  },
+  {
+    "title": " User-configured alternate email rendering",
+    "dates": {
+      "Priority": "2009-05-20",
+      "Filing": "2009-05-20",
+      "Publication": "2010-11-25"
+    },
+    "abstract": " A method of rendering email includes receiving with a networked computing device at least one filter criterion; receiving with the networked computing device an email message; and, responsive to a determination by the networked computing …"
+  },
+  {
+    "title": " System and Method for Managing Data Transfers Between Information Protocols",
+    "dates": {
+      "Priority": "2008-11-25",
+      "Filing": "2008-11-25",
+      "Publication": "2010-05-27"
+    },
+    "abstract": " A computer data handling method, system and apparatus are disclosed. A data item or information object are received in one protocol. Based on data contents, a protocol transfer module (engine) optimizes information presentation by …"
+  },
+  {
+    "title": " Activity pattern based battery charging alerts for mobile devices",
+    "dates": {
+      "Priority": "2008-09-03",
+      "Filing": "2008-09-03",
+      "Grant": "2011-11-08",
+      "Publication": "2011-11-08"
+    },
+    "abstract": " A method for providing activity pattern based battery charging alerts for mobile devices, the method includes: monitoring usage patterns of a mobile device; determining periods of activity and inactivity for the mobile device's usage;"
+  },
+  {
+    "title": " Voice response unit mapping",
+    "dates": {
+      "Priority": "2008-09-02",
+      "Filing": "2008-09-02",
+      "Grant": "2013-12-24",
+      "Publication": "2013-12-24"
+    },
+    "abstract": " A system, method and program product for mapping voice response units (VRUs). A system is provided that includes: an interrogation system for interrogating a VRU and gathering a hierarchical set of options associated with the VRU; a map …"
+  },
+  {
+    "title": " Client side reconciliation of typographical errors in messages from input- …",
+    "dates": {
+      "Priority": "2008-06-30",
+      "Filing": "2008-06-30",
+      "Publication": "2009-12-31"
+    },
+    "abstract": " A method for reconciling typographical errors, includes: receiving an electronic text message from a pervasive device with limited input keypads on a receiving device configured with a messaging application; determining an input protocol …"
+  },
+  {
+    "title": " Method for providing enhanced audio conferencing services in a telephony system",
+    "dates": {
+      "Priority": "2008-06-19",
+      "Filing": "2008-06-19",
+      "Grant": "2012-03-20",
+      "Publication": "2012-03-20"
+    },
+    "abstract": " A method is provided for enhanced audio conferencing services. A request is received and authenticated for enhanced audio conferencing services. A calendar for the user is accessed, and scheduled conference calls of the user are …"
+  },
+  {
+    "title": " Interlacing responses within an instant messaging system",
+    "dates": {
+      "Priority": "2008-05-09",
+      "Filing": "2008-05-09",
+      "Publication": "2009-11-12"
+    },
+    "abstract": " A computer-implemented method of interlacing responses within an instant messaging (IM) system can include, responsive to a request from a user in an IM session, storing an IM message fragment input by the user and associating the IM …"
+  },
+  {
+    "title": " System and method to deflect email threads to a blogging system",
+    "dates": {
+      "Priority": "2008-04-28",
+      "Filing": "2008-04-28",
+      "Grant": "2009-03-24",
+      "Publication": "2009-03-24"
+    },
+    "abstract": " A method for deflecting threaded email discussions to message forums includes providing a first user operating an email client application to send a first email message addressed to one or more recipient users with a first option to …"
+  },
+  {
+    "title": " Seamless drag and drop operation with multiple event handlers",
+    "dates": {
+      "Priority": "2008-04-09",
+      "Filing": "2008-04-09",
+      "Publication": "2009-10-15"
+    },
+    "abstract": " A computer-implemented method of selecting event handlers can include initiating a drag and drop operation for a source object and, responsive to detecting contact between the source object and a window of a graphical user interface (GUI) …"
+  },
+  {
+    "title": " Method, system and user interface for providing inline spelling assistance",
+    "dates": {
+      "Priority": "2008-04-03",
+      "Filing": "2008-04-03",
+      "Publication": "2009-10-08"
+    },
+    "abstract": " A method for providing inline spelling assistance to a user via a user interface. The method includes receiving at least a prefix of a word being typed by a user, determining whether the word is being misspelled while the user types the …"
+  },
+  {
+    "title": " Sharing syndicated feed bookmarks among members of a social network",
+    "dates": {
+      "Priority": "2008-03-22",
+      "Filing": "2008-03-22",
+      "Publication": "2009-09-24"
+    },
+    "abstract": " A computer-implemented method of bookmarking syndicated feeds. The method can include receiving a request to bookmark a first network resource and determining whether at least one syndicated feed is associated with the first network …"
+  },
+  {
+    "title": " Presenting supplemental content for digital media using a multimodal …",
+    "dates": {
+      "Priority": "2007-02-27",
+      "Filing": "2008-02-04",
+      "Publication": "2009-11-11"
+    },
+    "abstract": " The invention relates to a method of rendering to a user data describing where to purchase an item depicted in a portion of digital media being rendered to the user, the method comprising rendering, by a multimodal application, operating …"
+  },
+  {
+    "title": " Method for Managing Transient Telephone Contacts",
+    "dates": {
+      "Priority": "2008-01-04",
+      "Filing": "2008-01-04",
+      "Publication": "2009-07-09"
+    },
+    "abstract": " A method for managing transient telephone contacts including capturing a telephone call identifying information related to a telephone communication, associating the telephone call identifying information with a telephone number related …"
+  },
+  {
+    "title": " Location independent communication in a virtual world",
+    "dates": {
+      "Priority": "2007-12-31",
+      "Filing": "2007-12-31",
+      "Publication": "2009-07-02"
+    },
+    "abstract": " Embodiments of the present invention address deficiencies of the art in respect to virtual worlds and provide a method, system and computer program product for deploying and managing an avatar silhouette in a location in a virtual world."
+  },
+  {
+    "title": " System and method to handle vandalism in a virtual world",
+    "dates": {
+      "Priority": "2007-12-05",
+      "Filing": "2007-12-05",
+      "Publication": "2009-06-11"
+    },
+    "abstract": " A method for operating a virtual world, the method including: selecting an action with respect to an object displayed in the virtual world wherein the action is for at least one of preventing and eliminating vandalism; and executing the …"
+  },
+  {
+    "title": " Protecting context sensitive information from being transmitted from an instant …",
+    "dates": {
+      "Priority": "2007-10-16",
+      "Filing": "2007-10-16",
+      "Publication": "2009-04-16"
+    },
+    "abstract": " In a method and system for protecting context sensitive information from being transmitted from an instant message client, at least one policy is received that includes an entry of one or more disallowed terms and is associated with at …"
+  },
+  {
+    "title": " Method and User Interface for Creating an Audio Recording Using a Document …",
+    "dates": {
+      "Priority": "2007-09-23",
+      "Filing": "2007-09-23",
+      "Publication": "2009-03-26"
+    },
+    "abstract": " A computer-implemented method of producing a sound recording can begin with receiving an audio signal. The method can continue with displaying the audio signal in a user interface as a waveform. Upon the waveform reaching an end of a line …"
+  },
+  {
+    "title": " Socially based station navigation",
+    "dates": {
+      "Priority": "2007-09-06",
+      "Filing": "2007-09-06",
+      "Grant": "2012-03-06",
+      "Publication": "2012-03-06"
+    },
+    "abstract": " A method of socially-based station navigation can include receiving station selection information from each of a plurality of mobile nodes within a mobile ad-hoc network, wherein station selection information comprises, for each mobile …"
+  },
+  {
+    "title": " Method and apparatus for aggregating and presenting user playback data …",
+    "dates": {
+      "Priority": "2007-08-29",
+      "Filing": "2007-08-29",
+      "Publication": "2009-03-05"
+    },
+    "abstract": " User playback data is collected from multiple user media devices. The user playback data indicates how a media clip has been manipulated by the users during playback of the media clip. The collected user playback data is aggregated and …"
+  },
+  {
+    "title": " Collaborative, event driven system management",
+    "dates": {
+      "Priority": "2006-08-28",
+      "Filing": "2007-07-19",
+      "Publication": "2009-05-13"
+    },
+    "abstract": " A collaboration system is provided in combination with a system administration monitoring system. The monitoring software for the system may recognize an error or other event in a component that is being monitored. The monitoring software …"
+  },
+  {
+    "title": " Automatic Speech Recognition With Dynamic Grammar Rules",
+    "dates": {
+      "Priority": "2007-03-20",
+      "Filing": "2007-03-20",
+      "Publication": "2008-09-25"
+    },
+    "abstract": " Automatic speech recognition implemented with a speech recognition grammar of a multimodal application in an ASR engine, the multimodal application operating on a multimodal device supporting multiple modes of user interaction including a …"
+  },
+  {
+    "title": " Effecting Functions On A Multimodal Telephony Device",
+    "dates": {
+      "Priority": "2007-02-27",
+      "Filing": "2007-02-27",
+      "Publication": "2008-08-28"
+    },
+    "abstract": " Methods, apparatus, and computer program products are described for effecting functions on a multimodal telephony device, implemented with the multimodal application operating on a multimodal telephony device supporting multiple modes of …"
+  },
+  {
+    "title": " Providing relevant assets in collaboration mediums",
+    "dates": {
+      "Priority": "2007-01-10",
+      "Filing": "2007-01-10",
+      "Grant": "2015-04-28",
+      "Publication": "2015-04-28"
+    },
+    "abstract": " A method for providing assets in a collaboration medium includes receiving information from an entity; analyzing the information to identify metadata; searching a system to locate assets relevant to the identified metadata; filtering the …"
+  },
+  {
+    "title": " Dynamically Merging Columns Within a Table",
+    "dates": {
+      "Priority": "2006-10-25",
+      "Filing": "2006-10-25",
+      "Publication": "2008-05-01"
+    },
+    "abstract": " In a computer system having a graphical user interface including a display and a selection device, a method of selecting and merging columns on a spreadsheet includes displaying a first data set residing in cells in a first column;"
+  },
+  {
+    "title": " Method, system, and computer program product for managing content received from …",
+    "dates": {
+      "Priority": "2006-06-30",
+      "Filing": "2006-06-30",
+      "Publication": "2008-01-03"
+    },
+    "abstract": " A method, system, and computer program product for managing content received from multiple content feeds is provided. The method includes analyzing content articles received from multiple content feeds to identify common subject matter …"
+  },
+  {
+    "title": " Communicating status data",
+    "dates": {
+      "Priority": "2005-07-02",
+      "Filing": "2006-06-28",
+      "Publication": "2007-01-04"
+    },
+    "abstract": " A system for communicating status data associated with a first user to a second user, for use with a first data processing system associated with a plurality of status events of the first user and comprising a first communication …"
+  },
+  {
+    "title": " Method, system, and computer program product for controlling a voice over …",
+    "dates": {
+      "Priority": "2006-06-27",
+      "Filing": "2006-06-27",
+      "Publication": "2008-02-14"
+    },
+    "abstract": " A method, system, and computer program product for controlling a VoIP communication session is provided. The method includes accessing user-defined settings for a live VoIP communication session representing a first audio stream between …"
+  },
+  {
+    "title": " Method, Computer Program Product And Portable Electronic Device For Providing …",
+    "dates": {
+      "Priority": "2006-06-14",
+      "Filing": "2006-06-14",
+      "Publication": "2007-12-20"
+    },
+    "abstract": " A computer program product including program instructions embodied on a tangible computer-readable medium is provided. Execution of the program instructions results in operations including: using a portable electronic device, obtaining …"
+  },
+  {
+    "title": " Oral modification of an ASR lexicon of an ASR engine",
+    "dates": {
+      "Priority": "2006-06-13",
+      "Filing": "2006-06-13",
+      "Grant": "2010-03-09",
+      "Publication": "2010-03-09"
+    },
+    "abstract": " Methods, apparatus, and computer program products are described for providing oral modification of an ASR lexicon of an ASR engine that include receiving, in the ASR engine from a user through a multimodal application, speech for …"
+  },
+  {
+    "title": " Context enhanced messaging and collaboration system",
+    "dates": {
+      "Priority": "2006-05-16",
+      "Filing": "2006-05-16",
+      "Grant": "2009-03-10",
+      "Publication": "2009-03-10"
+    },
+    "abstract": " A context enhanced messaging and collaboration system in which resources related to the context of text messages may be automatically identified and exchanged between users in association with the text messages, is provided. A graphical …"
+  },
+  {
+    "title": " Audio accessibility enhancement for computer audio events",
+    "dates": {
+      "Priority": "2006-04-07",
+      "Filing": "2006-04-07",
+      "Publication": "2007-10-11"
+    },
+    "abstract": " A computer program product is presented including program instructions embodied on a tangible computer-readable medium. Execution of the program instructions results in operations including: monitoring at least one pathway between at …"
+  },
+  {
+    "title": " Priority based scheduling system",
+    "dates": {
+      "Priority": "2006-04-06",
+      "Filing": "2006-04-06",
+      "Publication": "2007-10-11"
+    },
+    "abstract": " A computer program product, electronic device and method are provided that incorporate a hierarchical structure of priority ranks for presenting a scheduling user with a relationship-based display of a schedule for another user. A …"
+  },
+  {
+    "title": " System and method for browser context based search disambiguation using a …",
+    "dates": {
+      "Priority": "2006-04-06",
+      "Filing": "2006-04-06",
+      "Publication": "2007-10-11"
+    },
+    "abstract": " A mechanism is provided for context based search disambiguation. A client provides additional cues for search term disambiguation through the context of the specific user's browser. In one embodiment, a viewed content history is sent …"
+  },
+  {
+    "title": " Methods and apparatus for implementing version-based electronic mail",
+    "dates": {
+      "Priority": "2006-03-02",
+      "Filing": "2006-03-02",
+      "Publication": "2007-09-06"
+    },
+    "abstract": " The present invention concerns methods and apparatus for managing e-mail creation and display operations. In particular, in one aspect of the invention, a new e-mail is generated as a new version of a pre-existing e-mail. Both the pre- …"
+  },
+  {
+    "title": " Methods and apparatus for implementing real-time collective moderation of …",
+    "dates": {
+      "Priority": "2006-01-20",
+      "Filing": "2006-01-20",
+      "Publication": "2007-07-26"
+    },
+    "abstract": " The present invention concerns methods and apparatus for implementing real-time collective moderation of collaborative user environments by allowing participants in a collaborative environment to collectively control a level of …"
+  },
+  {
+    "title": " Collaborative contact management",
+    "dates": {
+      "Priority": "2005-12-06",
+      "Filing": "2005-12-06",
+      "Publication": "2007-06-07"
+    },
+    "abstract": " A solution for managing a set of collaborative contacts is provided. Each collaborative contact includes one or more collaboration capabities, each of which corresponds to a unique collaboration tool (e.g., voice over IP, instant …"
+  },
+  {
+    "title": " Method, system, and storage medium for filtering content presented on a …",
+    "dates": {
+      "Priority": "2003-11-25",
+      "Filing": "2003-11-25",
+      "Publication": "2005-05-26"
+    },
+    "abstract": " An exemplary embodiment of the invention relates to a method, system, and storage medium for filtering content presented on a computer system. The method includes selecting an application associated with the computer, selecting a priority …"
+  },
+  {
+    "title": " Creating dynamic interactive alert messages based on extensible document …",
+    "dates": {
+      "Priority": "2002-07-26",
+      "Filing": "2003-10-15",
+      "Publication": "2004-07-01"
+    },
+    "abstract": " An unsolicited dynamic interactive message is created wherein the message defines any graphical user interface elements to be displayed, the rules associated with the message, the appropriate methods and functions which can be performed …"
+  },
+  {
+    "title": " Method and apparatus for scalable peer-to-peer inquiries in a network of …",
+    "dates": {
+      "Priority": "2003-09-24",
+      "Filing": "2003-09-24",
+      "Grant": "2008-01-29",
+      "Publication": "2008-01-29"
+    },
+    "abstract": " A method and apparatus for scalable inquiries in a network of communicating peers are provided. The method and apparatus of the present invention make use of communal filters and randomization to determine which client devices will output …"
+  }
+]
