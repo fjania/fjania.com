@@ -1,8 +1,8 @@
 ---
-title: Read me first
+section: jobs
 layout: page
 date: 2014-01-15
-role: VP Engineering
+title: VP Engineering
 company: Tapestry/GifYourselfIn (a Betaworks company) - New York City, NY (01/2013 - present)
 summary: Lead software engineering and write all of the non-app code for readtapestry.com and gifyourself.in.
 bullets:

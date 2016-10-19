@@ -20,22 +20,29 @@
     <div class="col-md-7 col-md-offset-2" role="main">
     <main>
       {% for item in this.content %}
+      {% if item.section == 'jobs' %}
+      <div class="article">
+          <h3><strong>{{item.title}}</strong></h3>
+          <h4>{{ item.company }}</h4>
+          <p>{{ item.summary }}</p>
+          <ul>
+            {% for bullet in item.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+      </div>
+      {% endif %}
+      {% endfor %}
 
-            <div class="article">
-                <h3>
-                  <strong>{{item.role}}</strong>
-                </h3>
-                <h4>
-                  {{ item.company }}
-                </h4>
-                <p>{{ item.summary }}</p>
-                <ul>
-                  {% for bullet in item.bullets %}
-                  <li>{{ bullet }}</li>
-                  {% endfor %}
-                </ul>
-            </div>
-
+      {% for item in this.content %}
+      {% if item.section == 'education' %}
+      <div class="article">
+          <h3><strong>{{item.title}}</strong></h3>
+          <h4>{{ item.school }}</h4>
+          <p>{{ item.thesis }}</p>
+          <p>{{ item.description }}</p>
+      </div>
+      {% endif %}
       {% endfor %}
     </div>
   </main>
