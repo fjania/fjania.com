@@ -1,8 +1,8 @@
 ---
-title: Resume
+title: Patents
 layout: resume
 date: 2014-01-15
 order: fn
 reverse: true
-icon: 00-resume
+icon: 01-patents
 ---
