@@ -17,36 +17,41 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-7 col-md-offset-2" role="main">
+    <div class="col-md-9 col-md-offset-1" role="main">
     <main>
-      <h2><strong>Work Experience</strong></h2>
-      {% for item in this.content %}
-      {% if item.section == 'jobs' %}
-      <div class="article">
-          <h3><strong>{{item.title}}</strong></h3>
-          <h4>{{ item.company }}</h4>
-          <p>{{ item.summary }}</p>
-          <ul>
-            {% for bullet in item.bullets %}
-            <li>{{ bullet }}</li>
-            {% endfor %}
-          </ul>
-      </div>
-      {% endif %}
-      {% endfor %}
 
-      <h2><strong>Education</strong></h2>
-      {% for item in this.content %}
-      {% if item.section == 'education' %}
-      <div class="article">
-          <h3><strong>{{item.title}}</strong></h3>
-          <h4>{{ item.school }}</h4>
-          <p>{{ item.thesis }}</p>
-          <p>{{ item.description }}</p>
-      </div>
-      {% endif %}
-      {% endfor %}
+    <h2>Personal Statement</h2>
+    <div class="article">
+      I find my greatest professional joy when I am designing, developing and inventing new technologies that are meant to enrich the lives of the people that use them. The subject areas I am most fond of are: collaboration and social software, novel and transparent user interfaces, and information visualization. I am a compassionate manager and leader, a sincere teammate who thrives in an environment of smart and creative people that regularly challenge each other, and a prolific inventor with over 70 patents pending.
     </div>
+
+    <h2>Work Experience</h2>
+    {% for item in this.content %}
+    {% if item.section == 'jobs' %}
+    <div class="article">
+        <h3><strong>{{item.title}}</strong></h3>
+        <h4>{{ item.company }}</h4>
+        <p>{{ item.summary }}</p>
+        <ul>
+          {% for bullet in item.bullets %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <h2>Education</h2>
+    {% for item in this.content %}
+    {% if item.section == 'education' %}
+    <div class="article">
+        <h3><strong>{{item.title}}</strong></h3>
+        <h4>{{ item.school }}</h4>
+        <p>{{ item.thesis }}</p>
+        <p>{{ item.description }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
   </main>
   </div>
 </div>
