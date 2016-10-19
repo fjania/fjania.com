@@ -14,7 +14,7 @@
   </ol>
   {% endblock %}
 
-  <div class="page-header">
+  <div class="page-header col-md-offset-2 col-md-7">
     {% block title %}
     <h1>{{this.title}}</h1>
     {% endblock %}
@@ -23,7 +23,7 @@
   <div class="row">
 
     {% block content %}
-    <div class="col-md-7 content" role="main">
+    <div class="col-md-offset-2 col-md-7 content" role="main">
     <main>
       {{this.body}}
     </main>
@@ -56,8 +56,6 @@
     {% endblock %}
 
   </div>
-
-  {% include 'footer.html' %}
 
 </div>
 

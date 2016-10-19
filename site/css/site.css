@@ -10,13 +10,13 @@ article {
   float: right;
 }
 
-.job-bullets > li {
+li.bullet {
     display: block;
     margin-bottom: 10px;
-    margin-right: 20px;
+    padding-right: 20px;
 }
 
-.job-bullets > li:before {
+li.bullet:before {
     /*Using a Bootstrap glyphicon as the bullet point*/
     content: "\e080";
     font-family: 'Glyphicons Halflings';

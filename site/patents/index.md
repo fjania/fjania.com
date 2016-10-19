@@ -1,6 +1,6 @@
 ---
 title: Patents
-layout: index
+layout: patents
 date: 2014-01-15
 order: fn
 reverse: true

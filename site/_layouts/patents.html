@@ -1,0 +1,59 @@
+{% extends "_base.html" %}
+
+{% block body %}
+
+{% block jumbotron %}
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h1>{{this.title}}</h1>
+          <p>{{this.abstract}}</p>
+       </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-2" role="main">
+    <main>
+
+      <section>
+      <h4>Granted Patents</h4>
+      <ul>
+      {% for item in this.content %}
+        {% if item.grant %}
+        <li class='bullet'>
+          <a href="{{item.url}}">{{item.title}}</a>
+          <small class='patent-date'> {{item.date|dateformat}}</small>
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+      </section>
+
+      <section>
+      <h4>Patent Applications</h4>
+      <ul>
+      {% for item in this.content %}
+        {% if not item.grant %}
+        <li class='bullet'>
+          <a href="{{item.url}}">{{item.title}}</a>
+          <small class='patent-date'> {{item.date|dateformat}}</small>
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+      </section>
+
+    </div>
+  </main>
+  </div>
+</div>
+<div class="container">
+  {{ this.body }}
+</div>
+
+{% endblock %}
