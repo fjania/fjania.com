@@ -2,7 +2,8 @@
 section: jobs
 layout: page
 title: Software Engineer
-company: Findings.com (a Betaworks company) - New York City, NY (07/2012 - 01/2013)
+company: Findings.com (a Betaworks company) - New York City, NY
+dates: (07/2012 - 01/2013)
 summary: One of two software engineers working on the full stack of findings.com, primilary responsible for the product's front-end. Findings is a service which allows people to clip, collect and share text snippets from the web.
 bullets:
 - Wrote all of the site's JavaScript using a combination of native JavaScript, jQuery, jQuery UI, and D3. Also wrote a portion of the site's backend, in Python/Django, particularly the endpoints needed for all of the ajax calls on the site.

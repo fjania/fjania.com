@@ -2,7 +2,8 @@
 section: jobs
 layout: page
 title: Visiting Software Engineer
-company: IBM Research - San Jose, CA and Hawthorne, NY (11/2003 - 07/2004)
+company: IBM Research - San Jose, CA and Hawthorne, NY
+dates: (11/2003 - 07/2004)
 summary: Hand selected for a six month rotational assignment as a visiting software engineer with IBM Research.
 bullets:
 - Consulted for the WebFountain text analytics team to identify a rich client technology platform to use for custom end user applications.

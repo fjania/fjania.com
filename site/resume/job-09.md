@@ -3,7 +3,8 @@ section: jobs
 layout: page
 date: 2014-01-15
 title: VP Engineering
-company: Tapestry/GifYourselfIn (a Betaworks company) - New York City, NY (01/2013 - 04/2014)
+company: Tapestry/GifYourselfIn (a Betaworks company) - New York City, NY
+dates: (01/2013 - 04/2014)
 summary: Lead software engineering and write all of the non-app code for readtapestry.com and gifyourself.in.
 bullets:
     - Develop and maintain all of the backend code and infrastructure for readtapestry.com. This includes the Python/Django based web application, Redis/Celery task queue, Postgresql DB, and integrations with 3rd party email, messaging, storage services.

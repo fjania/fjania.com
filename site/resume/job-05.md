@@ -2,7 +2,8 @@
 section: jobs
 layout: page
 title: Senior Software Engineer; UI Warlord; Problem Solver
-company: IBM Software Group - Lotus Connections Development - Research Triangle Park, NC (06/2008 - 03/2009)
+company: IBM Software Group - Lotus Connections Development - Research Triangle Park, NC
+dates: (06/2008 - 03/2009)
 summary: UI lead for the Lotus Connections development team, serving as the UI development subject matter expert across all eight of the Lotus Connections applications.
 bullets:
 - Choreographed the efforts of 13 UI engineers, in 3 countries, working on a family of 8 applications, to insure that the product's design points are consistently applied and implemented.

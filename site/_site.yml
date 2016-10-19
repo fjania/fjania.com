@@ -1,6 +1,6 @@
 brand: frankjania.com
 
-bootswatch: yeti
+bootswatch: simplex
 navbar_inverse: false
 bootstrap: 3.3.6
 navbar_right_items: 1

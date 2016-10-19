@@ -2,7 +2,8 @@
 section: jobs
 layout: page
 title: Rich Client UI Software Engineer, Team Lead and Product Manager
-company: IBM Systems Group, WebAhead - Southbury, CT and New York City, NY (11/2000 - 11/2003)
+company: IBM Systems Group, WebAhead - Southbury, CT and New York City, NY
+dates: (11/2000 - 11/2003)
 summary: Worked as a team lead, product manager, UI designer and rich desktop client engineer for IBM's most successful advanced technology prototype team.
 bullets:
 - Lead a team of 4 engineer/designers in developing an enterprise scale messaging client platform deployed to over 50,000 people.

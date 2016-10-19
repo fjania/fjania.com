@@ -20,8 +20,9 @@
     {% if item.section == 'jobs' %}
     <article>
         <h4 class='job-title'>{{item.title}}</h4>
-        <h5 class='job-company'>{{ item.company }}</h5>
-        <h5 class='job-dates'>{{ item.dates }}</h5>
+        <h5 class='job-company'>{{ item.company }}
+          <span class='job-dates'>{{ item.dates }}</span>
+        </h5>
         <p class='job-summary'>{{ item.summary }}</p>
         <ul class='job-bullets'>
           {% for bullet in item.bullets %}
@@ -39,8 +40,9 @@
     {% if item.section == 'education' %}
     <article>
         <h4 class='education-degree'>{{item.title}}</h4>
-        <h5 class='education-school'>{{ item.school }}</h5>
-        <h5 class='education-dates'>{{ item.dates }}</h5>
+        <h5 class='education-school'>{{ item.school }}
+        <span class='education-dates'>{{ item.dates }}</span>
+        </h5>
         <p class='education-thesis'>{{ item.thesis }}</p>
         <p class='education-description'>{{ item.description }}</p>
     </article>

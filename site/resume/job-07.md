@@ -2,7 +2,8 @@
 section: jobs
 layout: page
 title: Software Engineer; Team Lead
-company: Google - New York City, NY (06/2010 - 07/2012)
+company: Google - New York City, NY
+dates: (06/2010 - 07/2012)
 summary: Software engineer and team lead for a display ad management software product. Still working past the acquisition as a startup would, so I wear many hats in this role.
 bullets:
 - Took over and streamlined the release process for the product. Implemented a release strategy and wrote release code that allowed minor releases to happen without system downtime.

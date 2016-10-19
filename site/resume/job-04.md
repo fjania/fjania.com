@@ -2,7 +2,8 @@
 section: jobs
 layout: page
 title: Technical Evangelist; Business Partner Liaison; Social Software Consultant
-company: IBM Software Group - Lotus Business Partner Enablement - Research Triangle Park, NC (06/2006 - 06/2008)
+company: IBM Software Group - Lotus Business Partner Enablement - Research Triangle Park, NC
+dates: (06/2006 - 06/2008)
 summary: Supported the Lotus brand as a technical evangelist, business partner liaison and consultant for the portfolio of collaboration and social software.
 bullets:
 - Developed reusable collateral in the form of documentation, articles, interactive learning labs and code samples in support business partner efforts to integrate with Lotus products.

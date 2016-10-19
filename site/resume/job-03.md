@@ -2,7 +2,8 @@
 section: jobs
 layout: page
 title: Software Engineering Manager
-company: IBM Systems and Technology Group - Research Triangle Park, NC (07/2004 - 06/2006)
+company: IBM Systems and Technology Group - Research Triangle Park, NC
+dates: (07/2004 - 06/2006)
 summary: Managed a distributed team of UI software engineers located in New York and North Carolina.
 bullets:
 - Performed every aspect of personnel management including hiring, separating, developing, promoting, mentoring and coaching, for a department of 18 employees.

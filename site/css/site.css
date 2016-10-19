@@ -5,3 +5,7 @@ section {
 article {
   margin-bottom: 30px;
 }
+
+.job-dates, .education-dates {
+  float: right;
+}
