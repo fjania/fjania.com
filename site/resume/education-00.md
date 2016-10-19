@@ -1,8 +1,8 @@
 ---
 layout: page
 section: education
-title: Bachelor of Engineering in Electrical Engineering
-school: The Cooper Union - New York City, NY (09/1993 to 05/1997)
-thesis: Reduction of Low Frequency Loudspeaker Distortion Using an Adaptive, Driver Independent, Digital Signal Processing System
-description: Completed a senior thesis project with the goal of reducing distortion in low frequency loudspeakers by performing a real time analysis of it's moving parts. This hybrid digital/analog project involved implementing an adaptive filter algorithm in assembly language on a Spectrum PC/C5x DSP board. The filter's response characteristic was controlled by analyzing the output of an accelerometer mounted on the speaker's cone.
+title: Master of Science in Electrical Engineering
+school: The Cooper Union - New York City, NY (09/1997 to 05/1999)
+thesis: Applying Visual Analysis to Ground Force Reaction Data in the Study of Gait Pathology
+description: Completed a master's thesis project based on a request by researchers at Lenox Hill Hospital. The researches had purchased a "force plate" which measures the force applied as a patient walks on it in order to analyze gait pathology and athletic performance. Using the Win32 API and OpenGL I wrote software which read the stream of data from the force plate and a video feed. The software displayed a synchronized side by side view of the force plate's data (displayed as a 3-D visualization of the direction and magnitude of the force applied to the plate) and video of the human subject being measured.
 ---
