@@ -1,6 +1,6 @@
 ---
 title: Frank Jania
-layout: index
+layout: front-page
 order: icon
 ---
 
