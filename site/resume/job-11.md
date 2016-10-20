@@ -15,5 +15,6 @@ bullets:
     - Maintained Elasticsearch cluster for experimental feature development
     - Implemented a prototype twitter decahose ingest infrastructure in Java using Apache Storm
     - Implemented a production twitter decahose ingest infrastructure using AWS Kinesis Streams, Kinsis Firehose, SNS, Lambda and S3
+    - Conceived and implemented a new form of clustered network graph visualization in D3
     - Worked with the data team impement features into production system
 ---
