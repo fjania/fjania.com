@@ -3,7 +3,7 @@ section: jobs
 layout: page
 title: CTO / VP Engineering
 company: Scale Model (a Betaworks company) - New York City, NY
-dates: (04/2014 - present)
+dates: (04/2014 - 12/2016)
 summary: Lead software engineering for Scale Model
 bullets:
     - Built first prototype of front and back end for real time data dashboard to display aggregate tweet data
