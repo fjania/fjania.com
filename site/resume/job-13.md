@@ -3,7 +3,7 @@ section: jobs
 layout: page
 title: Search Engineering Manager
 company: GitHub - New York City, NY / Remote
-dates: (11/2019 - 07/2020)
+dates: (11/2018 - 07/2020)
 summary: Directly manage a team of 6 senior engineers building the platform for code search. Indirectly manage a team of 2 engineers working on the experience of code search.
 bullets:
 - Responsible for all aspects of people management for the ICs on my team - on-boarding, hiring, separating, performance review, and individual goal setting.
