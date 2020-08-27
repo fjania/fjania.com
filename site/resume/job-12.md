@@ -3,7 +3,7 @@ section: jobs
 layout: page
 title: Engineering Manager II
 company: Uber - New York City, NY
-dates: (01/2017 - 11/2019)
+dates: (01/2017 - 11/2018)
 summary: I manage a team of between 7-11 engineers building full stack applications for Observability at Uber. This includes monitoring, alerting, dashboarding, and metric querying applications used by all engineers at Uber.
 bullets:
 - Responsible for all aspects of people management for the ICs on my team - on-boarding, hiring, separating, performance review, and individual goal setting.
