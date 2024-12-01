@@ -1,2 +1,4 @@
 *.pyc
 .project
+.python-version
+uv.lock
