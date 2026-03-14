@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purpleheart — Wood Species Reference Card</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f5f0ea;
+  color: #2c1810;
+  font-size: 9.5pt;
+  line-height: 1.4;
+  max-width: 8.5in;
+  margin: 0 auto;
+}
+
+.page {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Banner ── */
+.banner {
+  background: linear-gradient(135deg, #3B2714 0%, #5a3a1e 50%, #3B2714 100%);
+  color: #F5E6D3;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.banner-text {
+  text-align: left;
+}
+.banner h1 {
+  font-size: 18pt;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1px;
+}
+.banner .subtitle {
+  font-size: 9.5pt;
+  opacity: 0.85;
+  font-style: italic;
+}
+.banner-thumbs {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.banner-thumbs img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1.5px solid rgba(245, 230, 211, 0.5);
+}
+
+/* ── Stats strip ── */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #F5E6D3;
+  padding: 8px 20px;
+  border-bottom: 2px solid #C4973B;
+}
+.stat {
+  text-align: center;
+  padding: 2px 4px;
+}
+.stat .label {
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  font-size: 7pt;
+  letter-spacing: 0.6px;
+}
+.stat .value {
+  color: #3B2714;
+  font-weight: 600;
+  font-size: 8.5pt;
+}
+
+/* ── Group header (About / Workshop) ── */
+.group-header {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #3B2714;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 0 6px 0;
+  border-bottom: 2.5px solid #C4973B;
+  margin-bottom: 8px;
+}
+
+/* ── Two-column main layout ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 10px 16px 6px 16px;
+}
+.two-col > .group {
+  padding: 0 12px;
+}
+.two-col > .group:first-child {
+  border-right: 1.5px solid #e0d5c8;
+  padding-left: 0;
+}
+.two-col > .group:last-child {
+  padding-right: 0;
+}
+
+/* ── Section headings ── */
+.section-title {
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5px solid #d8cfc2;
+  padding-bottom: 2px;
+  margin-bottom: 3px;
+  margin-top: 8px;
+}
+.section-title:first-of-type,
+.group-header + .section-title {
+  margin-top: 0;
+}
+
+/* ── Body text ── */
+.section-text {
+  font-size: 8.5pt;
+  line-height: 1.4;
+  color: #3a2a1a;
+}
+
+/* ── Janka bar (full-width) ── */
+.janka-strip {
+  padding: 8px 16px;
+  background: #faf6f0;
+  border-top: 1px solid #e0d5c8;
+  border-bottom: 1px solid #e0d5c8;
+}
+.janka-strip .janka-label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+.janka-bar-container {
+  background: #f0e8de;
+  border-radius: 5px;
+  height: 18px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #d8cfc2;
+}
+.janka-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #C4973B, #8B6914);
+  position: relative;
+}
+.janka-bar-label {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8pt;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* ── Comparison tables (full-width, side by side) ── */
+.comparisons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 8px 16px 10px 16px;
+}
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+  margin-top: 3px;
+}
+.comp-table th {
+  background: #3B2714;
+  color: #F5E6D3;
+  padding: 4px 6px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 7.5pt;
+}
+.comp-table td {
+  padding: 3.5px 6px;
+  border-bottom: 1px solid #ebe3d8;
+  font-size: 8pt;
+}
+.comp-table tr:nth-child(even) td {
+  background: #faf6f0;
+}
+.comp-label {
+  font-size: 8pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* ── Lists ── */
+.uses-list, .tips-list, .buying-list {
+  list-style: none;
+  padding: 0;
+  font-size: 8.5pt;
+}
+.uses-list li, .tips-list li, .buying-list li {
+  padding: 1.5px 0 1.5px 12px;
+  position: relative;
+  line-height: 1.35;
+}
+.uses-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #C4973B;
+  font-weight: 700;
+}
+.tips-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #888;
+}
+.buying-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #6B4226;
+}
+
+/* ── Advantages / Challenges ── */
+.adv-list, .chal-list {
+  list-style: none;
+  padding: 0;
+  font-size: 8.5pt;
+}
+.adv-list li, .chal-list li {
+  padding: 1.5px 0 1.5px 14px;
+  position: relative;
+  line-height: 1.35;
+}
+.adv-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+  font-weight: 700;
+}
+.chal-list li::before {
+  content: "\25B8";
+  position: absolute;
+  left: 0;
+  color: #c62828;
+  font-weight: 700;
+}
+
+/* ── Fun fact footer ── */
+.fun-fact {
+  background: #F5E6D3;
+  padding: 8px 20px;
+  font-size: 8.5pt;
+  color: #3B2714;
+  border-top: 2px solid #C4973B;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: auto;
+}
+.fun-fact strong {
+  color: #6B4226;
+}
+
+/* ── BACK PAGE ── */
+.back .banner {
+  background: linear-gradient(135deg, #5a3a1e 0%, #3B2714 50%, #5a3a1e 100%);
+}
+
+/* ── Colour reference ── */
+.colour-ref {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #faf6f0;
+  border-bottom: 1px solid #e0d5c8;
+}
+.colour-item .colour-label {
+  font-size: 7pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.colour-item .colour-value {
+  font-size: 8.5pt;
+  color: #3a2a1a;
+  line-height: 1.35;
+}
+
+/* ── Photo grid ── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 14px 20px;
+}
+.photo-card {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #d8cfc2;
+  background: #f5f0ea;
+}
+.photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.photo-card .photo-caption {
+  font-size: 7.5pt;
+  text-align: center;
+  padding: 5px;
+  color: #6B4226;
+  font-weight: 600;
+  background: #F5E6D3;
+}
+
+.no-photos {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px 24px;
+  color: #999;
+  font-size: 10pt;
+  font-style: italic;
+  background: #faf6f0;
+  border-radius: 6px;
+  border: 2px dashed #d8cfc2;
+}
+
+/* ── FAQ section ── */
+.faq-section {
+  flex: 1;
+  padding: 14px 20px;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+}
+.faq-item {
+  padding: 8px 10px;
+  background: #faf6f0;
+  border-radius: 4px;
+  border-left: 3px solid #C4973B;
+}
+.faq-q {
+  font-size: 9pt;
+  font-weight: 700;
+  color: #3B2714;
+  margin-bottom: 3px;
+}
+.faq-a {
+  font-size: 8.5pt;
+  color: #5a4a3a;
+  line-height: 1.4;
+}
+
+/* ── Source bar ── */
+.source-bar {
+  background: #3B2714;
+  color: #F5E6D3;
+  padding: 8px 20px;
+  font-size: 7.5pt;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* ── Print ── */
+@media print {
+  body {
+    background: white;
+    max-width: none;
+  }
+  .page {
+    height: 11in;
+    min-height: 11in;
+    max-height: 11in;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child {
+    page-break-after: auto;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Purpleheart</h1>
+      <div class="subtitle">Peltogyne spp. &mdash; Central & South America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/purpleheart_0.jpg" alt="Purpleheart"><img src="./images/purpleheart_1.png" alt="Purpleheart"><img src="./images/purpleheart_2.png" alt="Purpleheart"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">2,520 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.86 sg (very heavy; sinks in water)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">Central & South America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Generally straight, occasionally wavy or irregular</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Grayish-brown freshly cut; oxidizes to bright violet-purple<br><strong>Sapwood:</strong> Pale yellow or gray, narrow and distinct<br><strong>Texture:</strong> Fine to medium<br><strong>Lustre:</strong> Naturally high; silky, reflective surface</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Vibrant natural colour — no dye needed</li><li>Exceptional hardness (2,520 lbf Janka)</li><li>Impressive dimensional stability</li><li>Striking conversation-piece appearance</li><li>Purple tones last decades with UV protection</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Fine furniture & cabinetry</li><li>Turning blanks (bowls, pens, handles)</li><li>Flooring & stair treads</li><li>Instrument parts & inlays</li><li>Decorative panels & accents</li><li>Tables, countertops & art pieces</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Moderate; machines well but dulls blades faster<br>
+        <strong>Turning:</strong> Excellent; yields clean edges and glassy finish<br>
+        <strong>Gluing:</strong> Reliable with fresh surfaces and quality adhesive<br>
+        <strong>Finishing:</strong> Takes oils, varnishes, and waxes superbly
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Extremely dense — hard on tools</li><li>Dulls cutting edges faster than domestics</li><li>Heat from dull tools can darken colour</li><li>Expensive compared to domestic hardwoods</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Keep tools razor-sharp to avoid heat buildup</li><li>Use clear UV-protective finish to preserve purple</li><li>Avoid excessive sanding — heat darkens the wood</li><li>Alcohol-based shellac as sealer works well</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Source from reputable exotic wood suppliers</li><li>Verify sustainability certifications</li><li>Examine colour consistency before purchase</li><li>Account for extra tool sharpening costs</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 2,520 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 68.7%">
+        <span class="janka-bar-label">2,520</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Purpleheart Colour Stages</div>
+<table class="comp-table">
+<tr><th>Stage</th><th>Colour</th><th>Timeframe</th></tr>
+<tr><td>Fresh Cut</td><td>Grey-brown</td><td>Minutes</td></tr>
+<tr><td>Oxidized</td><td>Bright violet-purple</td><td>Hours to days</td></tr>
+<tr><td>Aged (unfinished)</td><td>Dark brown-purple</td><td>Years</td></tr>
+<tr><td>Aged (UV finish)</td><td>Rich plum-purple</td><td>Decades</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Purpleheart vs Popular Hardwoods</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Purpleheart</th><th>Hard Maple</th></tr>
+<tr><td>Janka Hardness</td><td>2,520 lbf</td><td>1,450 lbf</td></tr>
+<tr><td>Density</td><td>Very heavy</td><td>Heavy</td></tr>
+<tr><td>Colour</td><td>Vivid purple</td><td>Cream/white</td></tr>
+<tr><td>Workability</td><td>Moderate (dense)</td><td>Good</td></tr>
+<tr><td>Price</td><td>Premium exotic</td><td>Moderate domestic</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Purpleheart's colour comes from an oxidation reaction — freshly cut wood is grey-brown, then magically turns vivid purple over hours of air exposure.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Purpleheart</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/purpleheart_0.jpg" alt="Purpleheart"><img src="./images/purpleheart_1.png" alt="Purpleheart"><img src="./images/purpleheart_2.png" alt="Purpleheart"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Grayish-brown freshly cut; oxidizes to bright violet-purple</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale yellow or gray, narrow and distinct</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine to medium</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Naturally high; silky, reflective surface</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/purpleheart_0.jpg" alt="Purpleheart — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/purpleheart_1.png" alt="Purpleheart — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/purpleheart_2.png" alt="Purpleheart — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">What causes Purpleheart's colour change?</div>
+        <div class="faq-a">Oxidation transforms the grey-brown freshly cut wood to bright violet-purple over hours of air exposure.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is Purpleheart suitable for beginners?</div>
+        <div class="faq-a">It requires sharp tools and patience due to extreme density — better for intermediate+ woodworkers.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">How long does the purple colour last?</div>
+        <div class="faq-a">With UV-protective finish, the vibrant purple tones can last for decades.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Purpleheart Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+</body>
+</html>

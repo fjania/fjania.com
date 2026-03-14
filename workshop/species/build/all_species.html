@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Wood Species — Reference Cards</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f5f0ea;
+  color: #2c1810;
+  font-size: 9.5pt;
+  line-height: 1.4;
+  max-width: 8.5in;
+  margin: 0 auto;
+}
+
+.page {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Banner ── */
+.banner {
+  background: linear-gradient(135deg, #3B2714 0%, #5a3a1e 50%, #3B2714 100%);
+  color: #F5E6D3;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.banner-text {
+  text-align: left;
+}
+.banner h1 {
+  font-size: 18pt;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 1px;
+}
+.banner .subtitle {
+  font-size: 9.5pt;
+  opacity: 0.85;
+  font-style: italic;
+}
+.banner-thumbs {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.banner-thumbs img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1.5px solid rgba(245, 230, 211, 0.5);
+}
+
+/* ── Stats strip ── */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #F5E6D3;
+  padding: 8px 20px;
+  border-bottom: 2px solid #C4973B;
+}
+.stat {
+  text-align: center;
+  padding: 2px 4px;
+}
+.stat .label {
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  font-size: 7pt;
+  letter-spacing: 0.6px;
+}
+.stat .value {
+  color: #3B2714;
+  font-weight: 600;
+  font-size: 8.5pt;
+}
+
+/* ── Group header (About / Workshop) ── */
+.group-header {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #3B2714;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 0 6px 0;
+  border-bottom: 2.5px solid #C4973B;
+  margin-bottom: 8px;
+}
+
+/* ── Two-column main layout ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 10px 16px 6px 16px;
+}
+.two-col > .group {
+  padding: 0 12px;
+}
+.two-col > .group:first-child {
+  border-right: 1.5px solid #e0d5c8;
+  padding-left: 0;
+}
+.two-col > .group:last-child {
+  padding-right: 0;
+}
+
+/* ── Section headings ── */
+.section-title {
+  font-size: 8.5pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5px solid #d8cfc2;
+  padding-bottom: 2px;
+  margin-bottom: 3px;
+  margin-top: 8px;
+}
+.section-title:first-of-type,
+.group-header + .section-title {
+  margin-top: 0;
+}
+
+/* ── Body text ── */
+.section-text {
+  font-size: 8.5pt;
+  line-height: 1.4;
+  color: #3a2a1a;
+}
+
+/* ── Janka bar (full-width) ── */
+.janka-strip {
+  padding: 8px 16px;
+  background: #faf6f0;
+  border-top: 1px solid #e0d5c8;
+  border-bottom: 1px solid #e0d5c8;
+}
+.janka-strip .janka-label {
+  font-size: 7.5pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+.janka-bar-container {
+  background: #f0e8de;
+  border-radius: 5px;
+  height: 18px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #d8cfc2;
+}
+.janka-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #C4973B, #8B6914);
+  position: relative;
+}
+.janka-bar-label {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8pt;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* ── Comparison tables (full-width, side by side) ── */
+.comparisons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 8px 16px 10px 16px;
+}
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+  margin-top: 3px;
+}
+.comp-table th {
+  background: #3B2714;
+  color: #F5E6D3;
+  padding: 4px 6px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 7.5pt;
+}
+.comp-table td {
+  padding: 3.5px 6px;
+  border-bottom: 1px solid #ebe3d8;
+  font-size: 8pt;
+}
+.comp-table tr:nth-child(even) td {
+  background: #faf6f0;
+}
+.comp-label {
+  font-size: 8pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* ── Lists ── */
+.uses-list, .tips-list, .buying-list {
+  list-style: none;
+  padding: 0;
+  font-size: 8.5pt;
+}
+.uses-list li, .tips-list li, .buying-list li {
+  padding: 1.5px 0 1.5px 12px;
+  position: relative;
+  line-height: 1.35;
+}
+.uses-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #C4973B;
+  font-weight: 700;
+}
+.tips-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #888;
+}
+.buying-list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #6B4226;
+}
+
+/* ── Advantages / Challenges ── */
+.adv-list, .chal-list {
+  list-style: none;
+  padding: 0;
+  font-size: 8.5pt;
+}
+.adv-list li, .chal-list li {
+  padding: 1.5px 0 1.5px 14px;
+  position: relative;
+  line-height: 1.35;
+}
+.adv-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: #2e7d32;
+  font-weight: 700;
+}
+.chal-list li::before {
+  content: "\25B8";
+  position: absolute;
+  left: 0;
+  color: #c62828;
+  font-weight: 700;
+}
+
+/* ── Fun fact footer ── */
+.fun-fact {
+  background: #F5E6D3;
+  padding: 8px 20px;
+  font-size: 8.5pt;
+  color: #3B2714;
+  border-top: 2px solid #C4973B;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: auto;
+}
+.fun-fact strong {
+  color: #6B4226;
+}
+
+/* ── BACK PAGE ── */
+.back .banner {
+  background: linear-gradient(135deg, #5a3a1e 0%, #3B2714 50%, #5a3a1e 100%);
+}
+
+/* ── Colour reference ── */
+.colour-ref {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 10px 20px;
+  background: #faf6f0;
+  border-bottom: 1px solid #e0d5c8;
+}
+.colour-item .colour-label {
+  font-size: 7pt;
+  font-weight: 700;
+  color: #6B4226;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.colour-item .colour-value {
+  font-size: 8.5pt;
+  color: #3a2a1a;
+  line-height: 1.35;
+}
+
+/* ── Photo grid ── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 14px 20px;
+}
+.photo-card {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #d8cfc2;
+  background: #f5f0ea;
+}
+.photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.photo-card .photo-caption {
+  font-size: 7.5pt;
+  text-align: center;
+  padding: 5px;
+  color: #6B4226;
+  font-weight: 600;
+  background: #F5E6D3;
+}
+
+.no-photos {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px 24px;
+  color: #999;
+  font-size: 10pt;
+  font-style: italic;
+  background: #faf6f0;
+  border-radius: 6px;
+  border: 2px dashed #d8cfc2;
+}
+
+/* ── FAQ section ── */
+.faq-section {
+  flex: 1;
+  padding: 14px 20px;
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+}
+.faq-item {
+  padding: 8px 10px;
+  background: #faf6f0;
+  border-radius: 4px;
+  border-left: 3px solid #C4973B;
+}
+.faq-q {
+  font-size: 9pt;
+  font-weight: 700;
+  color: #3B2714;
+  margin-bottom: 3px;
+}
+.faq-a {
+  font-size: 8.5pt;
+  color: #5a4a3a;
+  line-height: 1.4;
+}
+
+/* ── Source bar ── */
+.source-bar {
+  background: #3B2714;
+  color: #F5E6D3;
+  padding: 8px 20px;
+  font-size: 7.5pt;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* ── Print ── */
+@media print {
+  body {
+    background: white;
+    max-width: none;
+  }
+  .page {
+    height: 11in;
+    min-height: 11in;
+    max-height: 11in;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  .page:last-child {
+    page-break-after: auto;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>African Blackwood</h1>
+      <div class="subtitle">Dalbergia melanoxylon &mdash; East Africa (Tanzania, Mozambique)</div>
+    </div>
+    
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">3,670 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">1.27 sg (extremely heavy; sinks readily)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">East Africa (Tanzania, Mozambique)</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Straight to slightly interlocked</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Jet black to deep violet-brown with dark streaks<br><strong>Sapwood:</strong> Pale yellow-white; sharp contrast when visible<br><strong>Texture:</strong> Very fine and uniform; naturally oily<br><strong>Lustre:</strong> Subtle natural polish even before finishing</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>One of the world's hardest woods (3,670 lbf)</li><li>Dimensional stability — minimal climate movement</li><li>Natural mirror-like polish without coatings</li><li>Acoustic properties unmatched for woodwinds</li><li>Extremely fine, uniform texture</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Musical instruments (clarinets, oboes, bagpipes)</li><li>Fine turning (pens, bowls, handles)</li><li>Knife handles & precision tools</li><li>Luxury furniture inlays</li><li>Sculptural art & jewellery boxes</li><li>High-end woodwind instruments</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Excellent for turning and fine cutting; tough on dull tools<br>
+        <strong>Turning:</strong> Exceptional — ideal for fine detail and mirror finishes<br>
+        <strong>Gluing:</strong> Requires fresh surfaces due to natural oils<br>
+        <strong>Finishing:</strong> Superb — polishes to glass-like sheen without topcoat
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Extremely hard on cutting tools</li><li>Very expensive — often sold by the piece</li><li>Heavy and dense — small pieces only practical</li><li>Dust can be irritating — use respiratory protection</li><li>Slow-growing — sustainability concerns</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Often needs no finish — polishes naturally</li><li>Buff with fine compound for mirror sheen</li><li>If finishing, use thin oil or wax only</li><li>Avoid thick film finishes — unnecessary</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Sold by the piece, not by the board foot</li><li>Instrument-grade commands extreme premiums</li><li>Smaller turning blanks are more accessible</li><li>Verify sustainable/legal sourcing (CITES listed)</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 3,670 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 100.0%">
+        <span class="janka-bar-label">3,670</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">African Blackwood by Grade</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Instrument Grade</th><th>Craft/Turning Grade</th></tr>
+<tr><td>Colour</td><td>Jet black, uniform</td><td>May have streaks</td></tr>
+<tr><td>Defects</td><td>None</td><td>Minor permitted</td></tr>
+<tr><td>Size</td><td>Larger billets</td><td>Smaller blanks</td></tr>
+<tr><td>Price</td><td>Extreme premium</td><td>More accessible</td></tr>
+<tr><td>Use</td><td>Pro instruments</td><td>Pens, bowls, handles</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">African Blackwood vs Ebony</div>
+<table class="comp-table">
+<tr><th>Property</th><th>African Blackwood</th><th>Gabon Ebony</th></tr>
+<tr><td>Janka Hardness</td><td>3,670 lbf</td><td>3,080 lbf</td></tr>
+<tr><td>Colour</td><td>Black with violet tones</td><td>Jet black</td></tr>
+<tr><td>Oiliness</td><td>Naturally oily</td><td>Dry</td></tr>
+<tr><td>Primary Use</td><td>Woodwinds</td><td>Piano keys, inlays</td></tr>
+<tr><td>Turning</td><td>Exceptional</td><td>Good but brittle</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> African Blackwood is often priced higher than gold by weight in instrument-grade billets. It's the world's most expensive commercial timber and the gold standard for professional clarinets and oboes.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>African Blackwood</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Jet black to deep violet-brown with dark streaks</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale yellow-white; sharp contrast when visible</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Very fine and uniform; naturally oily</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Subtle natural polish even before finishing</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="no-photos">No product images available for African Blackwood</div>
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Why is it so expensive?</div>
+        <div class="faq-a">Slow growth, small trees, extreme demand for instruments, and limited supply drive prices above many precious metals by weight.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Can beginners work with it?</div>
+        <div class="faq-a">For turning, yes — it cuts beautifully. For joinery, the extreme hardness makes it challenging.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is it sustainable?</div>
+        <div class="faq-a">It's CITES-listed. Always buy from verified sustainable sources and support reforestation efforts.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    African Blackwood Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Afromosia</h1>
+      <div class="subtitle">Pericopsis elata &mdash; West & Central Africa (Ghana, Cameroon, Congo)</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/afromosia_0.jpg" alt="Afromosia"><img src="./images/afromosia_1.jpg" alt="Afromosia"><img src="./images/afromosia_2.jpg" alt="Afromosia"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">1,570 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.62 sg (medium-heavy)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">West & Central Africa (Ghana, Cameroon, Congo)</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Straight to slightly interlocked; ribbon figure on QS</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Golden to medium brown with olive or copper undertones<br><strong>Sapwood:</strong> Pale yellow, sharply distinct from heartwood<br><strong>Texture:</strong> Fine and uniform with satiny lustre<br><strong>Lustre:</strong> Naturally bright and reflective; polishes to soft glow</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Natural decay resistance</li><li>Dimensional stability</li><li>Workability rivalling domestic hardwoods</li><li>Develops rich patina over time</li><li>Easier finishing than Teak (fewer oils)</li><li>Sustainable sourcing available</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Fine furniture & cabinetry</li><li>Flooring & stairwork</li><li>Exterior architecture</li><li>Boatbuilding</li><li>Decorative millwork</li><li>Turned objects & bowls</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Excellent — planes, sands, and carves cleanly<br>
+        <strong>Turning:</strong> Outstanding; crisp edges and high sheen<br>
+        <strong>Gluing:</strong> Very good on freshly abraded surfaces<br>
+        <strong>Finishing:</strong> Superb — takes oil beautifully and polishes naturally
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Higher cost than domestic hardwoods</li><li>Requires fresh surfaces for optimal gluing</li><li>Some boards have interlocked grain</li><li>CITES Appendix II — verify sourcing</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Oil finishes bring out natural golden sheen</li><li>Sands to silky smoothness easily</li><li>Avoid heavy film finishes — they mask natural beauty</li><li>Develops richer amber tone over time</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Select quarter-sawn for ribbon figure</li><li>Inspect sapwood/heartwood contrast</li><li>Source from certified sustainable suppliers</li><li>Compare pricing with Teak — often significantly less</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 1,570 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 42.8%">
+        <span class="janka-bar-label">1,570</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Afromosia vs Teak</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Afromosia</th><th>Teak</th></tr>
+<tr><td>Janka Hardness</td><td>1,570 lbf</td><td>1,000 lbf</td></tr>
+<tr><td>Natural Oils</td><td>Moderate</td><td>High</td></tr>
+<tr><td>Workability</td><td>Excellent</td><td>Good</td></tr>
+<tr><td>Cost</td><td>Moderate</td><td>Premium</td></tr>
+<tr><td>Gluing</td><td>Easier</td><td>Requires special prep</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Afromosia vs White Oak</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Afromosia</th><th>White Oak</th></tr>
+<tr><td>Janka Hardness</td><td>1,570 lbf</td><td>1,360 lbf</td></tr>
+<tr><td>Colour</td><td>Golden-brown</td><td>Pale tan/olive</td></tr>
+<tr><td>Decay Resistance</td><td>Excellent</td><td>Good</td></tr>
+<tr><td>Origin</td><td>Tropical (Africa)</td><td>Domestic (N. America)</td></tr>
+<tr><td>Grain Pattern</td><td>Fine, ribbon</td><td>Open, coarse</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Over time, Afromosia darkens to a richer amber tone, developing a patina that rivals genuine Teak — at a fraction of the cost and with easier workability.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Afromosia</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/afromosia_0.jpg" alt="Afromosia"><img src="./images/afromosia_1.jpg" alt="Afromosia"><img src="./images/afromosia_2.jpg" alt="Afromosia"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Golden to medium brown with olive or copper undertones</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale yellow, sharply distinct from heartwood</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine and uniform with satiny lustre</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Naturally bright and reflective; polishes to soft glow</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/afromosia_0.jpg" alt="Afromosia — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/afromosia_1.jpg" alt="Afromosia — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/afromosia_2.jpg" alt="Afromosia — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Is Afromosia sustainable?</div>
+        <div class="faq-a">Certified sustainable sources are available. It's CITES Appendix II — always verify sourcing with your supplier.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">How does it compare to Teak?</div>
+        <div class="faq-a">Similar appearance and durability, with easier finishing, better hardness, and lower cost.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Will it darken over time?</div>
+        <div class="faq-a">Yes — it develops a richer amber patina similar to aged Teak.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Afromosia Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Ambrosia Maple</h1>
+      <div class="subtitle">Acer rubrum (beetle-figured) &mdash; North America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/ambrosia_maple_0.jpg" alt="Ambrosia Maple"><img src="./images/ambrosia_maple_1.jpg" alt="Ambrosia Maple"><img src="./images/ambrosia_maple_2.jpg" alt="Ambrosia Maple"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">950 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.54 sg (moderate; typical of soft maple)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">North America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Linear or feathery streaks from beetle tunnels</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Light creamy beige with grey, brown & blue-green streaking<br><strong>Sapwood:</strong> Creamy beige base colour<br><strong>Texture:</strong> Fine to medium; tiny bore holes throughout<br><strong>Lustre:</strong> Moderate natural sheen</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Unique, unrepeatable natural patterns</li><li>Excellent workability</li><li>Affordable compared to other figured woods</li><li>Stunning visual character</li><li>Great strength-to-beauty ratio</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Accent furniture & feature pieces</li><li>Tabletops & dining tables</li><li>Turned bowls & vessels</li><li>Cutting boards</li><li>Decorative conversation pieces</li><li>Wall art & live edge projects</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Cuts cleanly with sharp tools; tear-out possible around holes<br>
+        <strong>Turning:</strong> Excellent — visual character shines on the lathe<br>
+        <strong>Gluing:</strong> Excellent adhesion with standard wood glues<br>
+        <strong>Finishing:</strong> Sands smoothly; fine grit maintains grain contrast
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Variable figure — board selection is critical</li><li>Small bore holes throughout the wood</li><li>Tear-out risk around figured areas</li><li>No two boards are alike (matching is difficult)</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Use fine-grit sandpaper to preserve contrast</li><li>Matte finishes highlight the blue-grey tones</li><li>Test finish on scrap first</li><li>Clear coats showcase the natural patterns best</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Select boards for figure consistency and pattern appeal</li><li>All insect activity ceases after kiln-drying — wood is safe</li><li>Inspect bore hole density for your taste</li><li>Consider visual impact in the final design</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 950 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 25.9%">
+        <span class="janka-bar-label">950</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Ambrosia Maple vs Standard Soft Maple</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Ambrosia Maple</th><th>Standard Soft Maple</th></tr>
+<tr><td>Appearance</td><td>Grey/blue streaks + bore holes</td><td>Uniform light colour</td></tr>
+<tr><td>Janka Hardness</td><td>700–950 lbf</td><td>700–950 lbf</td></tr>
+<tr><td>Visual Character</td><td>High artistic appeal</td><td>Minimal pattern</td></tr>
+<tr><td>Price</td><td>Higher (unique figure)</td><td>Lower baseline</td></tr>
+<tr><td>Workability</td><td>Excellent</td><td>Excellent</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Ambrosia Maple vs Spalted Maple</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Ambrosia Maple</th><th>Spalted Maple</th></tr>
+<tr><td>Cause</td><td>Beetle + fungal staining</td><td>Fungal decay (spalting)</td></tr>
+<tr><td>Structural Integrity</td><td>Fully sound</td><td>Can be soft/punky</td></tr>
+<tr><td>Colour Palette</td><td>Grey, blue, brown streaks</td><td>Black zone lines</td></tr>
+<tr><td>Workability</td><td>Standard maple</td><td>Varies (soft spots)</td></tr>
+<tr><td>Stability</td><td>Reliable</td><td>Unpredictable</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Ambrosia Maple isn't actually a species — it's the creative result of the Ambrosia beetle boring into soft maple and leaving behind artistic fungal staining. Every board is one-of-a-kind.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Ambrosia Maple</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/ambrosia_maple_0.jpg" alt="Ambrosia Maple"><img src="./images/ambrosia_maple_1.jpg" alt="Ambrosia Maple"><img src="./images/ambrosia_maple_2.jpg" alt="Ambrosia Maple"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Light creamy beige with grey, brown & blue-green streaking</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Creamy beige base colour</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine to medium; tiny bore holes throughout</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Moderate natural sheen</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/ambrosia_maple_0.jpg" alt="Ambrosia Maple — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/ambrosia_maple_1.jpg" alt="Ambrosia Maple — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/ambrosia_maple_2.jpg" alt="Ambrosia Maple — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Are there live bugs in the wood?</div>
+        <div class="faq-a">No — kiln-drying halts all insect activity. The wood is completely safe and stable.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is it as strong as regular Maple?</div>
+        <div class="faq-a">Yes — the beetle tunnels are cosmetic. Structural integrity is the same as soft maple.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Why is it called 'wormy maple'?</div>
+        <div class="faq-a">Historical name, though beetles (not worms) create the characteristic patterns.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Ambrosia Maple Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Aromatic Cedar</h1>
+      <div class="subtitle">Juniperus virginiana &mdash; Eastern North America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/aromatic_cedar_0.jpg" alt="Aromatic Cedar"><img src="./images/aromatic_cedar_1.jpg" alt="Aromatic Cedar"><img src="./images/aromatic_cedar_2.png" alt="Aromatic Cedar"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">900 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.47 sg (light to moderate)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">Eastern North America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Fine, uniform with tight knots and colour streaks</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Rich reddish-purple; ages to warm golden reddish-brown<br><strong>Sapwood:</strong> Pale yellow or creamy white<br><strong>Texture:</strong> Fine and uniform<br><strong>Lustre:</strong> Warm natural glow</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Distinctive pleasant fragrance</li><li>Natural moth & insect repellent</li><li>Vivid heartwood/sapwood colour contrast</li><li>Fine, workable grain</li><li>Aroma persists for years in enclosed spaces</li><li>Naturally decay resistant</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Closet lining & storage chests</li><li>Furniture interiors & drawers</li><li>Decorative panels & accent walls</li><li>Heirloom blanket chests</li><li>Jewellery boxes</li><li>Moth-repellent applications</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Machines well with sharp tools; soft enough for hand work<br>
+        <strong>Turning:</strong> Good for small turned items; aromatic shavings<br>
+        <strong>Gluing:</strong> Good with standard wood glues<br>
+        <strong>Finishing:</strong> Ages beautifully; many leave unfinished for aroma
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Softwood — dents more easily than hardwoods</li><li>Knots can be challenging to work around</li><li>Not suitable for food contact (aromatic oils)</li><li>Narrow boards from smaller trees</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Leave unfinished in closets to preserve aroma</li><li>Light sanding renews the scent over time</li><li>If finishing, use clear shellac or lacquer</li><li>Avoid polyurethane — it seals in the scent</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Smell the wood — fresh stock should be fragrant</li><li>Look for dramatic heartwood/sapwood contrast</li><li>Select based on end use (closet vs decorative)</li><li>Wider boards are rarer and command premiums</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 900 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 24.5%">
+        <span class="janka-bar-label">900</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Finished vs Unfinished Aromatic Cedar</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Unfinished</th><th>Finished</th></tr>
+<tr><td>Aroma</td><td>Full fragrance</td><td>Reduced/sealed</td></tr>
+<tr><td>Colour</td><td>Vivid red-purple</td><td>Preserved but muted</td></tr>
+<tr><td>Best For</td><td>Closets, chests</td><td>Decorative panels</td></tr>
+<tr><td>Maintenance</td><td>Sand to renew scent</td><td>Standard care</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Aromatic Cedar vs Western Red Cedar</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Aromatic (Eastern Red)</th><th>Western Red</th></tr>
+<tr><td>Species</td><td>Juniperus virginiana</td><td>Thuja plicata</td></tr>
+<tr><td>Aroma</td><td>Strong, distinctive</td><td>Mild</td></tr>
+<tr><td>Hardness</td><td>~900 lbf</td><td>~350 lbf</td></tr>
+<tr><td>Primary Use</td><td>Interior/closets</td><td>Exterior/decking</td></tr>
+<tr><td>Insect Repellent</td><td>Excellent</td><td>Moderate</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Aromatic Cedar isn't a true cedar at all — it's actually a juniper species! The scent comes from natural essential oils that effectively repel moths and insects.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Aromatic Cedar</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/aromatic_cedar_0.jpg" alt="Aromatic Cedar"><img src="./images/aromatic_cedar_1.jpg" alt="Aromatic Cedar"><img src="./images/aromatic_cedar_2.png" alt="Aromatic Cedar"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Rich reddish-purple; ages to warm golden reddish-brown</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale yellow or creamy white</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine and uniform</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Warm natural glow</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/aromatic_cedar_0.jpg" alt="Aromatic Cedar — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/aromatic_cedar_1.jpg" alt="Aromatic Cedar — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/aromatic_cedar_2.png" alt="Aromatic Cedar — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Does the scent fade?</div>
+        <div class="faq-a">It lasts years in enclosed spaces. Light sanding with fine grit renews the fragrance.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is Aromatic Cedar safe for food contact?</div>
+        <div class="faq-a">No — the aromatic oils make it unsuitable for cutting boards or food storage.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Can I use it outdoors?</div>
+        <div class="faq-a">It has some rot resistance but is better suited to interior applications. Western Red Cedar is better for outdoor use.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Aromatic Cedar Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Ash</h1>
+      <div class="subtitle">Fraxinus americana &mdash; North America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/ash_0.jpg" alt="Ash"><img src="./images/ash_1.png" alt="Ash"><img src="./images/ash_2.png" alt="Ash"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">1,320 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.60 sg (medium-heavy)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">North America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Straight, bold, open with cathedral-like patterns</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Light beige to creamy brown with gentle golden tint<br><strong>Sapwood:</strong> Slightly lighter; blends with heartwood<br><strong>Texture:</strong> Medium to coarse; smoother than Oak<br><strong>Lustre:</strong> Natural satin glow that brightens with finish</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Exceptional strength-to-weight ratio</li><li>Bold, beautiful cathedral grain</li><li>Versatile finish options — mimics other species</li><li>Sustainably sourced across North America</li><li>Excellent steam-bending properties</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Furniture & cabinetry</li><li>Table legs & chair frames</li><li>Flooring & stair parts</li><li>Baseball bats & tool handles</li><li>Turned bowls & pens</li><li>Veneers & decorative panels</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Machines, turns, sands, and finishes easily<br>
+        <strong>Turning:</strong> Excellent for bowls, pens, and spindle work<br>
+        <strong>Gluing:</strong> Excellent adhesion and strong fastener hold<br>
+        <strong>Finishing:</strong> Accepts stain exceptionally well; grain filler recommended
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Open pores require grain filler for smooth finish</li><li>Supply impacted by Emerald Ash Borer</li><li>Not naturally rot-resistant outdoors</li><li>Can look 'busy' in large flat panels</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Use grain filler or pre-sealer for smooth finish</li><li>Takes stain evenly and predictably</li><li>Can mimic Oak, Walnut, or other species with stain</li><li>Oil finishes highlight the bold grain pattern</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Great value — premium look at domestic pricing</li><li>Choose for projects needing strength without excess weight</li><li>Ideal if you prefer bright, clean aesthetic over Oak</li><li>Source soon — Emerald Ash Borer is reducing supply</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 1,320 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 36.0%">
+        <span class="janka-bar-label">1,320</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Ash: Oil Finish vs Film Finish</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Oil Finish</th><th>Film Finish (Poly)</th></tr>
+<tr><td>Grain Feel</td><td>Natural, tactile</td><td>Smooth, sealed</td></tr>
+<tr><td>Pore Filling</td><td>Minimal</td><td>Fills with coats</td></tr>
+<tr><td>Repairability</td><td>Easy touch-up</td><td>Requires full resand</td></tr>
+<tr><td>Best For</td><td>Rustic/natural look</td><td>High-wear surfaces</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Ash vs Red Oak</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Ash</th><th>Red Oak</th></tr>
+<tr><td>Janka Hardness</td><td>1,320 lbf</td><td>1,290 lbf</td></tr>
+<tr><td>Colour</td><td>Light beige-brown</td><td>Pinkish-red tone</td></tr>
+<tr><td>Grain Pattern</td><td>Cathedral, bold</td><td>Open, prominent</td></tr>
+<tr><td>Workability</td><td>Excellent</td><td>Good</td></tr>
+<tr><td>Steam Bending</td><td>Excellent</td><td>Good</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Ash has been the wood of choice for baseball bats and axe handles for centuries — its incredible impact resistance and natural elasticity make it unmatched for tools that take a beating.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Ash</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/ash_0.jpg" alt="Ash"><img src="./images/ash_1.png" alt="Ash"><img src="./images/ash_2.png" alt="Ash"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Light beige to creamy brown with gentle golden tint</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Slightly lighter; blends with heartwood</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Medium to coarse; smoother than Oak</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Natural satin glow that brightens with finish</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/ash_0.jpg" alt="Ash — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/ash_1.png" alt="Ash — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/ash_2.png" alt="Ash — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Is Ash suitable for beginners?</div>
+        <div class="faq-a">Yes — its excellent workability makes it forgiving for new woodworkers.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Does Ash bend well?</div>
+        <div class="faq-a">Exceptionally — high shock resistance and elasticity make it ideal for steam bending.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Can Ash replace Oak?</div>
+        <div class="faq-a">In many applications, yes — with a brighter aesthetic and comparable durability.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Ash Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Black Limba</h1>
+      <div class="subtitle">Terminalia superba &mdash; West & Central Africa (Ghana, Ivory Coast)</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/black_limba_0.jpg" alt="Black Limba"><img src="./images/black_limba_1.png" alt="Black Limba"><img src="./images/black_limba_2.jpg" alt="Black Limba"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">670 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.45 sg (medium-light; excellent strength-to-weight)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">West & Central Africa (Ghana, Ivory Coast)</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Straight to interlocked; dramatic figure</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Light golden-yellow with deep black/dark brown streaks<br><strong>Sapwood:</strong> Pale white or cream, blending softly into heartwood<br><strong>Texture:</strong> Medium to coarse<br><strong>Lustre:</strong> Good natural sheen under finish</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Visually striking natural figure</li><li>Lightweight yet strong</li><li>Easy machining & clean cutting</li><li>Excellent finishing potential</li><li>Stable and reliable</li><li>Outstanding for bookmatching</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Furniture & cabinetry</li><li>Guitar bodies & musical instruments</li><li>Decorative veneers & inlays</li><li>Live edge slabs & tabletops</li><li>Turned objects & sculptural pieces</li><li>Accent walls & fine joinery</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Exceptionally easy to work; machines, sands, and glues easily<br>
+        <strong>Turning:</strong> Produces fine, clean finish on the lathe<br>
+        <strong>Gluing:</strong> Glues easily with standard adhesives<br>
+        <strong>Finishing:</strong> Accepts oils and clear coats beautifully; grain comes alive
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Interlocked grain may cause tear-out</li><li>Requires sharp cutters for best results</li><li>Exotic pricing (imported)</li><li>Colour/figure varies significantly board to board</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Use sharp cutters to prevent tear-out</li><li>Satin or gloss clear coats enhance grain</li><li>Oil finishes bring out the golden tones</li><li>Light sanding between coats for best results</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Select boards with bold streaking patterns</li><li>Consider bookmatching for dramatic symmetry</li><li>Inspect for figure quality and consistency</li><li>Pairs beautifully with lighter woods as accents</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 670 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 18.3%">
+        <span class="janka-bar-label">670</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Black Limba vs White Limba</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Black Limba</th><th>White Limba</th></tr>
+<tr><td>Colour</td><td>Golden + black streaks</td><td>Uniform pale yellow</td></tr>
+<tr><td>Figure</td><td>Dramatic, varied</td><td>Subtle, even</td></tr>
+<tr><td>Hardness</td><td>670 lbf (same)</td><td>670 lbf (same)</td></tr>
+<tr><td>Price</td><td>Premium (figure)</td><td>More affordable</td></tr>
+<tr><td>Appeal</td><td>Show pieces</td><td>Utility / subtle</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Black Limba vs Mahogany</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Black Limba</th><th>Mahogany</th></tr>
+<tr><td>Janka Hardness</td><td>670 lbf</td><td>800–900 lbf</td></tr>
+<tr><td>Weight</td><td>Lightweight</td><td>Moderate</td></tr>
+<tr><td>Workability</td><td>Excellent</td><td>Good</td></tr>
+<tr><td>Figure</td><td>Dramatic streaking</td><td>Subtle ribbon grain</td></tr>
+<tr><td>Common Use</td><td>Guitars, art furniture</td><td>Traditional furniture</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Black Limba (known locally as 'Akom') comes from the same species as White Limba — the dramatic dark streaking is what sets it apart and makes it prized.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Black Limba</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/black_limba_0.jpg" alt="Black Limba"><img src="./images/black_limba_1.png" alt="Black Limba"><img src="./images/black_limba_2.jpg" alt="Black Limba"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Light golden-yellow with deep black/dark brown streaks</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale white or cream, blending softly into heartwood</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Medium to coarse</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Good natural sheen under finish</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/black_limba_0.jpg" alt="Black Limba — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/black_limba_1.png" alt="Black Limba — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/black_limba_2.jpg" alt="Black Limba — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">How does Black Limba compare to White Limba?</div>
+        <div class="faq-a">Same species — Black Limba has dramatic dark streaks and contrasting figure that White Limba lacks.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is Black Limba difficult to work?</div>
+        <div class="faq-a">No — it's one of the most user-friendly tropical hardwoods with excellent machining properties.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">What finishes work best?</div>
+        <div class="faq-a">Oils and clear coats enhance the grain beautifully, particularly satin or gloss finishes.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Black Limba Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Black Walnut</h1>
+      <div class="subtitle">Juglans nigra &mdash; Eastern North America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/black_walnut_0.jpg" alt="Black Walnut"><img src="./images/black_walnut_1.jpg" alt="Black Walnut"><img src="./images/black_walnut_2.png" alt="Black Walnut"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">1,010 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.55 sg (moderately heavy)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">Eastern North America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Generally straight; occasionally wavy or curly</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Rich dark brown to purplish black; deepens with age<br><strong>Sapwood:</strong> Pale cream to light grey<br><strong>Texture:</strong> Fine and even with natural lustre<br><strong>Lustre:</strong> Natural lustre under finish</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Striking natural dark colour — no stain needed</li><li>Dramatic heartwood/sapwood contrast</li><li>Machines cleanly and holds fine detail</li><li>Stable and durable</li><li>Premium appearance prized worldwide</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Fine furniture & cabinetry</li><li>Gunstocks & musical instruments</li><li>Architectural millwork & wall panels</li><li>Veneer & marquetry</li><li>Turned bowls & lathe projects</li><li>Custom tables & countertops</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Excellent; planes, sands, turns, and glues effortlessly<br>
+        <strong>Turning:</strong> Performs beautifully for bowls and lathe projects<br>
+        <strong>Gluing:</strong> Responds well; reliable bonds<br>
+        <strong>Finishing:</strong> Accepts oil, shellac, and varnish flawlessly without blotching
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Premium pricing — most expensive domestic hardwood</li><li>Narrower boards (smaller trees)</li><li>Sapwood waste if uniform colour needed</li><li>Can stain hands and clothes</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Clear coats showcase natural beauty best</li><li>Oil finishes deepen the rich brown tones</li><li>No pre-stain conditioner needed — won't blotch</li><li>Danish oil is a classic Walnut finish</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Curly, crotch, or burl variants command premiums</li><li>Sapwood contrast is desirable for visual impact</li><li>Steamed Walnut has more uniform (lighter) colour</li><li>Live edge slabs are spectacular in this species</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 1,010 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 27.5%">
+        <span class="janka-bar-label">1,010</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Steamed vs Unsteamed Walnut</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Steamed</th><th>Unsteamed (Natural)</th></tr>
+<tr><td>Heartwood</td><td>More uniform brown</td><td>Rich dark brown to purple</td></tr>
+<tr><td>Sapwood</td><td>Blends more</td><td>Sharp cream contrast</td></tr>
+<tr><td>Character</td><td>Consistent</td><td>More dramatic</td></tr>
+<tr><td>Typical Use</td><td>Production furniture</td><td>Show pieces</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Black Walnut vs Cherry</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Black Walnut</th><th>Cherry</th></tr>
+<tr><td>Janka Hardness</td><td>1,010 lbf</td><td>995 lbf</td></tr>
+<tr><td>Colour</td><td>Dark brown/purple</td><td>Pink → deep red</td></tr>
+<tr><td>Grain</td><td>Straight, fine</td><td>Straight, fine</td></tr>
+<tr><td>Price</td><td>Premium</td><td>Moderate</td></tr>
+<tr><td>Stain Needed</td><td>No</td><td>No (colour develops)</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Black Walnut is one of the only domestic North American species with naturally dark heartwood — most 'dark' furniture woods get their colour from stain.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Black Walnut</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/black_walnut_0.jpg" alt="Black Walnut"><img src="./images/black_walnut_1.jpg" alt="Black Walnut"><img src="./images/black_walnut_2.png" alt="Black Walnut"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Rich dark brown to purplish black; deepens with age</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale cream to light grey</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine and even with natural lustre</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Natural lustre under finish</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/black_walnut_0.jpg" alt="Black Walnut — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/black_walnut_1.jpg" alt="Black Walnut — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/black_walnut_2.png" alt="Black Walnut — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Why is Black Walnut so expensive?</div>
+        <div class="faq-a">Smaller trees, slower growth, and worldwide demand for its unique dark colour drive premium pricing.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Does Walnut darken or lighten over time?</div>
+        <div class="faq-a">Unlike most woods, Walnut actually lightens slightly over years of UV exposure.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Steamed vs natural Walnut?</div>
+        <div class="faq-a">Steaming blends sapwood/heartwood colour for uniformity. Natural has more dramatic contrast.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Black Walnut Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Cherry</h1>
+      <div class="subtitle">Prunus serotina &mdash; Eastern United States & Southern Canada</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/cherry_0.jpg" alt="Cherry"><img src="./images/cherry_1.png" alt="Cherry"><img src="./images/cherry_2.png" alt="Cherry"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">995 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.50 sg (moderate)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">Eastern United States & Southern Canada</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Straight and fine, with occasional curls or waves</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Light pinkish brown; matures to deep reddish brown<br><strong>Sapwood:</strong> Creamy white to pale yellow<br><strong>Texture:</strong> Smooth and satiny<br><strong>Lustre:</strong> Natural lustre with satiny finish</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Colour deepens beautifully with age</li><li>Excellent workability — forgiving wood</li><li>Balanced strength-to-weight ratio</li><li>Versatile for traditional & modern design</li><li>Premium appearance at moderate cost</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Fine furniture & cabinetry</li><li>Architectural millwork & paneling</li><li>Flooring & stair parts</li><li>Turned bowls & platters</li><li>Musical instruments</li><li>Decorative carving</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Excellent; machines smoothly with minimal tear-out<br>
+        <strong>Turning:</strong> Cuts cleanly and polishes easily on the lathe<br>
+        <strong>Gluing:</strong> Excellent adhesion and holding strength<br>
+        <strong>Finishing:</strong> Outstanding; accepts oils, varnishes, and stains evenly
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Softer than Oak or Maple (995 lbf Janka)</li><li>Prone to blotching if staining without conditioner</li><li>Colour variation between boards</li><li>Sapwood/heartwood contrast can be dramatic</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Always use pre-stain conditioner before staining</li><li>Clear finishes showcase the natural colour evolution</li><li>Oil finishes deepen the warm tones</li><li>UV exposure accelerates the darkening patina</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Expect colour to darken significantly over time</li><li>Mix boards from same lot for consistent ageing</li><li>Sapwood can be stained to blend or left for contrast</li><li>Select for grain figure if making show pieces</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 995 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 27.1%">
+        <span class="janka-bar-label">995</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Cherry Fresh vs Aged</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Fresh Cut</th><th>Aged (1-2 years)</th></tr>
+<tr><td>Colour</td><td>Light pinkish tan</td><td>Deep reddish brown</td></tr>
+<tr><td>Lustre</td><td>Moderate</td><td>Rich, warm glow</td></tr>
+<tr><td>Character</td><td>Subtle</td><td>Dramatic patina</td></tr>
+<tr><td>UV Effect</td><td>Accelerates change</td><td>Stabilizes over time</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Cherry vs Black Walnut</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Cherry</th><th>Black Walnut</th></tr>
+<tr><td>Janka Hardness</td><td>995 lbf</td><td>1,010 lbf</td></tr>
+<tr><td>Colour</td><td>Pinkish → deep red</td><td>Rich dark brown</td></tr>
+<tr><td>Workability</td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td>Weight</td><td>Moderate</td><td>Moderate-heavy</td></tr>
+<tr><td>Colour Change</td><td>Darkens significantly</td><td>Lightens slightly</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Cherry's colour transformation is one of woodworking's great pleasures — what begins as light pinkish tan gradually becomes a deep reddish brown patina over months and years.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Cherry</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/cherry_0.jpg" alt="Cherry"><img src="./images/cherry_1.png" alt="Cherry"><img src="./images/cherry_2.png" alt="Cherry"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Light pinkish brown; matures to deep reddish brown</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Creamy white to pale yellow</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Smooth and satiny</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Natural lustre with satiny finish</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/cherry_0.jpg" alt="Cherry — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/cherry_1.png" alt="Cherry — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/cherry_2.png" alt="Cherry — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Why does Cherry change colour?</div>
+        <div class="faq-a">UV light and oxidation cause natural chemical changes that deepen the pink tones into rich reddish brown.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">How do I prevent blotching?</div>
+        <div class="faq-a">Always apply a pre-stain wood conditioner before staining. Or use a gel stain for more control.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is Cherry durable enough for furniture?</div>
+        <div class="faq-a">Absolutely — it's been a premier furniture wood for centuries. It's softer than Oak but more than adequate.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Cherry Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Hard Maple</h1>
+      <div class="subtitle">Acer saccharum &mdash; North America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/hard_maple_0.png" alt="Hard Maple"><img src="./images/hard_maple_1.png" alt="Hard Maple"><img src="./images/hard_maple_2.png" alt="Hard Maple"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">1,450 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.63 sg (heavy and strong)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">North America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Generally straight; occasional curly, wavy, or birdseye figure</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Cream to light reddish brown with warm golden tone<br><strong>Sapwood:</strong> Nearly white to pale cream; often preferred for uniform look<br><strong>Texture:</strong> Fine and even; glass-like surfaces when sanded<br><strong>Lustre:</strong> Naturally bright and reflective</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Exceptional density and wear resistance</li><li>Fine grain for ultra-smooth finishes</li><li>Uniform appearance (sapwood)</li><li>Versatile for modern & traditional styles</li><li>Available with figured variants (curly, birdseye)</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Furniture & cabinetry</li><li>Cutting boards & butcher blocks</li><li>Flooring & stair treads</li><li>Wood turning projects</li><li>Musical instruments</li><li>Bowling lanes & gym floors</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Excellent with sharp tools; dull blades cause burning<br>
+        <strong>Turning:</strong> Produces crisp detail and clean edges on the lathe<br>
+        <strong>Gluing:</strong> Very good when pre-drilled; tight bonds<br>
+        <strong>Finishing:</strong> Outstanding; accepts oils and clear coats evenly
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Hardness requires consistently sharp tools</li><li>Dull blades cause burning or tear-out</li><li>Can be difficult to stain evenly</li><li>Heavy — plan for weight in large projects</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Use pre-stain conditioner if staining</li><li>Oil finishes give a warm, natural look</li><li>Sand to 320+ grit for glass-like surface</li><li>Water-based finishes keep colour light</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Select sapwood for uniform light appearance</li><li>Consider figured variants for decorative pieces</li><li>Prioritize sharp tooling before starting</li><li>FAS grade for clear, consistent boards</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 1,450 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 39.5%">
+        <span class="janka-bar-label">1,450</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Hard Maple vs Soft Maple</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Hard Maple</th><th>Soft Maple</th></tr>
+<tr><td>Janka Hardness</td><td>1,450 lbf</td><td>700–950 lbf</td></tr>
+<tr><td>Density</td><td>Higher</td><td>Lower</td></tr>
+<tr><td>Grain</td><td>Tighter, finer</td><td>Slightly coarser</td></tr>
+<tr><td>Workability</td><td>Needs sharp tools</td><td>Easier to work</td></tr>
+<tr><td>Price</td><td>Higher</td><td>More affordable</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Hard Maple vs Cherry</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Hard Maple</th><th>Cherry</th></tr>
+<tr><td>Janka Hardness</td><td>1,450 lbf</td><td>995 lbf</td></tr>
+<tr><td>Colour</td><td>Pale cream/white</td><td>Pinkish to deep red</td></tr>
+<tr><td>Grain Visibility</td><td>Subtle</td><td>Moderate</td></tr>
+<tr><td>Darkens Over Time</td><td>Slightly</td><td>Significantly</td></tr>
+<tr><td>Best For</td><td>Modern/clean look</td><td>Warm/traditional</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Hard Maple is the same wood found in classic bowling lanes, gym floors, and professional-grade cutting boards — it thrives under punishment.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Hard Maple</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/hard_maple_0.png" alt="Hard Maple"><img src="./images/hard_maple_1.png" alt="Hard Maple"><img src="./images/hard_maple_2.png" alt="Hard Maple"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Cream to light reddish brown with warm golden tone</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Nearly white to pale cream; often preferred for uniform look</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine and even; glass-like surfaces when sanded</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Naturally bright and reflective</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/hard_maple_0.png" alt="Hard Maple — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/hard_maple_1.png" alt="Hard Maple — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/hard_maple_2.png" alt="Hard Maple — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between Hard and Soft Maple?</div>
+        <div class="faq-a">Hard Maple (Sugar Maple) is denser, harder, and more wear-resistant. Soft Maple is easier to work but less durable.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Why does Hard Maple burn when cutting?</div>
+        <div class="faq-a">Its density creates friction — always use sharp blades and appropriate feed rates.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is Hard Maple good for beginners?</div>
+        <div class="faq-a">It's forgiving in design but demands sharp, well-maintained tools.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Hard Maple Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Hickory</h1>
+      <div class="subtitle">Carya spp. &mdash; Eastern North America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/hickory_0.jpg" alt="Hickory"><img src="./images/hickory_1.jpg" alt="Hickory"><img src="./images/hickory_2.png" alt="Hickory"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">1,820 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.72 sg (extremely dense)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">Eastern North America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Typically straight, often wavy or irregular</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Light to medium brown with reddish undertones<br><strong>Sapwood:</strong> Creamy white to pale tan; strong contrast with heartwood<br><strong>Texture:</strong> Medium to coarse<br><strong>Lustre:</strong> Moderate natural sheen</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Exceptional strength & impact resistance</li><li>Dramatic visual character (heartwood/sapwood contrast)</li><li>Outstanding wear resistance</li><li>Legendary durability for high-use items</li><li>Domestic availability and sustainability</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Cutting boards & butcher blocks</li><li>Cabinetry & furniture</li><li>Tool handles & mallets</li><li>Stair treads & flooring</li><li>Workbenches & shop fixtures</li><li>Tabletops & heavy-use surfaces</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Challenging but manageable with sharp tooling<br>
+        <strong>Turning:</strong> Good results with sharp tools; dramatic grain shows well<br>
+        <strong>Gluing:</strong> Excellent when pre-drilled for fasteners<br>
+        <strong>Finishing:</strong> Accepts stains and clear coats well
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Requires sharp tooling at all times</li><li>Can tear out with aggressive passes</li><li>Difficult to work with dull blades</li><li>Significant density variation between boards</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Use sharp blades — dull tools cause tear-out</li><li>Sand progressively to 220+ grit</li><li>Oil finishes highlight the grain contrast</li><li>Pre-drill for all fasteners</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Select kiln-dried stock for stability</li><li>Verify careful milling</li><li>Expect dramatic colour variation board-to-board</li><li>Calico (mixed heartwood/sapwood) adds character</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 1,820 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 49.6%">
+        <span class="janka-bar-label">1,820</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Hickory Heartwood vs Sapwood</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Heartwood</th><th>Sapwood</th></tr>
+<tr><td>Colour</td><td>Medium brown, reddish</td><td>Creamy white</td></tr>
+<tr><td>Hardness</td><td>Same (1,820 lbf)</td><td>Same (1,820 lbf)</td></tr>
+<tr><td>Character</td><td>Rich, warm</td><td>Clean, bright</td></tr>
+<tr><td>Popular For</td><td>Rustic furniture</td><td>Contemporary looks</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Hickory vs White Oak</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Hickory</th><th>White Oak</th></tr>
+<tr><td>Janka Hardness</td><td>1,820 lbf</td><td>1,360 lbf</td></tr>
+<tr><td>Impact Resistance</td><td>Exceptional</td><td>Good</td></tr>
+<tr><td>Weight</td><td>Heavier</td><td>Heavy</td></tr>
+<tr><td>Workability</td><td>Challenging</td><td>Moderate</td></tr>
+<tr><td>Colour Range</td><td>Wide variation</td><td>Consistent</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Hickory was the go-to wood for wagon wheels, ladder rungs, and tool handles throughout American history — failure simply wasn't acceptable.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Hickory</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/hickory_0.jpg" alt="Hickory"><img src="./images/hickory_1.jpg" alt="Hickory"><img src="./images/hickory_2.png" alt="Hickory"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Light to medium brown with reddish undertones</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Creamy white to pale tan; strong contrast with heartwood</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Medium to coarse</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Moderate natural sheen</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/hickory_0.jpg" alt="Hickory — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/hickory_1.jpg" alt="Hickory — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/hickory_2.png" alt="Hickory — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Is Hickory too hard to work by hand?</div>
+        <div class="faq-a">It's challenging but not impossible — keep tools sharp and take light passes.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Hickory vs Maple for cutting boards?</div>
+        <div class="faq-a">Both excellent. Hickory adds dramatic visual contrast; Maple offers a cleaner look.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Does Hickory stain well?</div>
+        <div class="faq-a">Yes, but test first — the sapwood and heartwood absorb stain differently.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Hickory Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Purpleheart</h1>
+      <div class="subtitle">Peltogyne spp. &mdash; Central & South America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/purpleheart_0.jpg" alt="Purpleheart"><img src="./images/purpleheart_1.png" alt="Purpleheart"><img src="./images/purpleheart_2.png" alt="Purpleheart"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">2,520 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.86 sg (very heavy; sinks in water)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">Central & South America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Generally straight, occasionally wavy or irregular</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Grayish-brown freshly cut; oxidizes to bright violet-purple<br><strong>Sapwood:</strong> Pale yellow or gray, narrow and distinct<br><strong>Texture:</strong> Fine to medium<br><strong>Lustre:</strong> Naturally high; silky, reflective surface</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Vibrant natural colour — no dye needed</li><li>Exceptional hardness (2,520 lbf Janka)</li><li>Impressive dimensional stability</li><li>Striking conversation-piece appearance</li><li>Purple tones last decades with UV protection</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Fine furniture & cabinetry</li><li>Turning blanks (bowls, pens, handles)</li><li>Flooring & stair treads</li><li>Instrument parts & inlays</li><li>Decorative panels & accents</li><li>Tables, countertops & art pieces</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Moderate; machines well but dulls blades faster<br>
+        <strong>Turning:</strong> Excellent; yields clean edges and glassy finish<br>
+        <strong>Gluing:</strong> Reliable with fresh surfaces and quality adhesive<br>
+        <strong>Finishing:</strong> Takes oils, varnishes, and waxes superbly
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Extremely dense — hard on tools</li><li>Dulls cutting edges faster than domestics</li><li>Heat from dull tools can darken colour</li><li>Expensive compared to domestic hardwoods</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Keep tools razor-sharp to avoid heat buildup</li><li>Use clear UV-protective finish to preserve purple</li><li>Avoid excessive sanding — heat darkens the wood</li><li>Alcohol-based shellac as sealer works well</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Source from reputable exotic wood suppliers</li><li>Verify sustainability certifications</li><li>Examine colour consistency before purchase</li><li>Account for extra tool sharpening costs</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 2,520 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 68.7%">
+        <span class="janka-bar-label">2,520</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Purpleheart Colour Stages</div>
+<table class="comp-table">
+<tr><th>Stage</th><th>Colour</th><th>Timeframe</th></tr>
+<tr><td>Fresh Cut</td><td>Grey-brown</td><td>Minutes</td></tr>
+<tr><td>Oxidized</td><td>Bright violet-purple</td><td>Hours to days</td></tr>
+<tr><td>Aged (unfinished)</td><td>Dark brown-purple</td><td>Years</td></tr>
+<tr><td>Aged (UV finish)</td><td>Rich plum-purple</td><td>Decades</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">Purpleheart vs Popular Hardwoods</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Purpleheart</th><th>Hard Maple</th></tr>
+<tr><td>Janka Hardness</td><td>2,520 lbf</td><td>1,450 lbf</td></tr>
+<tr><td>Density</td><td>Very heavy</td><td>Heavy</td></tr>
+<tr><td>Colour</td><td>Vivid purple</td><td>Cream/white</td></tr>
+<tr><td>Workability</td><td>Moderate (dense)</td><td>Good</td></tr>
+<tr><td>Price</td><td>Premium exotic</td><td>Moderate domestic</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> Purpleheart's colour comes from an oxidation reaction — freshly cut wood is grey-brown, then magically turns vivid purple over hours of air exposure.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>Purpleheart</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/purpleheart_0.jpg" alt="Purpleheart"><img src="./images/purpleheart_1.png" alt="Purpleheart"><img src="./images/purpleheart_2.png" alt="Purpleheart"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Grayish-brown freshly cut; oxidizes to bright violet-purple</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale yellow or gray, narrow and distinct</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine to medium</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Naturally high; silky, reflective surface</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/purpleheart_0.jpg" alt="Purpleheart — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/purpleheart_1.png" alt="Purpleheart — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/purpleheart_2.png" alt="Purpleheart — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">What causes Purpleheart's colour change?</div>
+        <div class="faq-a">Oxidation transforms the grey-brown freshly cut wood to bright violet-purple over hours of air exposure.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Is Purpleheart suitable for beginners?</div>
+        <div class="faq-a">It requires sharp tools and patience due to extreme density — better for intermediate+ woodworkers.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">How long does the purple colour last?</div>
+        <div class="faq-a">With UV-protective finish, the vibrant purple tones can last for decades.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    Purpleheart Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+<div class="page front">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>White Oak</h1>
+      <div class="subtitle">Quercus alba &mdash; North America</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/white_oak_0.png" alt="White Oak"><img src="./images/white_oak_1.jpg" alt="White Oak"><img src="./images/white_oak_2.jpg" alt="White Oak"></div>
+  </header>
+
+  <div class="stats-strip">
+    <div class="stat"><div class="label">Janka Hardness</div><div class="value">1,360 lbf</div></div>
+    <div class="stat"><div class="label">Density</div><div class="value">0.68 sg (heavy)</div></div>
+    <div class="stat"><div class="label">Origin</div><div class="value">North America</div></div>
+    <div class="stat"><div class="label">Grain</div><div class="value">Straight, tight, even; prominent rays when quarter-sawn</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="group">
+      <div class="group-header">About This Wood</div>
+
+      <div class="section-title">Appearance</div>
+      <div class="section-text"><strong>Heartwood:</strong> Light to medium brown with olive or golden undertones<br><strong>Sapwood:</strong> Pale cream to white<br><strong>Texture:</strong> Fine to medium, dense and consistent<br><strong>Lustre:</strong> Natural sheen; finishes beautifully in satin or matte</div>
+
+      <div class="section-title">Why Choose It</div>
+      <ul class="adv-list"><li>Exceptional durability & natural rot resistance</li><li>Neutral colour for classic & modern aesthetics</li><li>Strong and dimensionally stable</li><li>Distinctive ray fleck when quarter-sawn</li><li>Accepts oils, stains, and sealers beautifully</li></ul>
+
+      <div class="section-title">Common Uses</div>
+      <ul class="uses-list"><li>Fine furniture & cabinetry</li><li>Flooring & stair treads</li><li>Doors & architectural trim</li><li>Paneling & millwork</li><li>Barrel staves & boatbuilding</li><li>Turning & decorative accents</li></ul>
+    </div>
+
+    <div class="group">
+      <div class="group-header">Workshop Guide</div>
+
+      <div class="section-title">Working Properties</div>
+      <div class="section-text">
+        <strong>Workability:</strong> Very good with sharp tools; balances hardness with predictability<br>
+        <strong>Turning:</strong> Dense, smooth, easy to finish on the lathe<br>
+        <strong>Gluing:</strong> Excellent when surfaces are properly prepared<br>
+        <strong>Finishing:</strong> Outstanding stain and oil absorption
+      </div>
+
+      <div class="section-title">Watch Out For</div>
+      <ul class="chal-list"><li>Reacts with ferrous metals (tannin staining)</li><li>Heavier than many domestic hardwoods</li><li>Quarter-sawn stock commands premium pricing</li></ul>
+
+      <div class="section-title">Finishing Tips</div>
+      <ul class="tips-list"><li>Use water-based or oil-based finishes freely</li><li>Avoid ferrous clamps directly on wet surfaces</li><li>Pre-stain conditioner not typically needed</li><li>Quarter-sawn takes stain more evenly</li></ul>
+
+      <div class="section-title">Buying Tips</div>
+      <ul class="buying-list"><li>Available flat-sawn and quarter-sawn</li><li>Quarter-sawn offers ray fleck figure and stability</li><li>Check for consistent colour across boards</li><li>FAS grade for furniture; #1 Common for character</li></ul>
+    </div>
+  </div>
+
+  <div class="janka-strip">
+    <div class="janka-label">Janka Hardness &mdash; 1,360 lbf</div>
+    <div class="janka-bar-container">
+      <div class="janka-bar-fill" style="width: 37.1%">
+        <span class="janka-bar-label">1,360</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="comparisons">
+    <div>
+<div class="comp-label">Flat-Sawn vs Quarter-Sawn White Oak</div>
+<table class="comp-table">
+<tr><th>Property</th><th>Flat-Sawn</th><th>Quarter-Sawn</th></tr>
+<tr><td>Grain Pattern</td><td>Cathedral arches</td><td>Straight lines + ray fleck</td></tr>
+<tr><td>Stability</td><td>Good</td><td>Excellent</td></tr>
+<tr><td>Shrinkage</td><td>More movement</td><td>Minimal movement</td></tr>
+<tr><td>Price</td><td>Standard</td><td>Premium (15-30% more)</td></tr>
+<tr><td>Best For</td><td>Rustic/traditional</td><td>Modern/refined</td></tr>
+</table>
+</div>
+    <div>
+<div class="comp-label">White Oak vs Red Oak</div>
+<table class="comp-table">
+<tr><th>Property</th><th>White Oak</th><th>Red Oak</th></tr>
+<tr><td>Janka Hardness</td><td>1,360 lbf</td><td>1,290 lbf</td></tr>
+<tr><td>Colour</td><td>Olive/golden brown</td><td>Pinkish-red tone</td></tr>
+<tr><td>Rot Resistance</td><td>Excellent (tyloses)</td><td>Poor</td></tr>
+<tr><td>Grain</td><td>Tighter, finer</td><td>More open pores</td></tr>
+<tr><td>Outdoor Use</td><td>Yes</td><td>Not recommended</td></tr>
+</table>
+</div>
+  </div>
+
+  <footer class="fun-fact">
+    <strong>Did you know?</strong> White Oak's tyloses make it watertight — that's why it's the only wood suitable for whiskey and wine barrels.
+  </footer>
+</div>
+<div class="page back">
+  <header class="banner">
+    <div class="banner-text">
+      <h1>White Oak</h1>
+      <div class="subtitle">Visual Reference &amp; FAQ</div>
+    </div>
+    <div class="banner-thumbs"><img src="./images/white_oak_0.png" alt="White Oak"><img src="./images/white_oak_1.jpg" alt="White Oak"><img src="./images/white_oak_2.jpg" alt="White Oak"></div>
+  </header>
+
+  <div class="colour-ref">
+    <div class="colour-item"><div class="colour-label">Heartwood</div><div class="colour-value">Light to medium brown with olive or golden undertones</div></div>
+    <div class="colour-item"><div class="colour-label">Sapwood</div><div class="colour-value">Pale cream to white</div></div>
+    <div class="colour-item"><div class="colour-label">Texture</div><div class="colour-value">Fine to medium, dense and consistent</div></div>
+    <div class="colour-item"><div class="colour-label">Lustre</div><div class="colour-value">Natural sheen; finishes beautifully in satin or matte</div></div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo-card">
+        <img src="./images/white_oak_0.png" alt="White Oak — Product Example 1">
+        <div class="photo-caption">Product Example 1</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/white_oak_1.jpg" alt="White Oak — Product Example 2">
+        <div class="photo-caption">Product Example 2</div>
+      </div>
+<div class="photo-card">
+        <img src="./images/white_oak_2.jpg" alt="White Oak — Product Example 3">
+        <div class="photo-caption">Product Example 3</div>
+      </div>
+
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title" style="margin-bottom: 6px;">Frequently Asked Questions</div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Is White Oak waterproof?</div>
+        <div class="faq-a">Not waterproof, but its tyloses block liquid penetration, making it water-resistant and ideal for barrels and boats.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">Can I use White Oak outdoors?</div>
+        <div class="faq-a">Yes — it has natural rot resistance and is one of the best domestic hardwoods for exterior use.</div>
+      </div>
+<div class="faq-item">
+        <div class="faq-q">White Oak vs Red Oak for furniture?</div>
+        <div class="faq-a">White Oak is more versatile: tighter grain, better rot resistance, and a more neutral colour palette.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="source-bar">
+    White Oak Wood Species Reference Card &bull; Data compiled from industry sources &bull; For educational use
+  </footer>
+</div>
+</body>
+</html>
