@@ -26,15 +26,15 @@ CSS = """
 
 @page {
   size: letter;
-  margin: 0;
+  margin: 0.25in 0.2in;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: #f5f0ea;
   color: #2c1810;
-  font-size: 9.5pt;
-  line-height: 1.4;
+  font-size: 10pt;
+  line-height: 1.45;
   max-width: 8.5in;
   margin: 0 auto;
 }
@@ -65,7 +65,7 @@ body {
   margin-bottom: 1px;
 }
 .banner .subtitle {
-  font-size: 9.5pt;
+  font-size: 10pt;
   opacity: 0.85;
   font-style: italic;
 }
@@ -87,7 +87,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: #F5E6D3;
-  padding: 8px 20px;
+  padding: 7px 20px;
   border-bottom: 2px solid #C4973B;
 }
 .stat {
@@ -98,25 +98,25 @@ body {
   font-weight: 700;
   color: #6B4226;
   text-transform: uppercase;
-  font-size: 7pt;
+  font-size: 7.5pt;
   letter-spacing: 0.6px;
 }
 .stat .value {
   color: #3B2714;
   font-weight: 600;
-  font-size: 8.5pt;
+  font-size: 9pt;
 }
 
 /* ── Group header (About / Workshop) ── */
 .group-header {
-  font-size: 11pt;
+  font-size: 11.5pt;
   font-weight: 700;
   color: #3B2714;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 8px 0 6px 0;
+  padding: 8px 0 5px 0;
   border-bottom: 2.5px solid #C4973B;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 /* ── Two-column main layout ── */
@@ -139,14 +139,14 @@ body {
 
 /* ── Section headings ── */
 .section-title {
-  font-size: 8.5pt;
+  font-size: 9pt;
   font-weight: 700;
   color: #6B4226;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   border-bottom: 1.5px solid #d8cfc2;
   padding-bottom: 2px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   margin-top: 8px;
 }
 .section-title:first-of-type,
@@ -156,8 +156,8 @@ body {
 
 /* ── Body text ── */
 .section-text {
-  font-size: 8.5pt;
-  line-height: 1.4;
+  font-size: 9pt;
+  line-height: 1.45;
   color: #3a2a1a;
 }
 
@@ -169,7 +169,7 @@ body {
   border-bottom: 1px solid #e0d5c8;
 }
 .janka-strip .janka-label {
-  font-size: 7.5pt;
+  font-size: 8pt;
   font-weight: 700;
   color: #6B4226;
   text-transform: uppercase;
@@ -205,13 +205,13 @@ body {
 .comparisons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 8px 16px 10px 16px;
+  gap: 14px;
+  padding: 8px 16px 8px 16px;
 }
 .comp-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 8pt;
+  font-size: 8.5pt;
   margin-top: 3px;
 }
 .comp-table th {
@@ -220,18 +220,18 @@ body {
   padding: 4px 6px;
   text-align: left;
   font-weight: 600;
-  font-size: 7.5pt;
+  font-size: 8pt;
 }
 .comp-table td {
-  padding: 3.5px 6px;
+  padding: 3px 6px;
   border-bottom: 1px solid #ebe3d8;
-  font-size: 8pt;
+  font-size: 8.5pt;
 }
 .comp-table tr:nth-child(even) td {
   background: #faf6f0;
 }
 .comp-label {
-  font-size: 8pt;
+  font-size: 8.5pt;
   font-weight: 700;
   color: #6B4226;
   text-transform: uppercase;
@@ -242,12 +242,12 @@ body {
 .uses-list, .tips-list, .buying-list {
   list-style: none;
   padding: 0;
-  font-size: 8.5pt;
+  font-size: 9pt;
 }
 .uses-list li, .tips-list li, .buying-list li {
   padding: 1.5px 0 1.5px 12px;
   position: relative;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 .uses-list li::before {
   content: "\\2022";
@@ -273,12 +273,12 @@ body {
 .adv-list, .chal-list {
   list-style: none;
   padding: 0;
-  font-size: 8.5pt;
+  font-size: 9pt;
 }
 .adv-list li, .chal-list li {
   padding: 1.5px 0 1.5px 14px;
   position: relative;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 .adv-list li::before {
   content: "\\2713";
@@ -299,7 +299,7 @@ body {
 .fun-fact {
   background: #F5E6D3;
   padding: 8px 20px;
-  font-size: 8.5pt;
+  font-size: 9pt;
   color: #3B2714;
   border-top: 2px solid #C4973B;
   text-align: center;
@@ -325,14 +325,14 @@ body {
   border-bottom: 1px solid #e0d5c8;
 }
 .colour-item .colour-label {
-  font-size: 7pt;
+  font-size: 7.5pt;
   font-weight: 700;
   color: #6B4226;
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }
 .colour-item .colour-value {
-  font-size: 8.5pt;
+  font-size: 9pt;
   color: #3a2a1a;
   line-height: 1.35;
 }
@@ -357,7 +357,7 @@ body {
   display: block;
 }
 .photo-card .photo-caption {
-  font-size: 7.5pt;
+  font-size: 8pt;
   text-align: center;
   padding: 5px;
   color: #6B4226;
@@ -394,15 +394,15 @@ body {
   border-left: 3px solid #C4973B;
 }
 .faq-q {
-  font-size: 9pt;
+  font-size: 9.5pt;
   font-weight: 700;
   color: #3B2714;
   margin-bottom: 3px;
 }
 .faq-a {
-  font-size: 8.5pt;
+  font-size: 9pt;
   color: #5a4a3a;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* ── Source bar ── */
@@ -410,7 +410,7 @@ body {
   background: #3B2714;
   color: #F5E6D3;
   padding: 8px 20px;
-  font-size: 7.5pt;
+  font-size: 8pt;
   text-align: center;
   opacity: 0.9;
 }
@@ -422,9 +422,9 @@ body {
     max-width: none;
   }
   .page {
-    height: 11in;
-    min-height: 11in;
-    max-height: 11in;
+    height: 10.5in;
+    min-height: 10.5in;
+    max-height: 10.5in;
     overflow: hidden;
     page-break-after: always;
     page-break-inside: avoid;
