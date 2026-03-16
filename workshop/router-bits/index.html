@@ -203,37 +203,43 @@
     margin-bottom: 0.4rem;
   }
 
-  .specs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.15rem 0.75rem;
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 0.85rem;
-    margin-top: auto;
   }
 
-  .spec {
-    display: flex;
-    justify-content: space-between;
-    gap: 0.25rem;
+  .spec-table td {
+    padding: 0.1rem 0;
+    border-bottom: 1px dotted var(--border);
   }
 
-  .spec-label {
+  .spec-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .spec-table .spec-label {
     color: var(--text-muted);
     white-space: nowrap;
+    padding-right: 0.5rem;
   }
 
-  .spec-value {
+  .spec-table .spec-value {
     font-weight: 600;
-    text-align: right;
     white-space: nowrap;
+    text-align: right;
+    width: 1%;
   }
 
-  .spec-full {
-    grid-column: 1 / -1;
-  }
-
-  .spec-full .spec-value {
-    white-space: normal;
+  .spec-table .section-header td {
+    padding-top: 0.6rem;
+    padding-bottom: 0.1rem;
+    border-bottom: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
   }
 
   .summary {
@@ -385,22 +391,31 @@
       margin-bottom: 1pt;
     }
 
-    /* Specs grid */
-    .specs {
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5pt 3pt;
+    /* Specs table */
+    .spec-table {
       font-size: 5pt;
     }
-    .spec-label {
+    .spec-table td {
+      padding: 0.5pt 0;
+      border-bottom: 0.25pt dotted #ccc;
+    }
+    .spec-table tr:last-child td {
+      border-bottom: none;
+    }
+    .spec-table .spec-label {
       color: #666;
       font-size: 4.5pt;
     }
-    .spec-value {
+    .spec-table .spec-value {
       font-weight: 700;
       font-size: 5pt;
     }
-    .spec-full {
-      grid-column: 1 / -1;
+    .spec-table .section-header td {
+      padding-top: 1.5pt;
+      border-bottom: none;
+      font-size: 3.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     /* Force colors in print */
@@ -499,12 +514,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>3-Flute Compact Shallow Pattern</h3>
         <div class="model">US2188CSP</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/16"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -516,12 +533,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>3-Flute Compact Shallow Pattern</h3>
         <div class="model">US2250CSP</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -533,12 +552,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>3-Flute Compact Shallow Pattern</h3>
         <div class="model">US2313CSP</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">5/16"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/16"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -550,12 +571,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>3-Flute Compact Shallow Pattern</h3>
         <div class="model">US2375CSP</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">3/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -568,11 +591,13 @@
         <span class="tag tag-spoilboard">Spoilboard</span>
         <h3>Carbide Insert Slab Flattening / Spoilboard Bit Set</h3>
         <div class="model">US203SF-SET</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">14,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">14,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -585,11 +610,13 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>Carbide-Tipped Roundover</h3>
         <div class="model">US23RO-7PC (1/16")</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Radius</span><span class="spec-value">1/16"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/16"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -601,11 +628,13 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>Carbide-Tipped Roundover</h3>
         <div class="model">US23RO-7PC (3/32")</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Radius</span><span class="spec-value">3/32"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/32"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -617,11 +646,13 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>Carbide-Tipped Roundover</h3>
         <div class="model">US23RO-7PC (1/8")</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Radius</span><span class="spec-value">1/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -633,11 +664,13 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>Carbide-Tipped Roundover</h3>
         <div class="model">US23RO-7PC (3/16")</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Radius</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/16"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -649,11 +682,13 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>Carbide-Tipped Roundover</h3>
         <div class="model">US23RO-7PC (1/4")</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Radius</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -665,11 +700,13 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>Carbide-Tipped Roundover</h3>
         <div class="model">US23RO-7PC (3/8")</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Radius</span><span class="spec-value">3/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -682,11 +719,13 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>Carbide Tipped Mini-Round Over, 5-PC Set</h3>
         <div class="model">US2218ROSET-5PC</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Bearing</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -699,12 +738,14 @@
         <span class="tag tag-flush">Flush Trim</span>
         <h3>Solid Carbide 2-Flute Spiral Compression Flush Trim</h3>
         <div class="model">US5152FTC</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1-1/2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -717,12 +758,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>Carbide Tipped Plunging Pattern Bit</h3>
         <div class="model">US521110PLT</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1-1/8"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">16,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1-1/8"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -734,12 +777,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>Carbide Tipped Plunging Pattern Bit</h3>
         <div class="model">US520707PLT</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">16,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -752,12 +797,14 @@
         <span class="tag tag-vgroove">V-Groove</span>
         <h3>Carbide Tipped Folding Miter V-Groove</h3>
         <div class="model">US529015VG</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Angle</span><span class="spec-value">90&deg;</span></div>
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1-1/2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">15,900</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">15,900</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Angle</td><td class="spec-value">90&deg;</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1-1/2"</td></tr>
+        </table>
         </div>
       </div>
     </a>
@@ -769,12 +816,14 @@
         <span class="tag tag-vgroove">V-Groove</span>
         <h3>Carbide Tipped Folding Miter V-Groove</h3>
         <div class="model">US229010VG</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Angle</span><span class="spec-value">90&deg;</span></div>
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">18,600</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">18,600</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Angle</td><td class="spec-value">90&deg;</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1"</td></tr>
+        </table>
         </div>
       </div>
     </a>
@@ -787,12 +836,14 @@
         <span class="tag tag-flush">Flush Trim</span>
         <h3>Micro-Bearing Carbide-Tipped Flush Trim</h3>
         <div class="model">US221805FT</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -805,12 +856,14 @@
         <span class="tag tag-chamfer">Chamfer</span>
         <h3>Carbide-Tipped Chamfer Router Bit</h3>
         <div class="model">US534575CH</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Angle</span><span class="spec-value">45&deg;</span></div>
-          <div class="spec"><span class="spec-label">Cut Height</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">11,600</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">11,600</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Angle</td><td class="spec-value">45&deg;</td></tr>
+          <tr><td class="spec-label">Cut Height</td><td class="spec-value">3/4"</td></tr>
+        </table>
         </div>
       </div>
     </a>
@@ -823,12 +876,14 @@
         <span class="tag tag-compression">Compression</span>
         <h3>Solid Carbide 3-Flute Spiral Compression</h3>
         <div class="model">US5123C</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -840,12 +895,14 @@
         <span class="tag tag-compression">Compression</span>
         <h3>Solid Carbide 3-Flute Spiral Compression (Short Up-Cut)</h3>
         <div class="model">US5123CM</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">7/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">7/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -857,12 +914,14 @@
         <span class="tag tag-compression">Compression</span>
         <h3>Solid Carbide 3-Flute Spiral Compression</h3>
         <div class="model">US5163C</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1-5/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-5/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -874,12 +933,14 @@
         <span class="tag tag-compression">Compression</span>
         <h3>Solid Carbide 3-Flute Spiral Compression (Short Up-Cut)</h3>
         <div class="model">US5163CM</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1-1/2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -892,12 +953,14 @@
         <span class="tag tag-ballnose">Ball Nose</span>
         <h3>Solid Carbide Ball Nose</h3>
         <div class="model">US5313BNU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">5/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -909,12 +972,14 @@
         <span class="tag tag-ballnose">Ball Nose</span>
         <h3>Solid Carbide Ball Nose</h3>
         <div class="model">US5375BNU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/8"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1-1/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/8"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -926,12 +991,14 @@
         <span class="tag tag-ballnose">Ball Nose</span>
         <h3>Solid Carbide Ball Nose</h3>
         <div class="model">US5500BNU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -944,12 +1011,14 @@
         <span class="tag tag-spiral">Spiral</span>
         <h3>3-Flute Spiral Solid Carbide (Down-Cut)</h3>
         <div class="model">US5200TD</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -961,12 +1030,14 @@
         <span class="tag tag-spiral">Spiral</span>
         <h3>3-Flute Spiral Solid Carbide (Up-Cut)</h3>
         <div class="model">US5200TU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -979,12 +1050,14 @@
         <span class="tag tag-clearing">Clearing &amp; Pattern</span>
         <h3>Carbide Head, Clearing &amp; Pattern</h3>
         <div class="model">U51063CPB</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">5/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">16,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -997,12 +1070,14 @@
         <span class="tag tag-bowl">Bowl</span>
         <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
         <div class="model">US57125BD</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">5/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1014,12 +1089,14 @@
         <span class="tag tag-bowl">Bowl</span>
         <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
         <div class="model">US57188BD</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1031,12 +1108,14 @@
         <span class="tag tag-bowl">Bowl</span>
         <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
         <div class="model">US57250BD</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1049,12 +1128,14 @@
         <span class="tag tag-flush">Flush Trim</span>
         <h3>Solid Carbide Micro Bearing Flush Trim, Up-Cut</h3>
         <div class="model">US221875FTU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1067,12 +1148,14 @@
         <span class="tag tag-compression">Compression</span>
         <h3>Carbide Head Compression Pattern &amp; Flush Trim</h3>
         <div class="model">US225010PFC</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1085,12 +1168,14 @@
         <span class="tag tag-compression">Compression</span>
         <h3>Carbide Head Compression Pattern Bit</h3>
         <div class="model">US225010PC</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1103,12 +1188,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>Carbide Head Micro Bearing Pattern, Up-Cut</h3>
         <div class="model">US221825TPU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1120,12 +1207,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>Carbide Head Micro Bearing Pattern, Up-Cut</h3>
         <div class="model">US221850TPU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/16"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1137,12 +1226,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>Carbide Head Micro Bearing Pattern, Up-Cut</h3>
         <div class="model">US222525TPU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1154,12 +1245,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>Carbide Head Micro Bearing Pattern, Up-Cut</h3>
         <div class="model">US222550TPU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/2"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1171,12 +1264,14 @@
         <span class="tag tag-pattern">Pattern</span>
         <h3>Carbide Head Micro Bearing Pattern, Up-Cut</h3>
         <div class="model">US222575TPU</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1189,11 +1284,13 @@
         <span class="tag tag-vgroove">V-Groove</span>
         <h3>Carbide Tipped Folding Miter V-Groove, 2-PC Set</h3>
         <div class="model">USVGFM-2PC</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Angle</span><span class="spec-value">90&deg;</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4" &amp; 1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">15,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4" &amp; 1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">15,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Angle</td><td class="spec-value">90&deg;</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1206,10 +1303,10 @@
         <span class="tag tag-groove">Groove</span>
         <h3>V-Groove Finger Grip Groove</h3>
         <div class="model">US2FGV-3PC</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1222,10 +1319,10 @@
         <span class="tag tag-groove">Groove</span>
         <h3>Juice Groove Bit Set with Bushing</h3>
         <div class="model">US23JG-3PC</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/4"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">24,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1238,10 +1335,10 @@
         <span class="tag tag-rabbeting">Rabbeting</span>
         <h3>Carbide Insert 3-Flute Rabbeting Bit Deluxe Set</h3>
         <div class="model">US5RBT-DEL-SET</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">16,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1261,11 +1358,13 @@
         <span class="tag tag-chamfer">Chamfer</span>
         <h3>AstraHP Coated Chamfer Bit 45&deg;</h3>
         <div class="model">W-2292</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Angle</span><span class="spec-value">45&deg;</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">18,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">18,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Angle</td><td class="spec-value">45&deg;</td></tr>
+        </table>
         </div>
         </div>
     </a>
@@ -1277,12 +1376,14 @@
         <span class="tag tag-roundover">Roundover</span>
         <h3>1/8" Roundover Router Bit</h3>
         <div class="model">Whiteside 2005C</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Radius</span><span class="spec-value">1/8"</span></div>
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">3/4"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">16,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+        </table>
         </div>
       </div>
     </a>
@@ -1294,12 +1395,14 @@
         <span class="tag tag-flush">Flush Trim</span>
         <h3>Ultimate Flush Trim Router Bit</h3>
         <div class="model">Whiteside UDC9112</div>
-        <div class="specs">
-          <div class="spec"><span class="spec-label">Dia</span><span class="spec-value">7/8"</span></div>
-          <div class="spec"><span class="spec-label">Cut Length</span><span class="spec-value">2-1/8"</span></div>
-          <div class="spec"><span class="spec-label">Shank</span><span class="spec-value">1/2"</span></div>
-          <div class="spec"><span class="spec-label">Max RPM</span><span class="spec-value">14,000</span></div>
-        </div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">14,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">7/8"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2-1/8"</td></tr>
+        </table>
         </div>
       </div>
     </a>
