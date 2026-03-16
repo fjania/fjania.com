@@ -96,40 +96,39 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 0.75rem;
   }
 
   .card {
     background: var(--card-bg);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--border);
-    transition: box-shadow 0.2s, transform 0.1s;
+    transition: box-shadow 0.2s;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    min-height: 0;
   }
 
   .card:hover {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
 
   .card-img {
-    width: 100%;
-    height: 280px;
-    background: #fff;
+    width: 120px;
+    min-width: 120px;
+    background: #f8f8f6;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .card-img img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 140px;
     object-fit: contain;
   }
 
@@ -144,35 +143,36 @@
   }
 
   .bit-icon svg {
-    width: 80px;
-    height: 80px;
+    width: 48px;
+    height: 48px;
     opacity: 0.3;
   }
 
   .bit-icon span {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: #aaa;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
 
   .card-body {
-    padding: 1rem 1.25rem 1.25rem;
+    padding: 0.6rem 0.8rem;
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
   }
 
   .card-body .tag {
     display: inline-block;
-    padding: 0.15rem 0.6rem;
-    border-radius: 12px;
-    font-size: 0.7rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     align-self: flex-start;
   }
 
@@ -189,43 +189,51 @@
   .tag-clearing { background: var(--tag-clearing); }
 
   .card-body h3 {
-    font-size: 0.95rem;
+    font-size: 0.82rem;
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
     color: var(--text);
+    line-height: 1.3;
   }
 
   .card-body .model {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     color: var(--text-muted);
     font-family: 'SF Mono', 'Consolas', monospace;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
   }
 
   .specs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.3rem 1rem;
-    font-size: 0.82rem;
+    gap: 0.15rem 0.75rem;
+    font-size: 0.75rem;
     margin-top: auto;
   }
 
   .spec {
     display: flex;
     justify-content: space-between;
+    gap: 0.25rem;
   }
 
   .spec-label {
     color: var(--text-muted);
+    white-space: nowrap;
   }
 
   .spec-value {
     font-weight: 600;
     text-align: right;
+    white-space: nowrap;
   }
 
   .spec-full {
     grid-column: 1 / -1;
+  }
+
+  .spec-full .spec-value {
+    white-space: normal;
   }
 
   .summary {
@@ -239,10 +247,11 @@
     color: var(--text-muted);
   }
 
-  @media (max-width: 700px) {
-    body { padding: 1rem; }
+  @media (max-width: 500px) {
+    body { padding: 0.75rem; }
     .grid { grid-template-columns: 1fr; }
     header h1 { font-size: 1.5rem; }
+    .card-img { width: 90px; min-width: 90px; }
   }
 
   /* ===== PRINT STYLES ===== */
@@ -304,45 +313,44 @@
       break-after: avoid;
     }
 
-    /* 5-column grid */
+    /* 3-column grid for horizontal cards */
     .grid {
       display: grid !important;
-      grid-template-columns: repeat(5, 1fr) !important;
-      gap: 4pt !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 3pt !important;
     }
 
     /* Card styling for print */
     .card {
       border: 0.5pt solid #bbb;
-      border-radius: 3pt;
+      border-radius: 2pt;
       break-inside: avoid;
       page-break-inside: avoid;
       background: white;
       box-shadow: none !important;
       transform: none !important;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       overflow: hidden;
     }
 
     /* Image area — compact */
     .card-img {
-      min-height: 0 !important;
-      max-height: none;
-      height: 100pt;
+      width: 55pt !important;
+      min-width: 55pt !important;
       padding: 2pt;
       background: #f5f5f3;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
     .card-img img {
-      max-width: 95%;
-      max-height: 95%;
+      max-width: 100%;
+      max-height: 65pt;
       object-fit: contain;
     }
     .card-img.cdn-crop img {
-      max-width: 95%;
-      max-height: 95%;
+      max-width: 100%;
+      max-height: 65pt;
       clip-path: inset(0 0 10% 0);
     }
 
@@ -354,7 +362,7 @@
 
     /* Type tag */
     .card-body .tag {
-      font-size: 5pt;
+      font-size: 4.5pt;
       padding: 0.5pt 3pt;
       border-radius: 6pt;
       margin-bottom: 1pt;
@@ -364,32 +372,32 @@
 
     /* Title */
     .card-body h3 {
-      font-size: 6.5pt;
+      font-size: 5.5pt;
       font-weight: 700;
-      margin-bottom: 1pt;
+      margin-bottom: 0.5pt;
       line-height: 1.2;
     }
 
     /* Model number */
     .card-body .model {
-      font-size: 5.5pt;
+      font-size: 5pt;
       color: #555;
-      margin-bottom: 2pt;
+      margin-bottom: 1pt;
     }
 
     /* Specs grid */
     .specs {
       grid-template-columns: 1fr 1fr;
       gap: 0.5pt 3pt;
-      font-size: 5.5pt;
+      font-size: 5pt;
     }
     .spec-label {
       color: #666;
-      font-size: 5pt;
+      font-size: 4.5pt;
     }
     .spec-value {
       font-weight: 700;
-      font-size: 5.5pt;
+      font-size: 5pt;
     }
     .spec-full {
       grid-column: 1 / -1;
@@ -424,10 +432,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 200px;
     background: #eee;
     color: #bbb;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-style: italic;
   }
   a.card-link {
@@ -444,10 +451,10 @@
   .card::after {
     content: '\2197';
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 0.9rem;
-    color: #bbb;
+    top: 0.4rem;
+    right: 0.4rem;
+    font-size: 0.75rem;
+    color: #ccc;
     opacity: 0;
     transition: opacity 0.2s;
   }
@@ -461,7 +468,7 @@
 
 <header>
   <h1>Router Bit Inventory</h1>
-  <p>44 router bits across 13 types &mdash; Ultra&middot;Shear by Woodpeckers &amp; Whiteside AstraHP</p>
+  <p>47 router bits across 13 types &mdash; Ultra&middot;Shear by Woodpeckers &amp; Whiteside AstraHP</p>
 </header>
 
 <div class="filters">
