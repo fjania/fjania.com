@@ -25,6 +25,7 @@
     --tag-clearing: #495057;
     --tag-groove: #bc6c25;
     --tag-rabbeting: #582f0e;
+    --nav-width: 180px;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,7 +35,7 @@
     background: var(--bg);
     color: var(--text);
     line-height: 1.5;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem calc(var(--nav-width) + 3rem);
   }
 
   header {
@@ -57,36 +58,74 @@
     font-size: 0.95rem;
   }
 
-  .filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
-
-  .filter-btn {
-    padding: 0.4rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: 20px;
+  /* Left Nav */
+  .side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
     background: var(--card-bg);
-    cursor: pointer;
-    font-size: 0.85rem;
+    border-right: 1px solid var(--border);
+    padding: 1.5rem 0;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  .side-nav .nav-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: var(--text-muted);
-    transition: all 0.2s;
+    padding: 0 1rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.5rem;
   }
 
-  .filter-btn:hover, .filter-btn.active {
-    background: var(--accent);
-    color: white;
-    border-color: var(--accent);
+  .side-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.85rem;
+    transition: all 0.15s;
+    border-left: 3px solid transparent;
   }
 
-  .brand-section {
+  .side-nav a:hover {
+    background: var(--bg);
+    border-left-color: var(--accent);
+  }
+
+  .side-nav a.active {
+    background: var(--bg);
+    border-left-color: var(--accent);
+    font-weight: 600;
+  }
+
+  .side-nav .nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .side-nav .nav-count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  /* Type sections */
+  .type-section {
     margin-bottom: 2.5rem;
+    scroll-margin-top: 1rem;
   }
 
-  .brand-section h2 {
+  .type-section h2 {
     font-size: 1.3rem;
     color: var(--text);
     margin-bottom: 1rem;
@@ -109,6 +148,8 @@
     display: flex;
     flex-direction: row;
     min-height: 0;
+    cursor: pointer;
+    position: relative;
   }
 
   .card:hover {
@@ -132,27 +173,14 @@
     object-fit: contain;
   }
 
-  .bit-icon {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
+  .card-img.cdn-crop {
+    overflow: hidden;
   }
-
-  .bit-icon svg {
-    width: 48px;
-    height: 48px;
-    opacity: 0.3;
-  }
-
-  .bit-icon span {
-    font-size: 0.7rem;
-    color: #aaa;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  .card-img.cdn-crop img {
+    max-width: 92%;
+    max-height: 92%;
+    object-fit: contain;
+    clip-path: inset(0 0 10% 0);
   }
 
   .card-body {
@@ -187,6 +215,8 @@
   .tag-ballnose { background: var(--tag-ballnose); }
   .tag-spoilboard { background: var(--tag-spoilboard); }
   .tag-clearing { background: var(--tag-clearing); }
+  .tag-groove { background: var(--tag-groove); }
+  .tag-rabbeting { background: var(--tag-rabbeting); }
 
   .card-body h3 {
     font-size: 0.95rem;
@@ -242,6 +272,59 @@
     color: var(--text-muted);
   }
 
+  /* Manufacturer badge */
+  .brand-badge {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 1;
+  }
+
+  .card:hover .brand-badge {
+    opacity: 1;
+  }
+
+  .brand-badge.brand-wp {
+    background: #c0392b;
+  }
+
+  .brand-badge.brand-ws {
+    background: #2c3e50;
+  }
+
+  a.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+  }
+
+  .card::after {
+    content: '\2197';
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0.4rem;
+    font-size: 0.75rem;
+    color: #ccc;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .card:hover::after {
+    opacity: 1;
+  }
+
   .summary {
     text-align: center;
     margin-top: 2rem;
@@ -253,8 +336,10 @@
     color: var(--text-muted);
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
+    :root { --nav-width: 0px; }
     body { padding: 0.75rem; }
+    .side-nav { display: none; }
     .grid { grid-template-columns: 1fr; }
     header h1 { font-size: 1.5rem; }
     .card-img { width: 120px; min-width: 120px; }
@@ -262,13 +347,11 @@
 
   /* ===== PRINT STYLES ===== */
   @media print {
-    /* Page setup */
     @page {
       size: portrait;
       margin: 0.4in 0.3in;
     }
 
-    /* Reset layout chrome */
     body {
       padding: 0;
       background: white;
@@ -277,7 +360,6 @@
       color: #000;
     }
 
-    /* Compact header — inline with first row */
     header {
       margin-bottom: 0.15rem;
       padding-bottom: 0.1rem;
@@ -294,23 +376,20 @@
       margin-top: 0;
     }
 
-    /* Hide interactive elements */
-    .filters { display: none !important; }
+    .side-nav { display: none !important; }
     .summary { display: none !important; }
     .card::after { display: none !important; }
 
-    /* Remove link styling */
     a.card-link {
       display: contents;
       text-decoration: none;
       color: inherit;
     }
 
-    /* Brand section headers */
-    .brand-section {
+    .type-section {
       margin-bottom: 0.15rem;
     }
-    .brand-section h2 {
+    .type-section h2 {
       font-size: 8pt;
       color: #000;
       margin-bottom: 0.1rem;
@@ -319,14 +398,12 @@
       break-after: avoid;
     }
 
-    /* 3-column grid for horizontal cards */
     .grid {
       display: grid !important;
       grid-template-columns: repeat(3, 1fr) !important;
       gap: 3pt !important;
     }
 
-    /* Card styling for print */
     .card {
       border: 0.5pt solid #bbb;
       border-radius: 2pt;
@@ -340,7 +417,15 @@
       overflow: hidden;
     }
 
-    /* Image area — compact */
+    .brand-badge {
+      width: 12pt;
+      height: 12pt;
+      font-size: 4pt;
+      opacity: 1;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
     .card-img {
       width: 55pt !important;
       min-width: 55pt !important;
@@ -360,13 +445,11 @@
       clip-path: inset(0 0 10% 0);
     }
 
-    /* Card body — ultra compact */
     .card-body {
       padding: 2pt 3pt 3pt;
       flex: 1;
     }
 
-    /* Type tag */
     .card-body .tag {
       font-size: 4.5pt;
       padding: 0.5pt 3pt;
@@ -376,7 +459,6 @@
       print-color-adjust: exact;
     }
 
-    /* Title */
     .card-body h3 {
       font-size: 5.5pt;
       font-weight: 700;
@@ -384,14 +466,12 @@
       line-height: 1.2;
     }
 
-    /* Model number */
     .card-body .model {
       font-size: 5pt;
       color: #555;
       margin-bottom: 1pt;
     }
 
-    /* Specs table */
     .spec-table {
       font-size: 5pt;
     }
@@ -418,31 +498,16 @@
       text-transform: uppercase;
     }
 
-    /* Force colors in print */
     .tag-pattern, .tag-flush, .tag-roundover, .tag-compression,
     .tag-spiral, .tag-vgroove, .tag-chamfer, .tag-bowl,
     .tag-ballnose, .tag-spoilboard, .tag-clearing,
-    .tag-groove, .tag-rabbeting {
+    .tag-groove, .tag-rabbeting,
+    .brand-badge.brand-wp, .brand-badge.brand-ws {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
   }
 
-
-  .tag-groove { background: var(--tag-groove); }
-  .tag-rabbeting { background: var(--tag-rabbeting); }
-
-
-  .card-img.cdn-crop {
-    overflow: hidden;
-  }
-  .card-img.cdn-crop img {
-    max-width: 92%;
-    max-height: 92%;
-    object-fit: contain;
-    /* Clip bottom 10% of image to hide manufacturer text caption */
-    clip-path: inset(0 0 10% 0);
-  }
   .card-img.placeholder {
     display: flex;
     align-items: center;
@@ -452,63 +517,39 @@
     font-size: 0.75rem;
     font-style: italic;
   }
-  a.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: contents;
-  }
-
-  .card {
-    cursor: pointer;
-    position: relative;
-  }
-
-  .card::after {
-    content: '\2197';
-    position: absolute;
-    top: 0.4rem;
-    right: 0.4rem;
-    font-size: 0.75rem;
-    color: #ccc;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-
-  .card:hover::after {
-    opacity: 1;
-  }
 </style>
 </head>
 <body>
 
+<nav class="side-nav">
+  <div class="nav-title">Bit Types</div>
+  <a href="#pattern"><span class="nav-dot" style="background:var(--tag-pattern)"></span> Pattern <span class="nav-count">12</span></a>
+  <a href="#flush"><span class="nav-dot" style="background:var(--tag-flush)"></span> Flush Trim <span class="nav-count">5</span></a>
+  <a href="#roundover"><span class="nav-dot" style="background:var(--tag-roundover)"></span> Roundover <span class="nav-count">12</span></a>
+  <a href="#compression"><span class="nav-dot" style="background:var(--tag-compression)"></span> Compression <span class="nav-count">6</span></a>
+  <a href="#spiral"><span class="nav-dot" style="background:var(--tag-spiral)"></span> Spiral <span class="nav-count">2</span></a>
+  <a href="#vgroove"><span class="nav-dot" style="background:var(--tag-vgroove)"></span> V-Groove <span class="nav-count">2</span></a>
+  <a href="#chamfer"><span class="nav-dot" style="background:var(--tag-chamfer)"></span> Chamfer <span class="nav-count">2</span></a>
+  <a href="#bowl"><span class="nav-dot" style="background:var(--tag-bowl)"></span> Bowl <span class="nav-count">3</span></a>
+  <a href="#ballnose"><span class="nav-dot" style="background:var(--tag-ballnose)"></span> Ball Nose <span class="nav-count">3</span></a>
+  <a href="#groove"><span class="nav-dot" style="background:var(--tag-groove)"></span> Groove <span class="nav-count">6</span></a>
+  <a href="#spoilboard"><span class="nav-dot" style="background:var(--tag-spoilboard)"></span> Spoilboard <span class="nav-count">1</span></a>
+  <a href="#rabbeting"><span class="nav-dot" style="background:var(--tag-rabbeting)"></span> Rabbeting <span class="nav-count">1</span></a>
+</nav>
+
 <header>
   <h1>Router Bit Inventory</h1>
-  <p>54 router bits across 13 types &mdash; Ultra&middot;Shear by Woodpeckers &amp; Whiteside AstraHP</p>
+  <p>55 router bits across 12 types &mdash; Ultra&middot;Shear by Woodpeckers &amp; Whiteside</p>
 </header>
 
-<div class="filters">
-  <button class="filter-btn active" onclick="filterBits('all')">All</button>
-  <button class="filter-btn" onclick="filterBits('pattern')">Pattern</button>
-  <button class="filter-btn" onclick="filterBits('flush')">Flush Trim</button>
-  <button class="filter-btn" onclick="filterBits('roundover')">Roundover</button>
-  <button class="filter-btn" onclick="filterBits('compression')">Compression</button>
-  <button class="filter-btn" onclick="filterBits('spiral')">Spiral</button>
-  <button class="filter-btn" onclick="filterBits('vgroove')">V-Groove</button>
-  <button class="filter-btn" onclick="filterBits('chamfer')">Chamfer</button>
-  <button class="filter-btn" onclick="filterBits('bowl')">Bowl</button>
-  <button class="filter-btn" onclick="filterBits('ballnose')">Ball Nose</button>
-  <button class="filter-btn" onclick="filterBits('spoilboard')">Spoilboard</button>
-  <button class="filter-btn" onclick="filterBits('groove')">Groove</button>
-  <button class="filter-btn" onclick="filterBits('rabbeting')">Rabbeting</button>
-</div>
-
-<div class="brand-section">
-  <h2>Ultra&middot;Shear&trade; by Woodpeckers</h2>
+<!-- ==================== PATTERN (12) ==================== -->
+<div class="type-section" id="pattern">
+  <h2>Pattern</h2>
   <div class="grid">
 
-    <!-- Compact Shallow Pattern Bits -->
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2188CSP.jpg" alt="US2188CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -518,7 +559,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/16"</td></tr>
         </table>
@@ -528,6 +568,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2250CSP.jpg" alt="US2250CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -537,7 +578,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/4"</td></tr>
         </table>
@@ -547,6 +587,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2313CSP.jpg" alt="US2313CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -556,7 +597,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/16"</td></tr>
         </table>
@@ -566,6 +606,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2375CSP.jpg" alt="US2375CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -575,7 +616,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/8"</td></tr>
         </table>
@@ -583,253 +623,9 @@
         </div>
     </a>
 
-    <!-- Spoilboard Bit -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-insert-slab-flattening-spoilboard-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="spoilboard">
-      <div class="card-img"><img src="bit-images/US203SF-SET.jpg" alt="US203SF-SET" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-spoilboard">Spoilboard</span>
-        <h3>Carbide Insert Slab Flattening / Spoilboard Bit Set</h3>
-        <div class="model">US203SF-SET</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">14,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">2"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Roundover Bits (from US23RO-7PC Set) -->
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US23RO-116.jpg" alt="Roundover 1/16 radius" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide-Tipped Roundover</h3>
-        <div class="model">US23RO-7PC (1/16")</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">1/16"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US23RO-332.jpg" alt="Roundover 3/32 radius" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide-Tipped Roundover</h3>
-        <div class="model">US23RO-7PC (3/32")</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">3/32"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US23RO-18.jpg" alt="Roundover 1/8 radius" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide-Tipped Roundover</h3>
-        <div class="model">US23RO-7PC (1/8")</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US23RO-316.jpg" alt="Roundover 3/16 radius" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide-Tipped Roundover</h3>
-        <div class="model">US23RO-7PC (3/16")</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">3/16"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US23RO-14.jpg" alt="Roundover 1/4 radius" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide-Tipped Roundover</h3>
-        <div class="model">US23RO-7PC (1/4")</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">1/4"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US23RO-38.jpg" alt="Roundover 3/8 radius" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide-Tipped Roundover</h3>
-        <div class="model">US23RO-7PC (3/8")</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">3/8"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Micro-Bearing Roundover Bits (from US2218ROSET-5PC set) -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US220618RO.jpg" alt="US220618RO" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
-        <div class="model">US220618RO</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">1/16"</td></tr>
-          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US221218RO.jpg" alt="US221218RO" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
-        <div class="model">US221218RO</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
-          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US221818RO.jpg" alt="US221818RO" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
-        <div class="model">US221818RO</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">3/16"</td></tr>
-          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US222518RO.jpg" alt="US222518RO" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
-        <div class="model">US222518RO</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">1/4"</td></tr>
-          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/US223718RO.jpg" alt="US223718RO" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
-        <div class="model">US223718RO</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">3/8"</td></tr>
-          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Flush Trim Compression -->
-    <a href="https://www.woodpeck.com/ultra-shear-half-inch-spiral-compression-flush-trim-router-bits.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="flush compression">
-      <div class="card-img"><img src="bit-images/US5152FTC.jpg" alt="US5152FTC" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-flush">Flush Trim</span>
-        <h3>Solid Carbide 2-Flute Spiral Compression Flush Trim</h3>
-        <div class="model">US5152FTC</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/2"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Plunging Pattern Bits -->
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-plunging-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US521110PLT.jpg" alt="US521110PLT" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -839,7 +635,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1-1/8"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
         </table>
@@ -849,6 +644,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-plunging-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US520707PLT.jpg" alt="US520707PLT" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -858,7 +654,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
         </table>
@@ -866,262 +661,9 @@
         </div>
     </a>
 
-    <!-- V-Groove Bits -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-folding-miter-v-groove-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="vgroove">
-      <div class="card-img"><img src="bit-images/US529015VG.jpg" alt="US529015VG" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-vgroove">V-Groove</span>
-        <h3>Carbide Tipped Folding Miter V-Groove</h3>
-        <div class="model">US529015VG</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">15,900</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Angle</td><td class="spec-value">90&deg;</td></tr>
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1-1/2"</td></tr>
-        </table>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-folding-miter-v-groove-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="vgroove">
-      <div class="card-img"><img src="bit-images/US229010VG.jpg" alt="US229010VG" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-vgroove">V-Groove</span>
-        <h3>Carbide Tipped Folding Miter V-Groove</h3>
-        <div class="model">US229010VG</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">18,600</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Angle</td><td class="spec-value">90&deg;</td></tr>
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1"</td></tr>
-        </table>
-        </div>
-      </div>
-    </a>
-
-    <!-- Micro Flush Trim -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-flush-trim-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="flush">
-      <div class="card-img"><img src="bit-images/US221805FT.jpg" alt="US221805FT" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-flush">Flush Trim</span>
-        <h3>Micro-Bearing Carbide-Tipped Flush Trim</h3>
-        <div class="model">US221805FT</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/2"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Chamfer -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-50-shank-chamfer-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="chamfer">
-      <div class="card-img"><img src="bit-images/US534575CH.jpg" alt="US534575CH" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-chamfer">Chamfer</span>
-        <h3>Carbide-Tipped Chamfer Router Bit</h3>
-        <div class="model">US534575CH</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">11,600</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Angle</td><td class="spec-value">45&deg;</td></tr>
-          <tr><td class="spec-label">Cut Height</td><td class="spec-value">3/4"</td></tr>
-        </table>
-        </div>
-      </div>
-    </a>
-
-    <!-- Compression Spirals -->
-    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="compression">
-      <div class="card-img"><img src="bit-images/US5123C.jpg" alt="US5123C" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-compression">Compression</span>
-        <h3>Solid Carbide 3-Flute Spiral Compression</h3>
-        <div class="model">US5123C</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="compression">
-      <div class="card-img"><img src="bit-images/US5123CM.jpg" alt="US5123CM" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-compression">Compression</span>
-        <h3>Solid Carbide 3-Flute Spiral Compression (Short Up-Cut)</h3>
-        <div class="model">US5123CM</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">7/8"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="compression">
-      <div class="card-img"><img src="bit-images/US5163C.jpg" alt="US5163C" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-compression">Compression</span>
-        <h3>Solid Carbide 3-Flute Spiral Compression</h3>
-        <div class="model">US5163C</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-5/8"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="compression">
-      <div class="card-img"><img src="bit-images/US5163CM.jpg" alt="US5163CM" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-compression">Compression</span>
-        <h3>Solid Carbide 3-Flute Spiral Compression (Short Up-Cut)</h3>
-        <div class="model">US5163CM</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/2"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Ball Nose -->
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="ballnose">
-      <div class="card-img"><img src="bit-images/US5313BNU.jpg" alt="US5313BNU" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-ballnose">Ball Nose</span>
-        <h3>Solid Carbide Ball Nose</h3>
-        <div class="model">US5313BNU</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="ballnose">
-      <div class="card-img"><img src="bit-images/US5375BNU.jpg" alt="US5375BNU" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-ballnose">Ball Nose</span>
-        <h3>Solid Carbide Ball Nose</h3>
-        <div class="model">US5375BNU</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/8"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/8"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="ballnose">
-      <div class="card-img"><img src="bit-images/US5500BNU.jpg" alt="US5500BNU" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-ballnose">Ball Nose</span>
-        <h3>Solid Carbide Ball Nose</h3>
-        <div class="model">US5500BNU</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Spiral Up/Down -->
-    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-3-flute-router-bits.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="spiral">
-      <div class="card-img"><img src="bit-images/US5200TD.jpg" alt="US5200TD" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-spiral">Spiral</span>
-        <h3>3-Flute Spiral Solid Carbide (Down-Cut)</h3>
-        <div class="model">US5200TD</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-3-flute-router-bits.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="spiral">
-      <div class="card-img"><img src="bit-images/US5200TU.jpg" alt="US5200TU" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-spiral">Spiral</span>
-        <h3>3-Flute Spiral Solid Carbide (Up-Cut)</h3>
-        <div class="model">US5200TU</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Clearing & Pattern -->
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-clearing-pattern-router-bits-inch-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern clearing">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/U51063CPB.jpg" alt="U51063CPB" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-clearing">Clearing &amp; Pattern</span>
@@ -1131,7 +673,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
         </table>
@@ -1139,127 +680,9 @@
         </div>
     </a>
 
-    <!-- Bowl Bits -->
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="bowl">
-      <div class="card-img"><img src="bit-images/US57125BD.jpg" alt="US57125BD" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-bowl">Bowl</span>
-        <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
-        <div class="model">US57125BD</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="bowl">
-      <div class="card-img"><img src="bit-images/US57188BD.jpg" alt="US57188BD" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-bowl">Bowl</span>
-        <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
-        <div class="model">US57188BD</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="bowl">
-      <div class="card-img"><img src="bit-images/US57250BD.jpg" alt="US57250BD" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-bowl">Bowl</span>
-        <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
-        <div class="model">US57250BD</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Micro Bearing Flush Trim Up-Cut -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-flush-trim-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="flush">
-      <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us221875ftu_1.jpg" alt="US221875FTU" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-flush">Flush Trim</span>
-        <h3>Solid Carbide Micro Bearing Flush Trim, Up-Cut</h3>
-        <div class="model">US221875FTU</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Compression Pattern & Flush Trim -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-head-compression-pattern-flush-trim-router-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="compression pattern flush">
-      <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us225010pfc_1.jpg" alt="US225010PFC" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-compression">Compression</span>
-        <h3>Carbide Head Compression Pattern &amp; Flush Trim</h3>
-        <div class="model">US225010PFC</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Compression Pattern Bit -->
-    <a href="https://www.woodpeck.com/ultra-shear-carbide-head-25-shank-compression-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="compression pattern">
-      <div class="card-img"><img src="bit-images/US225010PC.jpg" alt="US225010PC" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-compression">Compression</span>
-        <h3>Carbide Head Compression Pattern Bit</h3>
-        <div class="model">US225010PC</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <!-- Micro Bearing Pattern Bits (5-PC Set) -->
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us221825tpu_1.jpg" alt="US221825TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -1269,7 +692,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/4"</td></tr>
         </table>
@@ -1279,6 +701,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us221850tpu_1.jpg" alt="US221850TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -1288,7 +711,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/2"</td></tr>
         </table>
@@ -1298,6 +720,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us222525tpu_1.jpg" alt="US222525TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -1307,7 +730,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/4"</td></tr>
         </table>
@@ -1317,6 +739,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us222550tpu_1.jpg" alt="US222550TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -1326,7 +749,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/2"</td></tr>
         </table>
@@ -1336,6 +758,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us222575tpu_1.jpg" alt="US222575TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -1345,7 +768,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
           <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
         </table>
@@ -1353,9 +775,739 @@
         </div>
     </a>
 
-    <!-- V-Groove Finger Grip Groove Bits (from US2FGV-3PC set) -->
+  </div>
+</div>
+
+<!-- ==================== FLUSH TRIM (5) ==================== -->
+<div class="type-section" id="flush">
+  <h2>Flush Trim</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-half-inch-spiral-compression-flush-trim-router-bits.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="flush compression">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5152FTC.jpg" alt="US5152FTC" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Solid Carbide 2-Flute Spiral Compression Flush Trim</h3>
+        <div class="model">US5152FTC</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/2"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-flush-trim-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="flush">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US221805FT.jpg" alt="US221805FT" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Micro-Bearing Carbide-Tipped Flush Trim</h3>
+        <div class="model">US221805FT</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1/2"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-flush-trim-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="flush">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us221875ftu_1.jpg" alt="US221875FTU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Solid Carbide Micro Bearing Flush Trim, Up-Cut</h3>
+        <div class="model">US221875FTU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://bitsbits.com/product/udc9112-ultimate/" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="flush">
+      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <div class="card-img"><img src="bit-images/W-UDC9112.jpg" alt="Whiteside UDC9112" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Ultimate Flush Trim Router Bit</h3>
+        <div class="model">Whiteside UDC9112</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">14,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">7/8"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2-1/8"</td></tr>
+        </table>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.whitesiderouterbits.com/products/2702" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="flush">
+      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <div class="card-img"><img src="bit-images/2702.jpg" alt="Whiteside 2702" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Combo Flush Trim, Top &amp; Bottom Bearings</h3>
+        <div class="model">Whiteside 2702</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== ROUNDOVER (12) ==================== -->
+<div class="type-section" id="roundover">
+  <h2>Roundover</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US23RO-116.jpg" alt="Roundover 1/16 radius" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide-Tipped Roundover</h3>
+        <div class="model">US23RO-7PC (1/16")</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US23RO-332.jpg" alt="Roundover 3/32 radius" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide-Tipped Roundover</h3>
+        <div class="model">US23RO-7PC (3/32")</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/32"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US23RO-18.jpg" alt="Roundover 1/8 radius" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide-Tipped Roundover</h3>
+        <div class="model">US23RO-7PC (1/8")</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US23RO-316.jpg" alt="Roundover 3/16 radius" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide-Tipped Roundover</h3>
+        <div class="model">US23RO-7PC (3/16")</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US23RO-14.jpg" alt="Roundover 1/4 radius" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide-Tipped Roundover</h3>
+        <div class="model">US23RO-7PC (1/4")</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/4"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US23RO-38.jpg" alt="Roundover 3/8 radius" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide-Tipped Roundover</h3>
+        <div class="model">US23RO-7PC (3/8")</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US220618RO.jpg" alt="US220618RO" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
+        <div class="model">US220618RO</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/16"</td></tr>
+          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US221218RO.jpg" alt="US221218RO" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
+        <div class="model">US221218RO</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
+          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US221818RO.jpg" alt="US221818RO" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
+        <div class="model">US221818RO</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US222518RO.jpg" alt="US222518RO" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
+        <div class="model">US222518RO</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US223718RO.jpg" alt="US223718RO" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>Carbide Tipped Micro-Bearing Roundover</h3>
+        <div class="model">US223718RO</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">3/8"</td></tr>
+          <tr><td class="spec-label">Bearing</td><td class="spec-value">3/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://bitsbits.com/product/2005c/" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="roundover">
+      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <div class="card-img"><img src="bit-images/W-2005C.jpg" alt="Whiteside 2005C" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-roundover">Roundover</span>
+        <h3>1/8" Roundover Router Bit</h3>
+        <div class="model">Whiteside 2005C</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+        </table>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== COMPRESSION (6) ==================== -->
+<div class="type-section" id="compression">
+  <h2>Compression</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="compression">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5123C.jpg" alt="US5123C" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-compression">Compression</span>
+        <h3>Solid Carbide 3-Flute Spiral Compression</h3>
+        <div class="model">US5123C</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="compression">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5123CM.jpg" alt="US5123CM" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-compression">Compression</span>
+        <h3>Solid Carbide 3-Flute Spiral Compression (Short Up-Cut)</h3>
+        <div class="model">US5123CM</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">7/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="compression">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5163C.jpg" alt="US5163C" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-compression">Compression</span>
+        <h3>Solid Carbide 3-Flute Spiral Compression</h3>
+        <div class="model">US5163C</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-5/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="compression">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5163CM.jpg" alt="US5163CM" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-compression">Compression</span>
+        <h3>Solid Carbide 3-Flute Spiral Compression (Short Up-Cut)</h3>
+        <div class="model">US5163CM</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/2"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-head-compression-pattern-flush-trim-router-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="compression pattern flush">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us225010pfc_1.jpg" alt="US225010PFC" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-compression">Compression</span>
+        <h3>Carbide Head Compression Pattern &amp; Flush Trim</h3>
+        <div class="model">US225010PFC</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-head-25-shank-compression-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="compression pattern">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US225010PC.jpg" alt="US225010PC" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-compression">Compression</span>
+        <h3>Carbide Head Compression Pattern Bit</h3>
+        <div class="model">US225010PC</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== SPIRAL (2) ==================== -->
+<div class="type-section" id="spiral">
+  <h2>Spiral</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-3-flute-router-bits.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="spiral">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5200TD.jpg" alt="US5200TD" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-spiral">Spiral</span>
+        <h3>3-Flute Spiral Solid Carbide (Down-Cut)</h3>
+        <div class="model">US5200TD</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-3-flute-router-bits.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="spiral">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5200TU.jpg" alt="US5200TU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-spiral">Spiral</span>
+        <h3>3-Flute Spiral Solid Carbide (Up-Cut)</h3>
+        <div class="model">US5200TU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== V-GROOVE (2) ==================== -->
+<div class="type-section" id="vgroove">
+  <h2>V-Groove</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-folding-miter-v-groove-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="vgroove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US529015VG.jpg" alt="US529015VG" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-vgroove">V-Groove</span>
+        <h3>Carbide Tipped Folding Miter V-Groove</h3>
+        <div class="model">US529015VG</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">15,900</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Angle</td><td class="spec-value">90&deg;</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1-1/2"</td></tr>
+        </table>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-folding-miter-v-groove-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="vgroove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US229010VG.jpg" alt="US229010VG" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-vgroove">V-Groove</span>
+        <h3>Carbide Tipped Folding Miter V-Groove</h3>
+        <div class="model">US229010VG</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">18,600</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Angle</td><td class="spec-value">90&deg;</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== CHAMFER (2) ==================== -->
+<div class="type-section" id="chamfer">
+  <h2>Chamfer</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-50-shank-chamfer-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="chamfer">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US534575CH.jpg" alt="US534575CH" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-chamfer">Chamfer</span>
+        <h3>Carbide-Tipped Chamfer Router Bit</h3>
+        <div class="model">US534575CH</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">11,600</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Angle</td><td class="spec-value">45&deg;</td></tr>
+          <tr><td class="spec-label">Cut Height</td><td class="spec-value">3/4"</td></tr>
+        </table>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://bitsbits.com/product/2292-chamfer/" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="chamfer">
+      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <div class="card-img"><img src="bit-images/W-2292.jpg" alt="W-2292" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-chamfer">Chamfer</span>
+        <h3>AstraHP Coated Chamfer Bit 45&deg;</h3>
+        <div class="model">W-2292</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">18,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Angle</td><td class="spec-value">45&deg;</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== BOWL (3) ==================== -->
+<div class="type-section" id="bowl">
+  <h2>Bowl</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="bowl">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US57125BD.jpg" alt="US57125BD" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-bowl">Bowl</span>
+        <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
+        <div class="model">US57125BD</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="bowl">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US57188BD.jpg" alt="US57188BD" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-bowl">Bowl</span>
+        <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
+        <div class="model">US57188BD</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/4"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="bowl">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US57250BD.jpg" alt="US57250BD" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-bowl">Bowl</span>
+        <h3>Carbide Headed 3-Flute Deep Reach Bowl</h3>
+        <div class="model">US57250BD</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== BALL NOSE (3) ==================== -->
+<div class="type-section" id="ballnose">
+  <h2>Ball Nose</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="ballnose">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5313BNU.jpg" alt="US5313BNU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-ballnose">Ball Nose</span>
+        <h3>Solid Carbide Ball Nose</h3>
+        <div class="model">US5313BNU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">5/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="ballnose">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5375BNU.jpg" alt="US5375BNU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-ballnose">Ball Nose</span>
+        <h3>Solid Carbide Ball Nose</h3>
+        <div class="model">US5375BNU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/8"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="ballnose">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US5500BNU.jpg" alt="US5500BNU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-ballnose">Ball Nose</span>
+        <h3>Solid Carbide Ball Nose</h3>
+        <div class="model">US5500BNU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">24,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/2"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== GROOVE (6) ==================== -->
+<div class="type-section" id="groove">
+  <h2>Groove</h2>
+  <div class="grid">
+
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-v-groove-finger-grip-groove-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove vgroove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2207FGV.jpg" alt="US2207FGV" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1365,7 +1517,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value"><em>Unlisted</em></td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Board Thickness</td><td class="spec-value">3/4"</td></tr>
           <tr><td class="spec-label">Cutting Height</td><td class="spec-value">3/8"</td></tr>
         </table>
@@ -1375,6 +1526,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-v-groove-finger-grip-groove-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove vgroove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2210FGV.jpg" alt="US2210FGV" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1384,7 +1536,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value"><em>Unlisted</em></td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Board Thickness</td><td class="spec-value">1"-1.5"</td></tr>
           <tr><td class="spec-label">Cutting Height</td><td class="spec-value">9/16"</td></tr>
         </table>
@@ -1394,6 +1545,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-v-groove-finger-grip-groove-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove vgroove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US5212FGV.jpg" alt="US5212FGV" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1403,7 +1555,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value"><em>Unlisted</em></td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Board Thickness</td><td class="spec-value">1"-1.25"</td></tr>
           <tr><td class="spec-label">Cutting Height</td><td class="spec-value">13/16"</td></tr>
         </table>
@@ -1411,9 +1562,9 @@
         </div>
     </a>
 
-    <!-- Juice Groove Bits (from US23JG-3PC set) -->
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-round-nose-juice-groove-router-bits-3-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2337JG.jpg" alt="US2337JG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1423,7 +1574,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value"><em>Unlisted</em></td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Profile</td><td class="spec-value">Round Nose</td></tr>
           <tr><td class="spec-label">Nose Diameter</td><td class="spec-value">3/8"</td></tr>
         </table>
@@ -1433,6 +1583,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-round-nose-juice-groove-router-bits-3-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US2350JG.jpg" alt="US2350JG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1442,7 +1593,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value"><em>Unlisted</em></td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Profile</td><td class="spec-value">Round Nose</td></tr>
           <tr><td class="spec-label">Nose Diameter</td><td class="spec-value">1/2"</td></tr>
         </table>
@@ -1452,6 +1602,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-round-nose-juice-groove-router-bits-3-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US232545JG.jpg" alt="US232545JG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1461,7 +1612,6 @@
           <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
           <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value"><em>Unlisted</em></td></tr>
           <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
           <tr><td class="spec-label">Profile</td><td class="spec-value">V-Groove</td></tr>
           <tr><td class="spec-label">Radius</td><td class="spec-value">1/4"</td></tr>
           <tr><td class="spec-label">Angle</td><td class="spec-value">45&deg;</td></tr>
@@ -1470,9 +1620,43 @@
         </div>
     </a>
 
-    <!-- Rabbeting Bit Deluxe Set -->
+  </div>
+</div>
+
+<!-- ==================== SPOILBOARD (1) ==================== -->
+<div class="type-section" id="spoilboard">
+  <h2>Spoilboard</h2>
+  <div class="grid">
+
+    <a href="https://www.woodpeck.com/ultra-shear-carbide-insert-slab-flattening-spoilboard-bit.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card" data-type="spoilboard">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <div class="card-img"><img src="bit-images/US203SF-SET.jpg" alt="US203SF-SET" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-spoilboard">Spoilboard</span>
+        <h3>Carbide Insert Slab Flattening / Spoilboard Bit Set</h3>
+        <div class="model">US203SF-SET</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">14,000</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">2"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- ==================== RABBETING (1) ==================== -->
+<div class="type-section" id="rabbeting">
+  <h2>Rabbeting</h2>
+  <div class="grid">
+
     <a href="https://www.woodpeck.com/ultra-shear-carbide-insert-rabbeting-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="rabbeting">
+      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img cdn-crop"><img src="https://www.woodpeck.com/media/catalog/product/cache/9c3c55fbde84edb4ff714d8ce8947ea6/u/s/us5rbt-del-set_1.jpg" alt="US5RBT-DEL-SET" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-rabbeting">Rabbeting</span>
@@ -1489,89 +1673,26 @@
   </div>
 </div>
 
-<!-- Whiteside Section -->
-<div class="brand-section">
-  <h2>Whiteside (AstraHP Coated)</h2>
-  <div class="grid">
-
-    <a href="https://bitsbits.com/product/2292-chamfer/" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="chamfer">
-      <div class="card-img"><img src="bit-images/W-2292.jpg" alt="W-2292" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-chamfer">Chamfer</span>
-        <h3>AstraHP Coated Chamfer Bit 45&deg;</h3>
-        <div class="model">W-2292</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">18,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Angle</td><td class="spec-value">45&deg;</td></tr>
-        </table>
-        </div>
-        </div>
-    </a>
-
-    <a href="https://bitsbits.com/product/2005c/" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
-      <div class="card-img"><img src="bit-images/W-2005C.jpg" alt="Whiteside 2005C" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-roundover">Roundover</span>
-        <h3>1/8" Roundover Router Bit</h3>
-        <div class="model">Whiteside 2005C</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">16,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Radius</td><td class="spec-value">1/8"</td></tr>
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/4"</td></tr>
-        </table>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://bitsbits.com/product/udc9112-ultimate/" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="flush">
-      <div class="card-img"><img src="bit-images/W-UDC9112.jpg" alt="Whiteside UDC9112" loading="lazy"></div>
-      <div class="card-body">
-        <span class="tag tag-flush">Flush Trim</span>
-        <h3>Ultimate Flush Trim Router Bit</h3>
-        <div class="model">Whiteside UDC9112</div>
-        <table class="spec-table">
-          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/2"</td></tr>
-          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">14,000</td></tr>
-          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
-
-          <tr><td class="spec-label">Diameter</td><td class="spec-value">7/8"</td></tr>
-          <tr><td class="spec-label">Cut Length</td><td class="spec-value">2-1/8"</td></tr>
-        </table>
-        </div>
-      </div>
-    </a>
-
-  </div>
-</div>
-
 <div class="summary">
-  54 router bits &bull; 13 types &bull; 2 brands &bull; Last updated March 2026
+  55 router bits &bull; 12 types &bull; 2 brands &bull; Last updated March 2026
 </div>
 
 <script>
-function filterBits(type) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  document.querySelectorAll('.card').forEach(card => {
-    const types = card.dataset.type.split(' ');
-    if (type === 'all' || types.some(t => t === type)) {
-      card.style.display = '';
-      if (card.closest('.card-link')) card.closest('.card-link').style.display = '';
-    } else {
-      card.style.display = 'none';
-      if (card.closest('.card-link')) card.closest('.card-link').style.display = 'none';
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('.type-section');
+const navLinks = document.querySelectorAll('.side-nav a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const active = document.querySelector('.side-nav a[href="#' + entry.target.id + '"]');
+      if (active) active.classList.add('active');
     }
   });
-}
+}, { rootMargin: '-10% 0px -80% 0px' });
+
+sections.forEach(s => observer.observe(s));
 </script>
 
 </body>
