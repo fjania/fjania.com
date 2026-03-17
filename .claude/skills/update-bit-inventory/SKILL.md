@@ -76,7 +76,7 @@ Change `<div class="card"` to `<div class="card shipped"` and add `<span class="
 Remove `backorder` or `shipped` from the card's class list, and remove the `<span class="order-stamp">...</span>` element.
 
 **To add a new bit** that isn't in the inventory yet:
-Tell the user which SKUs were ordered but aren't in the inventory. Ask if they want to add them. If yes, use the `/fetch-bit-image` skill to get the product image, then add the card to the appropriate type section following the existing HTML structure.
+Invoke `/add-bit {SKU} --status backorder --status-date {date}` (or `--status shipped --status-date {date}`) for each new SKU found in orders. The add-bit skill handles vendor resolution, image fetching, and card insertion automatically.
 
 ## Step 5: Summarize changes
 
