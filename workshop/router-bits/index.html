@@ -156,6 +156,40 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
 
+  .card.backorder,
+  .card.shipped {
+    position: relative;
+  }
+  .card.backorder {
+    opacity: 0.5;
+  }
+  .card.shipped {
+    opacity: 0.65;
+  }
+  .card.backorder .order-stamp,
+  .card.shipped .order-stamp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-18deg);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #b45309;
+    border: 3px solid #b45309;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    background: rgba(255,255,255,0.85);
+  }
+  .card.shipped .order-stamp {
+    color: #1d4ed8;
+    border-color: #1d4ed8;
+  }
+
   .card-img {
     width: 180px;
     min-width: 180px;
@@ -519,6 +553,10 @@
   <a href="#groove"><span class="nav-dot" style="background:var(--tag-groove)"></span> Groove <span class="nav-count">6</span></a>
   <a href="#spoilboard"><span class="nav-dot" style="background:var(--tag-spoilboard)"></span> Spoilboard <span class="nav-count">1</span></a>
   <a href="#rabbeting"><span class="nav-dot" style="background:var(--tag-rabbeting)"></span> Rabbeting <span class="nav-count">1</span></a>
+  <div class="nav-title" style="margin-top: 1.2rem;">Status</div>
+  <a href="#" class="status-filter active" data-status="in-stock"><span class="nav-dot" style="background:#16a34a"></span> In Inventory</a>
+  <a href="#" class="status-filter active" data-status="shipped"><span class="nav-dot" style="background:#1d4ed8"></span> Shipped</a>
+  <a href="#" class="status-filter active" data-status="backorder"><span class="nav-dot" style="background:#b45309"></span> Backorder</a>
 </nav>
 
 <header>
@@ -979,7 +1017,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
+    <div class="card backorder" data-type="roundover">
+      <span class="order-stamp">Backorder ~Apr 2</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US220618RO.jpg" alt="US220618RO" loading="lazy"></div>
       <div class="card-body">
@@ -998,7 +1037,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
+    <div class="card backorder" data-type="roundover">
+      <span class="order-stamp">Backorder ~Apr 2</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US221218RO.jpg" alt="US221218RO" loading="lazy"></div>
       <div class="card-body">
@@ -1017,7 +1057,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
+    <div class="card backorder" data-type="roundover">
+      <span class="order-stamp">Backorder ~Apr 2</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US221818RO.jpg" alt="US221818RO" loading="lazy"></div>
       <div class="card-body">
@@ -1036,7 +1077,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
+    <div class="card backorder" data-type="roundover">
+      <span class="order-stamp">Backorder ~Apr 2</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US222518RO.jpg" alt="US222518RO" loading="lazy"></div>
       <div class="card-body">
@@ -1055,7 +1097,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="roundover">
+    <div class="card backorder" data-type="roundover">
+      <span class="order-stamp">Backorder ~Apr 2</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US223718RO.jpg" alt="US223718RO" loading="lazy"></div>
       <div class="card-body">
@@ -1196,7 +1239,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-25-shank-compression-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="compression pattern">
+    <div class="card backorder" data-type="compression pattern">
+      <span class="order-stamp">Backorder ~Mar 30</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US225010PC.jpg" alt="US225010PC" loading="lazy"></div>
       <div class="card-body">
@@ -1360,7 +1404,8 @@
   <div class="grid">
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="bowl">
+    <div class="card shipped" data-type="bowl">
+      <span class="order-stamp">Shipped Mar 16</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US57125BD.jpg" alt="US57125BD" loading="lazy"></div>
       <div class="card-body">
@@ -1379,7 +1424,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="bowl">
+    <div class="card shipped" data-type="bowl">
+      <span class="order-stamp">Shipped Mar 16</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US57188BD.jpg" alt="US57188BD" loading="lazy"></div>
       <div class="card-body">
@@ -1398,7 +1444,8 @@
     </a>
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
-    <div class="card" data-type="bowl">
+    <div class="card shipped" data-type="bowl">
+      <span class="order-stamp">Shipped Mar 16</span>
       <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
       <div class="card-img"><img src="bit-images/US57250BD.jpg" alt="US57250BD" loading="lazy"></div>
       <div class="card-body">
@@ -1664,7 +1711,7 @@
 <script>
 // Highlight active nav link on scroll
 const sections = document.querySelectorAll('.type-section');
-const navLinks = document.querySelectorAll('.side-nav a');
+const navLinks = document.querySelectorAll('.side-nav a:not(.status-filter)');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -1677,6 +1724,34 @@ const observer = new IntersectionObserver(entries => {
 }, { rootMargin: '-10% 0px -80% 0px' });
 
 sections.forEach(s => observer.observe(s));
+
+// Status filtering (multiselect)
+function applyStatusFilters() {
+  const active = new Set(
+    [...document.querySelectorAll('.status-filter.active')].map(l => l.dataset.status)
+  );
+  document.querySelectorAll('.card-link').forEach(cardLink => {
+    const card = cardLink.querySelector('.card');
+    if (!card) return;
+    let status = 'in-stock';
+    if (card.classList.contains('backorder')) status = 'backorder';
+    else if (card.classList.contains('shipped')) status = 'shipped';
+    cardLink.style.display = active.has(status) ? '' : 'none';
+  });
+  // Hide empty type sections
+  document.querySelectorAll('.type-section').forEach(section => {
+    const visible = section.querySelectorAll('.card-link:not([style*="display: none"])');
+    section.style.display = visible.length ? '' : 'none';
+  });
+}
+
+document.querySelectorAll('.status-filter').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    link.classList.toggle('active');
+    applyStatusFilters();
+  });
+});
 </script>
 
 </body>
