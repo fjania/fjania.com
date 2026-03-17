@@ -7,6 +7,7 @@ LOCAL_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 rsync -avz --delete \
   --exclude='deploy.sh' \
+  --exclude='trim-image.sh' \
   --exclude='bit-images-backup/' \
   --exclude='.DS_Store' \
   "$LOCAL_DIR/" "$REMOTE:$REMOTE_PATH/"
