@@ -100,10 +100,33 @@
     border-left-color: var(--accent);
   }
 
+  .nav-brand-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    vertical-align: -2px;
+  }
+
   .side-nav a.active {
     background: var(--bg);
     border-left-color: var(--accent);
     font-weight: 600;
+  }
+
+  .side-nav a.nav-filter {
+    font-weight: 400;
+    border-left-color: transparent;
+    background: none;
+  }
+
+  .side-nav a.nav-filter.active {
+    font-weight: 600;
+    background: none;
+    border-left-color: transparent;
+  }
+
+  .side-nav a.nav-filter:not(.active) {
+    opacity: 0.4;
   }
 
   .side-nav .nav-dot {
@@ -157,7 +180,8 @@
   }
 
   .card.backorder,
-  .card.shipped {
+  .card.shipped,
+  .card.ordered {
     position: relative;
   }
   .card.backorder {
@@ -166,8 +190,12 @@
   .card.shipped {
     opacity: 0.65;
   }
+  .card.ordered {
+    opacity: 0.6;
+  }
   .card.backorder .order-stamp,
-  .card.shipped .order-stamp {
+  .card.shipped .order-stamp,
+  .card.ordered .order-stamp {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -188,6 +216,10 @@
   .card.shipped .order-stamp {
     color: #1d4ed8;
     border-color: #1d4ed8;
+  }
+  .card.ordered .order-stamp {
+    color: #059669;
+    border-color: #059669;
   }
 
   .card-img {
@@ -303,14 +335,7 @@
     right: 0.4rem;
     width: 22px;
     height: 22px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.55rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    color: white;
+    border-radius: 3px;
     opacity: 0.7;
     transition: opacity 0.2s;
     z-index: 1;
@@ -318,14 +343,6 @@
 
   .card:hover .brand-badge {
     opacity: 1;
-  }
-
-  .brand-badge.brand-wp {
-    background: #c0392b;
-  }
-
-  .brand-badge.brand-ws {
-    background: #2c3e50;
   }
 
   a.card-link {
@@ -446,10 +463,7 @@
     .brand-badge {
       width: 14pt;
       height: 14pt;
-      font-size: 5pt;
       opacity: 1;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
     }
 
     .card-img {
@@ -528,11 +542,13 @@
     }
 
     .card.backorder,
-    .card.shipped {
+    .card.shipped,
+    .card.ordered {
       opacity: 1 !important;
     }
     .card.backorder .order-stamp,
-    .card.shipped .order-stamp {
+    .card.shipped .order-stamp,
+    .card.ordered .order-stamp {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -540,8 +556,7 @@
     .tag-pattern, .tag-flush, .tag-roundover, .tag-compression,
     .tag-spiral, .tag-vgroove, .tag-chamfer, .tag-bowl,
     .tag-ballnose, .tag-spoilboard, .tag-clearing,
-    .tag-groove, .tag-rabbeting,
-    .brand-badge.brand-wp, .brand-badge.brand-ws {
+    .tag-groove, .tag-rabbeting {
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
@@ -563,7 +578,7 @@
 <nav class="side-nav">
   <div class="nav-title">Bit Types</div>
   <a href="#pattern"><span class="nav-dot" style="background:var(--tag-pattern)"></span> Pattern <span class="nav-count">12</span></a>
-  <a href="#flush"><span class="nav-dot" style="background:var(--tag-flush)"></span> Flush Trim <span class="nav-count">5</span></a>
+  <a href="#flush"><span class="nav-dot" style="background:var(--tag-flush)"></span> Flush Trim <span class="nav-count">9</span></a>
   <a href="#roundover"><span class="nav-dot" style="background:var(--tag-roundover)"></span> Roundover <span class="nav-count">12</span></a>
   <a href="#compression"><span class="nav-dot" style="background:var(--tag-compression)"></span> Compression <span class="nav-count">6</span></a>
   <a href="#spiral"><span class="nav-dot" style="background:var(--tag-spiral)"></span> Spiral <span class="nav-count">2</span></a>
@@ -574,15 +589,22 @@
   <a href="#groove"><span class="nav-dot" style="background:var(--tag-groove)"></span> Groove <span class="nav-count">6</span></a>
   <a href="#spoilboard"><span class="nav-dot" style="background:var(--tag-spoilboard)"></span> Spoilboard <span class="nav-count">1</span></a>
   <a href="#rabbeting"><span class="nav-dot" style="background:var(--tag-rabbeting)"></span> Rabbeting <span class="nav-count">1</span></a>
+  <div class="nav-title" style="margin-top: 1.2rem;">Shank</div>
+  <a href="#" class="nav-filter active" data-group="shank" data-value="1/4"><span class="nav-dot" style="background:#6b7280"></span> 1/4"</a>
+  <a href="#" class="nav-filter active" data-group="shank" data-value="1/2"><span class="nav-dot" style="background:#6b7280"></span> 1/2"</a>
+  <div class="nav-title" style="margin-top: 1.2rem;">Manufacturer</div>
+  <a href="#" class="nav-filter active" data-group="brand" data-value="wp"><img src="bit-images/brand-wp.jpg" class="nav-brand-icon"> Woodpeckers</a>
+  <a href="#" class="nav-filter active" data-group="brand" data-value="ws"><img src="bit-images/brand-ws.jpg" class="nav-brand-icon"> Whiteside</a>
   <div class="nav-title" style="margin-top: 1.2rem;">Status</div>
-  <a href="#" class="status-filter active" data-status="in-stock"><span class="nav-dot" style="background:#16a34a"></span> In Inventory</a>
-  <a href="#" class="status-filter active" data-status="shipped"><span class="nav-dot" style="background:#1d4ed8"></span> Shipped</a>
-  <a href="#" class="status-filter active" data-status="backorder"><span class="nav-dot" style="background:#b45309"></span> Backorder</a>
+  <a href="#" class="nav-filter active" data-group="status" data-value="in-stock"><span class="nav-dot" style="background:#16a34a"></span> In Inventory</a>
+  <a href="#" class="nav-filter active" data-group="status" data-value="shipped"><span class="nav-dot" style="background:#1d4ed8"></span> Shipped</a>
+  <a href="#" class="nav-filter active" data-group="status" data-value="ordered"><span class="nav-dot" style="background:#059669"></span> Ordered</a>
+  <a href="#" class="nav-filter active" data-group="status" data-value="backorder"><span class="nav-dot" style="background:#b45309"></span> Backorder</a>
 </nav>
 
 <header>
   <h1>Router Bit Inventory</h1>
-  <p>55 router bits across 12 types &mdash; Ultra&middot;Shear by Woodpeckers &amp; Whiteside</p>
+  <p>59 router bits across 12 types &mdash; Ultra&middot;Shear by Woodpeckers &amp; Whiteside</p>
 </header>
 
 <!-- ==================== PATTERN (12) ==================== -->
@@ -592,7 +614,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2188CSP.jpg" alt="US2188CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -611,7 +633,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2250CSP.jpg" alt="US2250CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -630,7 +652,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2313CSP.jpg" alt="US2313CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -649,7 +671,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-compact-shallow-pattern-router-bit-14-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2375CSP.jpg" alt="US2375CSP" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -668,7 +690,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-plunging-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US521110PLT.jpg" alt="US521110PLT" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -687,7 +709,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-plunging-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US520707PLT.jpg" alt="US520707PLT" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -706,7 +728,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-clearing-pattern-router-bits-inch-shank.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern clearing">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/U51063CPB.jpg" alt="U51063CPB" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-clearing">Clearing &amp; Pattern</span>
@@ -725,7 +747,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US221825TPU.jpg" alt="US221825TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -744,7 +766,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US221850TPU.jpg" alt="US221850TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -763,7 +785,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US222525TPU.jpg" alt="US222525TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -782,7 +804,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US222550TPU.jpg" alt="US222550TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -801,7 +823,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="pattern">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US222575TPU.jpg" alt="US222575TPU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-pattern">Pattern</span>
@@ -821,14 +843,14 @@
   </div>
 </div>
 
-<!-- ==================== FLUSH TRIM (5) ==================== -->
+<!-- ==================== FLUSH TRIM (9) ==================== -->
 <div class="type-section" id="flush">
   <h2>Flush Trim</h2>
   <div class="grid">
 
     <a href="https://www.woodpeck.com/ultra-shear-half-inch-spiral-compression-flush-trim-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="flush compression">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5152FTC.jpg" alt="US5152FTC" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-flush">Flush Trim</span>
@@ -847,7 +869,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-flush-trim-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="flush">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US221805FT.jpg" alt="US221805FT" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-flush">Flush Trim</span>
@@ -866,7 +888,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-flush-trim-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="flush">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US221875FTU.jpg" alt="US221875FTU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-flush">Flush Trim</span>
@@ -885,7 +907,7 @@
 
     <a href="https://bitsbits.com/product/udc9112-ultimate/" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="flush">
-      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <img class="brand-badge" src="bit-images/brand-ws.jpg" alt="Whiteside" title="Whiteside">
       <div class="card-img"><img src="bit-images/W-UDC9112.jpg" alt="Whiteside UDC9112" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-flush">Flush Trim</span>
@@ -904,7 +926,7 @@
 
     <a href="https://www.whitesiderouterbits.com/products/2702" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="flush">
-      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <img class="brand-badge" src="bit-images/brand-ws.jpg" alt="Whiteside" title="Whiteside">
       <div class="card-img"><img src="bit-images/2702.jpg" alt="Whiteside 2702" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-flush">Flush Trim</span>
@@ -921,6 +943,82 @@
       </div>
     </a>
 
+    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-flush-trim-14-bits.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card ordered" data-type="flush">
+      <span class="order-stamp">Ordered Mar 17</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
+      <div class="card-img"><img src="bit-images/US2100FTU.jpg" alt="US2100FTU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Solid Carbide Up-Cut Spiral Flush Trim</h3>
+        <div class="model">US2100FTU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-flush-trim-14-bits.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card ordered" data-type="flush">
+      <span class="order-stamp">Ordered Mar 17</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
+      <div class="card-img"><img src="bit-images/US2150FTU.jpg" alt="US2150FTU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Solid Carbide Up-Cut Spiral Flush Trim</h3>
+        <div class="model">US2150FTU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">1/4"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">1-1/2"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-flush-trim-2-flute-316-bits.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card backorder" data-type="flush">
+      <span class="order-stamp">Backorder ~Mar 31</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
+      <div class="card-img"><img src="bit-images/US221837FTU.jpg" alt="US221837FTU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Solid Carbide Micro-Bearing Up-Cut Flush Trim</h3>
+        <div class="model">US221837FTU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">3/8"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
+    <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-flush-trim-2-flute-316-bits.html" target="_blank" rel="noopener" class="card-link">
+    <div class="card backorder" data-type="flush">
+      <span class="order-stamp">Backorder ~Mar 31</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
+      <div class="card-img"><img src="bit-images/US221856FTU.jpg" alt="US221856FTU" loading="lazy"></div>
+      <div class="card-body">
+        <span class="tag tag-flush">Flush Trim</span>
+        <h3>Solid Carbide Micro-Bearing Up-Cut Flush Trim</h3>
+        <div class="model">US221856FTU</div>
+        <table class="spec-table">
+          <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">1/4"</td></tr>
+          <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+          <tr><td class="spec-label">Diameter</td><td class="spec-value">3/16"</td></tr>
+          <tr><td class="spec-label">Cut Length</td><td class="spec-value">9/16"</td></tr>
+        </table>
+        </div>
+        </div>
+    </a>
+
   </div>
 </div>
 
@@ -931,7 +1029,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="roundover">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US23RO-116.jpg" alt="Roundover 1/16 radius" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -949,7 +1047,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="roundover">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US23RO-332.jpg" alt="Roundover 3/32 radius" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -967,7 +1065,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="roundover">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US23RO-18.jpg" alt="Roundover 1/8 radius" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -985,7 +1083,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="roundover">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US23RO-316.jpg" alt="Roundover 3/16 radius" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1003,7 +1101,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="roundover">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US23RO-14.jpg" alt="Roundover 1/4 radius" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1021,7 +1119,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="roundover">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US23RO-38.jpg" alt="Roundover 3/8 radius" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1040,7 +1138,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card backorder" data-type="roundover">
       <span class="order-stamp">Backorder ~Apr 2</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US220618RO.jpg" alt="US220618RO" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1060,7 +1158,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card backorder" data-type="roundover">
       <span class="order-stamp">Backorder ~Apr 2</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US221218RO.jpg" alt="US221218RO" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1080,7 +1178,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card backorder" data-type="roundover">
       <span class="order-stamp">Backorder ~Apr 2</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US221818RO.jpg" alt="US221818RO" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1099,8 +1197,8 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card backorder" data-type="roundover">
-      <span class="order-stamp">Backorder ~Apr 2</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <span class="order-stamp">Backorder ~Apr 15</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US222518RO.jpg" alt="US222518RO" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1120,7 +1218,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card backorder" data-type="roundover">
       <span class="order-stamp">Backorder ~Apr 2</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US223718RO.jpg" alt="US223718RO" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1139,7 +1237,7 @@
 
     <a href="https://bitsbits.com/product/2005c/" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="roundover">
-      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <img class="brand-badge" src="bit-images/brand-ws.jpg" alt="Whiteside" title="Whiteside">
       <div class="card-img"><img src="bit-images/W-2005C.jpg" alt="Whiteside 2005C" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-roundover">Roundover</span>
@@ -1166,7 +1264,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="compression">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5123C.jpg" alt="US5123C" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-compression">Compression</span>
@@ -1185,7 +1283,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="compression">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5123CM.jpg" alt="US5123CM" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-compression">Compression</span>
@@ -1204,7 +1302,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="compression">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5163C.jpg" alt="US5163C" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-compression">Compression</span>
@@ -1223,7 +1321,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="compression">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5163CM.jpg" alt="US5163CM" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-compression">Compression</span>
@@ -1242,7 +1340,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-compression-pattern-flush-trim-router-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="compression pattern flush">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US225010PFC.jpg" alt="US225010PFC" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-compression">Compression</span>
@@ -1262,7 +1360,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-carbide-head-25-shank-compression-pattern-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card backorder" data-type="compression pattern">
       <span class="order-stamp">Backorder ~Mar 30</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US225010PC.jpg" alt="US225010PC" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-compression">Compression</span>
@@ -1289,7 +1387,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-3-flute-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="spiral">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5200TD.jpg" alt="US5200TD" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-spiral">Spiral</span>
@@ -1308,7 +1406,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-3-flute-router-bits.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="spiral">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5200TU.jpg" alt="US5200TU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-spiral">Spiral</span>
@@ -1335,7 +1433,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-folding-miter-v-groove-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="vgroove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US529015VG.jpg" alt="US529015VG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-vgroove">V-Groove</span>
@@ -1354,7 +1452,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-folding-miter-v-groove-bit-2-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="vgroove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US229010VG.jpg" alt="US229010VG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-vgroove">V-Groove</span>
@@ -1381,7 +1479,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-50-shank-chamfer-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="chamfer">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US534575CH.jpg" alt="US534575CH" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-chamfer">Chamfer</span>
@@ -1400,7 +1498,7 @@
 
     <a href="https://bitsbits.com/product/2292-chamfer/" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="chamfer">
-      <span class="brand-badge brand-ws" title="Whiteside">WS</span>
+      <img class="brand-badge" src="bit-images/brand-ws.jpg" alt="Whiteside" title="Whiteside">
       <div class="card-img"><img src="bit-images/W-2292.jpg" alt="W-2292" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-chamfer">Chamfer</span>
@@ -1427,7 +1525,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card shipped" data-type="bowl">
       <span class="order-stamp">Shipped Mar 16</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US57125BD.jpg" alt="US57125BD" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-bowl">Bowl</span>
@@ -1447,7 +1545,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card shipped" data-type="bowl">
       <span class="order-stamp">Shipped Mar 16</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US57188BD.jpg" alt="US57188BD" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-bowl">Bowl</span>
@@ -1467,7 +1565,7 @@
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card shipped" data-type="bowl">
       <span class="order-stamp">Shipped Mar 16</span>
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US57250BD.jpg" alt="US57250BD" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-bowl">Bowl</span>
@@ -1494,7 +1592,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="ballnose">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5313BNU.jpg" alt="US5313BNU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-ballnose">Ball Nose</span>
@@ -1513,7 +1611,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="ballnose">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5375BNU.jpg" alt="US5375BNU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-ballnose">Ball Nose</span>
@@ -1532,7 +1630,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="ballnose">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5500BNU.jpg" alt="US5500BNU" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-ballnose">Ball Nose</span>
@@ -1559,7 +1657,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-v-groove-finger-grip-groove-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove vgroove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2207FGV.jpg" alt="US2207FGV" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1578,7 +1676,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-v-groove-finger-grip-groove-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove vgroove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2210FGV.jpg" alt="US2210FGV" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1597,7 +1695,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-v-groove-finger-grip-groove-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove vgroove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5212FGV.jpg" alt="US5212FGV" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1616,7 +1714,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-round-nose-juice-groove-router-bits-3-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2337JG.jpg" alt="US2337JG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1635,7 +1733,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-round-nose-juice-groove-router-bits-3-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US2350JG.jpg" alt="US2350JG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1654,7 +1752,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-tipped-round-nose-juice-groove-router-bits-3-flute.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="groove">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US232545JG.jpg" alt="US232545JG" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-groove">Groove</span>
@@ -1682,7 +1780,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-insert-slab-flattening-spoilboard-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="spoilboard">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US203SF-SET.jpg" alt="US203SF-SET" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-spoilboard">Spoilboard</span>
@@ -1708,7 +1806,7 @@
 
     <a href="https://www.woodpeck.com/ultra-shear-carbide-insert-rabbeting-bit.html" target="_blank" rel="noopener" class="card-link">
     <div class="card" data-type="rabbeting">
-      <span class="brand-badge brand-wp" title="Ultra&middot;Shear by Woodpeckers">WP</span>
+      <img class="brand-badge" src="bit-images/brand-wp.jpg" alt="Woodpeckers" title="Ultra&middot;Shear by Woodpeckers">
       <div class="card-img"><img src="bit-images/US5RBT-DEL-SET.jpg" alt="US5RBT-DEL-SET" loading="lazy"></div>
       <div class="card-body">
         <span class="tag tag-rabbeting">Rabbeting</span>
@@ -1732,7 +1830,7 @@
 <script>
 // Highlight active nav link on scroll
 const sections = document.querySelectorAll('.type-section');
-const navLinks = document.querySelectorAll('.side-nav a:not(.status-filter)');
+const navLinks = document.querySelectorAll('.side-nav a:not(.nav-filter)');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -1746,31 +1844,50 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(s => observer.observe(s));
 
-// Status filtering (multiselect)
-function applyStatusFilters() {
-  const active = new Set(
-    [...document.querySelectorAll('.status-filter.active')].map(l => l.dataset.status)
-  );
+// Derive card properties from content
+function getCardProps(card) {
+  let status = 'in-stock';
+  if (card.classList.contains('backorder')) status = 'backorder';
+  else if (card.classList.contains('shipped')) status = 'shipped';
+  else if (card.classList.contains('ordered')) status = 'ordered';
+
+  const badge = card.querySelector('.brand-badge');
+  const brand = badge && badge.src.includes('brand-ws') ? 'ws' : 'wp';
+
+  const shankCell = card.querySelector('.spec-common .spec-value');
+  const shank = shankCell && shankCell.textContent.includes('1/2') ? '1/2' : '1/4';
+
+  return { status, brand, shank };
+}
+
+// Unified filtering (multiselect per group)
+function applyFilters() {
+  const groups = {};
+  document.querySelectorAll('.nav-filter.active').forEach(link => {
+    const g = link.dataset.group;
+    if (!groups[g]) groups[g] = new Set();
+    groups[g].add(link.dataset.value);
+  });
+
   document.querySelectorAll('.card-link').forEach(cardLink => {
     const card = cardLink.querySelector('.card');
     if (!card) return;
-    let status = 'in-stock';
-    if (card.classList.contains('backorder')) status = 'backorder';
-    else if (card.classList.contains('shipped')) status = 'shipped';
-    cardLink.style.display = active.has(status) ? '' : 'none';
+    const props = getCardProps(card);
+    const visible = Object.keys(groups).every(g => groups[g].has(props[g]));
+    cardLink.style.display = visible ? '' : 'none';
   });
-  // Hide empty type sections
+
   document.querySelectorAll('.type-section').forEach(section => {
     const visible = section.querySelectorAll('.card-link:not([style*="display: none"])');
     section.style.display = visible.length ? '' : 'none';
   });
 }
 
-document.querySelectorAll('.status-filter').forEach(link => {
+document.querySelectorAll('.nav-filter').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     link.classList.toggle('active');
-    applyStatusFilters();
+    applyFilters();
   });
 });
 </script>
