@@ -1,0 +1,15 @@
+model: W-2292
+name: 'AstraHP Coated Chamfer Bit 45°'
+types:
+  - chamfer
+brand: ws
+shank: '1/2"'
+max_rpm: 18000
+image: W-2292.jpg
+url: 'https://bitsbits.com/product/2292-chamfer/'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Angle
+    value: '45°'

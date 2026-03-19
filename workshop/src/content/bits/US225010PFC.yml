@@ -1,0 +1,19 @@
+model: US225010PFC
+name: 'Carbide Head Compression Pattern & Flush Trim'
+types:
+  - compression
+  - pattern
+  - flush
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US225010PFC.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-head-compression-pattern-flush-trim-router-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '1"'

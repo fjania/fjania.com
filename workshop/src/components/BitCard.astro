@@ -1,0 +1,94 @@
+---
+interface Props {
+  bit: {
+    model: string;
+    name: string;
+    types: string[];
+    brand: string;
+    shank: string;
+    max_rpm: number | null;
+    image: string;
+    url: string;
+    qty: number;
+    status: string;
+    status_date: string | null;
+    specs: { label: string; value: string }[];
+  };
+}
+
+const { bit } = Astro.props;
+
+const brandImages: Record<string, { src: string; alt: string; title: string }> = {
+  wp: { src: '/workshop/bit-images/brand-wp.jpg', alt: 'Woodpeckers', title: 'Ultra\u00B7Shear by Woodpeckers' },
+  ws: { src: '/workshop/bit-images/brand-ws.jpg', alt: 'Whiteside', title: 'Whiteside' },
+  cmt: { src: '/workshop/bit-images/brand-cmt.jpg', alt: 'CMT', title: 'CMT Orange Tools' },
+};
+
+const brand = brandImages[bit.brand] || brandImages.wp;
+
+// Use the first type for the tag display
+const primaryType = bit.types[0];
+const tagLabels: Record<string, string> = {
+  pattern: 'Pattern',
+  flush: 'Flush Trim',
+  roundover: 'Roundover',
+  compression: 'Compression',
+  spiral: 'Spiral',
+  vgroove: 'V-Groove',
+  chamfer: 'Chamfer',
+  bowl: 'Bowl',
+  ballnose: 'Ball Nose',
+  spoilboard: 'Spoilboard',
+  clearing: 'Clearing',
+  groove: 'Groove',
+  rabbeting: 'Rabbeting',
+};
+
+// For multi-type bits, show a combined label
+let tagLabel = tagLabels[primaryType] || primaryType;
+let tagClass = `tag-${primaryType}`;
+if (bit.types.includes('clearing') && bit.types.includes('pattern')) {
+  tagLabel = 'Clearing & Pattern';
+  tagClass = 'tag-clearing';
+}
+
+const statusClass = bit.status !== 'in-stock' ? bit.status : '';
+
+// Format status stamp text
+let stampText = '';
+if (bit.status === 'backorder' && bit.status_date) {
+  stampText = `Backorder ${bit.status_date}`;
+} else if (bit.status === 'shipped' && bit.status_date) {
+  stampText = `Shipped ${bit.status_date}`;
+} else if (bit.status === 'ordered' && bit.status_date) {
+  stampText = `Ordered ${bit.status_date}`;
+}
+
+const rpmDisplay = bit.max_rpm ? bit.max_rpm.toLocaleString() : '<em>Unlisted</em>';
+---
+
+<a href={bit.url} target="_blank" rel="noopener" class="card-link">
+  <div class:list={['card', statusClass]} data-type={bit.types.join(' ')} data-qty={bit.qty > 1 ? bit.qty : undefined}>
+    {stampText && <span class="order-stamp">{stampText}</span>}
+    <img class="brand-badge" src={brand.src} alt={brand.alt} title={brand.title}>
+    <div class="card-img"><img src={`/workshop/bit-images/${bit.image}`} alt={bit.model} loading="lazy"></div>
+    <div class="card-body">
+      <span class={`tag ${tagClass}`}>{tagLabel}</span>
+      <h3>{bit.name}</h3>
+      <div class="model">{bit.model}</div>
+      <table class="spec-table">
+        <tr class="spec-common"><td class="spec-label">Shank</td><td class="spec-value">{bit.shank}</td></tr>
+        {bit.max_rpm !== null && (
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value">{bit.max_rpm.toLocaleString()}</td></tr>
+        )}
+        {bit.max_rpm === null && (
+          <tr class="spec-common"><td class="spec-label">Max RPM</td><td class="spec-value"><em>Unlisted</em></td></tr>
+        )}
+        <tr class="section-header"><td colspan="2">Bit Details</td></tr>
+        {bit.specs.map(spec => (
+          <tr><td class="spec-label">{spec.label}</td><td class="spec-value">{spec.value}</td></tr>
+        ))}
+      </table>
+    </div>
+  </div>
+</a>

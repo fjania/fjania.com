@@ -1,0 +1,15 @@
+model: US203SF-SET
+name: Carbide Insert Slab Flattening / Spoilboard Bit Set
+types:
+  - spoilboard
+brand: wp
+shank: '1/2"'
+max_rpm: 14000
+image: US203SF-SET.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-insert-slab-flattening-spoilboard-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '2"'

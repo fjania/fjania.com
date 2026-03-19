@@ -1,0 +1,17 @@
+model: Whiteside UDC9112
+name: Ultimate Flush Trim Router Bit
+types:
+  - flush
+brand: ws
+shank: '1/2"'
+max_rpm: 14000
+image: W-UDC9112.jpg
+url: 'https://bitsbits.com/product/udc9112-ultimate/'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '7/8"'
+  - label: Cut Length
+    value: '2-1/8"'

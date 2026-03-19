@@ -1,0 +1,17 @@
+model: Whiteside 2005C
+name: '1/8" Roundover Router Bit'
+types:
+  - roundover
+brand: ws
+shank: '1/2"'
+max_rpm: 16000
+image: W-2005C.jpg
+url: 'https://bitsbits.com/product/2005c/'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Radius
+    value: '1/8"'
+  - label: Diameter
+    value: '3/4"'

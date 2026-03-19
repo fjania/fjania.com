@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import '../../styles/species.css';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const allSpecies = await getCollection('species');
+const sorted = allSpecies.sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+// Find first image for each species
+function findFirstImage(name: string): string | null {
+  const slug = name.toLowerCase().replace(/ /g, '_');
+  const imagesDir = path.resolve('public/species-images');
+  try {
+    const files = fs.readdirSync(imagesDir).filter(f => f.startsWith(slug + '_')).sort();
+    return files[0] || null;
+  } catch {
+    return null;
+  }
+}
+---
+
+<Base title="Wood Species Reference">
+  <div class="species-listing">
+    <h1>Wood Species Reference</h1>
+    <p class="subtitle">{sorted.length} species &mdash; printable reference cards with workshop data</p>
+
+    <div class="species-grid">
+      {sorted.map(sp => {
+        const slug = sp.data.name.toLowerCase().replace(/ /g, '_');
+        const img = findFirstImage(sp.data.name);
+        return (
+          <a href={`/workshop/species/${slug}/`} class="species-link">
+            <div class="species-thumb">
+              {img ? (
+                <img src={`/workshop/species-images/${img}`} alt={sp.data.name}>
+              ) : (
+                <div style="height:160px;background:#f5f0ea;display:flex;align-items:center;justify-content:center;color:#999;font-style:italic;">No image</div>
+              )}
+              <div class="species-info">
+                <h3>{sp.data.name}</h3>
+                <p>{sp.data.scientific}</p>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</Base>

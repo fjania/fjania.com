@@ -1,0 +1,17 @@
+model: US5163C
+name: Solid Carbide 3-Flute Spiral Compression
+types:
+  - compression
+brand: wp
+shank: '1/2"'
+max_rpm: 24000
+image: US5163C.jpg
+url: 'https://www.woodpeck.com/ultra-shear-half-inch-compression-router-bits-3-flutes.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '1-5/8"'

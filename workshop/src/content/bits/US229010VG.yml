@@ -1,0 +1,17 @@
+model: US229010VG
+name: Carbide Tipped Folding Miter V-Groove
+types:
+  - vgroove
+brand: wp
+shank: '1/4"'
+max_rpm: 18600
+image: US229010VG.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-folding-miter-v-groove-bit-2-flute.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Angle
+    value: '90°'
+  - label: Diameter
+    value: '1"'

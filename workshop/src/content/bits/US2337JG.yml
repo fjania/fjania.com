@@ -1,0 +1,17 @@
+model: US2337JG
+name: 'Carbide Tipped Juice Groove, Round Nose'
+types:
+  - groove
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US2337JG.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-round-nose-juice-groove-router-bits-3-flute.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Profile
+    value: Round Nose
+  - label: Nose Diameter
+    value: '3/8"'

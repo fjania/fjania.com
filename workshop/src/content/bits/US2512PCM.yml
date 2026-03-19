@@ -1,0 +1,17 @@
+model: US2512PCM
+name: 'Solid Carbide Compact Compression Pattern & Mortising'
+types:
+  - pattern
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US2512PCM.jpg
+url: 'https://www.woodpeck.com/ultra-shear-compact-compression-pattern-mortising-router-bit.html'
+qty: 2
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '1"'

@@ -1,0 +1,17 @@
+model: US5200TD
+name: 3-Flute Spiral Solid Carbide (Down-Cut)
+types:
+  - spiral
+brand: wp
+shank: '1/2"'
+max_rpm: 24000
+image: US5200TD.jpg
+url: 'https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-3-flute-router-bits.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '2"'

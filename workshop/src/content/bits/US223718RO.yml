@@ -1,0 +1,17 @@
+model: US223718RO
+name: Carbide Tipped Micro-Bearing Roundover
+types:
+  - roundover
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US223718RO.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html'
+qty: 1
+status: backorder
+status_date: '~Apr 15'
+specs:
+  - label: Radius
+    value: '3/8"'
+  - label: Bearing
+    value: '3/16"'

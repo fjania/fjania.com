@@ -1,0 +1,17 @@
+model: Whiteside 2702
+name: 'Combo Flush Trim, Top & Bottom Bearings'
+types:
+  - flush
+brand: ws
+shank: '1/4"'
+max_rpm: 24000
+image: 2702.jpg
+url: 'https://www.whitesiderouterbits.com/products/2702'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '1"'

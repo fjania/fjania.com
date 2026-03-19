@@ -1,0 +1,18 @@
+model: U51063CPB
+name: 'Carbide Head, Clearing & Pattern'
+types:
+  - pattern
+  - clearing
+brand: wp
+shank: '1/2"'
+max_rpm: 16000
+image: U51063CPB.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-head-clearing-pattern-router-bits-inch-shank.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1"'
+  - label: Cut Length
+    value: '5/8"'

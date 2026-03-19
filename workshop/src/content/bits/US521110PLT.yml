@@ -1,0 +1,17 @@
+model: US521110PLT
+name: Carbide Tipped Plunging Pattern Bit
+types:
+  - pattern
+brand: wp
+shank: '1/2"'
+max_rpm: 16000
+image: US521110PLT.jpg
+url: 'https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-plunging-pattern-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1-1/8"'
+  - label: Cut Length
+    value: '1"'

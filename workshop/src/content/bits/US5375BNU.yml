@@ -1,0 +1,17 @@
+model: US5375BNU
+name: Solid Carbide Ball Nose
+types:
+  - ballnose
+brand: wp
+shank: '1/2"'
+max_rpm: 24000
+image: US5375BNU.jpg
+url: 'https://www.woodpeck.com/ultra-shear-3-flute-ball-nose-router-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '3/8"'
+  - label: Cut Length
+    value: '1-1/8"'

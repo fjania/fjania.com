@@ -1,0 +1,17 @@
+model: US2100FTU
+name: Solid Carbide Up-Cut Spiral Flush Trim
+types:
+  - flush
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US2100FTU.jpg
+url: 'https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-flush-trim-14-bits.html'
+qty: 1
+status: ordered
+status_date: Mar 17
+specs:
+  - label: Diameter
+    value: '1/4"'
+  - label: Cut Length
+    value: '1"'

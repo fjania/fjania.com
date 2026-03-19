@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import SpeciesCard from '../../components/SpeciesCard.astro';
+import { getCollection } from 'astro:content';
+import '../../styles/species.css';
+import fs from 'node:fs';
+import path from 'node:path';
+
+export async function getStaticPaths() {
+  const allSpecies = await getCollection('species');
+  const maxJanka = Math.max(...allSpecies.map(sp => sp.data.properties.janka));
+
+  return allSpecies.map(sp => {
+    const slug = sp.data.name.toLowerCase().replace(/ /g, '_');
+    return {
+      params: { slug },
+      props: { species: sp.data, maxJanka },
+    };
+  });
+}
+
+const { species, maxJanka } = Astro.props;
+const slug = species.name.toLowerCase().replace(/ /g, '_');
+
+// Find images for this species
+const imagesDir = path.resolve('public/species-images');
+let images: string[] = [];
+try {
+  images = fs.readdirSync(imagesDir)
+    .filter(f => f.startsWith(slug + '_'))
+    .sort();
+} catch {
+  // no images found
+}
+---
+
+<Base title={`${species.name} — Wood Species Reference Card`}>
+  <SpeciesCard species={species} maxJanka={maxJanka} images={images} />
+</Base>

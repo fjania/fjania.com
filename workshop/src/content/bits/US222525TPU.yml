@@ -1,0 +1,17 @@
+model: US222525TPU
+name: 'Carbide Head Micro Bearing Pattern, Up-Cut'
+types:
+  - pattern
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US222525TPU.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-head-micro-bearing-spiral-pattern-router-bits.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/4"'
+  - label: Cut Length
+    value: '1/4"'

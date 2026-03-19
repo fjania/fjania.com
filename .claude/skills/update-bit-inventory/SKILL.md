@@ -1,19 +1,20 @@
 ---
 name: update-bit-inventory
-description: Check email for router bit order updates and sync the inventory page — update statuses, flag new bits, clear delivered items.
+description: Check email for router bit order updates and sync the inventory YAML files — update statuses, flag new bits, clear delivered items.
 allowed-tools: Read, Edit, Bash, Grep, Glob, mcp__claude_ai_Gmail__gmail_search_messages, mcp__claude_ai_Gmail__gmail_read_message, WebFetch, Skill
 ---
 
 # Update Router Bit Inventory from Email
 
-Scan email for recent router bit orders and shipping notifications, then update the inventory page to reflect current order statuses.
+Scan email for recent router bit orders and shipping notifications, then update the inventory YAML files to reflect current order statuses.
 
 ## Overview
 
-The inventory lives at `workshop/router-bits/index.html`. Each bit is a `.card` inside a `.card-link` wrapper. Cards can have status classes:
-- `.card.backorder` + `<span class="order-stamp">Backorder ~DATE</span>` — ordered but not yet shipped
-- `.card.shipped` + `<span class="order-stamp">Shipped DATE</span>` — shipped, in transit
-- No status class = in inventory (delivered/owned)
+The inventory is stored as individual YAML files in `workshop/src/content/bits/`. Each file has `status` and `status_date` fields:
+- `status: in-stock` — owned, in inventory
+- `status: backorder` with `status_date: ~DATE` — ordered but not yet shipped
+- `status: shipped` with `status_date: DATE` — shipped, in transit
+- `status: ordered` with `status_date: DATE` — ordered, being processed
 
 ## Step 1: Search email for recent orders
 
@@ -60,28 +61,31 @@ Cross-reference orders with shipments to determine current status of each SKU:
 | Shipping email exists, back-ordered qty > 0 | Partially shipped — the backordered portion is still **backorder** |
 | Shipped and enough time has passed (>7 days) | Likely **delivered** — clear the status |
 
-Only flag bits that are in the inventory (have a card in index.html). Report any ordered SKUs not in the inventory so the user can decide whether to add them.
+Only flag bits that are in the inventory (have a YAML file in `workshop/src/content/bits/`). Report any ordered SKUs not in the inventory so the user can decide whether to add them.
 
-## Step 4: Update the HTML
+## Step 4: Update the YAML files
 
-Read `workshop/router-bits/index.html` and for each bit that needs a status change:
+For each bit that needs a status change, edit the YAML file in `workshop/src/content/bits/`:
 
-**To add a backorder stamp:**
-Change `<div class="card"` to `<div class="card backorder"` and add `<span class="order-stamp">Backorder ~DATE</span>` as the first child inside the card div (before the brand badge).
+**To set backorder:**
+Change `status: in-stock` to `status: backorder` and `status_date: null` to `status_date: ~DATE`
 
-**To add a shipped stamp:**
-Change `<div class="card"` to `<div class="card shipped"` and add `<span class="order-stamp">Shipped DATE</span>` as the first child.
+**To set shipped:**
+Change status to `status: shipped` and set `status_date: DATE`
 
-**To clear a status** (delivered / no longer pending):
-Remove `backorder` or `shipped` from the card's class list, and remove the `<span class="order-stamp">...</span>` element.
+**To set ordered:**
+Change status to `status: ordered` and set `status_date: DATE`
+
+**To clear a status (delivered):**
+Change status to `status: in-stock` and set `status_date: null`
 
 **To add a new bit** that isn't in the inventory yet:
-Invoke `/add-bit {SKU} --status backorder --status-date {date}` (or `--status shipped --status-date {date}`) for each new SKU found in orders. The add-bit skill handles vendor resolution, image fetching, and card insertion automatically.
+Invoke `/add-bit {SKU} --status backorder --status-date {date}` (or `--status shipped --status-date {date}`) for each new SKU found in orders. The add-bit skill handles vendor resolution, image fetching, and YAML creation automatically.
 
 ## Step 5: Summarize changes
 
 Report to the user:
-- Which cards were updated (and to what status)
+- Which YAML files were updated (and to what status)
 - Which statuses were cleared (delivered)
 - Which ordered SKUs are not yet in the inventory
 - Any ambiguous cases (e.g. couldn't match a SKU, partial shipment)

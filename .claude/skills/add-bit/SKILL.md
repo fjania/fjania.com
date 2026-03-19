@@ -1,19 +1,19 @@
 ---
 name: add-bit
-description: Add a router bit to the inventory by SKU — resolves vendor, fetches specs and image, inserts the card HTML.
-allowed-tools: Read, Edit, Bash, Grep, Glob, WebFetch, WebSearch, Skill
-argument-hint: <SKU> [--status backorder|shipped] [--status-date DATE]
+description: Add a router bit to the inventory by SKU — resolves vendor, fetches specs and image, creates a YAML data file.
+allowed-tools: Read, Write, Bash, Grep, Glob, WebFetch, WebSearch, Skill
+argument-hint: <SKU> [--status backorder|shipped|ordered] [--status-date DATE]
 ---
 
 # Add Router Bit by SKU
 
-Given a product SKU, resolve the vendor and product page, extract specs, fetch a clean image, and insert a fully-formed card into the inventory HTML.
+Given a product SKU, resolve the vendor and product page, extract specs, fetch a clean image, and create a YAML data file in the Astro content collection.
 
 ## Arguments
 
 `$ARGUMENTS` should contain:
 1. The SKU (required) — will be normalized to uppercase
-2. `--status backorder|shipped` (optional) — sets the order status stamp
+2. `--status backorder|shipped|ordered` (optional) — sets the order status
 3. `--status-date DATE` (optional) — date for the status stamp (e.g. `2026-03-15`)
 
 ## Step 1: Parse arguments
@@ -22,7 +22,7 @@ Normalize the SKU to uppercase. Extract optional `--status` and `--status-date` 
 
 ## Step 2: Check for duplicates
 
-Grep `workshop/router-bits/index.html` for the SKU. If the bit already exists, report it and stop — do not add a duplicate.
+Check if a YAML file already exists in `workshop/src/content/bits/` for this SKU. If the bit already exists, report it and stop — do not add a duplicate.
 
 ## Step 3: Resolve vendor and product URL
 
@@ -85,45 +85,43 @@ Invoke the fetch-bit-image skill to download and trim the product image:
 
 This chains into trim-bit-image automatically.
 
-## Step 7: Build the card HTML
+## Step 7: Create the YAML file
 
-Read `workshop/router-bits/index.html` and match the existing card structure exactly. A typical card looks like:
+Determine the filename:
+- Woodpeckers (starts with US or U5): `{SKU}.yml`
+- Whiteside: `W-{SKU}.yml`
+- CMT: `CMT_{SKU}.yml` (replace spaces with underscores)
 
-```html
-<a href="{product-url}" class="card-link" target="_blank" rel="noopener">
-  <div class="card">
-    <span class="brand-badge badge-{WP|WS}">{WP|WS}</span>
-    <img src="bit-images/{SKU}.jpg" alt="{product name}">
-    <div class="card-info">
-      <h3>{product name}</h3>
-      <p class="specs">{shank}" shank · {diameter}" dia · {cut-length}" cut · {flutes}F</p>
-    </div>
-  </div>
-</a>
+Create `workshop/src/content/bits/{filename}` with this structure:
+
+```yaml
+model: {SKU}
+name: "{product name}"
+types:
+  - {type}
+brand: {wp|ws|cmt}
+shank: '{shank}"'
+max_rpm: {rpm or null}
+image: {SKU}.jpg
+url: "{product-url}"
+qty: 1
+status: {status or in-stock}
+status_date: {date or null}
+specs:
+  - label: Diameter
+    value: '{value}"'
+  - label: Cut Length
+    value: '{value}"'
 ```
 
-- Brand badge: `WP` for Woodpeckers, `WS` for Whiteside, `BB` for Bits&Bits
-- If `--status` is provided, add the status class and stamp:
-  - Add `backorder` or `shipped` to the card's class list
-  - Insert `<span class="order-stamp">Backorder ~DATE</span>` or `<span class="order-stamp">Shipped DATE</span>` as the first child of the card div (before the brand badge)
+Match the format of existing YAML files in `workshop/src/content/bits/`. Quote strings that contain special YAML characters.
 
-**Important:** Read the actual HTML first to match the exact structure, classes, and formatting currently in use. The example above is a guide — defer to what's actually in the file.
+## Step 8: Copy the image to public/
 
-## Step 8: Insert the card
+Copy the trimmed image to `workshop/public/bit-images/{SKU}.jpg`.
 
-Find the correct `.type-section` by its ID (e.g. `id="rabbeting"` for rabbeting bits). Insert the new `<a class="card-link">` block before the closing `</div>` of that section's `.grid` container.
+## Step 9: Show result
 
-If the type section doesn't exist yet, ask the user where to add it rather than creating a new section automatically.
-
-## Step 9: Update counts
-
-After inserting the card:
-
-1. **Nav count** — Find the `<span class="nav-count">` inside the nav link for this bit type and increment it by 1.
-2. **Header total** — Find the total count in the page header and increment it by 1.
-
-## Step 10: Show result
-
-Display the final card HTML and the trimmed image for the user to verify. Report what was added and where.
+Display the YAML file content and the trimmed image for the user to verify. Report what was added.
 
 Do NOT commit, push, or deploy — let the user review first.

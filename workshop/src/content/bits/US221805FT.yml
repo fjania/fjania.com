@@ -1,0 +1,17 @@
+model: US221805FT
+name: Micro-Bearing Carbide-Tipped Flush Trim
+types:
+  - flush
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US221805FT.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-flush-trim-bit-2-flute.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '3/16"'
+  - label: Cut Length
+    value: '1/2"'

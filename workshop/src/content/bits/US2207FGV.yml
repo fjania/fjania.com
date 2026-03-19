@@ -1,0 +1,18 @@
+model: US2207FGV
+name: Carbide Tipped V-Groove Finger Grip
+types:
+  - groove
+  - vgroove
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US2207FGV.jpg
+url: 'https://www.woodpeck.com/ultra-shear-2-flute-carbide-tipped-v-groove-finger-grip-groove-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Board Thickness
+    value: '3/4"'
+  - label: Cutting Height
+    value: '3/8"'

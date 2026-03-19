@@ -1,0 +1,18 @@
+model: US225010PC
+name: Carbide Head Compression Pattern Bit
+types:
+  - compression
+  - pattern
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US225010PC.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-head-25-shank-compression-pattern-bit.html'
+qty: 1
+status: backorder
+status_date: '~Mar 30'
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '1"'

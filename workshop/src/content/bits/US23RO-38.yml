@@ -1,0 +1,15 @@
+model: 'US23RO-7PC (3/8")'
+name: Carbide-Tipped Roundover
+types:
+  - roundover
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US23RO-38.jpg
+url: 'https://www.woodpeck.com/ultra-shear-3-flute-carbide-tipped-roundover-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Radius
+    value: '3/8"'

@@ -1,0 +1,13 @@
+model: US5RBT-DEL-SET
+name: Carbide Insert 3-Flute Rabbeting Bit Deluxe Set
+types:
+  - rabbeting
+brand: wp
+shank: '1/2"'
+max_rpm: 16000
+image: US5RBT-DEL-SET.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-insert-rabbeting-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs: []

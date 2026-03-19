@@ -13,7 +13,7 @@ Given a product page URL and a target filename, find the best product image (cle
 
 `$ARGUMENTS` should contain:
 1. The product page URL
-2. The output filename (just the name, e.g. `2703.jpg` — it will be saved to `workshop/router-bits/bit-images/`)
+2. The output filename (just the name, e.g. `2703.jpg` — it will be saved to `workshop/public/bit-images/`). Note: `isolate-objects.py` and `trim-image.sh` live in `workshop/router-bits/`.
 
 ## Steps
 
@@ -35,11 +35,11 @@ Given a product page URL and a target filename, find the best product image (cle
    - The bit is the dominant subject (not a tiny element in a larger scene)
    - The image is high resolution
 
-5. **Select the best image.** Copy it to `workshop/router-bits/bit-images/<output-filename>`.
+5. **Select the best image.** Copy it to `workshop/public/bit-images/<output-filename>`.
 
 6. **Invoke the trim-bit-image skill** on the saved image:
    ```
-   /trim-bit-image workshop/router-bits/bit-images/<output-filename>
+   /trim-bit-image workshop/public/bit-images/<output-filename>
    ```
 
 7. **Show the final result** by reading the trimmed image so the user can verify it.

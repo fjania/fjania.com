@@ -1,0 +1,17 @@
+model: US221856FTU
+name: Solid Carbide Micro-Bearing Up-Cut Flush Trim
+types:
+  - flush
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US221856FTU.jpg
+url: 'https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-flush-trim-2-flute-316-bits.html'
+qty: 1
+status: backorder
+status_date: '~Mar 31'
+specs:
+  - label: Diameter
+    value: '3/16"'
+  - label: Cut Length
+    value: '9/16"'

@@ -1,0 +1,17 @@
+model: US534575CH
+name: Carbide-Tipped Chamfer Router Bit
+types:
+  - chamfer
+brand: wp
+shank: '1/2"'
+max_rpm: 11600
+image: US534575CH.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-50-shank-chamfer-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Angle
+    value: '45°'
+  - label: Cut Height
+    value: '3/4"'

@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+import BitCard from '../../components/BitCard.astro';
+import BitNav from '../../components/BitNav.astro';
+import { getCollection } from 'astro:content';
+import '../../styles/router-bits.css';
+
+const allBits = await getCollection('bits');
+
+// Define the type order and labels to match existing page
+const typeConfig = [
+  { id: 'pattern', label: 'Pattern', heading: 'Pattern' },
+  { id: 'flush', label: 'Flush Trim', heading: 'Flush Trim' },
+  { id: 'roundover', label: 'Roundover', heading: 'Roundover' },
+  { id: 'compression', label: 'Compression', heading: 'Compression' },
+  { id: 'spiral', label: 'Spiral', heading: 'Spiral' },
+  { id: 'vgroove', label: 'V-Groove', heading: 'V-Groove' },
+  { id: 'chamfer', label: 'Chamfer', heading: 'Chamfer' },
+  { id: 'bowl', label: 'Bowl', heading: 'Bowl' },
+  { id: 'ballnose', label: 'Ball Nose', heading: 'Ball Nose' },
+  { id: 'groove', label: 'Groove', heading: 'Groove' },
+  { id: 'spoilboard', label: 'Spoilboard', heading: 'Spoilboard' },
+  { id: 'rabbeting', label: 'Rabbeting', heading: 'Rabbeting' },
+];
+
+// Group bits by their primary type (first type in the types array)
+// A bit appears in the section of its first type
+const bitsByType = new Map<string, typeof allBits>();
+for (const tc of typeConfig) {
+  bitsByType.set(tc.id, []);
+}
+
+for (const bit of allBits) {
+  const primaryType = bit.data.types[0];
+  const group = bitsByType.get(primaryType);
+  if (group) {
+    group.push(bit);
+  }
+}
+
+// Build nav counts
+const typeCounts = typeConfig
+  .map(tc => ({
+    id: tc.id,
+    label: tc.label,
+    count: bitsByType.get(tc.id)?.length || 0,
+  }))
+  .filter(tc => tc.count > 0);
+
+const totalBits = allBits.length;
+const totalTypes = typeCounts.length;
+
+const brands = [
+  { value: 'wp', label: 'Woodpeckers', icon: '/workshop/bit-images/brand-wp.jpg' },
+  { value: 'ws', label: 'Whiteside', icon: '/workshop/bit-images/brand-ws.jpg' },
+  { value: 'cmt', label: 'CMT', icon: '/workshop/bit-images/brand-cmt.jpg' },
+];
+
+// Only include brands that have at least one bit
+const activeBrands = brands.filter(b =>
+  allBits.some(bit => bit.data.brand === b.value)
+);
+---
+
+<Base title="Router Bit Inventory">
+  <BitNav typeCounts={typeCounts} brands={activeBrands} />
+
+  <header>
+    <h1>Router Bit Inventory</h1>
+    <p>{totalBits} router bits across {totalTypes} types &mdash; Ultra&middot;Shear by Woodpeckers, Whiteside &amp; CMT</p>
+  </header>
+
+  {typeConfig.map(tc => {
+    const bits = bitsByType.get(tc.id) || [];
+    if (bits.length === 0) return null;
+    return (
+      <div class="type-section" id={tc.id}>
+        <h2>{tc.heading}</h2>
+        <div class="grid">
+          {bits.map(bit => (
+            <BitCard bit={bit.data} />
+          ))}
+        </div>
+      </div>
+    );
+  })}
+
+  <div class="summary">
+    {totalBits} router bits &bull; {totalTypes} types &bull; {activeBrands.length} brands &bull; Last updated March 2026
+  </div>
+
+  <script src="../../scripts/bit-filters.js"></script>
+</Base>

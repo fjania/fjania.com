@@ -1,0 +1,19 @@
+model: CMT 811.123.11
+name: Carbide Tipped Ply-Groove Straight Bit
+types:
+  - groove
+brand: cmt
+shank: '1/4"'
+max_rpm: 24000
+image: 811.123.11.jpg
+url: 'https://www.cmtorangetools.com/na-en/industrial-router-bits/straight-router-bitsshort-series'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '31/64" (12.3mm)'
+  - label: Cut Length
+    value: '1"'
+  - label: Plywood
+    value: '1/2"'

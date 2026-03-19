@@ -1,0 +1,17 @@
+model: US57188BD
+name: Carbide Headed 3-Flute Deep Reach Bowl
+types:
+  - bowl
+brand: wp
+shank: '1/2"'
+max_rpm: 24000
+image: US57188BD.jpg
+url: 'https://www.woodpeck.com/ultra-shear-3-flute-deep-reach-bowl-bit.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '3/4"'
+  - label: Cut Length
+    value: '3/4"'

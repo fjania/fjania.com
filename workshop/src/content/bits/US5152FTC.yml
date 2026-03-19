@@ -1,0 +1,18 @@
+model: US5152FTC
+name: Solid Carbide 2-Flute Spiral Compression Flush Trim
+types:
+  - flush
+  - compression
+brand: wp
+shank: '1/2"'
+max_rpm: 24000
+image: US5152FTC.jpg
+url: 'https://www.woodpeck.com/ultra-shear-half-inch-spiral-compression-flush-trim-router-bits.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '1-1/2"'
