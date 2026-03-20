@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 
 const bits = await getCollection('bits');
 const species = await getCollection('species');
+const manuals = await getCollection('manuals');
 ---
 
 <Base title="Workshop">
@@ -85,6 +86,11 @@ const species = await getCollection('species');
         <div class="count">{species.length}</div>
         <h2>Wood Species</h2>
         <p class="desc">Printable reference cards with workshop data</p>
+      </a>
+      <a href="/workshop/manuals/" class="home-card">
+        <div class="count">{manuals.length}</div>
+        <h2>Manuals</h2>
+        <p class="desc">Machine manuals as PDFs and readable HTML</p>
       </a>
     </div>
   </div>

@@ -60,4 +60,16 @@ const species = defineCollection({
   }),
 });
 
-export const collections = { bits, species };
+const manuals = defineCollection({
+  loader: glob({ pattern: '**/*.yml', base: './src/content/manuals' }),
+  schema: z.object({
+    name: z.string(),
+    manufacturer: z.string(),
+    model: z.string(),
+    category: z.string(),
+    pdf: z.string(),
+    pages: z.number(),
+  }),
+});
+
+export const collections = { bits, species, manuals };
