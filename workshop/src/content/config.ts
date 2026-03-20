@@ -69,6 +69,7 @@ const manuals = defineCollection({
     category: z.string(),
     pdf: z.string(),
     pages: z.number(),
+    image: z.string(),
   }),
 });
 

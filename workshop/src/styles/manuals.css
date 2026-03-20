@@ -28,10 +28,25 @@ body {
   background: #fff;
   border: 1px solid #e0ddd5;
   border-radius: 10px;
-  padding: 1.5rem;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   transition: box-shadow 0.2s, transform 0.2s;
+}
+.manual-card .card-image {
+  background: #fff;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.manual-card .card-image img {
+  max-height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+.manual-card .card-body {
+  padding: 1rem 1.5rem 1.5rem;
 }
 .manual-card:hover {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
