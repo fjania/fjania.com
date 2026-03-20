@@ -45,6 +45,7 @@ Read the extracted text to understand:
 - All technical specifications
 - All sections and their content
 - Safety warnings and notes
+- **Whether the manual is multilingual** — many manuals (Bosch, Festool, Mirka) contain English, Spanish, French, etc. in one PDF. Identify the English page range and only extract English content.
 
 ## Step 5: Extract images from the PDF
 
@@ -71,17 +72,57 @@ for i, page in enumerate(reader.pages):
             f.write(img.data)
 ```
 
-After extraction, check image dimensions with `sips -g pixelWidth -g pixelHeight` on each image. Note which images are:
+### Post-extraction fixes (CRITICAL)
+
+After extracting all images, fix two common PDF extraction issues:
+
+**1. JPEG 2000 files with `.jpg` extension:** pypdf often extracts JP2 (JPEG 2000) images and names them `.jpg`. Browsers cannot render JP2. Detect and convert all of them:
+
+```bash
+find workshop/public/manuals/{slug} -name "*.jpg" -exec sh -c \
+  'file "$1" | grep -q "JPEG 2000" && sips -s format jpeg "$1" --out "$1"' _ {} \;
+```
+
+**2. CMYK and Grayscale color spaces:** PDF images are often in CMYK (print) or Grayscale color spaces that browsers render incorrectly. Convert all non-RGB images to sRGB:
+
+```bash
+find workshop/public/manuals/{slug} -type f \( -name "*.jpg" -o -name "*.png" \) -exec sh -c \
+  'space=$(sips -g space "$1" 2>/dev/null | grep space | awk "{print \$2}"); \
+  [ "$space" = "CMYK" ] || [ "$space" = "Gray" ] && \
+  sips -m /System/Library/ColorSync/Profiles/sRGB\ Profile.icc "$1" --out "$1"' _ {} \;
+```
+
+### Dimension check
+
+Check image dimensions with `sips -g pixelWidth -g pixelHeight` on each image. Note which images are:
 - **Usable** (reasonable dimensions, not tiny fragments): width > 100px AND height > 100px AND aspect ratio between 1:8 and 8:1
 - **Fragments** (tiny icons, slivers, extreme aspect ratios): skip these when placing images
 
-## Step 6: Map images to sections
+## Step 6: Download a product photo for the card image
+
+The listing card needs a clean, color product photo — **not** a PDF-extracted image (which are often grayscale, CMYK, or low quality).
+
+Use WebSearch to find the product page on the manufacturer's website. WebFetch the page to find the main product image URL. Download it:
+
+```bash
+curl -sL -o workshop/public/manuals/{slug}/product.jpg "<image_url>"
+```
+
+If the manufacturer's site blocks direct image downloads (403, hotlink protection, JavaScript-rendered), try the product page on rockler.com, acmetools.com, or woodcraft.com instead.
+
+Verify the downloaded image:
+- Is a valid JPEG or PNG (`file` command)
+- Has reasonable dimensions (at least 300px wide, `sips`)
+- Is in RGB color space (convert if needed)
+- If downloaded as WebP or PNG, convert to JPEG with `sips -s format jpeg`
+
+## Step 7: Map images to sections
 
 Using the table of contents from Step 4 and the `p{page}_{index}` naming convention, map images to their corresponding manual sections. The page number in the filename tells you which section the image belongs to.
 
 **CRITICAL: Do NOT use the Read tool on extracted images.** PDF-extracted images often have unusual dimensions or encoding that causes the vision API to return `"Could not process image"` errors. Instead, map images to sections purely by page number and the text content of that page.
 
-## Step 7: Create the YAML data file
+## Step 8: Create the YAML data file
 
 Write to `workshop/src/content/manuals/{slug}.yml`:
 
@@ -92,27 +133,25 @@ model: Model Number/SKU
 category: machine-category
 pdf: {slug}.pdf
 pages: <page count>
+image: {slug}/product.jpg
 ```
 
 Category should be kebab-case (e.g. `drill-press`, `table-saw`, `bandsaw`, `router-table`).
 
-## Step 8: Create the HTML manual page
+The `image` field should always point to the downloaded product photo (`product.jpg`), not a PDF-extracted image.
 
-The manual detail page is at `workshop/src/pages/manuals/[slug].astro`. Currently this file contains hardcoded content for a single manual. When adding a new manual, you have two options:
+## Step 9: Create the HTML manual page
 
-**If this is the second manual being added:** Refactor `[slug].astro` into a routing shell and create individual content pages per manual. Create `workshop/src/pages/manuals/content/{slug}.astro` with the full HTML for this manual, and update `[slug].astro` to dynamically include the correct content component.
+The manual pages use a dynamic routing shell at `workshop/src/pages/manuals/[slug].astro` that loads individual content components from `workshop/src/pages/manuals/content/{slug}.astro`.
 
-**If there are already multiple manuals:** Follow the existing pattern for content pages.
+Create `workshop/src/pages/manuals/content/{slug}.astro` with the HTML content for this manual (no frontmatter or layout wrapper needed — the router handles that).
 
 The HTML page should follow these conventions:
-
-### Page structure
-- Wrap in `<Base title="{name} — Owner's Manual">` with the manual-detail/manual-header/manual-content div structure
-- Use the existing CSS classes from `workshop/src/styles/manuals.css`
 
 ### Content translation rules
 - Translate the PDF text into clean, readable HTML — not a raw dump
 - Condense verbose/repetitive safety boilerplate but preserve all technical content
+- For multilingual manuals, only translate the English section
 - Use semantic HTML: `<h2>` for major sections, `<h3>` for subsections
 - Use `<table>` for specifications and reference data
 - Use `<ol>` for step-by-step procedures, `<ul>` for lists
@@ -124,6 +163,7 @@ The HTML page should follow these conventions:
 ### Image placement rules
 - Reference images as `/workshop/manuals/{slug}/p{page}_{index}.{ext}`
 - Only include images that passed the dimension check in Step 5
+- **Every content page must include images.** If the PDF had extractable images, they must appear in the HTML. Do not write an image-free content page when images are available.
 - Use `<div class="figure">` with `<figcaption>` for standalone diagrams (labeled diagrams, exploded views, wiring diagrams, charts)
 - Use `<div class="image-row">` for 2-3 related images shown side by side (assembly steps, before/after, detail views)
 - Place images directly after the text they illustrate
@@ -145,11 +185,11 @@ The HTML page should follow these conventions:
 - Wiring diagram and exploded views (if present)
 - Contact / manufacturer info
 
-## Step 9: Build
+## Step 10: Build
 
 Run `npx astro build` from the `workshop/` directory. Confirm the new manual page appears in the build output.
 
-## Step 10: Report
+## Step 11: Report
 
 Report what was created:
 - The YAML file path
