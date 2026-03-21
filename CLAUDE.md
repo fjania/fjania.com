@@ -8,9 +8,9 @@
 
 ### Deploy
 ```sh
-rsync -rv dist/* fjania.com:~/sites/fjania.com
-rsync -rv dist/* fjania.com:~/sites/franklyjania.com
-rsync -rv dist/* fjania.com:~/sites/frankjania.com
+rsync -rv --delete dist/* fjania.com:~/sites/fjania.com
+rsync -rv --delete dist/* fjania.com:~/sites/franklyjania.com
+rsync -rv --delete dist/* fjania.com:~/sites/frankjania.com
 ```
 
 ## Router Bit Inventory
