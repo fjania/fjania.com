@@ -42,6 +42,11 @@ body {
   opacity: 0.85;
   font-style: italic;
 }
+.banner .aka {
+  font-size: 8.5pt;
+  opacity: 0.7;
+  margin-top: 2px;
+}
 .banner-thumbs {
   display: flex;
   gap: 6px;
@@ -467,4 +472,10 @@ body {
   font-size: 0.85rem;
   color: #6B4226;
   font-style: italic;
+}
+.species-thumb .species-info p.aka {
+  font-size: 0.78rem;
+  color: #999;
+  font-style: normal;
+  margin-top: 0.15rem;
 }

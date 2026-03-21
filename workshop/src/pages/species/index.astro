@@ -41,6 +41,9 @@ function findFirstImage(name: string): string | null {
               <div class="species-info">
                 <h3>{sp.data.name}</h3>
                 <p>{sp.data.scientific}</p>
+                {sp.data.also_known_as && sp.data.also_known_as.length > 0 && (
+                  <p class="aka">{sp.data.also_known_as.join(', ')}</p>
+                )}
               </div>
             </div>
           </a>

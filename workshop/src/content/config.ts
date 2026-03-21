@@ -26,6 +26,7 @@ const species = defineCollection({
   loader: glob({ pattern: '**/*.yml', base: './src/content/species' }),
   schema: z.object({
     name: z.string(),
+    also_known_as: z.array(z.string()).optional(),
     scientific: z.string(),
     origin: z.string(),
     appearance: z.object({

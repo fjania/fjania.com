@@ -2,6 +2,7 @@
 interface Props {
   species: {
     name: string;
+    also_known_as?: string[];
     scientific: string;
     origin: string;
     appearance: {
@@ -44,6 +45,9 @@ const captions = ['Product Example 1', 'Product Example 2', 'Product Example 3']
     <div class="banner-text">
       <h1>{sp.name}</h1>
       <div class="subtitle">{sp.scientific} &mdash; {sp.origin}</div>
+      {sp.also_known_as && sp.also_known_as.length > 0 && (
+        <div class="aka">Also known as: {sp.also_known_as.join(', ')}</div>
+      )}
     </div>
     {images.length > 0 && (
       <div class="banner-thumbs">
