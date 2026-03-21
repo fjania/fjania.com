@@ -3,6 +3,6 @@
 .python-version
 uv.lock
 .DS_Store
-workshop/node_modules/
-workshop/dist/
-workshop/.astro/
+node_modules/
+dist/
+.astro/

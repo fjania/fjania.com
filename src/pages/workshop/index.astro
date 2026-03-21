@@ -1,0 +1,97 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const bits = await getCollection('bits');
+const species = await getCollection('species');
+const manuals = await getCollection('manuals');
+---
+
+<Base title="Workshop">
+  <Fragment slot="head">
+    <style>
+      body {
+        background: #f5f5f0;
+        color: #2c2c2c;
+      }
+      .workshop-home {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+        text-align: center;
+      }
+      .workshop-home h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #8b1a1a;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+      .workshop-home .subtitle {
+        color: #666;
+        font-size: 1rem;
+        margin-bottom: 3rem;
+      }
+      .home-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .home-card {
+        background: #fff;
+        border: 1px solid #e0ddd5;
+        border-radius: 10px;
+        padding: 2rem 1.5rem;
+        text-decoration: none;
+        color: inherit;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .home-card:hover {
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+      }
+      .home-card h2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #2c2c2c;
+        margin-bottom: 0.5rem;
+      }
+      .home-card .count {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #8b1a1a;
+        margin-bottom: 0.3rem;
+      }
+      .home-card .desc {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 500px) {
+        .home-cards { grid-template-columns: 1fr; }
+      }
+    </style>
+  </Fragment>
+
+  <div class="workshop-home">
+    <h1>Workshop</h1>
+    <p class="subtitle">Reference tools for the shop</p>
+
+    <div class="home-cards">
+      <a href="/workshop/router-bits/" class="home-card">
+        <div class="count">{bits.length}</div>
+        <h2>Router Bits</h2>
+        <p class="desc">Inventory with specs, filters, and product links</p>
+      </a>
+      <a href="/workshop/species/" class="home-card">
+        <div class="count">{species.length}</div>
+        <h2>Wood Species</h2>
+        <p class="desc">Printable reference cards with workshop data</p>
+      </a>
+      <a href="/workshop/manuals/" class="home-card">
+        <div class="count">{manuals.length}</div>
+        <h2>Manuals</h2>
+        <p class="desc">Machine manuals as PDFs and readable HTML</p>
+      </a>
+    </div>
+  </div>
+</Base>
