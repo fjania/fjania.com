@@ -26,12 +26,21 @@ function findFirstImage(name: string): string | null {
     <h1>Wood Species Reference</h1>
     <p class="subtitle">{sorted.length} species &mdash; printable reference cards with workshop data</p>
 
+    <div class="species-search">
+      <input type="text" id="species-filter" placeholder="Search by name, alternate name, or scientific name..." autocomplete="off">
+      <span id="species-count" class="search-count"></span>
+    </div>
+
     <div class="species-grid">
       {sorted.map(sp => {
         const slug = sp.data.name.toLowerCase().replace(/ /g, '_');
         const img = findFirstImage(sp.data.name);
         return (
-          <a href={`/workshop/species/${slug}/`} class="species-link">
+          <a href={`/workshop/species/${slug}/`} class="species-link"
+             data-slug={slug}
+             data-name={sp.data.name}
+             data-scientific={sp.data.scientific}
+             data-aka={sp.data.also_known_as?.join(', ') || ''}>
             <div class="species-thumb">
               {img ? (
                 <img src={`/workshop/species-images/${img}`} alt={sp.data.name}>
@@ -51,4 +60,123 @@ function findFirstImage(name: string): string | null {
       })}
     </div>
   </div>
+
+  <script>
+    import MiniSearch from 'minisearch';
+
+    const input = document.getElementById('species-filter') as HTMLInputElement;
+    const count = document.getElementById('species-count')!;
+    const cards = document.querySelectorAll<HTMLAnchorElement>('.species-link');
+    const total = cards.length;
+
+    // Build index from card data attributes
+    const cardMap = new Map<string, HTMLAnchorElement>();
+    const docs = Array.from(cards).map((card, i) => {
+      const slug = card.dataset.slug!;
+      cardMap.set(slug, card);
+      return {
+        id: slug,
+        name: card.dataset.name!,
+        scientific: card.dataset.scientific!,
+        aka: card.dataset.aka!,
+      };
+    });
+
+    const ms = new MiniSearch({
+      fields: ['name', 'aka', 'scientific'],
+      storeFields: ['name', 'aka', 'scientific'],
+      searchOptions: {
+        boost: { name: 3, aka: 2, scientific: 1 },
+        prefix: true,
+        fuzzy: 0.2,
+      },
+    });
+    ms.addAll(docs);
+
+    function highlightText(el: Element, terms: string[]) {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes: Text[] = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode as Text);
+
+      for (const node of nodes) {
+        const text = node.textContent || '';
+        const lower = text.toLowerCase();
+        // Find all match ranges
+        const ranges: [number, number][] = [];
+        for (const term of terms) {
+          let pos = 0;
+          while ((pos = lower.indexOf(term, pos)) !== -1) {
+            ranges.push([pos, pos + term.length]);
+            pos += term.length;
+          }
+        }
+        if (ranges.length === 0) continue;
+
+        // Merge overlapping ranges
+        ranges.sort((a, b) => a[0] - b[0]);
+        const merged: [number, number][] = [ranges[0]];
+        for (let i = 1; i < ranges.length; i++) {
+          const last = merged[merged.length - 1];
+          if (ranges[i][0] <= last[1]) {
+            last[1] = Math.max(last[1], ranges[i][1]);
+          } else {
+            merged.push(ranges[i]);
+          }
+        }
+
+        // Build highlighted fragment
+        const frag = document.createDocumentFragment();
+        let cursor = 0;
+        for (const [start, end] of merged) {
+          if (start > cursor) frag.appendChild(document.createTextNode(text.slice(cursor, start)));
+          const mark = document.createElement('mark');
+          mark.textContent = text.slice(start, end);
+          frag.appendChild(mark);
+          cursor = end;
+        }
+        if (cursor < text.length) frag.appendChild(document.createTextNode(text.slice(cursor)));
+        node.replaceWith(frag);
+      }
+    }
+
+    function clearHighlights() {
+      document.querySelectorAll('.species-info mark').forEach(mark => {
+        const parent = mark.parentNode!;
+        parent.replaceChild(document.createTextNode(mark.textContent || ''), mark);
+        parent.normalize();
+      });
+    }
+
+    input.addEventListener('input', () => {
+      const q = input.value.trim();
+      clearHighlights();
+
+      if (!q) {
+        cards.forEach(card => (card as HTMLElement).style.display = '');
+        count.textContent = '';
+        return;
+      }
+
+      const results = ms.search(q);
+      const matchedIds = new Set(results.map(r => r.id));
+      // Collect search terms for highlighting
+      const terms = new Set<string>();
+      for (const r of results) {
+        for (const [term] of Object.entries(r.match)) {
+          terms.add(term.toLowerCase());
+        }
+      }
+
+      let visible = 0;
+      cards.forEach(card => {
+        const match = matchedIds.has(card.dataset.slug!);
+        (card as HTMLElement).style.display = match ? '' : 'none';
+        if (match) {
+          highlightText(card.querySelector('.species-info')!, Array.from(terms));
+          visible++;
+        }
+      });
+      count.textContent = `${visible} of ${total}`;
+    });
+  </script>
 </Base>
