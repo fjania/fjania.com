@@ -15,7 +15,7 @@ const manuals = await getCollection('manuals');
         color: #2c2c2c;
       }
       .workshop-home {
-        max-width: 640px;
+        max-width: 960px;
         margin: 0 auto;
         padding: 4rem 1.5rem;
         text-align: center;
@@ -34,7 +34,7 @@ const manuals = await getCollection('manuals');
       }
       .home-cards {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
       }
       .home-card {
@@ -66,7 +66,7 @@ const manuals = await getCollection('manuals');
         color: #666;
         font-size: 0.9rem;
       }
-      @media (max-width: 500px) {
+      @media (max-width: 700px) {
         .home-cards { grid-template-columns: 1fr; }
       }
     </style>
