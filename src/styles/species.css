@@ -6,6 +6,10 @@
 body {
   background: #f5f0ea;
   color: #2c1810;
+}
+
+/* Scoped to individual species card pages (not listing) */
+body:has(.page) {
   font-size: 10pt;
   line-height: 1.45;
   max-width: 8.5in;
