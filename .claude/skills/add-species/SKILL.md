@@ -15,11 +15,11 @@ Given a wood species common name, research its properties online, create a YAML 
 
 ## Step 1: Check for duplicates
 
-Check if a YAML file already exists in `workshop/src/content/species/` for this species (match by slug: lowercase, spaces to underscores). If it exists, report it and stop.
+Check if a YAML file already exists in `src/content/species/` for this species (match by slug: lowercase, spaces to underscores). If it exists, report it and stop.
 
 ## Step 2: Understand the YAML structure
 
-Read one existing species YAML (e.g. `workshop/src/content/species/purpleheart.yml`) and the schema at `workshop/.astro/collections/species.schema.json` to confirm required fields. All of these fields are required:
+Read one existing species YAML (e.g. `src/content/species/purpleheart.yml`) to confirm required fields. All of these fields are required:
 
 - `name`, `scientific`, `origin`
 - `appearance`: heartwood, sapwood, grain, texture, luster
@@ -46,7 +46,7 @@ Use an Agent with WebSearch and WebFetch to gather accurate data from reliable s
 
 Write the YAML to **both** locations:
 - `workshop/species/species/{slug}.yml` (card builder)
-- `workshop/src/content/species/{slug}.yml` (Astro content collection)
+- `src/content/species/{slug}.yml` (Astro content collection)
 
 The slug is: lowercase name, spaces replaced with underscores (e.g. `hard_maple`).
 
@@ -55,24 +55,37 @@ Match the style of existing YAML files — no quotes on simple strings, use `>` 
 ## Step 5: Find and download images
 
 Find 3 images of the species from different angles/contexts:
-- Image 0: Face grain / reference shot
-- Image 1: Board, lumber, or finished surface
-- Image 2: Grain detail or alternate view
+- **Image 0 (card image — most important):** A photo of an actual board or stack of boards. This is the thumbnail shown on the species listing page. It must clearly show a physical piece of lumber — NOT a flat grain swatch/texture sample, NOT a turning blank/block, NOT a botanical illustration, NOT a room/furniture photo. The ideal style is a board photographed at an angle on a clean light/white background showing the face grain and natural colour (see existing images from The Knotty Lumber Co. as the gold standard). Product photos from lumber retailers work well.
+- **Image 1:** Board, lumber stack, or finished surface from a different angle
+- **Image 2:** Grain detail, end grain, or alternate view
 
-Process:
-1. WebSearch for the species + "lumber wood grain photo"
+### Image quality criteria
+- Must be a photograph (not an illustration, render, or colour swatch)
+- Should show the wood's actual colour and grain character
+- Clean background preferred (white, light grey, or simple)
+- No heavy watermarks, text overlays, or distracting elements
+- No messy workshop/warehouse backgrounds with markings or chalk lines
+
+### Where to find good images
+Search for "[species name] lumber board" or "[species name] wood boards". Good sources:
+- Lumber retailers: bellforestproducts.com, hearnehardwoods.com, cookwoods.com, ocoochhardwoods.com, woodworkerssource.com, irionlumber.com
+- Wikimedia Commons (often has high-quality public domain wood photos)
+- Specialty dealers for exotic species: cookwoods.com, exoticwoodzone.com
+
+### Download process
+1. WebSearch for the species + "lumber board photo"
 2. WebFetch promising product/reference pages to extract image URLs
 3. Download with `curl -sL` to `workshop/species/images/{slug}_0.jpg`, `{slug}_1.jpg`, `{slug}_2.jpg`
 4. Verify each image: check file size (>5KB) and dimensions with `sips -g pixelWidth -g pixelHeight`. If an image is broken (<1KB or nil dimensions), try another source.
-5. Visually confirm images with the Read tool
+5. **Visually confirm every image with the Read tool** — especially image 0. If image 0 is not a clear board photo, reject it and find another.
 
 ## Step 6: Copy images to public directory
 
-Copy all valid images to `workshop/public/species-images/` so the Astro page template picks them up.
+Copy all valid images to `public/species-images/` so the Astro page template picks them up.
 
 ## Step 7: Build
 
-Run `npx astro build` from the `workshop/` directory. Confirm the new species page appears in the build output (e.g. `/species/{slug}/index.html`).
+Run `npx astro build` from the repo root. Confirm the new species page appears in the build output (e.g. `/workshop/species/{slug}/index.html`).
 
 ## Step 8: Show result
 
