@@ -12,7 +12,7 @@ body {
 body:has(.page) {
   font-size: 10pt;
   line-height: 1.45;
-  max-width: 8.5in;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -401,7 +401,7 @@ body:has(.page) {
 @media print {
   body {
     background: white;
-    max-width: none;
+    max-width: 8.5in;
   }
   .page {
     height: 10.5in;
