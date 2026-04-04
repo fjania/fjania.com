@@ -1,0 +1,41 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import '../../../styles/spec-sheets.css';
+
+export async function getStaticPaths() {
+  const sheets = await getCollection('spec-sheets');
+  return sheets.map(sheet => ({
+    params: { slug: sheet.id },
+    props: { sheet: sheet.data },
+  }));
+}
+
+const { sheet } = Astro.props;
+const { slug } = Astro.params;
+
+function categoryLabel(cat: string): string {
+  return cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+const contentModules = import.meta.glob('./content/*.astro', { eager: true });
+const contentKey = `./content/${slug}.astro`;
+const ContentComponent = contentModules[contentKey]?.default;
+---
+
+<Base title={`${sheet.name} — Spec Sheet`}>
+  <div class="sheet-detail">
+    <div class="sheet-header">
+      <div class="category">{categoryLabel(sheet.category)}</div>
+      <h1>{sheet.name}</h1>
+      <p class="manufacturer">{sheet.manufacturer}</p>
+      <div class="actions">
+        <a href="/workshop/spec-sheets/" class="back-link">&larr; All Spec Sheets</a>
+      </div>
+    </div>
+
+    <div class="sheet-content">
+      {ContentComponent ? <ContentComponent /> : <p>Spec sheet content not yet available.</p>}
+    </div>
+  </div>
+</Base>

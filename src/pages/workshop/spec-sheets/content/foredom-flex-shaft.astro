@@ -1,0 +1,488 @@
+<style>
+  .spec-sheet {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  .spec-sheet h2.sheet-title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a3a6e;
+    margin-bottom: 0.2rem;
+    border: none;
+    padding: 0;
+  }
+  .spec-sheet .sheet-subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 0.8rem;
+  }
+  .spec-sheet .intro-text {
+    text-align: center;
+    font-size: 0.82rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .spec-sheet .intro-text strong {
+    color: #2c2c2c;
+  }
+
+  /* Section labels */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .section-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #1a3a6e;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1a3a6e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    writing-mode: horizontal-tb;
+  }
+
+  /* Motor comparison table */
+  .motor-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .motor-section .section-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5rem;
+  }
+  .motor-section .section-side .section-name {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+  .motor-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .motor-table th,
+  .motor-table td {
+    border: 1px solid #c0c0c0;
+    padding: 0.4rem 0.6rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .motor-table th {
+    background: #e8edf5;
+    font-weight: 700;
+    color: #1a3a6e;
+  }
+  .motor-table th.row-label {
+    background: #eef1f7;
+    text-align: left;
+    font-weight: 700;
+    color: #1a3a6e;
+    width: 130px;
+  }
+  .motor-table td.performance {
+    font-size: 0.78rem;
+    text-align: left;
+    line-height: 1.4;
+  }
+  .motor-table .motor-header {
+    background: #fff;
+    padding: 0.6rem;
+  }
+  .motor-table .motor-header img {
+    max-height: 80px;
+    display: block;
+    margin: 0 auto 0.4rem;
+  }
+  .motor-table .series-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a3a6e;
+  }
+  .motor-table .alt-row td,
+  .motor-table .alt-row th {
+    background: #f4f6fa;
+  }
+  .motor-table .sku-cell {
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+  .motor-table .footnotes {
+    font-size: 0.72rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0.5rem 0.6rem;
+  }
+
+  /* Shafts section */
+  .shafts-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .shafts-section .section-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5rem;
+  }
+  .shafts-section .section-side .section-name {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+  .shafts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    flex: 1;
+  }
+  .shaft-col {
+    background: #fff;
+    padding: 0.8rem;
+  }
+  .shaft-col h4 {
+    font-size: 0.9rem;
+    color: #1a3a6e;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .shaft-col h4 span {
+    font-weight: 400;
+    color: #555;
+  }
+  .shaft-col .shaft-img {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .shaft-col .shaft-img img {
+    max-width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+  }
+  .shaft-col .shaft-desc {
+    font-size: 0.76rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 0.6rem;
+  }
+  .shaft-col .shaft-compat {
+    font-size: 0.76rem;
+    color: #555;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .shaft-col .shaft-compat strong {
+    color: #333;
+  }
+
+  /* Handpiece section */
+  .handpiece-section {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .handpiece-section .section-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5rem;
+  }
+  .handpiece-section .section-side .section-name {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+  .handpiece-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    flex: 1;
+  }
+  .handpiece-col {
+    background: #fff;
+    padding: 0.8rem;
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+  .handpiece-col strong {
+    color: #1a3a6e;
+  }
+  .handpiece-col .hp-title {
+    font-weight: 700;
+    color: #1a3a6e;
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 800px) {
+    .motor-section,
+    .shafts-section,
+    .handpiece-section {
+      flex-direction: column;
+    }
+    .motor-section .section-side,
+    .shafts-section .section-side,
+    .handpiece-section .section-side {
+      flex-direction: row;
+      padding-right: 0;
+      padding-bottom: 0.5rem;
+    }
+    .motor-section .section-side .section-name,
+    .shafts-section .section-side .section-name,
+    .handpiece-section .section-side .section-name {
+      writing-mode: horizontal-tb;
+      transform: none;
+    }
+    .motor-table {
+      font-size: 0.72rem;
+    }
+    .shafts-grid,
+    .handpiece-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .shafts-grid,
+    .handpiece-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="spec-sheet">
+  <h2 class="sheet-title">What Makes Up A Foredom Flex Shaft Tool?</h2>
+  <p class="sheet-subtitle">1- Motor Type and Speed Control + 2-Flex Shaft + 3-Handpiece</p>
+
+  <div class="intro-text">
+    <p><strong>Foredom has Kits, Sets and Combinations</strong> to take the guesswork out of finding what works for you.</p>
+    <p><strong>Motor Combinations Include:</strong> Motor + Shafting + Speed Control.<br>
+    <strong>Sets Include:</strong> Motor + Speed Control + Shafting + Handpieces. (Accessories sold separately).<br>
+    <strong>Kits Include:</strong> Motor + Shafting + Speed Control + Handpiece + Accessories.</p>
+  </div>
+
+  <!-- Section 1: Flex Shaft Motor -->
+  <div class="motor-section">
+    <div class="section-side">
+      <div class="section-number">1</div>
+      <div class="section-name">Flex Shaft Motor</div>
+    </div>
+
+    <table class="motor-table">
+      <thead>
+        <tr>
+          <th class="row-label"></th>
+          <td class="motor-header">
+            <img src="/spec-sheets/foredom-sr-motor.jpg" alt="Foredom Series SR Motor" />
+            <div class="series-name">Series SR</div>
+          </td>
+          <td class="motor-header">
+            <img src="/spec-sheets/foredom-tx-motor.jpg" alt="Foredom Series TX Motor" />
+            <div class="series-name">Series TX</div>
+          </td>
+          <td class="motor-header">
+            <img src="/spec-sheets/foredom-lx-motor.jpg" alt="Foredom Series LX Motor" />
+            <div class="series-name">Series LX</div>
+          </td>
+          <td class="motor-header">
+            <img src="/spec-sheets/foredom-pgx-motor.jpg" alt="Foredom PGX PowerGraver" />
+            <div class="series-name">PGX <small>PowerGraver</small></div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="row-label">Performance</th>
+          <td class="performance">Most popular motor has the power and speed needed for most jobs without stalling or slowing down while under normal load. Runs in both Forward and Reverse.</td>
+          <td class="performance">Extra power / torque for the most demanding work&mdash;hogging out large quantities of wood or porting engines. Offers excellent control of the cutting tool, drill, or bur under load.</td>
+          <td class="performance">Most powerful at low speeds (max speed is 5,000 RPM) even more than Series TX at the low end. Ideal for low speed jobs: stone setting, wax modeling, drilling and chisel carving.</td>
+          <td class="performance">PowerGraver is part of a unique system with shaft, speed controls and handpiece designed for power stone setting, engraving and texturing.</td>
+        </tr>
+        <tr class="alt-row">
+          <th class="row-label">Horsepower/Watt</th>
+          <td>1/6 HP*/125W</td>
+          <td>1/3 HP*/250W</td>
+          <td>1/10 HP*/75W</td>
+          <td>1/20 HP*/37W</td>
+        </tr>
+        <tr>
+          <th class="row-label">Max Speed</th>
+          <td>18,000 RPM</td>
+          <td>15,000 RPM</td>
+          <td>5,000 RPM</td>
+          <td>2,800 RPM</td>
+        </tr>
+        <tr class="alt-row">
+          <th class="row-label">Rotation</th>
+          <td>Forward &amp; Reverse</td>
+          <td>Forward</td>
+          <td>Forward</td>
+          <td>Forward</td>
+        </tr>
+        <tr>
+          <th class="row-label">Motor Type</th>
+          <td>Universal</td>
+          <td>Permanent Magnet</td>
+          <td>Permanent Magnet</td>
+          <td>Permanent Magnet</td>
+        </tr>
+        <tr class="alt-row">
+          <th class="row-label">Compatible Speed Controls</th>
+          <td class="sku-cell">
+            <strong>115V:</strong> C.FCT-1, C.SCT-1, C.EM-1, C.EMF-1<br>
+            <strong>230V:</strong> C.FCH-2, C.SCH-2, C.EMH-2, C.EMHF-2, C.FCT-21CE, C.FCT-22CE
+          </td>
+          <td class="sku-cell">
+            <strong>115V ONLY</strong> &ndash; C.TXR-1, C.SXR-1, C.EMX-1, C.EMXF-1
+          </td>
+          <td class="sku-cell">
+            <strong>115V:</strong> C.TXR-1, C.SXR-1, C.EMX-1<br>
+            <strong>230V:</strong> C.TXR-2, C.SXR-2, C.EMX-2
+          </td>
+          <td class="sku-cell">
+            <strong>115V:</strong> C.EMGX-1<br>
+            <strong>230V:</strong> C.EMGX-2
+          </td>
+        </tr>
+        <tr>
+          <th class="row-label">Voltage&Dagger;</th>
+          <td>115V &amp; 230V Single Phase<br>(See &Dagger; note)</td>
+          <td>115V ONLY. Single Phase</td>
+          <td>115V &amp; 230V Single Phase<br>(See &Dagger; note)</td>
+          <td>115V &amp; 230V Single Phase<br>(See &Dagger; note)</td>
+        </tr>
+        <tr class="alt-row">
+          <th class="row-label">Amp</th>
+          <td><strong>115VAC:</strong> 1.7 Amps<br><strong>230VAC:</strong> .9 Amps</td>
+          <td><strong>115VAC:</strong> 3.5 Amps</td>
+          <td><strong>115VAC:</strong> 1.2 Amps<br><strong>230VAC:</strong> .6 Amps</td>
+          <td><strong>115VAC:</strong> 1.2 Amps<br><strong>230VAC:</strong> .6 Amps</td>
+        </tr>
+        <tr>
+          <th class="row-label">Noise Level</th>
+          <td>68 Decibels</td>
+          <td>68 Decibels</td>
+          <td>68 Decibels</td>
+          <td>68 Decibels</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5" class="footnotes">
+            <p>* <strong>Horsepower&mdash;</strong> Foredom motors are rated at continuous duty or maximum efficiency under load and NOT maximum output. If we adopted the maximum output rating used by other manufacturers, Series SR motors would qualify as 1/5 HP or 1/4 HP; Series TX would be considered 1/2 HP; and all of our other motors would have higher horsepower ratings.</p>
+            <p>&Dagger; <strong>Voltage Note: 110-120V vs. 220-240V&mdash;</strong> The performance of 115V &amp; 230V motors in this catalog are identical. 230V machines are solely intended for use in areas where 110V&ndash;120V power is not available.</p>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- Section 2: Flexible Shafts -->
+  <div class="shafts-section">
+    <div class="section-side">
+      <div class="section-number">2</div>
+      <div class="section-name">Flexible Shafts for the Motors Listed Above</div>
+    </div>
+
+    <div class="shafts-grid">
+      <div class="shaft-col">
+        <h4>Key Tip <span>&ndash; standard</span></h4>
+        <div class="shaft-img"><img src="/spec-sheets/foredom-key-tip-shaft.jpg" alt="Foredom Key Tip Shaft" /></div>
+        <div class="shaft-desc">
+          <strong>85% of Foredom Flexible Shaft Machines use a 39&quot; long Key Tip Shaft.</strong> Foredom offers 19 handpieces to fit these shafts. Key Tip shafts are made to handle most types of work from jewelry fabrication and woodcarving to industrial use. A Foredom motor is built to industrial standards and when compared to a hand-held grinder or other Dremel&trade;-type rotary tools, it consistently offers more power and performance.
+        </div>
+        <div class="shaft-compat">For use on SR, TX, and LX motors.<br><strong>Must use compatible Handpiece</strong></div>
+      </div>
+
+      <div class="shaft-col">
+        <h4>Square Drive <span>&ndash; heavier</span></h4>
+        <div class="shaft-img"><img src="/spec-sheets/foredom-square-drive-shaft.jpg" alt="Foredom Square Drive Shaft" /></div>
+        <div class="shaft-desc">
+          Foredom motors equipped with square drive shafts and thicker protective sheaths have a letter &ldquo;H&rdquo; added to the model name (SRH or TXH, etc.). The motor is identical. Square drive shafting is thicker, less flexible, usually 63&quot; long and can connect to 5 Square Drive handpieces. Few applications require square drive shafting with a torsional breaking point of 50 in.-lb. (compared with 24 in.-lb. for key tip shafting). For unusually large or difficult jobs, square drive shafting may be a good choice.
+        </div>
+        <div class="shaft-compat">For use on SR, TX, and LX motors.<br><strong>Must use compatible Handpiece</strong></div>
+      </div>
+
+      <div class="shaft-col">
+        <h4>Slip Joint <span>&ndash; European</span></h4>
+        <div class="shaft-img"><img src="/spec-sheets/foredom-slip-joint-shaft.jpg" alt="Foredom Slip Joint Shaft" /></div>
+        <div class="shaft-desc">
+          <strong>Slip Joint Shafts are mostly used in Europe.</strong> Foredom motors equipped with Slip Joint Shafts and sheaths have a letter &ldquo;J&rdquo; added to the model name (SRJ, or LXJ, etc.). The motor is identical. Since Foredom motors are used worldwide we offer shafting with this European-style connection method and a choice of 7 handpieces that connect with the slip joint.
+        </div>
+        <div class="shaft-compat">For use on SR, TX, and LX motors.<br><strong>Must use compatible Handpiece</strong></div>
+      </div>
+
+      <div class="shaft-col">
+        <h4>PowerGraver Sheath</h4>
+        <div class="shaft-img"><img src="/spec-sheets/foredom-powergraver-sheath.jpg" alt="Foredom PowerGraver Sheath" /></div>
+        <div class="shaft-desc">
+          <strong>The PowerGraver is in a class of its own!</strong> It uses a standard 39&quot; Key Tip Inner Shaft (p/n S-93) but requires a unique Neoprene Outer Sheath (p/n S-76N) for Connecting to a <strong>H.9D PowerGraver Handpiece</strong>. As listed above, it has 1/20 horsepower and runs at a maximum speed of 2,800 RPM.
+        </div>
+        <div class="shaft-compat">For use on the Power Graver motor.<br><strong>Must use compatible Handpiece</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Compatible Handpiece -->
+  <div class="handpiece-section">
+    <div class="section-side">
+      <div class="section-number">3</div>
+      <div class="section-name">Compatible Handpiece</div>
+    </div>
+
+    <div class="handpiece-grid">
+      <div class="handpiece-col">
+        <div class="hp-title">Key Tip Shafting is compatible with the following Key Tip Handpieces:</div>
+        <p><strong>General Purpose:</strong><br>H.30, H.30-C2, H.44T, H.44T-E, H.43T, H.28, H.8</p>
+        <p><strong>Quick Change:</strong><br>H.18, H.20, H.10</p>
+        <p><strong>Special Use:</strong><br>H.25, H.50, H.15</p>
+        <p><strong>Duplex Spring:</strong><br>H.8D, H.10D, H.15D, H.18D, H.20D</p>
+      </div>
+
+      <div class="handpiece-col">
+        <div class="hp-title">Square Drive Shafting is compatible with the following Square Drive Handpieces:</div>
+        <p>H.28H, H.30H, H.43HT, H.44T, H.25H</p>
+      </div>
+
+      <div class="handpiece-col">
+        <div class="hp-title">Slip Joint Shafting is compatible with the following Slip Joint Handpieces:</div>
+        <p>H.30SJ, H.8SJ, H.28SJ, H.44TSJ, H.20SJ, H.18SJ, H.15SJ</p>
+      </div>
+
+      <div class="handpiece-col">
+        <div class="hp-title">PowerGraver Shafting is compatible with the following Handpieces:</div>
+        <p><strong>This is the ONLY Shafting for the Power Graver Handpiece H.9D.</strong></p>
+        <p>However all other KEY TIP Handpieces will work on the Power Graver Shafting</p>
+      </div>
+    </div>
+  </div>
+</div>

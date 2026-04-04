@@ -74,6 +74,16 @@ const manuals = defineCollection({
   }),
 });
 
+const specSheets = defineCollection({
+  loader: glob({ pattern: '**/*.yml', base: './src/content/spec-sheets' }),
+  schema: z.object({
+    name: z.string(),
+    manufacturer: z.string(),
+    category: z.string(),
+    description: z.string(),
+  }),
+});
+
 const resume = defineCollection({
   loader: glob({ pattern: '**/*.yml', base: './src/content/resume' }),
   schema: z.object({
@@ -89,4 +99,4 @@ const resume = defineCollection({
   }),
 });
 
-export const collections = { bits, species, manuals, resume };
+export const collections = { bits, species, manuals, 'spec-sheets': specSheets, resume };

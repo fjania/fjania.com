@@ -1,0 +1,33 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import '../../../styles/spec-sheets.css';
+
+const sheets = await getCollection('spec-sheets');
+const sorted = sheets.sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+function categoryLabel(cat: string): string {
+  return cat.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+---
+
+<Base title="Spec Sheets">
+  <div class="sheets-listing">
+    <a href="/workshop/" class="back-link">&larr; Workshop</a>
+    <h1>Spec Sheets</h1>
+    <p class="subtitle">{sorted.length} {sorted.length === 1 ? 'sheet' : 'sheets'} &mdash; tool and consumable reference specs</p>
+
+    <div class="sheets-grid">
+      {sorted.map(sheet => (
+        <a href={`/workshop/spec-sheets/${sheet.id}/`} class="sheet-card">
+          <div class="card-body">
+            <div class="category">{categoryLabel(sheet.data.category)}</div>
+            <h2>{sheet.data.name}</h2>
+            <p class="manufacturer">{sheet.data.manufacturer}</p>
+            <p class="desc">{sheet.data.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Base>

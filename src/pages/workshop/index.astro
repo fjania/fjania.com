@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 const bits = await getCollection('bits');
 const species = await getCollection('species');
 const manuals = await getCollection('manuals');
+const specSheets = await getCollection('spec-sheets');
 ---
 
 <Base title="Workshop">
@@ -34,7 +35,7 @@ const manuals = await getCollection('manuals');
       }
       .home-cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1.5rem;
       }
       .home-card {
@@ -91,6 +92,11 @@ const manuals = await getCollection('manuals');
         <div class="count">{manuals.length}</div>
         <h2>Manuals</h2>
         <p class="desc">Machine manuals as PDFs and readable HTML</p>
+      </a>
+      <a href="/workshop/spec-sheets/" class="home-card">
+        <div class="count">{specSheets.length}</div>
+        <h2>Spec Sheets</h2>
+        <p class="desc">Tool and consumable reference specs</p>
       </a>
     </div>
   </div>
