@@ -219,6 +219,16 @@ function matClass(c: string) {
   return 'mat-n';
 }
 
+function frac(str: string): string {
+  // Strip first " before dash, normalize dash to en-dash with thin spaces
+  let s = str.replace(/"\s*-\s*/g, ' \u2013 ');
+  s = s.replace(/\s+-\s+/g, ' \u2013 ');
+  s = s.replace(/(\d)-/g, '$1 \u2013 ');
+  // Convert fractions to styled HTML
+  s = s.replace(/(\d+)\/(\d+)/g, '<span class="frac"><sup>$1</sup>&frasl;<sub>$2</sub></span>');
+  return s;
+}
+
 function finishBars(val: string): number {
   if (val === '++++') return 4;
   if (val === '+++') return 3;
@@ -388,9 +398,8 @@ function finishBars(val: string): number {
     padding: 0.2rem 0.15rem;
   }
   .blade-table td.opt-cell {
-    text-align: left;
-    white-space: normal;
-    min-width: 80px;
+    white-space: nowrap;
+    text-align: center;
   }
   .blade-table td.check {
     color: #4a9e4a;
@@ -428,6 +437,19 @@ function finishBars(val: string): number {
   }
   .wood-class strong { color: #2c2c2c; }
 
+  /* Fractions */
+  .frac {
+    font-feature-settings: normal;
+    white-space: nowrap;
+  }
+  .frac sup, .frac sub {
+    font-size: 0.7em;
+    vertical-align: baseline;
+    position: relative;
+  }
+  .frac sup { top: -0.35em; }
+  .frac sub { bottom: -0.15em; }
+
   /* Responsive */
   @media (max-width: 900px) {
     .blade-table {
@@ -442,11 +464,9 @@ function finishBars(val: string): number {
       height: 10px;
     }
   }
-  @media (max-width: 600px) {
-    .blade-table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
+  .blade-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 </style>
 
@@ -531,7 +551,7 @@ function finishBars(val: string): number {
                 {b[6].split('').map((c: string) => (
                   <td class="mat-cell"><span class={matClass(c)}></span></td>
                 ))}
-                <td class="opt-cell">{b[7]}</td>
+                <td class="opt-cell" set:html={frac(b[7])} />
                 <td class="check">{b[8]}</td>
                 <td class="check">{b[9]}</td>
                 <td>{finishBars(b[10]) > 0
@@ -543,7 +563,7 @@ function finishBars(val: string): number {
                   : <span class="finish-bar-na">&ndash;</span>
                 }</td>
                 {section.pinned
-                  ? <td>{b[13]}</td>
+                  ? <td set:html={frac(b[13])} />
                   : <><td>{b[12]}</td><td>{b[13]}</td></>
                 }
               </tr>
