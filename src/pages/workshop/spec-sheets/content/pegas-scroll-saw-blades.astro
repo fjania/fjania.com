@@ -1,5 +1,5 @@
 ---
-const sections = [
+const allSections = [
   {
     name: "Super-Skip",
     img: "pegas-super-skip.png",
@@ -204,6 +204,12 @@ const sections = [
   },
 ];
 
+// Reorder: MGT first, Spiral second, then the rest in original order
+const mgt = allSections.find(s => s.name === "Modified Geometry");
+const spiral = allSections.find(s => s.name === "Spiral");
+const rest = allSections.filter(s => s.name !== "Modified Geometry" && s.name !== "Spiral");
+const sections = [mgt, spiral, ...rest];
+
 const matLabels = ["HW","MH","SW","PW","CO","AL","FE"];
 const matNames = ["Hardwoods","Medium Hardwoods","Softwoods","Plywood","Corian / Plastics","Alu, Brass, Copper","Ferrous Metals"];
 
@@ -323,25 +329,22 @@ function finishBars(val: string): number {
     font-size: 0.85rem;
     color: #888;
   }
-  .blade-section .section-head {
+  .blade-section .section-title-row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 1rem;
-    align-items: flex-start;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.3rem;
   }
-  .blade-section .section-head .section-text {
-    flex: 1;
-    min-width: 0;
-  }
-  .blade-section .section-head .blade-profile {
+  .blade-section .section-title-row .blade-profile {
     flex-shrink: 0;
     width: 450px;
     height: auto;
     object-fit: contain;
   }
   @media (max-width: 700px) {
-    .blade-section .section-head { flex-direction: column; }
-    .blade-section .section-head .blade-profile { width: 100%; max-width: 300px; }
+    .blade-section .section-title-row { flex-direction: column; align-items: flex-start; }
+    .blade-section .section-title-row .blade-profile { width: 100%; max-width: 300px; }
   }
   .blade-section .type-desc {
     font-size: 0.78rem;
@@ -488,13 +491,11 @@ function finishBars(val: string): number {
 
   {sections.map((section) => (
     <div class="blade-section">
-      <div class="section-head">
-        <div class="section-text">
-          <h3>{section.name} <span>({section.len})</span></h3>
-          <p class="type-desc">{section.desc}</p>
-        </div>
+      <div class="section-title-row">
+        <h3>{section.name} <span>({section.len})</span></h3>
         {section.img && <img class="blade-profile" src={`/spec-sheets/${section.img}`} alt={`${section.name} tooth profile`} />}
       </div>
+      <p class="type-desc">{section.desc}</p>
 
       <div class="blade-table-wrap">
         <table class="blade-table">
