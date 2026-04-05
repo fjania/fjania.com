@@ -1,0 +1,574 @@
+---
+const sections = [
+  {
+    name: "Super-Skip",
+    img: "pegas-super-skip.png",
+    len: '5"/130mm',
+    desc: "Use the Super-Skip when you want to achieve a smooth finish from an aggressive blade. Specially designed for hard and medium-hardwoods, Super-Skip also works perfectly on Acrylics with reduced speed. The spaces between the teeth of the Super-Skip blade are wider than the normal Skip-tooth configuration. This enables the blade to cut very quickly, leaving a smooth finish. The surface sawdust is whisked away and the edge remains clean.",
+    blades: [
+      ["SSB-27","2/0",".0085",".024","21.4",".0098","EEEEGNN",'.06"- 1/4"',"X","","+++","+++","70",'.0280"'],
+      ["SSB-28","0",".0090",".029","19.3",".0106","EEEEGNN",'1/12"- 1/4"',"X","","+++","+++","68",'.0310"'],
+      ["SSB-29","1",".0100",".030","17.2",".0114","EEGEGNN",'1/10"-1/3"',"X","","+++","++","64",'.0360"'],
+      ["SSB-30","2",".0118",".031","16.1",".0130","EEGEGNN",'1/8"-2/5"',"X","","+++","++","64",'.0360"'],
+      ["SSB-31","3",".0125",".033","14.8",".0138","EEGEGNN",'1/6"- 2/5"',"X","","+++","++","60",'.0400"'],
+      ["SSB-32","4",".0145",".037","13.8",".0150","EEGGENN",'1/5"- 1/2"',"","X","+++","++","57",'.0430"'],
+      ["SSB-33","5",".0150",".040","12.8",".0157","EEGGENN",'1/3"- 3/5"',"","X","+++","++","56",'.0465"'],
+      ["SSB-34","6",".0150",".044","12.0",".0169","EEGGENN",'1/3" - 3/4"',"","X","+++","++","56",'.0465"'],
+      ["SSB-35","7",".0160",".049","11.3",".0177","EEGGENN",'2/5"- 4/5"',"","X","+++","++","54",'.0550"'],
+      ["SSB-36","8",".0160",".050","10.7",".0185","EEGGENN",'1/2" 4/5"',"X","","+++","+","54",'.0550"'],
+      ["SSB-37","9",".0170",".051","10.1",".0193","EEGGNNN",'1/2"- 1"',"","","+++","+","52",'.0635"'],
+      ["SSB-38","10",".0180",".054","9.6",".0205","EEGGNNN",'3/5"-1 1/6"',"","X","+++","+","52",'.0635"'],
+      ["SSB-39","11",".0190",".057","9.2",".0220","EEGGNNN",'3/4"- 1 4/7"',"","X","+++","+","47",'.0785"'],
+      ["SSB-40","12",".0200",".061","8.8",".0244","EEGGNNN",'4/5"- 2"',"","X","+++","+","47",'.0785"'],
+    ]
+  },
+  {
+    name: "Skip",
+    img: "pegas-skip.png",
+    len: '5"/130mm',
+    desc: "Universal Scroll Sawblade, very efficient in Hard and Medium-Hard woods. The wide range of SKIP allows the cutting of intricate patterns as well as rough-cut work. It will accept a fast feed rate and will leave a smooth finish.",
+    blades: [
+      ["SSB-41","2/0",".0087",".0236","28.2",".0094","EEEEGNN",'.06"- 1/4"',"X","","+++","+++","70",'.0280"'],
+      ["SSB-415","0",".0094",".0291","25.4",".0102","EEEEGNN",'1/12"- 1/4"',"X","","+++","+++","68",'.0310"'],
+      ["SSB-42","1",".0102",".030","22.7",".0114","EEGEGNN",'1/10"-1/3"',"X","","+++","++","64",'.0360"'],
+      ["SSB-43","2",".0118",".0307","21.0",".013","EEGEGNN",'1/8"-2/5"',"X","","+++","++","64",'.0360"'],
+      ["SSB-44","3",".0126",".0335","19.5",".0142","EEGEGNN",'1/6"- 2/5"',"X","","+++","++","60",'.0400"'],
+      ["SSB-45","4",".0134",".0374","18.1",".015","EEGGENN",'1/5"- 1/2"',"","X","+++","++","57",'.0430"'],
+      ["SSB-46","5",".0142",".0402","16.9",".0157","EEGGENN",'1/3"- 3/5"',"","X","+++","++","56",'.0465"'],
+      ["SSB-469","6",".015",".0441","15.9",".0165","EEGGENN",'1/3" - 3/4"',"","X","+++","++","56",'.0465"'],
+      ["SSB-47","7",".0157",".0488","14.9",".0177","EEGGENN",'2/5"- 4/5"',"","X","+++","++","54",'.0550"'],
+      ["SSB-473","8",".0165",".0504","14.1",".0185","EEGGNNN",'1/2" 4/5"',"X","","+++","+","54",'.0550"'],
+      ["SSB-48","9",".0173",".0512","13.4",".0193","EEGGNNN",'1/2"- 1"',"","","+++","+","52",'.0635"'],
+      ["SSB-49","10",".0181",".0543","12.7",".0205","EEGGNNN",'3/5"-1 1/6"',"","X","+++","+","52",'.0635"'],
+      ["SSB-495","11",".0189",".0575","12.1",".0213","EEGGNNN",'3/4"- 1 4/7"',"","X","+++","+","47",'.0785"'],
+      ["SSB-50","12",".0197",".061","11.5",".022","EEGGNNN",'4/5"- 2"',"","X","+++","+","47",'.0785"'],
+    ]
+  },
+  {
+    name: "Skip + Reverse",
+    img: "pegas-skip-reverse.png",
+    len: '5"/130mm',
+    desc: "Same tooth geometry as Skip but with an addition of reverse teeth to the bottom of the blade. REVERSE blades prevent splinters on the underside of the work piece. Excellent blade for softer woods.",
+    blades: [
+      ["SSB-60","3R",".0126",".0335","16.4",".0142","GEEEGNN",'1/6"- 2/5"',"","X","+++","+++","60",'.0400"'],
+      ["SSB-61","5R",".0142",".0402","14.5",".0161","GEEEGNN",'1/3"- 3/5"',"","X","+++","+++","56",'.0465"'],
+      ["SSB-62","7R",".0157",".0488","13.0",".0181","GEEEGNN",'2/5"- 4/5"',"","X","+++","+++","54",'.0550"'],
+      ["SSB-63","9R",".0173",".0512","11.8",".020","GEEEGNN",'1/2"- 1"',"","X","+++","+++","52",'.0635"'],
+    ]
+  },
+  {
+    name: "Double Skip",
+    img: "pegas-double-skip.png",
+    len: '5"/130mm',
+    desc: "This tooth arrangement offers an efficient chip removal and therefore PREVENTS FROM WOOD BURNING. Fast blade which leaves a smooth finish. Excellent in Soft woods.",
+    blades: [
+      ["SSB-51","2/0",".0087",".0236","24.9",".0094","EEEEGNN",'1/10"-1/3"',"X","","+++","++","70",'.0280"'],
+      ["SSB-51Y","0",".0094",".0291","22.9",".0102","GEEEENN",'1/8"-2/5"',"X","","+++","++","68",'.0310"'],
+      ["SSB-52","1",".0102",".030","21.7",".0114","GEEEENN",'1/6"- 2/5"',"X","","+++","++","64",'.0360"'],
+      ["SSB-53","2",".0118",".0307","19.2",".013","GEEEENN",'1/5"- 1/2"',"X","","+++","++","64",'.0360"'],
+      ["SSB-53Y","3",".0126",".0335","16.9",".0142","GEEEENN",'1/3"- 3/5"',"","X","+++","++","60",'.0400"'],
+      ["SSB-54","4",".0134",".0374","15.7",".015","GEEGGNN",'1/3" - 3/4"',"","X","+++","+","57",'.0430"'],
+      ["SSB-55","5",".0142",".0402","14.7",".0157","GEEGGNN",'2/5"- 4/5"',"","X","+++","+","56",'.0465"'],
+      ["SSB-55Y","6",".015",".0441","14.4",".0165","GEEGGNN",'1/2" 4/5"',"","X","+++","+","56",'.0465"'],
+      ["SSB-56","7",".0157",".0488","12.8",".0177","GEEGNNN",'1/2"- 1"',"","X","+++","++","54",'.0550"'],
+      ["SSB-56Y","8",".0165",".0504","11.9",".0185","GEEGNNN",'3/5"-1 1/6"',"","","+++","+","54",'.0550"'],
+      ["SSB-57","9",".0173",".0512","11.3",".0193","GEEGNNN",'3/4"- 1 4/7"',"","X","+++","+","52",'.0635"'],
+      ["SSB-58","10",".0181",".0543","10.6",".0205","GEEGNNN",'4/5"- 2"',"","X","+++","+","52",'.0635"'],
+      ["SSB-58Y","11",".0189",".0575","10.0",".0213","GEEGNNN",'4/5"- 2 1/6"',"","X","+++","+","47",'.0785"'],
+      ["SSB-59","12",".0197",".061","9.4",".022","GEEGNNN",'1"- 2 1/3"',"","X","+++","+","47",'.0785"'],
+    ]
+  },
+  {
+    name: "Double Skip + Reverse",
+    img: "pegas-double-skip-reverse.png",
+    len: '5"/130mm',
+    desc: "Same as Double Skip but with addition of reverse teeth at the lower end of the blade, for a splinter free finish on the underside of the piece. Efficient blade in lots of woods where OVERHEATING is to avoid.",
+    blades: [
+      ["SSB-64","5R",".0142",".0402","12.1",".0161","GEEEENN",'1/3"- 3/5"',"","X","+++","+++","56",'.0465"'],
+      ["SSB-65","7R",".0157",".0488","10.9",".0181","GEEEENN",'2/5"- 4/5"',"","X","+++","+++","54",'.0550"'],
+      ["SSB-66","9R",".0173",".0512","9.7",".020","GEEEENN",'1/2"- 1"',"","X","+++","+++","52",'.0635"'],
+    ]
+  },
+  {
+    name: "Modified Geometry",
+    img: "pegas-mgt.png",
+    len: '5"/130mm',
+    desc: "The Modified Geometry Teeth (MGT) combines elements of skip and reverse teeth to make the best blade on the market. The specific tooth design makes this blade EXTREMELY EFFICIENT; tolerates aggressive feed rates, avoids overheating, leaves a smooth finish, no splitters.",
+    blades: [
+      ["SSB-67","2/0R",".0087",".0236","15.4",".0098","EEEEGNN",'1/4"-2/5"',"X","","++++","+++","68",'.0310"'],
+      ["SSB-68","1R",".0102",".030","13.7",".0114","EEEEGNN",'1/3"- 3/5"',"","X","++++","+++","68",'.0310"'],
+      ["SSB-6830","3R",".0126",".0335","12.4",".0142","EEEEGNN",'1/3"- 4/5"',"","X","++++","+++","60",'.0400"'],
+      ["SSB-69","5R",".0142",".0402","11.3",".0161","EEEENNN",'1/3"- 1"',"","X","++++","+++","56",'.0465"'],
+      ["SSB-70","7R",".0157",".0488","10.4",".0181","EEEENNN",'2/5"- 1 1/6"',"","X","++++","+++","52",'.0550"'],
+      ["SSB-71","9R",".0173",".0512","9.6",".0205","EEEENNN",'1/2" - 1 3/8"',"","X","++++","+++","52",'.0635"'],
+      ["SSB-72","12R",".0197",".061","8.6",".0236","EEEENNN",'3/5"- 1 4/7"',"","X","++++","+++","47",'.0785"'],
+    ]
+  },
+  {
+    name: "Regular",
+    img: "pegas-regular.png",
+    len: '5"/130mm',
+    desc: "The Universal tooth design makes this blade usable in a large range of applications. Very strong and easy to use but not adapted for close turns.",
+    blades: [
+      ["SSB-78","25TPI",".0197",".0709","25",".0268","GGEEEEN",'1/8"- 4/5"',"","X","++","+","47",'.0785"'],
+      ["SSB-79","20TPI",".0197",".0709","20",".0276","GGEEGGN",'1/6"- 1"',"","X","++","+","47",'.0785"'],
+      ["SSB-80","20TPI",".0197",".1181","20",".0283","GGEENNN",'1/6"- 1 1/6"',"","X","++","+","30",'.1285"'],
+      ["SSB-82","15TPI",".0197",".1181","15",".0283","GGEENNN",'1/5"- 1 3/8"',"","X","++","+","30",'.1285"'],
+      ["SSB-83","10TPI",".0197",".1181","10",".0283","GGEENNN",'1/3"- 2"',"","X","++","+","30",'.1285"'],
+    ]
+  },
+  {
+    name: "Regular",
+    img: "pegas-regular.png",
+    len: '6"/152mm',
+    desc: "Same applications as Regular 5\" but in 6\". To be used on older saws.",
+    blades: [
+      ["SSB-84","20TPI",".0197",".1181","20",".0283","GGEEEEN",'1/6"- 1 1/6"',"","X","++","+","30",'.1285"'],
+      ["SSB-85","15TPI",".0197",".1181","15",".0283","GGEEEEN",'1/5"- 1 3/8"',"","X","++","+","30",'.1285"'],
+      ["SSB-86","10TPI",".0197",".1181","10",".0283","GGEEGNN",'1/3"- 2"',"","X","++","+","30",'.1285"'],
+    ]
+  },
+  {
+    name: "Pinned Regular",
+    img: "pegas-pinned.png",
+    len: '5"/127mm',
+    desc: "Same as Regular 5\" & 6\" but WITH PINS.",
+    pinned: true,
+    blades: [
+      ["SSB-87","20TPI",".0197",".1181","20",".0283","GGEEEEN",'1/6"- 1 1/6"',"","X","++","+","","3/16"],
+      ["SSB-88","15TPI",".0197",".1181","15",".0283","GGEEGNN",'1/5"- 1 3/8"',"","X","++","+","","3/16"],
+      ["SSB-89","10TPI",".0197",".1181","10",".0283","GGEEGNN",'1/3"- 2"',"","X","++","+","","3/16"],
+      ["SSB-90","25TPI",".0098",".0787","25",".0157","GGEEEEE",'1/8"- 4/5"',"","X","++","+","","3/16"],
+    ]
+  },
+  {
+    name: "Pinned Skip",
+    img: "pegas-pinned.png",
+    len: '5"/127mm',
+    desc: "The large and flat skip between teeth gives a good chip removal and therefore reduces the overheating. Good blade for fast cuts with easy patterns.",
+    pinned: true,
+    blades: [
+      ["SSB-91","9TPI",".0197",".1181","9",".0283","GEEEEGN",'2/5"- >2"',"","X","++","+","","3/16"],
+      ["SSB-92","18TPI",".0098",".0787","18",".0142","EEEEEEN",'1/6"- 1 1/6"',"","X","++","+","","3/16"],
+    ]
+  },
+  {
+    name: "Pinned Hook",
+    img: "pegas-pinned.png",
+    len: '5"/127mm',
+    desc: "Special scroll saw blade with extra wide gullets for rapid cutting. This blade works like a miniature band saw blade.",
+    pinned: true,
+    blades: [
+      ["SSB-93","7TPI",".0197",".1181","7",".0291","EEEEEEG",'2/5"- 3"',"","X","++","+","","3/16"],
+    ]
+  },
+  {
+    name: "Pinned Regular",
+    img: "pegas-pinned.png",
+    len: '3"/75mm',
+    desc: "Same as pinned Regular 5\" but 3\", adapted for some Hobby saws.",
+    pinned: true,
+    blades: [
+      ["SSB-94","25TPI",".0098",".0787","25",".0157","GGEEEEE",'1/8"- 4/5"',"","X","++","+","","3/16"],
+    ]
+  },
+  {
+    name: "Pinned Skip",
+    img: "pegas-pinned.png",
+    len: '3"/75mm',
+    desc: "Same as pinned Skip 5\" but 3\", adapted for some Hobby saws.",
+    pinned: true,
+    blades: [
+      ["SSB-95","18TPI",".0150",".0787","18",".0205","EEEGGNN",'1/6"-4/5"',"","X","++","+","","3/16"],
+      ["SSB-96","15TPI",".0150",".1181","15",".0209","EEEGGNN",'1/5"- 1"',"","X","++","+","","3/16"],
+    ]
+  },
+  {
+    name: "Spiral",
+    img: "pegas-spiral.png",
+    len: '5"/130mm',
+    desc: "The teeth on 360\u00B0 allows to saw in each direction. The work does not have to be turned to make cuts, so sharp inside corners can be created. This also allows to work long pieces which couldn\u2019t be turned on a 16\" or 21\" scroll saw. It is best suited for thin materials.",
+    spiral: true,
+    blades: [
+      ["SSB-90500","2/0",".0236","","59.1",".0276","GGEEEEE",'.06"- 1/6"',"X","","-","-","68",'.0310"'],
+      ["SSB-90501","0",".0291","","54.0",".0339","GGEEEEE",'.06"- 1/5"',"X","","-","-","64",'.0360"'],
+      ["SSB-90502","1",".0299","","50.8",".0354","GGEEEEE",'1/12"- 1/5"',"X","","-","-","60",'.0400"'],
+      ["SSB-90503","2",".0315","","46.2",".0378","GGEEEEE",'1/12"- 1/4"',"X","","-","-","57",'.0430"'],
+      ["SSB-90504","3",".0339","","42.3",".0406","GGEEEEE",'1/12"- 1/4"',"X","","-","-","56",'.0465"'],
+      ["SSB-90505","4",".0374","","39.1",".0449","NGEEEEE",'1/12" - .275"',"X","","-","-","56",'.0465"'],
+      ["SSB-90506","5",".0402","","36.3",".0480","NGEEEEE",'1/12" - .275"',"X","","-","-","54",'.0550"'],
+      ["SSB-90507","6",".0441","","33.9",".0520","NGEEEEE",'1/10" - 1/3"',"X","","-","-","54",'.0550"'],
+      ["SSB-90508","7",".0488","","31.8",".0567","NGEEEEE",'1/10" - 2/5"',"X","","-","-","52",'.0635"'],
+      ["SSB-90509","8",".0504","","31.8",".0583","NGEEEEE",'1/8" - 2/5"',"X","","-","-","47",'.0785"'],
+    ]
+  },
+];
+
+const matLabels = ["HW","MH","SW","PW","CO","AL","FE"];
+const matNames = ["Hardwoods","Medium Hardwoods","Softwoods","Plywood","Corian / Plastics","Alu, Brass, Copper","Ferrous Metals"];
+
+function matClass(c: string) {
+  if (c === 'E') return 'mat-e';
+  if (c === 'G') return 'mat-g';
+  return 'mat-n';
+}
+
+function finishBars(val: string): number {
+  if (val === '++++') return 4;
+  if (val === '+++') return 3;
+  if (val === '++') return 2;
+  if (val === '+') return 1;
+  return 0; // "-" or empty
+}
+---
+
+<style>
+  .pegas-sheet {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .pegas-sheet h2.chart-title {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 1.5rem;
+    border: none;
+    padding: 0;
+  }
+
+  /* Legend */
+  .legend {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 0.4rem 2rem;
+    align-items: start;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1rem;
+    background: #f8f8f5;
+    border: 1px solid #e0ddd5;
+    border-radius: 6px;
+    font-size: 0.78rem;
+  }
+  .legend-group h4 { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 0.25rem; }
+  .legend-item { display: inline-flex; align-items: center; gap: 0.35rem; margin-right: 1rem; }
+  .legend-mat { display: flex; flex-wrap: wrap; }
+  .legend-finish { display: flex; flex-wrap: wrap; gap: 0.15rem 1rem; }
+
+  /* Finish quality bars */
+  .finish-bar {
+    display: inline-flex;
+    gap: 2px;
+    vertical-align: middle;
+  }
+  .finish-bar .bar-seg {
+    width: 5px;
+    height: 12px;
+    background: #d4d0c8;
+    border-radius: 1px;
+  }
+  .finish-bar .bar-seg.filled { background: #4a9e4a; }
+  .finish-bar-na {
+    color: #aaa;
+    font-size: 0.75rem;
+  }
+
+  /* Abbreviations */
+  .abbrev-all {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 0.1rem 1.2rem;
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+  .abbrev-all span { white-space: nowrap; }
+  .abbrev-all strong { color: #555; margin-right: 0.3rem; }
+  @media (max-width: 700px) {
+    .abbrev-all { grid-template-columns: repeat(2, auto); }
+  }
+
+  @media (max-width: 800px) {
+    .legend { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 500px) {
+    .legend { grid-template-columns: 1fr; }
+  }
+
+  /* Material suitability icons */
+  .mat-e, .mat-g, .mat-n {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .mat-e { background: #4a9e4a; }
+  .mat-g { background: #d4a843; }
+  .mat-n { background: #d4d0c8; }
+
+  /* Blade type section */
+  .blade-section {
+    margin-bottom: 2rem;
+  }
+  .blade-section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 0.2rem;
+    border: none;
+    padding: 0;
+  }
+  .blade-section h3 span {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #888;
+  }
+  .blade-section .section-head {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+  }
+  .blade-section .section-head .section-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .blade-section .section-head .blade-profile {
+    flex-shrink: 0;
+    width: 450px;
+    height: auto;
+    object-fit: contain;
+  }
+  @media (max-width: 700px) {
+    .blade-section .section-head { flex-direction: column; }
+    .blade-section .section-head .blade-profile { width: 100%; max-width: 300px; }
+  }
+  .blade-section .type-desc {
+    font-size: 0.78rem;
+    color: #555;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* Blade table */
+  .blade-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+    margin-bottom: 0.5rem;
+  }
+  .blade-table th,
+  .blade-table td {
+    border: 1px solid #d4d0c8;
+    padding: 0.25rem 0.4rem;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .blade-table thead th {
+    background: #f0ede6;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .blade-table tbody tr:nth-child(even) {
+    background: #fafaf7;
+  }
+  .blade-table td.model-cell {
+    font-weight: 600;
+    text-align: left;
+    color: #2c2c2c;
+  }
+  .blade-table td.mat-cell {
+    padding: 0.2rem 0.15rem;
+  }
+  .blade-table td.opt-cell {
+    text-align: left;
+    white-space: normal;
+    min-width: 80px;
+  }
+  .blade-table td.check {
+    color: #4a9e4a;
+    font-weight: 700;
+  }
+
+  /* Tips section */
+  .tips-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f8f8f5;
+    border: 1px solid #e0ddd5;
+    border-radius: 6px;
+  }
+  .tips-section h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    padding: 0;
+  }
+  .tips-section ul {
+    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+    font-size: 0.82rem;
+  }
+  .tips-section li { margin-bottom: 0.2rem; }
+
+  .wood-class {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: #f0ede6;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+  .wood-class strong { color: #2c2c2c; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .blade-table {
+      font-size: 0.68rem;
+    }
+    .blade-table th,
+    .blade-table td {
+      padding: 0.2rem 0.25rem;
+    }
+    .mat-e, .mat-g, .mat-n {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  @media (max-width: 600px) {
+    .blade-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+</style>
+
+<div class="pegas-sheet">
+  <h2 class="chart-title">Selection Chart &amp; Technical Data</h2>
+
+  <div class="legend">
+    <div class="legend-group">
+      <h4>Material Suitability</h4>
+      <div class="legend-mat">
+        <div class="legend-item"><span class="mat-e"></span> Excellent</div>
+        <div class="legend-item"><span class="mat-g"></span> OK</div>
+        <div class="legend-item"><span class="mat-n"></span> Not rec.</div>
+      </div>
+    </div>
+    <div class="legend-group">
+      <h4>Finish Quality</h4>
+      <div class="legend-finish">
+        <div class="legend-item"><span class="finish-bar"><span class="bar-seg filled"></span><span class="bar-seg"></span><span class="bar-seg"></span><span class="bar-seg"></span></span> Medium</div>
+        <div class="legend-item"><span class="finish-bar"><span class="bar-seg filled"></span><span class="bar-seg filled"></span><span class="bar-seg"></span><span class="bar-seg"></span></span> Good</div>
+        <div class="legend-item"><span class="finish-bar"><span class="bar-seg filled"></span><span class="bar-seg filled"></span><span class="bar-seg filled"></span><span class="bar-seg"></span></span> Excellent</div>
+        <div class="legend-item"><span class="finish-bar"><span class="bar-seg filled"></span><span class="bar-seg filled"></span><span class="bar-seg filled"></span><span class="bar-seg filled"></span></span> Incredibly fine</div>
+      </div>
+    </div>
+    <div class="legend-group">
+      <h4>Abbreviations</h4>
+      <div class="abbrev-all">
+        <span><strong>AL</strong>Alu, Brass, Copper</span>
+        <span><strong>CO</strong>Corian / Plastics</span>
+        <span><strong>FE</strong>Ferrous Metals</span>
+        <span><strong>HW</strong>Hardwoods</span>
+        <span><strong>Int.</strong>Intricate cuts</span>
+        <span><strong>MH</strong>Med. Hardwoods</span>
+        <span><strong>PW</strong>Plywood</span>
+        <span><strong>Surf.</strong>Surface finish</span>
+        <span><strong>SW</strong>Softwoods</span>
+        <span><strong>TPI</strong>Teeth/inch</span>
+        <span><strong>Under.</strong>Underside finish</span>
+      </div>
+    </div>
+  </div>
+
+  {sections.map((section) => (
+    <div class="blade-section">
+      <div class="section-head">
+        <div class="section-text">
+          <h3>{section.name} <span>({section.len})</span></h3>
+          <p class="type-desc">{section.desc}</p>
+        </div>
+        {section.img && <img class="blade-profile" src={`/spec-sheets/${section.img}`} alt={`${section.name} tooth profile`} />}
+      </div>
+
+      <div class="blade-table-wrap">
+        <table class="blade-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Univ.&nbsp;#</th>
+              <th>Thick</th>
+              {!section.spiral && <th>Width</th>}
+              <th>TPI</th>
+              <th>Trace</th>
+              {matLabels.map(l => <th title={matNames[matLabels.indexOf(l)]}>{l}</th>)}
+              <th>Optimal Thickness</th>
+              <th title="Intricate cuts">Int.</th>
+              <th title="Tight turns">Tight</th>
+              <th title="Surface finish">Surf.</th>
+              <th title="Underside finish">Under.</th>
+              {section.pinned
+                ? <th>Pin</th>
+                : <><th>Drill</th><th>Hole</th></>
+              }
+            </tr>
+          </thead>
+          <tbody>
+            {section.blades.map((b) => (
+              <tr>
+                <td class="model-cell">{b[0]}</td>
+                <td>{b[1]}</td>
+                <td>{b[2]}</td>
+                {!section.spiral && <td>{b[3]}</td>}
+                <td>{b[4]}</td>
+                <td>{b[5]}</td>
+                {b[6].split('').map((c: string) => (
+                  <td class="mat-cell"><span class={matClass(c)}></span></td>
+                ))}
+                <td class="opt-cell">{b[7]}</td>
+                <td class="check">{b[8]}</td>
+                <td class="check">{b[9]}</td>
+                <td>{finishBars(b[10]) > 0
+                  ? <span class="finish-bar">{[1,2,3,4].map(i => <span class={`bar-seg${i <= finishBars(b[10]) ? ' filled' : ''}`}></span>)}</span>
+                  : <span class="finish-bar-na">&ndash;</span>
+                }</td>
+                <td>{finishBars(b[11]) > 0
+                  ? <span class="finish-bar">{[1,2,3,4].map(i => <span class={`bar-seg${i <= finishBars(b[11]) ? ' filled' : ''}`}></span>)}</span>
+                  : <span class="finish-bar-na">&ndash;</span>
+                }</td>
+                {section.pinned
+                  ? <td>{b[13]}</td>
+                  : <><td>{b[12]}</td><td>{b[13]}</td></>
+                }
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ))}
+
+  <div class="tips-section">
+    <h3>General Tips for Selecting Blades</h3>
+    <p>The smaller the blade number is, the smaller radius it will cut.<br>
+    The smaller the blade number is, the narrower the TRACE will be.</p>
+    <p>Before starting a new project, ask yourself these questions:</p>
+    <ul>
+      <li>What type of wood am I cutting?</li>
+      <li>How thick is the piece of wood?</li>
+      <li>How thin does the cut line need to be (Puzzle, Intarsia)?</li>
+      <li>What finish do it need?</li>
+    </ul>
+
+    <div class="wood-class">
+      <strong>HARDWOODS:</strong> Beech, Bloodwood, Bocote, Bubinga, Canarywood, Cocobolo, Ebony, Elm, Hickory, Hornbeam, Jatoba, Leopardwood, Lyptus, Marblewood, Mora, Oleaster, Purpleheart, Rosewood, Wenge, Yellowheart, Zebrawood.<br>
+      <strong>MEDIUM HARDWOODS:</strong> Ash, Black Cherry, Cherry, Eucalyptus, Limba, Macacauba, Mahogany, Maple, Nogal, Oak, Padauk, Redheart, Sapele, Teak, Tzalam, Walnut.<br>
+      <strong>SOFTWOODS:</strong> Alder, Balsa, Basswood, Birch, Black Willow, Chestnut, Cedar, Cypress, Fir, Larch, Pine, Poplar, Redwood, Spanish Cedar, Spruce.
+    </div>
+  </div>
+</div>
