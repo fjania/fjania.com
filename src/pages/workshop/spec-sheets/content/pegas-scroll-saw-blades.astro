@@ -15,7 +15,7 @@ const allSections = [
       ["SSB-33","5",".0150",".040","12.8",".0157","EEGGENN",'1/3"- 3/5"',"","X","+++","++","56",'.0465"'],
       ["SSB-34","6",".0150",".044","12.0",".0169","EEGGENN",'1/3" - 3/4"',"","X","+++","++","56",'.0465"'],
       ["SSB-35","7",".0160",".049","11.3",".0177","EEGGENN",'2/5"- 4/5"',"","X","+++","++","54",'.0550"'],
-      ["SSB-36","8",".0160",".050","10.7",".0185","EEGGENN",'1/2" 4/5"',"X","","+++","+","54",'.0550"'],
+      ["SSB-36","8",".0160",".050","10.7",".0185","EEGGENN",'1/2"- 4/5"',"X","","+++","+","54",'.0550"'],
       ["SSB-37","9",".0170",".051","10.1",".0193","EEGGNNN",'1/2"- 1"',"","","+++","+","52",'.0635"'],
       ["SSB-38","10",".0180",".054","9.6",".0205","EEGGNNN",'3/5"-1 1/6"',"","X","+++","+","52",'.0635"'],
       ["SSB-39","11",".0190",".057","9.2",".0220","EEGGNNN",'3/4"- 1 4/7"',"","X","+++","+","47",'.0785"'],
@@ -37,7 +37,7 @@ const allSections = [
       ["SSB-46","5",".0142",".0402","16.9",".0157","EEGGENN",'1/3"- 3/5"',"","X","+++","++","56",'.0465"'],
       ["SSB-469","6",".015",".0441","15.9",".0165","EEGGENN",'1/3" - 3/4"',"","X","+++","++","56",'.0465"'],
       ["SSB-47","7",".0157",".0488","14.9",".0177","EEGGENN",'2/5"- 4/5"',"","X","+++","++","54",'.0550"'],
-      ["SSB-473","8",".0165",".0504","14.1",".0185","EEGGNNN",'1/2" 4/5"',"X","","+++","+","54",'.0550"'],
+      ["SSB-473","8",".0165",".0504","14.1",".0185","EEGGNNN",'1/2"- 4/5"',"X","","+++","+","54",'.0550"'],
       ["SSB-48","9",".0173",".0512","13.4",".0193","EEGGNNN",'1/2"- 1"',"","","+++","+","52",'.0635"'],
       ["SSB-49","10",".0181",".0543","12.7",".0205","EEGGNNN",'3/5"-1 1/6"',"","X","+++","+","52",'.0635"'],
       ["SSB-495","11",".0189",".0575","12.1",".0213","EEGGNNN",'3/4"- 1 4/7"',"","X","+++","+","47",'.0785"'],
@@ -69,7 +69,7 @@ const allSections = [
       ["SSB-53Y","3",".0126",".0335","16.9",".0142","GEEEENN",'1/3"- 3/5"',"","X","+++","++","60",'.0400"'],
       ["SSB-54","4",".0134",".0374","15.7",".015","GEEGGNN",'1/3" - 3/4"',"","X","+++","+","57",'.0430"'],
       ["SSB-55","5",".0142",".0402","14.7",".0157","GEEGGNN",'2/5"- 4/5"',"","X","+++","+","56",'.0465"'],
-      ["SSB-55Y","6",".015",".0441","14.4",".0165","GEEGGNN",'1/2" 4/5"',"","X","+++","+","56",'.0465"'],
+      ["SSB-55Y","6",".015",".0441","14.4",".0165","GEEGGNN",'1/2"- 4/5"',"","X","+++","+","56",'.0465"'],
       ["SSB-56","7",".0157",".0488","12.8",".0177","GEEGNNN",'1/2"- 1"',"","X","+++","++","54",'.0550"'],
       ["SSB-56Y","8",".0165",".0504","11.9",".0185","GEEGNNN",'3/5"-1 1/6"',"","","+++","+","54",'.0550"'],
       ["SSB-57","9",".0173",".0512","11.3",".0193","GEEGNNN",'3/4"- 1 4/7"',"","X","+++","+","52",'.0635"'],
@@ -219,14 +219,23 @@ function matClass(c: string) {
   return 'mat-n';
 }
 
+function styleFractions(s: string): string {
+  return s.replace(/(\d+)\/(\d+)/g, '<span class="frac"><sup>$1</sup>&frasl;<sub>$2</sub></span>');
+}
+
 function frac(str: string): string {
-  // Strip first " before dash, normalize dash to en-dash with thin spaces
-  let s = str.replace(/"\s*-\s*/g, ' \u2013 ');
-  s = s.replace(/\s+-\s+/g, ' \u2013 ');
-  s = s.replace(/(\d)-/g, '$1 \u2013 ');
-  // Convert fractions to styled HTML
-  s = s.replace(/(\d+)\/(\d+)/g, '<span class="frac"><sup>$1</sup>&frasl;<sub>$2</sub></span>');
-  return s;
+  // Normalize the dash: strip leading " before it
+  let s = str.replace(/"\s*-\s*/g, '|').replace(/\s+-\s+/g, '|');
+  s = s.replace(/(\d)-/g, '$1|');
+  if (s.includes('|')) {
+    const [lo, hi] = s.split('|');
+    return '<span class="rng">'
+      + '<span class="rng-lo">' + styleFractions(lo.trim()) + '</span>'
+      + '<span class="rng-d">&ndash;</span>'
+      + '<span class="rng-hi">' + styleFractions(hi.trim()) + '</span>'
+      + '</span>';
+  }
+  return styleFractions(s);
 }
 
 function finishBars(val: string): number {
@@ -401,6 +410,26 @@ function finishBars(val: string): number {
     white-space: nowrap;
     text-align: center;
   }
+  .blade-table td.opt-cell :global(.rng) {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+  }
+  .blade-table td.opt-cell :global(.rng-lo) {
+    display: inline-block;
+    width: 40px;
+  }
+  .blade-table td.opt-cell :global(.rng-d) {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    color: #aaa;
+  }
+  .blade-table td.opt-cell :global(.rng-hi) {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+  }
   .blade-table td.check {
     color: #4a9e4a;
     font-weight: 700;
@@ -437,18 +466,18 @@ function finishBars(val: string): number {
   }
   .wood-class strong { color: #2c2c2c; }
 
-  /* Fractions */
-  .frac {
+  /* Fractions (global because injected via set:html) */
+  :global(.frac) {
     font-feature-settings: normal;
     white-space: nowrap;
   }
-  .frac sup, .frac sub {
+  :global(.frac) sup, :global(.frac) sub {
     font-size: 0.7em;
     vertical-align: baseline;
     position: relative;
   }
-  .frac sup { top: -0.35em; }
-  .frac sub { bottom: -0.15em; }
+  :global(.frac) sup { top: -0.35em; }
+  :global(.frac) sub { bottom: -0.15em; }
 
   /* Responsive */
   @media (max-width: 900px) {
