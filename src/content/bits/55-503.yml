@@ -8,8 +8,8 @@ max_rpm: 18000
 image: 55-503.jpg
 url: 'https://infinitytools.com/products/infinity-tools-1-2-shank-4-pc-master-lock-miter-bit-setup-jig-package'
 qty: 1
-status: ordered
-status_date: '2026-04-05'
+status: shipped
+status_date: '2026-04-06'
 specs:
   - label: Diameter
     value: '2-3/4"'
