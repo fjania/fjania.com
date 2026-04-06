@@ -1,0 +1,15 @@
+model: 61-506
+name: "Edge Banding Tongue & Groove Set"
+types:
+  - edge-banding
+brand: inf
+shank: '1/2"'
+max_rpm: null
+image: 61-506.jpg
+url: 'https://infinitytools.com/products/infinity-tools-1-2-shank-banding-set'
+qty: 1
+status: ordered
+status_date: '2026-04-05'
+specs:
+  - label: Stock Thickness
+    value: '1/2" to 1"'

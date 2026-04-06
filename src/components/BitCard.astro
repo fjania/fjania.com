@@ -22,6 +22,7 @@ const brandImages: Record<string, { src: string; alt: string; title: string }> =
   wp: { src: '/bit-images/brand-wp.jpg', alt: 'Woodpeckers', title: 'Ultra\u00B7Shear by Woodpeckers' },
   ws: { src: '/bit-images/brand-ws.jpg', alt: 'Whiteside', title: 'Whiteside' },
   cmt: { src: '/bit-images/brand-cmt.jpg', alt: 'CMT', title: 'CMT Orange Tools' },
+  inf: { src: '/bit-images/brand-inf.jpg', alt: 'Infinity', title: 'Infinity Cutting Tools' },
 };
 
 const brand = brandImages[bit.brand] || brandImages.wp;
@@ -42,6 +43,8 @@ const tagLabels: Record<string, string> = {
   clearing: 'Clearing',
   groove: 'Groove',
   rabbeting: 'Rabbeting',
+  'edge-banding': 'Edge Banding',
+  'lock-miter': 'Lock Miter',
 };
 
 // For multi-type bits, show a combined label

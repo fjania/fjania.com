@@ -1,0 +1,19 @@
+model: 55-503
+name: "Lock Miter Sr."
+types:
+  - lock-miter
+brand: inf
+shank: '1/2"'
+max_rpm: 18000
+image: 55-503.jpg
+url: 'https://infinitytools.com/products/infinity-tools-1-2-shank-4-pc-master-lock-miter-bit-setup-jig-package'
+qty: 1
+status: ordered
+status_date: '2026-04-05'
+specs:
+  - label: Diameter
+    value: '2-3/4"'
+  - label: Cut Height
+    value: '1-3/16"'
+  - label: Stock Range
+    value: '3/4" to 1-3/16"'
