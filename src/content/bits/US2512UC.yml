@@ -1,0 +1,18 @@
+model: US2512UC
+name: "Solid Carbide Compact Compression Pattern & Flush Trim"
+types:
+  - compression
+  - flush
+brand: wp
+shank: '1/4"'
+max_rpm: 24000
+image: US2512UC.jpg
+url: 'https://www.woodpeck.com/ultra-shear-compact-compression-flush-trim-router-bit.html'
+qty: 1
+status: shipped
+status_date: '2026-04-07'
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '1-1/8"'
