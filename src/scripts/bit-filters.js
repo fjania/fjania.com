@@ -39,6 +39,7 @@ function getCardProps(card) {
     if (badge.src.includes('brand-ws')) brand = 'ws';
     else if (badge.src.includes('brand-cmt')) brand = 'cmt';
     else if (badge.src.includes('brand-inf')) brand = 'inf';
+    else if (badge.src.includes('brand-rk')) brand = 'rk';
   }
 
   const shankCell = card.querySelector('.spec-common .spec-value');

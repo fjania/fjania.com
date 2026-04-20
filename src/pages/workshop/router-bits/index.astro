@@ -57,6 +57,7 @@ const brands = [
   { value: 'ws', label: 'Whiteside', icon: '/bit-images/brand-ws.jpg' },
   { value: 'cmt', label: 'CMT', icon: '/bit-images/brand-cmt.jpg' },
   { value: 'inf', label: 'Infinity', icon: '/bit-images/brand-inf.jpg' },
+  { value: 'rk', label: 'Rockler', icon: '/bit-images/brand-rk.jpg' },
 ];
 
 // Only include brands that have at least one bit
@@ -71,7 +72,7 @@ const activeBrands = brands.filter(b =>
   <a href="/workshop/" class="back-link">&larr; Workshop</a>
   <header>
     <h1>Router Bit Inventory</h1>
-    <p>{totalBits} router bits across {totalTypes} types &mdash; Ultra&middot;Shear by Woodpeckers, Whiteside, CMT &amp; Infinity</p>
+    <p>{totalBits} router bits across {totalTypes} types &mdash; Ultra&middot;Shear by Woodpeckers, Whiteside, CMT, Infinity &amp; Rockler</p>
   </header>
 
   {typeConfig.map(tc => {

@@ -1,0 +1,21 @@
+model: Rockler 20969
+name: Miniature Roundover Router Bit
+types:
+  - roundover
+brand: rk
+shank: '1/4"'
+max_rpm: null
+image: 20969.jpg
+url: 'https://www.rockler.com/rockler-miniature-round-over-router-bits-1-4-in-shank'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Radius
+    value: '1/8"'
+  - label: Diameter
+    value: '9/16"'
+  - label: Cut Height
+    value: '7/16"'
+  - label: Bearing
+    value: '5/16" (8mm)'
