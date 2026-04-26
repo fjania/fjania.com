@@ -9,8 +9,8 @@ max_rpm: 24000
 image: US2512UC.jpg
 url: 'https://www.woodpeck.com/ultra-shear-compact-compression-flush-trim-router-bit.html'
 qty: 1
-status: shipped
-status_date: '2026-04-07'
+status: in-stock
+status_date: null
 specs:
   - label: Diameter
     value: '1/2"'
