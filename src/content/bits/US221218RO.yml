@@ -8,8 +8,8 @@ max_rpm: 24000
 image: US221218RO.jpg
 url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-25-shank-micro-bearing-round-over-bit.html'
 qty: 1
-status: backorder
-status_date: '~Apr 15'
+status: in-stock
+status_date: null
 specs:
   - label: Radius
     value: '1/8"'
