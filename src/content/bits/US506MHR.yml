@@ -1,0 +1,17 @@
+model: US506MHR
+name: Carbide Head Half Round (6mm)
+types:
+  - half-round
+brand: wp
+shank: '1/2"'
+max_rpm: null
+image: US506MHR.jpg
+url: 'https://www.woodpeck.com/ultra-shear-metric-half-round-bits-2-flute.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: 6mm
+  - label: Overall Length
+    value: '2-7/8"'

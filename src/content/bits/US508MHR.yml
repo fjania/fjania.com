@@ -1,0 +1,17 @@
+model: US508MHR
+name: Carbide Head Half Round (8mm)
+types:
+  - half-round
+brand: wp
+shank: '1/2"'
+max_rpm: null
+image: US508MHR.jpg
+url: 'https://www.woodpeck.com/ultra-shear-metric-half-round-bits-2-flute.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: 8mm
+  - label: Overall Length
+    value: '2-7/8"'

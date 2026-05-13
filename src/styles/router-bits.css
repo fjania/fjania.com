@@ -8,6 +8,7 @@
   --tag-pattern: #2d6a4f;
   --tag-flush: #1d3557;
   --tag-roundover: #774936;
+  --tag-half-round: #457b9d;
   --tag-compression: #5a189a;
   --tag-spiral: #0077b6;
   --tag-vgroove: #e76f51;
@@ -277,6 +278,7 @@ header p {
 .tag-pattern { background: var(--tag-pattern); }
 .tag-flush { background: var(--tag-flush); }
 .tag-roundover { background: var(--tag-roundover); }
+.tag-half-round { background: var(--tag-half-round); }
 .tag-compression { background: var(--tag-compression); }
 .tag-spiral { background: var(--tag-spiral); }
 .tag-vgroove { background: var(--tag-vgroove); }
@@ -567,7 +569,7 @@ a.card-link {
     print-color-adjust: exact;
   }
 
-  .tag-pattern, .tag-flush, .tag-roundover, .tag-compression,
+  .tag-pattern, .tag-flush, .tag-roundover, .tag-half-round, .tag-compression,
   .tag-spiral, .tag-vgroove, .tag-chamfer, .tag-bowl,
   .tag-ballnose, .tag-spoilboard, .tag-clearing,
   .tag-groove, .tag-rabbeting {
