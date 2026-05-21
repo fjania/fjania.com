@@ -60,6 +60,27 @@ function groupByYear(trips) {
 }
 
 export function initTrips({ state, container, countEl, onTripHover }) {
+  let prevRange = state.filters.monthRange.slice();
+
+  function maybeScrollToBrush() {
+    const [lo, hi] = state.filters.monthRange;
+    if (lo === prevRange[0] && hi === prevRange[1]) return;
+    prevRange = [lo, hi];
+    if (state.filters.focusTrip) return; // focused trip scroll handled in render
+    // trips are newest first; find the newest trip whose start month is within [lo, hi]
+    const trips = state.getFilteredTrips();
+    const target = trips.find((t) => {
+      const m = t.segments[0]?.monthIndex;
+      return Number.isFinite(m) && m >= lo && m <= hi;
+    });
+    if (!target) return;
+    const el = container.querySelector(`.trip-card[data-key="${CSS.escape(target.key)}"]`);
+    if (!el) return;
+    // scroll the trip's year header into view (slightly above the card)
+    const yearHeader = el.closest('.trips-year-group')?.querySelector('.trips-year-header');
+    (yearHeader || el).scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+
   function render() {
     const trips = state.getFilteredTrips();
     const focused = state.filters.focusTrip;
@@ -128,6 +149,9 @@ export function initTrips({ state, container, countEl, onTripHover }) {
     }
   });
 
-  state.subscribe(render);
+  state.subscribe(() => {
+    render();
+    maybeScrollToBrush();
+  });
   render();
 }
