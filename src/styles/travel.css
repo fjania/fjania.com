@@ -1,0 +1,89 @@
+:root {
+  --bg: #f5f5f0;
+  --card-bg: #ffffff;
+  --text: #2c2c2c;
+  --text-muted: #666;
+  --accent: #8b1a1a;
+  --border: #e0ddd5;
+  --water: #f0eee7;
+  --land: #e8e4d8;
+  --land-stroke: #d6d1c2;
+  --arc: rgba(139, 26, 26, 0.32);
+  --arc-hover: #8b1a1a;
+  --airport: #2c2c2c;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.travel-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.travel-header {
+  margin-bottom: 2rem;
+}
+
+.travel-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.travel-header .subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.map-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+#map-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--water);
+  border-radius: 6px;
+}
+
+#map-svg .country {
+  fill: var(--land);
+  stroke: var(--land-stroke);
+  stroke-width: 0.5;
+  vector-effect: non-scaling-stroke;
+}
+
+#map-svg .arc {
+  fill: none;
+  stroke: var(--arc);
+  stroke-width: 1;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+#map-svg .airport {
+  fill: var(--airport);
+  stroke: var(--card-bg);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+@media (max-width: 700px) {
+  .travel-page {
+    padding: 1.5rem 0.75rem 2rem;
+  }
+  .travel-header h1 {
+    font-size: 1.5rem;
+  }
+}
