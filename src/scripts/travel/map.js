@@ -109,8 +109,10 @@ export function initMap({ state, world }) {
     const hitsEnter = hits.enter()
       .append('path')
       .attr('class', 'arc-hit')
+      .attr('data-tt-pin', '')
       .on('pointerenter', (e, f) => {
-        ttShow(arcTooltipHtml(f), e.clientX, e.clientY);
+        const isTouch = e.pointerType === 'touch';
+        ttShow(arcTooltipHtml(f), e.clientX, e.clientY, { pin: isTouch });
         highlightArc(f, true);
       })
       .on('pointermove', (e) => {
@@ -118,7 +120,8 @@ export function initMap({ state, world }) {
         ttMove(c.x, c.y);
       })
       .on('pointerleave', (e, f) => {
-        ttHide();
+        // On touch: keep tooltip pinned (body dismisses it on next tap); just drop the arc highlight.
+        if (e.pointerType !== 'touch') ttHide();
         highlightArc(f, false);
       });
     hitsEnter.merge(hits).attr('d', arcPath);
@@ -134,9 +137,15 @@ export function initMap({ state, world }) {
       .attr('class', 'airport')
       .attr('tabindex', '0')
       .attr('role', 'button')
-      .on('pointerenter', (e, a) => ttShow(airportTooltipHtml(a), e.clientX, e.clientY))
+      .attr('data-tt-pin', '')
+      .on('pointerenter', (e, a) => {
+        const isTouch = e.pointerType === 'touch';
+        ttShow(airportTooltipHtml(a), e.clientX, e.clientY, { pin: isTouch });
+      })
       .on('pointermove', (e) => ttMove(e.clientX, e.clientY))
-      .on('pointerleave', () => ttHide())
+      .on('pointerleave', (e) => {
+        if (e.pointerType !== 'touch') ttHide();
+      })
       .on('click', (e, a) => {
         const cur = state.filters.focusAirport;
         state.setFilter('focusAirport', cur === a.iata ? null : a.iata);
