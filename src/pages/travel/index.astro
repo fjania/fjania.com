@@ -24,17 +24,12 @@ const flightsJson = safeJsonForScript(flights);
 
     <section id="stats" class="stats-strip" aria-label="Summary statistics"></section>
 
-    <section class="filters-section" aria-label="Filters">
-      <label>From year
-        <input type="number" id="year-min" min="2009" max="2026" value="2009" step="1" />
-      </label>
-      <label>to
-        <input type="number" id="year-max" min="2009" max="2026" value="2026" step="1" />
-      </label>
-    </section>
-
     <section class="map-section" aria-label="Map of flights">
       <svg id="map-svg" viewBox="0 0 960 500" role="img" aria-label="World map with great-circle arcs of all flights"></svg>
+    </section>
+
+    <section class="timeline-section" aria-label="Monthly timeline (brushable filter)">
+      <svg id="timeline-svg" role="group" aria-label="Drag the handles to filter by month range"></svg>
     </section>
 
     <section class="leaderboards" aria-label="Top routes and airports">

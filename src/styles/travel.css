@@ -157,30 +157,62 @@ body {
   font-size: 0.9rem;
 }
 
-.filters-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-
-.filters-section label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.filters-section input[type="number"] {
-  width: 5rem;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
+.timeline-section {
   background: var(--card-bg);
-  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#timeline-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+  user-select: none;
+}
+
+#timeline-svg .tl-bar {
+  fill: var(--accent);
+  opacity: 0.75;
+}
+
+#timeline-svg .tl-tick {
+  fill: var(--text-muted);
+  font-size: 10px;
   font-family: inherit;
+}
+
+#timeline-svg .tl-dim {
+  fill: var(--bg);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#timeline-svg .tl-window {
+  fill: transparent;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-opacity: 0.5;
+  cursor: grab;
+}
+
+#timeline-svg .tl-window:active {
+  cursor: grabbing;
+}
+
+#timeline-svg .tl-handle {
+  fill: var(--accent);
+  fill-opacity: 0.65;
+  cursor: ew-resize;
+  rx: 2;
+}
+
+#timeline-svg .tl-handle:hover,
+#timeline-svg .tl-handle:focus-visible {
+  fill-opacity: 1;
+  outline: none;
 }
 
 .map-section {
