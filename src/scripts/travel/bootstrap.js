@@ -20,6 +20,21 @@ window.__travel = { state };
 
 initStats({ state, container: document.getElementById('stats') });
 initFilters({ state, container: document.getElementById('filters') });
+
+// Reset-all button
+const resetBtn = document.getElementById('reset-filters');
+if (resetBtn) {
+  resetBtn.addEventListener('click', () => {
+    state.filters.airlines = new Set();
+    state.filters.bookingScopes = new Set();
+    state.filters.geoScopes = new Set();
+    state.filters.statuses = new Set(['taken']);
+    state.filters.focusAirport = null;
+    state.filters.focusRoute = null;
+    state.filters.focusTrip = null;
+    state.setMonthRange(0, state.MAX_MONTH_INDEX);
+  });
+}
 initMap({ state, world });
 initTimeline({ state, svg: document.getElementById('timeline-svg') });
 initTrips({

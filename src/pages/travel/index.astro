@@ -35,29 +35,30 @@ const issueDate = new Date().toLocaleDateString('en-US', { month: 'long', year: 
     </div>
 
     <header class="masthead">
-      <p class="eyebrow">A personal cartography, est. <span class="num">2009</span></p>
-      <h1 class="masthead-title">
-        <span class="display-italic">Travel</span>
-      </h1>
-      <p class="lede">
-        Every flight Frank Jania has ever taken, recovered from fifteen years of email and plotted as great-circle arcs across a flat earth. <span class="lede-figure">{flights.length} segments</span>, <span class="lede-figure">32 countries</span>, more than five hundred thousand miles of weather and time.
-      </p>
-      <div class="rule rule-double" role="presentation"></div>
+      <div class="masthead-left">
+        <p class="eyebrow">A personal cartography, est. <span class="num">2009</span></p>
+        <h1 class="masthead-title">
+          <span class="display-italic">Travel</span>
+        </h1>
+      </div>
+      <div class="masthead-right">
+        <p class="lede">
+          Every flight Frank Jania has ever taken, recovered from fifteen years of email and plotted as great-circle arcs across a flat earth. <span class="lede-figure">{flights.length} segments</span>, <span class="lede-figure">32 countries</span>, more than five hundred thousand miles.
+        </p>
+      </div>
     </header>
 
-    <section class="figure stats-figure" aria-label="Summary">
-      <p class="figure-label"><span>Fig. I</span> — The reckoning</p>
-      <div id="stats" class="stats-strip"></div>
+    <div class="rule rule-double" role="presentation"></div>
+
+    <section class="control-deck" aria-label="Filters and live stats">
+      <div id="filters" class="filters" aria-label="Filters"></div>
+      <button id="reset-filters" class="reset-link" type="button" aria-label="Clear all filters">Clear all</button>
+      <div id="stats" class="stats-banner" aria-live="polite"></div>
     </section>
 
-    <section class="figure filters-figure" aria-label="Filters">
-      <p class="figure-label"><span>Adjust</span> — Filter the catalogue</p>
-      <div id="filters" class="filters"></div>
-    </section>
-
-    <section class="figure map-figure" aria-label="World map">
-      <p class="figure-label"><span>Fig. II</span> — The world, after fifteen years</p>
-      <div class="map-and-trips">
+    <section class="atlas" aria-label="World map and trip log">
+      <div class="atlas-main">
+        <p class="figure-label"><span>Fig. I</span> — The world, after fifteen years <span class="figure-hint">— hover an arc, click an airport, drag the timeline</span></p>
         <div class="map-stage">
           <svg id="map-svg" viewBox="0 0 960 500" role="img" aria-label="World map with great-circle arcs of all flights"></svg>
           <div class="compass" aria-hidden="true">
@@ -65,32 +66,30 @@ const issueDate = new Date().toLocaleDateString('en-US', { month: 'long', year: 
             <span class="compass-arrow">↑</span>
           </div>
         </div>
-
-        <aside class="trips-panel" aria-label="Trips">
-          <div class="trips-header">
-            <h2><span class="display-italic">Trips</span></h2>
-            <span id="trips-count" class="trips-count"></span>
-          </div>
-          <div id="trips"></div>
-        </aside>
+        <div class="timeline-strip" aria-label="Monthly timeline (brushable filter)">
+          <svg id="timeline-svg" role="group" aria-label="Drag the handles to filter by month range"></svg>
+        </div>
       </div>
-    </section>
 
-    <section class="figure timeline-figure" aria-label="Timeline">
-      <p class="figure-label"><span>Fig. III</span> — One bar per month, 2009 → 2026 · drag to filter</p>
-      <svg id="timeline-svg" role="group" aria-label="Drag the handles to filter by month range"></svg>
+      <aside class="trips-panel" aria-label="Trips">
+        <div class="trips-header">
+          <h2><span class="display-italic">Trips</span></h2>
+          <span id="trips-count" class="trips-count"></span>
+        </div>
+        <div id="trips"></div>
+      </aside>
     </section>
 
     <div class="ornament" aria-hidden="true">❦</div>
 
-    <section class="figure leaderboards-figure" aria-label="Top routes and airports">
+    <section class="leaderboards-figure" aria-label="Top routes and airports">
       <div class="leaderboards">
         <div class="lb-card">
-          <p class="figure-label"><span>Fig. IV</span> — Routes, most flown</p>
+          <p class="lb-title">Routes, most flown</p>
           <div id="lb-routes"></div>
         </div>
         <div class="lb-card">
-          <p class="figure-label"><span>Fig. V</span> — Airports, most visited</p>
+          <p class="lb-title">Airports, most visited</p>
           <div id="lb-airports"></div>
         </div>
       </div>
