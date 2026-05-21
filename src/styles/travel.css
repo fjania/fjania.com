@@ -55,11 +55,15 @@ body {
 }
 
 .stat-value {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.3px;
-  line-height: 1.15;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
@@ -374,5 +378,39 @@ body {
   }
   .travel-header h1 {
     font-size: 1.5rem;
+  }
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .stat {
+    padding: 0.6rem 0.7rem;
+  }
+  .stat-value {
+    font-size: 1.05rem;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  .leaderboards {
+    grid-template-columns: 1fr;
+  }
+  .filters {
+    padding: 0.6rem 0.75rem;
+    gap: 0.5rem 1rem;
+  }
+  .filter-label {
+    width: 100%;
+    margin-bottom: -0.15rem;
+  }
+  #timeline-svg .tl-tick {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filter-chip,
+  .home-card {
+    transition: none !important;
   }
 }
