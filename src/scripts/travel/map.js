@@ -1,5 +1,5 @@
 import { select } from 'd3-selection';
-import { geoNaturalEarth1, geoPath } from 'd3-geo';
+import { geoNaturalEarth1, geoPath, geoGraticule } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { show as ttShow, move as ttMove, hide as ttHide } from './tooltip.js';
 import { formatMiles, formatDate, formatDuration } from './format.js';
@@ -43,6 +43,18 @@ export function initMap({ state, world }) {
 
   const projection = geoNaturalEarth1().fitSize([WIDTH, HEIGHT], { type: 'Sphere' });
   const pathGen = geoPath(projection);
+
+  // Graticule (under countries) — faint atlas grid
+  const grat = geoGraticule().step([20, 20]);
+  const gGrat = svg.append('g').attr('class', 'g-grat');
+  gGrat.append('path')
+    .datum(grat())
+    .attr('class', 'graticule')
+    .attr('d', pathGen);
+  gGrat.append('path')
+    .datum({ type: 'Sphere' })
+    .attr('class', 'graticule-outline')
+    .attr('d', pathGen);
 
   // Static countries
   const countries = feature(world, world.objects.countries);
