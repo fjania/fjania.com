@@ -3,6 +3,7 @@ import { initStats } from './stats.js';
 import { initLeaderboards } from './leaderboards.js';
 import { initTimeline } from './timeline.js';
 import { initFilters } from './filters.js';
+import { initTrips } from './trips.js';
 import { createState } from './state.js';
 
 function readJsonIsland(id) {
@@ -21,6 +22,11 @@ initStats({ state, container: document.getElementById('stats') });
 initFilters({ state, container: document.getElementById('filters') });
 initMap({ state, world });
 initTimeline({ state, svg: document.getElementById('timeline-svg') });
+initTrips({
+  state,
+  container: document.getElementById('trips'),
+  countEl: document.getElementById('trips-count'),
+});
 initLeaderboards({
   state,
   routesContainer: document.getElementById('lb-routes'),

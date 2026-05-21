@@ -20,11 +20,13 @@ export function createState(flights) {
     statuses: new Set(['taken']),
     focusAirport: null,
     focusRoute: null,
+    focusTrip: null,
   };
 
   let version = 0;
   let cache = null;
   let cacheTimeline = null;
+  let cacheTrips = null;
   const subscribers = [];
 
   function passes(f, opts) {
@@ -42,7 +44,68 @@ export function createState(flights) {
     if (filters.statuses.size && !filters.statuses.has(f.status)) return false;
     if (filters.focusAirport && f.dep !== filters.focusAirport && f.arr !== filters.focusAirport) return false;
     if (filters.focusRoute && f.route !== filters.focusRoute) return false;
+    if (filters.focusTrip && tripKey(f) !== filters.focusTrip) return false;
     return true;
+  }
+
+  function tripKey(f) {
+    // booking_id is the PNR; some early synthetic ones (JetBlue_09_11_25) are still unique enough
+    return f.id.split('-')[0] || f.id;
+  }
+
+  function deriveTrips(filtered) {
+    const map = new Map();
+    for (const f of filtered) {
+      const key = tripKey(f);
+      if (!map.has(key)) {
+        map.set(key, {
+          key,
+          segments: [],
+          airports: new Set(),
+          countries: new Set(),
+          airlines: new Set(),
+          notes: new Set(),
+          totalMiles: 0,
+          totalMinutes: 0,
+          isInternational: false,
+        });
+      }
+      const t = map.get(key);
+      t.segments.push(f);
+      t.airports.add(f.dep);
+      t.airports.add(f.arr);
+      if (f.depCountry) t.countries.add(f.depCountry);
+      if (f.arrCountry) t.countries.add(f.arrCountry);
+      if (f.airline) t.airlines.add(f.airline);
+      if (f.notes) t.notes.add(f.notes);
+      t.totalMiles += f.distanceMiles || 0;
+      t.totalMinutes += f.durationMinutes || 0;
+      if (f.isInternational) t.isInternational = true;
+    }
+    const trips = [];
+    for (const t of map.values()) {
+      t.segments.sort((a, b) => {
+        if (a.depDate !== b.depDate) return a.depDate < b.depDate ? -1 : 1;
+        return (a.id < b.id ? -1 : 1);
+      });
+      const path = [];
+      for (let i = 0; i < t.segments.length; i++) {
+        const s = t.segments[i];
+        if (i === 0) path.push(s.dep);
+        if (path[path.length - 1] !== s.dep) path.push(s.dep);
+        path.push(s.arr);
+      }
+      t.path = path;
+      t.startDate = t.segments[0].depDate;
+      t.endDate = t.segments[t.segments.length - 1].arrDate || t.segments[t.segments.length - 1].depDate;
+      t.airportCount = t.airports.size;
+      t.countryList = [...t.countries];
+      t.airlineList = [...t.airlines];
+      t.notesList = [...t.notes];
+      trips.push(t);
+    }
+    trips.sort((a, b) => a.startDate < b.startDate ? 1 : a.startDate > b.startDate ? -1 : 0);
+    return trips;
   }
 
   function deriveAirports(filtered) {
@@ -107,6 +170,25 @@ export function createState(flights) {
     return value;
   }
 
+  function getFilteredTrips() {
+    if (cacheTrips && cacheTrips.version === version) return cacheTrips.value;
+    const arr = flights.filter((f) => {
+      // trips list shows everything matching filters EXCEPT focusTrip itself,
+      // so picking a trip doesn't collapse the list
+      if (filters.focusTrip) {
+        const saved = filters.focusTrip;
+        filters.focusTrip = null;
+        const ok = passes(f);
+        filters.focusTrip = saved;
+        return ok;
+      }
+      return passes(f);
+    });
+    const value = deriveTrips(arr);
+    cacheTrips = { version, value };
+    return value;
+  }
+
   function getFilteredForTimeline() {
     if (cacheTimeline && cacheTimeline.version === version) return cacheTimeline.value;
     const arr = flights.filter((f) => passes(f, { skipMonthRange: true }));
@@ -118,6 +200,7 @@ export function createState(flights) {
   function notify() {
     cache = null;
     cacheTimeline = null;
+    cacheTrips = null;
     version++;
     for (const fn of subscribers) fn();
   }
@@ -155,6 +238,7 @@ export function createState(flights) {
     bookingScope,
     getFiltered,
     getFilteredForTimeline,
+    getFilteredTrips,
     setFilter,
     toggleSetFilter,
     setMonthRange,
