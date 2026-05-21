@@ -82,7 +82,7 @@ const issueDate = new Date().toLocaleDateString('en-US', { month: 'long', year: 
 
     <div class="ornament" aria-hidden="true">❦</div>
 
-    <section class="leaderboards-figure" aria-label="Top routes and airports">
+    <section class="leaderboards-figure" aria-label="Top routes, airports, and yearly totals">
       <div class="leaderboards">
         <div class="lb-card">
           <p class="lb-title">Routes, most flown</p>
@@ -91,6 +91,10 @@ const issueDate = new Date().toLocaleDateString('en-US', { month: 'long', year: 
         <div class="lb-card">
           <p class="lb-title">Airports, most visited</p>
           <div id="lb-airports"></div>
+        </div>
+        <div class="lb-card">
+          <p class="lb-title">Segments by year <span class="lb-hint">— click to filter</span></p>
+          <div id="lb-annual"></div>
         </div>
       </div>
     </section>

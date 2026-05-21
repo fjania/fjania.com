@@ -4,6 +4,7 @@ import { initLeaderboards } from './leaderboards.js';
 import { initTimeline } from './timeline.js';
 import { initFilters } from './filters.js';
 import { initTrips } from './trips.js';
+import { initAnnual } from './annual.js';
 import { createState } from './state.js';
 
 function readJsonIsland(id) {
@@ -35,6 +36,7 @@ initLeaderboards({
   routesContainer: document.getElementById('lb-routes'),
   airportsContainer: document.getElementById('lb-airports'),
 });
+initAnnual({ state, container: document.getElementById('lb-annual') });
 
 // Reset-all button
 const resetBtn = document.getElementById('reset-filters');
