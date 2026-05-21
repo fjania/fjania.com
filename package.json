@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "sync-flights": "cp ~/.claude-second-brain/my-brain/flight-history/flights.csv src/data/flights.csv"
   },
   "dependencies": {
     "astro": "^5",
