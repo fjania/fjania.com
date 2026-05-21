@@ -21,6 +21,21 @@ window.__travel = { state };
 initStats({ state, container: document.getElementById('stats') });
 initFilters({ state, container: document.getElementById('filters') });
 
+const mapApi = initMap({ state, world });
+
+initTimeline({ state, svg: document.getElementById('timeline-svg') });
+initTrips({
+  state,
+  container: document.getElementById('trips'),
+  countEl: document.getElementById('trips-count'),
+  onTripHover: mapApi.highlightTrip,
+});
+initLeaderboards({
+  state,
+  routesContainer: document.getElementById('lb-routes'),
+  airportsContainer: document.getElementById('lb-airports'),
+});
+
 // Reset-all button
 const resetBtn = document.getElementById('reset-filters');
 if (resetBtn) {
@@ -35,15 +50,3 @@ if (resetBtn) {
     state.setMonthRange(0, state.MAX_MONTH_INDEX);
   });
 }
-initMap({ state, world });
-initTimeline({ state, svg: document.getElementById('timeline-svg') });
-initTrips({
-  state,
-  container: document.getElementById('trips'),
-  countEl: document.getElementById('trips-count'),
-});
-initLeaderboards({
-  state,
-  routesContainer: document.getElementById('lb-routes'),
-  airportsContainer: document.getElementById('lb-airports'),
-});

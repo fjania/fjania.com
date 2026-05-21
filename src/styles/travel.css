@@ -452,6 +452,18 @@ body::after {
   stroke-width: 1.8;
 }
 
+/* Trip hover from sidebar — highlight the whole itinerary */
+#map-svg .arc.trip-hover {
+  stroke: var(--oxblood-deep);
+  stroke-opacity: 0.95;
+  stroke-width: 1.6;
+}
+#map-svg .airport.trip-hover {
+  fill: var(--oxblood);
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+
 #map-svg .arc-hit {
   fill: none;
   stroke: transparent;

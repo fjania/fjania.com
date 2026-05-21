@@ -148,6 +148,18 @@ export function initMap({ state, world }) {
       .classed('focused', (a) => state.filters.focusAirport === a.iata);
   }
 
+  function highlightTrip(key) {
+    const tripAirports = new Set();
+    if (key) {
+      for (const f of state.getFiltered().flights) {
+        if (f.id.split('-')[0] === key) { tripAirports.add(f.dep); tripAirports.add(f.arr); }
+      }
+    }
+    gArcs.selectAll('path.arc').classed('trip-hover', (d) => key && d.id.split('-')[0] === key);
+    gAirports.selectAll('circle.airport').classed('trip-hover', (a) => tripAirports.has(a.iata));
+  }
+
   state.subscribe(render);
   render();
+  return { highlightTrip };
 }

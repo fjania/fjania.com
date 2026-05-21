@@ -59,7 +59,7 @@ function groupByYear(trips) {
   return [...groups.entries()].sort((a, b) => b[0] - a[0]);
 }
 
-export function initTrips({ state, container, countEl }) {
+export function initTrips({ state, container, countEl, onTripHover }) {
   function render() {
     const trips = state.getFilteredTrips();
     const focused = state.filters.focusTrip;
@@ -97,6 +97,20 @@ export function initTrips({ state, container, countEl }) {
     if (!card) return;
     setFocus(card.dataset.key);
   });
+
+  if (onTripHover) {
+    container.addEventListener('pointerover', (e) => {
+      const card = e.target.closest('.trip-card');
+      if (!card) return;
+      onTripHover(card.dataset.key);
+    });
+    container.addEventListener('pointerleave', () => onTripHover(null));
+    container.addEventListener('focusin', (e) => {
+      const card = e.target.closest('.trip-card');
+      if (card) onTripHover(card.dataset.key);
+    });
+    container.addEventListener('focusout', () => onTripHover(null));
+  }
   container.addEventListener('keydown', (e) => {
     const card = e.target.closest('.trip-card');
     if (!card) return;
