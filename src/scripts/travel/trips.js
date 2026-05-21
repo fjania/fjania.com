@@ -1,14 +1,30 @@
-import { formatDate, formatMiles } from './format.js';
+import { formatMiles } from './format.js';
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-function tripDateRange(t) {
-  const a = formatDate(t.startDate);
-  if (t.startDate === t.endDate) return a;
-  const b = formatDate(t.endDate);
-  return `${a} – ${b}`;
+function parseIso(iso) {
+  const clean = (iso || '').replace(/^[^0-9]/, '');
+  const y = Number(clean.slice(0, 4));
+  const m = Number(clean.slice(5, 7));
+  const d = Number(clean.slice(8, 10));
+  return { y, m, d };
+}
+
+function compactDateRange(start, end) {
+  const a = parseIso(start);
+  const b = parseIso(end);
+  if (!a.m || !a.d) return '';
+  if (start === end || (a.y === b.y && a.m === b.m && a.d === b.d)) {
+    return `${MONTHS[a.m - 1]} ${a.d}`;
+  }
+  if (a.y === b.y && a.m === b.m) {
+    return `${MONTHS[a.m - 1]} ${a.d}–${b.d}`;
+  }
+  return `${MONTHS[a.m - 1]} ${a.d} – ${MONTHS[b.m - 1]} ${b.d}`;
 }
 
 function pathHtml(t) {
@@ -19,21 +35,28 @@ function pathHtml(t) {
 }
 
 function tripCardHtml(t, isFocused) {
-  const intl = t.isInternational ? '<span class="trip-tag trip-tag-intl">Intl</span>' : '';
-  const segCount = t.segments.length;
-  const noteSnippet = t.notesList[0] ? `<div class="trip-note">${escapeHtml(t.notesList[0])}</div>` : '';
+  const intl = t.isInternational ? '<span class="trip-tag-intl" aria-label="international">●</span>' : '';
+  const date = compactDateRange(t.startDate, t.endDate);
+  const note = t.notesList[0] || '';
   return `
-    <li class="trip-card${isFocused ? ' focused' : ''}" data-key="${escapeHtml(t.key)}" tabindex="0">
-      <div class="trip-date">${tripDateRange(t)}${intl}</div>
-      <div class="trip-path">${pathHtml(t)}</div>
-      <div class="trip-meta">
-        ${segCount} seg${segCount === 1 ? '' : 's'} ·
-        ${formatMiles(t.totalMiles)} ·
-        ${escapeHtml(t.airlineList.join(', '))}
+    <li class="trip-card${isFocused ? ' focused' : ''}" data-key="${escapeHtml(t.key)}" tabindex="0"${note ? ` title="${escapeHtml(note)}"` : ''}>
+      <div class="trip-row">
+        <span class="trip-date-compact">${escapeHtml(date)}${intl}</span>
+        <span class="trip-path">${pathHtml(t)}</span>
+        <span class="trip-meta-compact">${t.segments.length}·${formatMiles(t.totalMiles).replace(' mi', '')}</span>
       </div>
-      ${noteSnippet}
     </li>
   `;
+}
+
+function groupByYear(trips) {
+  const groups = new Map();
+  for (const t of trips) {
+    const y = parseIso(t.startDate).y;
+    if (!groups.has(y)) groups.set(y, []);
+    groups.get(y).push(t);
+  }
+  return [...groups.entries()].sort((a, b) => b[0] - a[0]);
 }
 
 export function initTrips({ state, container, countEl }) {
@@ -45,7 +68,19 @@ export function initTrips({ state, container, countEl }) {
       container.innerHTML = '<p class="trips-empty">No trips match the current filters.</p>';
       return;
     }
-    container.innerHTML = `<ul class="trips-list">${trips.map((t) => tripCardHtml(t, t.key === focused)).join('')}</ul>`;
+    const groups = groupByYear(trips);
+    container.innerHTML = groups.map(([year, items]) => {
+      const segs = items.reduce((n, t) => n + t.segments.length, 0);
+      return `
+        <div class="trips-year-group">
+          <div class="trips-year-header">
+            <span class="trips-year">${year}</span>
+            <span class="trips-year-count">${items.length} trip${items.length === 1 ? '' : 's'} · ${segs} seg${segs === 1 ? '' : 's'}</span>
+          </div>
+          <ul class="trips-list">${items.map((t) => tripCardHtml(t, t.key === focused)).join('')}</ul>
+        </div>
+      `;
+    }).join('');
     if (focused) {
       const el = container.querySelector(`.trip-card[data-key="${CSS.escape(focused)}"]`);
       if (el) el.scrollIntoView({ block: 'nearest' });
