@@ -1,14 +1,21 @@
 const WIDTH = 960;
-const HEIGHT = 120;
+const HEIGHT = 140;
 const PAD_LEFT = 32;
 const PAD_RIGHT = 12;
-const PAD_TOP = 8;
+const PAD_TOP = 22;     // room for era labels above the bars
 const PAD_BOTTOM = 22;
 const PLOT_W = WIDTH - PAD_LEFT - PAD_RIGHT;
 const PLOT_H = HEIGHT - PAD_TOP - PAD_BOTTOM;
 const EPOCH_YEAR = 2009;
 const TOTAL_MONTHS = 216; // 2009-01 .. 2026-12 inclusive
 const HANDLE_W = 8;
+
+// Career eras — per ~/.claude-second-brain/my-brain/flight-history/CLAUDE.md
+const ERAS = [
+  { label: 'Google',   start: 0,   end: 47  }, // 2009-01 .. 2012-12
+  { label: 'Uber',     start: 96,  end: 119 }, // 2017-01 .. 2018-12
+  { label: 'Shopify',  start: 192, end: 215 }, // 2025-01 .. 2026-12
+];
 
 function monthLabel(monthIndex) {
   const y = EPOCH_YEAR + Math.floor(monthIndex / 12);
@@ -29,6 +36,29 @@ export function initTimeline({ state, svg }) {
   svg.setAttribute('viewBox', `0 0 ${WIDTH} ${HEIGHT}`);
   svg.innerHTML = '';
   const xmlns = 'http://www.w3.org/2000/svg';
+
+  // Era bands & labels (above the bars)
+  const gEras = document.createElementNS(xmlns, 'g');
+  gEras.setAttribute('class', 'g-tl-eras');
+  for (const era of ERAS) {
+    const xL = xForMonth(era.start);
+    const xR = xForMonth(era.end + 1);
+    const band = document.createElementNS(xmlns, 'rect');
+    band.setAttribute('class', 'tl-era-band');
+    band.setAttribute('x', String(xL));
+    band.setAttribute('y', String(PAD_TOP));
+    band.setAttribute('width', String(Math.max(0, xR - xL)));
+    band.setAttribute('height', String(PLOT_H));
+    gEras.appendChild(band);
+    const t = document.createElementNS(xmlns, 'text');
+    t.setAttribute('class', 'tl-era-label');
+    t.setAttribute('x', String((xL + xR) / 2));
+    t.setAttribute('y', String(PAD_TOP - 8));
+    t.setAttribute('text-anchor', 'middle');
+    t.textContent = era.label;
+    gEras.appendChild(t);
+  }
+  svg.appendChild(gEras);
 
   // Year tick labels
   const gAxis = document.createElementNS(xmlns, 'g');
