@@ -18,11 +18,13 @@ function arcTooltipHtml(f) {
   const carrier = [f.airline, f.flightNumber].filter(Boolean).map(escapeHtml).join(' ');
   const dur = formatDuration(f.durationMinutes);
   const miles = formatMiles(f.distanceMiles);
+  const notes = f.notes ? `<div class="tt-notes">${escapeHtml(f.notes)}</div>` : '';
   return `
     <div class="tt-title">${route}</div>
     <div class="tt-sub">${cities}</div>
     <div class="tt-meta">${date}${carrier ? ' · ' + carrier : ''}</div>
     <div class="tt-meta">${miles}${dur !== '—' ? ' · ' + dur : ''}</div>
+    ${notes}
   `;
 }
 

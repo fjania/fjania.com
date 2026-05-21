@@ -372,6 +372,16 @@ body {
   font-size: 0.78rem;
 }
 
+.travel-tooltip .tt-notes {
+  margin-top: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d6d6d6;
+  font-style: italic;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
 @media (max-width: 700px) {
   .travel-page {
     padding: 1.5rem 0.75rem 2rem;
