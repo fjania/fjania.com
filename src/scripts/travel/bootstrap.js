@@ -2,6 +2,7 @@ import { initMap } from './map.js';
 import { initStats } from './stats.js';
 import { initLeaderboards } from './leaderboards.js';
 import { initTimeline } from './timeline.js';
+import { initFilters } from './filters.js';
 import { createState } from './state.js';
 
 function readJsonIsland(id) {
@@ -17,6 +18,7 @@ const state = createState(flights);
 window.__travel = { state };
 
 initStats({ state, container: document.getElementById('stats') });
+initFilters({ state, container: document.getElementById('filters') });
 initMap({ state, world });
 initTimeline({ state, svg: document.getElementById('timeline-svg') });
 initLeaderboards({
