@@ -10,11 +10,11 @@ const EPOCH_YEAR = 2009;
 const TOTAL_MONTHS = 216; // 2009-01 .. 2026-12 inclusive
 const HANDLE_W = 8;
 
-// Career eras — per ~/.claude-second-brain/my-brain/flight-history/CLAUDE.md
+// Career eras
 const ERAS = [
   { label: 'Google',   start: 0,   end: 47  }, // 2009-01 .. 2012-12
   { label: 'Uber',     start: 96,  end: 119 }, // 2017-01 .. 2018-12
-  { label: 'Shopify',  start: 192, end: 215 }, // 2025-01 .. 2026-12
+  { label: 'Shopify',  start: 140, end: 215 }, // 2020-09 .. 2026-12
 ];
 
 function monthLabel(monthIndex) {
