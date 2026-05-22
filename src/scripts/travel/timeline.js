@@ -12,9 +12,11 @@ const HANDLE_W = 8;
 
 // Career eras
 const ERAS = [
-  { label: 'Google',   start: 0,   end: 47  }, // 2009-01 .. 2012-12
-  { label: 'Uber',     start: 96,  end: 119 }, // 2017-01 .. 2018-12
-  { label: 'Shopify',  start: 140, end: 215 }, // 2020-09 .. 2026-12
+  { label: 'Google',    start: 0,   end: 41  }, // 2009-01 .. 2012-06
+  { label: 'Betaworks', start: 48,  end: 95  }, // 2013-01 .. 2016-12 (Tapestry + Scale Model)
+  { label: 'Uber',      start: 96,  end: 117 }, // 2017-01 .. 2018-10
+  { label: 'GitHub',    start: 118, end: 138 }, // 2018-11 .. 2020-07
+  { label: 'Shopify',   start: 140, end: 215 }, // 2020-09 .. 2026-12
 ];
 
 function monthLabel(monthIndex) {
