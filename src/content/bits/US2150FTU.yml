@@ -8,8 +8,8 @@ max_rpm: null
 image: US2150FTU.jpg
 url: 'https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-flush-trim-14-bits.html'
 qty: 1
-status: ordered
-status_date: Mar 17
+status: in-stock
+status_date: null
 specs:
   - label: Diameter
     value: '1/4"'
