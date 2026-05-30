@@ -1,0 +1,19 @@
+model: US527256HPB
+name: Carbide Head Down-Cut Plywood Bit, 23/32"
+types:
+  - plywood-groove
+brand: wp
+shank: '1/2"'
+max_rpm: null
+image: US527256HPB.jpg
+url: 'https://www.woodpeck.com/ultra-shear-router-bits-for-plywood.html'
+qty: 1
+status: backorder
+status_date: '~Jun 20'
+specs:
+  - label: Diameter
+    value: '23/32"'
+  - label: Cut Length
+    value: '9/16"'
+  - label: Construction
+    value: Carbide Head

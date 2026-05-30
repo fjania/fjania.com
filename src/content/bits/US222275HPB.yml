@@ -1,0 +1,19 @@
+model: US222275HPB
+name: Solid Carbide Down-Cut Plywood Bit, 7/32"
+types:
+  - plywood-groove
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US222275HPB.jpg
+url: 'https://www.woodpeck.com/ultra-shear-router-bits-for-plywood.html'
+qty: 1
+status: backorder
+status_date: '~Jun 20'
+specs:
+  - label: Diameter
+    value: '7/32"'
+  - label: Cut Length
+    value: '3/4"'
+  - label: Construction
+    value: Solid Carbide

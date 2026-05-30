@@ -9,6 +9,18 @@ argument-hint: <SKU> [--status backorder|shipped|ordered] [--status-date DATE]
 
 Given a product SKU, resolve the vendor and product page, extract specs, fetch a clean image, and create a YAML data file in the Astro content collection.
 
+> **Paths:** the content collection lives at `src/content/bits/` and images at `public/bit-images/` (both at the repo root — there is no `workshop/` prefix). The trim/isolate helper scripts live in `workshop/router-bits/`.
+
+## Sets: explode into individual bits
+
+**If the SKU is a multi-piece set (e.g. `...-7PC`, `...-SET`, "X-Piece Set"), do NOT create one card for the set. Explode it into one YAML file + one image per individual bit it contains.** Inventory is tracked at the individual-bit level, so a set card hides the real contents and can't reflect per-bit status, specs, or images.
+
+To explode a set:
+1. From the product page, get the individual SKU, diameter, shank, cut length, and construction of each bit in the set (vendor pages list these in a table or per-size image gallery; the gallery image filenames usually reveal the per-bit SKUs).
+2. Run Steps 3–8 below once **per individual bit** — its own product/image URL, its own `{SKU}.yml`, its own trimmed `{SKU}.jpg`.
+3. Apply the set's order `--status`/`--status-date` to every individual bit.
+4. Do **not** leave a YAML file or image for the set SKU itself.
+
 ## Arguments
 
 `$ARGUMENTS` should contain:
@@ -22,7 +34,7 @@ Normalize the SKU to uppercase. Extract optional `--status` and `--status-date` 
 
 ## Step 2: Check for duplicates
 
-Check if a YAML file already exists in `workshop/src/content/bits/` for this SKU. If the bit already exists, report it and stop — do not add a duplicate.
+Check if a YAML file already exists in `src/content/bits/` for this SKU. If the bit already exists, report it and stop — do not add a duplicate.
 
 ## Step 3: Resolve vendor and product URL
 
@@ -92,7 +104,7 @@ Determine the filename:
 - Whiteside: `W-{SKU}.yml`
 - CMT: `CMT_{SKU}.yml` (replace spaces with underscores)
 
-Create `workshop/src/content/bits/{filename}` with this structure:
+Create `src/content/bits/{filename}` with this structure:
 
 ```yaml
 model: {SKU}
@@ -114,11 +126,11 @@ specs:
     value: '{value}"'
 ```
 
-Match the format of existing YAML files in `workshop/src/content/bits/`. Quote strings that contain special YAML characters.
+Match the format of existing YAML files in `src/content/bits/`. Quote strings that contain special YAML characters.
 
 ## Step 8: Copy the image to public/
 
-Copy the trimmed image to `workshop/public/bit-images/{SKU}.jpg`.
+Copy the trimmed image to `public/bit-images/{SKU}.jpg`.
 
 ## Step 9: Show result
 

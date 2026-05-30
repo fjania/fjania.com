@@ -1,0 +1,19 @@
+model: US5218M56HPB
+name: Carbide Head Down-Cut Plywood Bit, 18mm
+types:
+  - plywood-groove
+brand: wp
+shank: '1/2"'
+max_rpm: null
+image: US5218M56HPB.jpg
+url: 'https://www.woodpeck.com/ultra-shear-router-bits-for-plywood.html'
+qty: 1
+status: backorder
+status_date: '~Jun 20'
+specs:
+  - label: Diameter
+    value: '18mm'
+  - label: Cut Length
+    value: '9/16"'
+  - label: Construction
+    value: Carbide Head

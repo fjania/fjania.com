@@ -1,0 +1,19 @@
+model: US229M56HPB
+name: Carbide Head Down-Cut Plywood Bit, 9mm
+types:
+  - plywood-groove
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US229M56HPB.jpg
+url: 'https://www.woodpeck.com/ultra-shear-router-bits-for-plywood.html'
+qty: 1
+status: backorder
+status_date: '~Jun 20'
+specs:
+  - label: Diameter
+    value: '9mm'
+  - label: Cut Length
+    value: '3/4"'
+  - label: Construction
+    value: Carbide Head

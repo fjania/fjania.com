@@ -1,7 +1,7 @@
 model: CMT 811.182.11
 name: Carbide Tipped Ply-Groove Straight Bit
 types:
-  - groove
+  - plywood-groove
 brand: cmt
 shank: '1/4"'
 max_rpm: 24000
