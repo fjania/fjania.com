@@ -1,0 +1,21 @@
+model: 530-DNC720
+name: AstraHP Triple-Flute Down-Cut Plywood Bit, 3/4"
+types:
+  - plywood-groove
+brand: bb
+shank: '1/2"'
+max_rpm: 16000
+image: 530-DNC720.jpg
+url: 'https://bitsbits.com/product/router-bit-for-3-4-inch-plywood/'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '23/32" (18.2mm)'
+  - label: Cut Length
+    value: '1-1/8"'
+  - label: Plywood
+    value: '3/4"'
+  - label: Construction
+    value: Solid Carbide

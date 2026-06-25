@@ -1,0 +1,21 @@
+model: 530-DNC484
+name: AstraHP Triple-Flute Down-Cut Plywood Bit, 1/2"
+types:
+  - plywood-groove
+brand: bb
+shank: '1/2"'
+max_rpm: 16000
+image: 530-DNC484.jpg
+url: 'https://bitsbits.com/product/router-bit-for-1-2-inch-plywood/'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '31/64" (12.3mm)'
+  - label: Cut Length
+    value: '1"'
+  - label: Plywood
+    value: '1/2"'
+  - label: Construction
+    value: Solid Carbide

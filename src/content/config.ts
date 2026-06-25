@@ -7,7 +7,7 @@ const bits = defineCollection({
     model: z.string(),
     name: z.string(),
     types: z.array(z.string()),
-    brand: z.enum(['wp', 'ws', 'cmt', 'inf', 'rk']),
+    brand: z.enum(['wp', 'ws', 'cmt', 'inf', 'rk', 'bb']),
     shank: z.string(),
     max_rpm: z.number().nullable(),
     image: z.string(),
