@@ -1,5 +1,10 @@
 # Project Guidelines
 
+## Git
+
+- Commit after making changes, once the work is complete and the build passes. Don't commit a knowingly broken state.
+- Don't `push` or deploy unless asked.
+
 ## Build & Deploy
 
 - Astro static site at repo root
