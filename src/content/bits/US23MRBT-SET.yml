@@ -1,0 +1,19 @@
+model: US23MRBT-SET
+name: Carbide-Tipped 3-Flute Mini Rabbeting Bit Set
+types:
+  - rabbeting
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US23MRBT-SET.jpg
+url: 'https://www.woodpeck.com/carbide-tipped-3-flute-mini-rabbeting-bit.html'
+qty: 2
+status: backorder
+status_date: '~Jul 11'
+specs:
+  - label: Diameter
+    value: '7/8"'
+  - label: Rabbets
+    value: 1/16"–1/4"
+  - label: Construction
+    value: Carbide Tipped

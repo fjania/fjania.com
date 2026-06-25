@@ -1,0 +1,19 @@
+model: US223025MCH
+name: Carbide-Tipped Micro-Bearing Chamfer Bit, 30°
+types:
+  - chamfer
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US223025MCH.jpg
+url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-chamfer-bit-2-flute-14-shank.html'
+qty: 1
+status: backorder
+status_date: '~Jul 11'
+specs:
+  - label: Angle
+    value: 30°
+  - label: Cut Height
+    value: '1/4"'
+  - label: Construction
+    value: Carbide Tipped
