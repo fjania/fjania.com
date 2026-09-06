@@ -1,0 +1,19 @@
+model: US275MU
+name: Metric Up-Cut Spiral Mortising Bit for Domino Tenons
+types:
+  - spiral
+brand: wp
+shank: '1/4"'
+max_rpm: null
+image: US275MU.jpg
+url: 'https://www.woodpeck.com/products/ultra-shear-metric-mortising-router-bits-for-domino-tenons'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: 5mm
+  - label: Cut Length
+    value: '3/4"'
+  - label: Flutes
+    value: '2'

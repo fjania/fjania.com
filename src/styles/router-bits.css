@@ -19,6 +19,7 @@
   --tag-clearing: #495057;
   --tag-groove: #bc6c25;
   --tag-rabbeting: #582f0e;
+  --tag-dovetail: #9d4edd;
   --nav-width: 180px;
 }
 
@@ -289,6 +290,7 @@ header p {
 .tag-clearing { background: var(--tag-clearing); }
 .tag-groove { background: var(--tag-groove); }
 .tag-rabbeting { background: var(--tag-rabbeting); }
+.tag-dovetail { background: var(--tag-dovetail); }
 
 .card-body h3 {
   font-size: 0.95rem;
@@ -572,7 +574,7 @@ a.card-link {
   .tag-pattern, .tag-flush, .tag-roundover, .tag-half-round, .tag-compression,
   .tag-spiral, .tag-vgroove, .tag-chamfer, .tag-bowl,
   .tag-ballnose, .tag-spoilboard, .tag-clearing,
-  .tag-groove, .tag-rabbeting {
+  .tag-groove, .tag-rabbeting, .tag-dovetail {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }

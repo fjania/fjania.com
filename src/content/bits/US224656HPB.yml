@@ -8,8 +8,8 @@ max_rpm: null
 image: US224656HPB.jpg
 url: 'https://www.woodpeck.com/ultra-shear-router-bits-for-plywood.html'
 qty: 1
-status: backorder
-status_date: '~Jun 20'
+status: in-stock
+status_date: null
 specs:
   - label: Diameter
     value: '15/32"'

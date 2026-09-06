@@ -1,0 +1,21 @@
+model: US525008SDU
+name: Solid Carbide Spiral Dovetail Bit (8°, Up-Cut)
+types:
+  - dovetail
+brand: wp
+shank: '1/2"'
+max_rpm: 21900
+image: US525008SDU.jpg
+url: 'https://www.woodpeck.com/ultra-shear-solid-carbide-spiral-dovetail.html'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Diameter
+    value: '1/2"'
+  - label: Cut Length
+    value: '13/16"'
+  - label: Angle
+    value: 8°
+  - label: Flutes
+    value: '2'

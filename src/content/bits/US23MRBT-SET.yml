@@ -8,8 +8,8 @@ max_rpm: null
 image: US23MRBT-SET.jpg
 url: 'https://www.woodpeck.com/carbide-tipped-3-flute-mini-rabbeting-bit.html'
 qty: 2
-status: backorder
-status_date: '~Jul 11'
+status: in-stock
+status_date: null
 specs:
   - label: Diameter
     value: '7/8"'

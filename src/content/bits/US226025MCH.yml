@@ -8,8 +8,8 @@ max_rpm: null
 image: US226025MCH.jpg
 url: 'https://www.woodpeck.com/ultra-shear-carbide-tipped-micro-bearing-chamfer-bit-2-flute-14-shank.html'
 qty: 1
-status: backorder
-status_date: '~Jul 11'
+status: in-stock
+status_date: null
 specs:
   - label: Angle
     value: 60°
