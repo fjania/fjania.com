@@ -1,0 +1,51 @@
+name: 1" Radiused Rolled Edge Skew, M2 Cryo (CryoCut)
+brand: Hurricane Turning Tools
+model: HTT-525
+category: skew
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/hurricane-cryocut-series-htt-525-m2-cryo-1-radiused-rolled-edge-skew-chisel/
+purchased: '2026-09-24'
+image: hurricane-htt-525.jpg
+summary: >-
+  A wide skew with a curved cutting edge and rounded long edges on the blade. The radius keeps more of the
+  edge away from the wood, so planing cuts and beads are more forgiving than with the straight Sorby skew.
+specs:
+  - label: Width
+    value: 1"
+  - label: Thickness
+    value: 1/4"
+  - label: Blade length
+    value: 6-3/4"
+  - label: Edge
+    value: Radiused, with rolled (rounded) long edges
+  - label: Handle
+    value: 12" beech
+  - label: Overall length
+    value: 19"
+  - label: Steel
+    value: M2 HSS, cryogenically treated
+sections:
+  - heading: What it's for
+    bullets:
+      - Planing long spindles, table legs, and tool handles to a finish-ready surface.
+      - Rolling large beads. The curved edge follows the bead naturally.
+      - Pommels and shoulders using the long point, and end-grain clean-up on spindle ends.
+      - Spindle turning only.
+  - heading: How to use it
+    bullets:
+      - "Planing: bevel on the work, long point up and trailing, handle low. Lift until the lower part of the curved edge cuts, and travel along the spindle. The radius means the sweet spot is wider than on a straight skew, but the long point still must stay clear."
+      - "Beads: start on the crest with the edge nearly horizontal, then rotate the tool and lift the handle together as you move down the side. The rolled edges let the blade pivot smoothly on the rest."
+      - "Peeling cut: with the edge square to the axis and the tool flat on the rest, push straight in to reduce a diameter quickly. Good for roughing tenons."
+      - Keep the rest close and at or slightly above center for planing cuts.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Two equal bevels, included angle about 40°, following the factory curve. Grind the curve by sweeping the
+        tool across the wheel rather than holding it still.
+    bullets:
+      - "Tormek: SVS-50 Multi Jig. Because the edge is curved, pivot the tool in the jig through the grind to follow the radius, then repeat on the other side at the same setting."
+      - Hone both faces to a polish. The surface a skew leaves is only as good as its edge.
+  - heading: Common mistakes
+    bullets:
+      - Treating the radius as permission to cut with the upper part of the edge. The long point can still dig in.
+      - Over-grinding the curve into a round-nose profile. Keep the radius gentle so the long point remains useful for V-cuts.

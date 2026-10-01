@@ -1,0 +1,83 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import '../../../styles/turning.css';
+
+export async function getStaticPaths() {
+  const items = await getCollection('turning');
+  return items.map(item => ({
+    params: { slug: item.id },
+    props: { item: item.data },
+  }));
+}
+
+const { item } = Astro.props;
+
+const categoryLabels: Record<string, string> = {
+  gouge: 'Gouge', skew: 'Skew Chisel', parting: 'Parting Tool', scraper: 'Scraper',
+  chuck: 'Chuck', jaws: 'Chuck Jaws', center: 'Center', 'tool-rest': 'Tool Rest', faceplate: 'Faceplate',
+};
+
+const setItems = item.set
+  ? (await getCollection('turning')).filter(i => i.data.set === item.set && i.data.name !== item.name)
+  : [];
+---
+
+<Base title={`${item.brand} ${item.name} — Turning Tools`}>
+  <div class="tool-detail">
+    <div class="tool-header">
+      <div>
+        <div class="category">{categoryLabels[item.category]}</div>
+        <h1>{item.name}</h1>
+        <p class="brand">{item.brand} &middot; {item.model}</p>
+        <p class="summary">{item.summary}</p>
+        <p class="provenance">
+          {item.included_with
+            ? <><strong>Included with</strong> {item.included_with}, delivered {item.purchased}</>
+            : <><strong>Purchased</strong> {item.purchased} from {item.vendor}</>}
+          {item.set && <><br /><strong>Part of</strong> {item.set}</>}
+        </p>
+        <div class="actions">
+          <a href={item.url} class="vendor-link" target="_blank" rel="noopener">Product page</a>
+          <a href="/workshop/turning/" class="back-link">All turning tools</a>
+        </div>
+      </div>
+      <div class="tool-photo">
+        <img src={`/turning/${item.image}`} alt={`${item.brand} ${item.name}`} />
+      </div>
+    </div>
+
+    <div class="tool-content">
+      <h2>Specifications</h2>
+      <table>
+        <tbody>
+          {item.specs.map(s => (
+            <tr><th>{s.label}</th><td>{s.value}</td></tr>
+          ))}
+        </tbody>
+      </table>
+
+      {item.sections.map(sec => (
+        <>
+          <h2>{sec.heading}</h2>
+          {sec.paragraphs?.map(p => <p>{p}</p>)}
+          {sec.bullets && (
+            <ul>
+              {sec.bullets.map(b => <li>{b}</li>)}
+            </ul>
+          )}
+          {sec.note && <div class="note">{sec.note}</div>}
+        </>
+      ))}
+
+      {setItems.length > 0 && (
+        <div class="set-note">
+          <strong>Also in this set:</strong>{' '}
+          {setItems.map((s, i) => (
+            <>{i > 0 && ', '}<a href={`/workshop/turning/${s.id}/`}>{s.data.name}</a></>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</Base>

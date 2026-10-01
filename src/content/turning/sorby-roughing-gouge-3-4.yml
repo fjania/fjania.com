@@ -1,0 +1,53 @@
+name: 3/4" Spindle Roughing Gouge
+brand: Robert Sorby
+model: 67HS set, Woodcraft 146162
+category: gouge
+vendor: Woodcraft (Raleigh store)
+url: https://www.woodcraft.com/products/sorby-intermediate-turning-tool-set-hss-6-piece
+purchased: September 2026, in store
+set: Sorby Intermediate 6-Piece HSS Turning Set
+image: sorby-roughing-gouge-3-4.jpg
+summary: >-
+  The first tool to pick up on any spindle blank. Its wide, deep U-flute takes square stock to a cylinder quickly
+  and without splintering. Spindle work only, never bowls.
+specs:
+  - label: Flute width
+    value: 3/4"
+  - label: Flute length
+    value: 6"
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Handle
+    value: Ash with brass ferrule
+  - label: Made in
+    value: Sheffield, England
+sections:
+  - heading: What it's for
+    paragraphs:
+      - >-
+        Roughing square or octagonal spindle blanks down to round, and quickly reducing diameter along a spindle
+        before switching to the spindle gouge or skew for detail. The forged, square-section tang and heavy flute
+        are built for the interrupted cuts of knocking off corners.
+    bullets:
+      - Spindle work between centers only. The tang is not designed for the leverage of bowl work, where a catch can snap it.
+      - Also useful for long, straight planing cuts on cylinders when a skew feels risky.
+  - heading: How to use it
+    bullets:
+      - Set the tool rest just below center and about 1/4" from the corners of the blank. Rotate the blank by hand to check clearance.
+      - Anchor the handle against your hip, rest the bevel on the wood with the edge clear, then raise the handle until the edge begins to cut. Rub the bevel the whole time.
+      - Start 1" to 2" in from the tailstock end and cut toward the end. Work in overlapping passes toward the headstock. Never start a cut at the end of the blank.
+      - Keep the flute pointing roughly in the direction of travel. Rolling it slightly toward the cut gives a cleaner shear.
+      - Once round, take light passes with the tool held square to the axis to produce a smooth cylinder.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Grind a single straight bevel of about 45° square across the end. There is no fingernail profile on a roughing gouge.
+    bullets:
+      - "Tormek: SVS-50 Multi Jig in the closed seat, or the SVD-110 platform. Set with the TTS-100 and roll the gouge across the wheel."
+      - A fresh-from-the-grinder edge is fine. Honing is optional for a roughing tool.
+      - Watch the corners of the flute. They should stay even with the center of the edge, not grind back faster.
+  - heading: Common mistakes
+    bullets:
+      - Using it on a bowl blank. This is the single most common cause of a snapped roughing gouge tang.
+      - Starting the cut with the edge touching first instead of the bevel. Bevel first, then lift into the cut.
+      - Letting the rest drift too far from the work as the diameter shrinks. Stop and move it in.

@@ -6,6 +6,7 @@ const bits = await getCollection('bits');
 const species = await getCollection('species');
 const manuals = await getCollection('manuals');
 const specSheets = await getCollection('spec-sheets');
+const turning = await getCollection('turning');
 ---
 
 <Base title="Workshop">
@@ -92,6 +93,11 @@ const specSheets = await getCollection('spec-sheets');
         <div class="count">{manuals.length}</div>
         <h2>Manuals</h2>
         <p class="desc">Machine manuals as PDFs and readable HTML</p>
+      </a>
+      <a href="/workshop/turning/" class="home-card">
+        <div class="count">{turning.length}</div>
+        <h2>Turning Tools</h2>
+        <p class="desc">Gouges, chucks, centers, and rests for the lathe</p>
       </a>
       <a href="/workshop/spec-sheets/" class="home-card">
         <div class="count">{specSheets.length}</div>

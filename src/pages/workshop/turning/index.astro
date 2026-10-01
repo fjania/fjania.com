@@ -1,0 +1,67 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import '../../../styles/turning.css';
+
+const items = await getCollection('turning');
+
+const groups = [
+  { id: 'gouges', label: 'Gouges', categories: ['gouge'] },
+  { id: 'skews', label: 'Skew Chisels', categories: ['skew'] },
+  { id: 'parting', label: 'Parting Tools', categories: ['parting'] },
+  { id: 'scrapers', label: 'Scrapers', categories: ['scraper'] },
+  { id: 'chucks', label: 'Chucks & Jaws', categories: ['chuck', 'jaws'] },
+  { id: 'centers', label: 'Centers & Tailstock', categories: ['center'] },
+  { id: 'rests', label: 'Tool Rests', categories: ['tool-rest'] },
+  { id: 'faceplates', label: 'Faceplates', categories: ['faceplate'] },
+];
+
+const categoryLabels: Record<string, string> = {
+  gouge: 'Gouge', skew: 'Skew', parting: 'Parting Tool', scraper: 'Scraper',
+  chuck: 'Chuck', jaws: 'Jaws', center: 'Center', 'tool-rest': 'Tool Rest', faceplate: 'Faceplate',
+};
+
+const grouped = groups
+  .map(g => ({
+    ...g,
+    items: items
+      .filter(i => g.categories.includes(i.data.category))
+      .sort((a, b) => a.data.brand.localeCompare(b.data.brand) || a.data.name.localeCompare(b.data.name)),
+  }))
+  .filter(g => g.items.length > 0);
+---
+
+<Base title="Turning Tools & Accessories">
+  <div class="turning-listing">
+    <a href="/workshop/" class="back-link">&larr; Workshop</a>
+    <h1>Turning Tools &amp; Accessories</h1>
+    <p class="subtitle">{items.length} items for the Powermatic 2014B &mdash; what each one is for, how to present it, and how to sharpen it</p>
+
+    <nav class="turning-nav">
+      {grouped.map(g => (
+        <a href={`#${g.id}`}>{g.label}<span class="n">{g.items.length}</span></a>
+      ))}
+    </nav>
+
+    {grouped.map(g => (
+      <section class="turning-group" id={g.id}>
+        <h2>{g.label}</h2>
+        <div class="turning-grid">
+          {g.items.map(item => (
+            <a href={`/workshop/turning/${item.id}/`} class="tool-card">
+              <div class="card-image">
+                <img src={`/turning/${item.data.image}`} alt={`${item.data.brand} ${item.data.name}`} loading="lazy" />
+              </div>
+              <div class="card-body">
+                <div class="category">{categoryLabels[item.data.category]}</div>
+                <h3>{item.data.name}</h3>
+                <p class="brand">{item.data.brand}</p>
+                <p class="meta">{item.data.included_with ? 'Came with the lathe' : item.data.vendor}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Base>

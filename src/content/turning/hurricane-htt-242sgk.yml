@@ -1,0 +1,57 @@
+name: 5/8" Bowl Gouge with Side Grind, M2 Cryo
+brand: Hurricane Turning Tools
+model: HTT-242SGK
+category: gouge
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/hurricane-htt-242sgkw-m2-cryo-5-8-bowl-gouge-1-2-flute-with-side-grind/
+purchased: '2026-09-22'
+image: hurricane-htt-242sgk.jpg
+summary: >-
+  The main bowl gouge. A 5/8" bar with a 1/2" deep flute and a swept-back Irish grind, cryogenically treated M2
+  from Crown Tools in Sheffield. Roughs and shapes bowls up to the lathe's 14" swing and leaves a good enough
+  surface to go straight to a finishing cut.
+specs:
+  - label: Bar diameter
+    value: 5/8"
+  - label: Flute width
+    value: 1/2", deep parabolic
+  - label: Usable flute length
+    value: 8"
+  - label: Handle
+    value: 14" ash, black with silver accents
+  - label: Overall length
+    value: 24"
+  - label: Steel
+    value: M2 HSS, cryogenically treated
+  - label: Factory grind
+    value: Swept-back side grind (Irish / Ellsworth)
+  - label: Made in
+    value: Sheffield, England (Crown Tools)
+sections:
+  - heading: What it's for
+    bullets:
+      - Roughing bowl blanks from the bandsaw to round, inside and out.
+      - Shaping the outside profile with push cuts and the inside with pull and push cuts.
+      - Shear-scraping with the wing for a final clean-up pass on the outside.
+      - Heavy enough for the 2014B's full 14" swing and the extended swing with the bed extension in the low position.
+  - heading: How to use it
+    bullets:
+      - "Outside, push cut: flute rolled about 45° toward the cut, handle low and against your hip, bevel rubbing. Move from the foot toward the rim so the fibers are supported."
+      - "Inside: enter at the center with the flute toward the rim and the handle toward four o'clock, swing the handle toward you as the cut progresses. Work in passes from the rim inward. Keep the bevel in contact and the rest close."
+      - "Shear scrape: drop the handle well below the rest, lay the gouge on its side, and let the long wing just kiss the wood at about 45°. Expect fine, wispy shavings."
+      - Start the lathe at the low end of a range and ramp up. On a 12" to 14" blank stay under about 700 RPM for roughing.
+      - Mount the blank between centers first to true it and cut a tenon, then move to the chuck.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Maintain the factory side grind. A nose bevel around 55° to 60° with wings swept back about 1-1/2" is
+        the standard Ellsworth-style profile and works for both roughing and interior finishing cuts on this lathe.
+    bullets:
+      - "Tormek: SVD-186 R gouge jig. Projection 75 mm, jig setting 6 reproduces a 55° to 60° side grind. Set the stop on the TTS-100 and keep the same numbers every time so the bevel stays single-facet."
+      - Hone the flute and the bevel on the LA-120 profiled leather wheel. Cryo M2 holds a honed edge well.
+      - If the heel starts leaving bruise marks inside a tight bowl, grind a small secondary relief on the heel.
+  - heading: Common mistakes
+    bullets:
+      - Catching the left wing on entry to the interior by presenting the flute upward. Flute toward the rim, always.
+      - Trying to cut the center of the bottom with the nose while the rest is far away. Move the rest in and take light cuts.
+      - Grinding the wings back too far, which thins the edge and makes the tool grabby on the outside.

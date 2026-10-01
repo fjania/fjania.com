@@ -1,0 +1,53 @@
+name: SC4 Professional Geared Scroll Chuck
+brand: Record Power
+model: SC4, 1-1/4" x 8 TPI insert (Highland 301687)
+category: chuck
+vendor: Highland Woodworking
+url: https://www.highlandwoodworking.com/products/record-power-sc4-lathe-chuck
+purchased: '2026-08-31'
+image: record-power-sc4.jpg
+summary: >-
+  The primary workholding chuck. A four-jaw geared scroll chuck with a sealed back and built-in indexing plate,
+  operated with a single ball-end hex key. Threaded for the 2014B's 1-1/4" x 8 TPI spindle through a Record
+  Power insert. Ships with 50 mm standard jaws, a faceplate ring, and a woodworm screw.
+specs:
+  - label: Spindle thread
+    value: 1-1/4" x 8 TPI via threaded insert
+  - label: Jaw operation
+    value: Geared scroll, ball-end hex key
+  - label: Included jaws
+    value: 50 mm (2") standard dovetail jaws
+  - label: External grip (tenon)
+    value: 1-3/4" to 2-1/2"
+  - label: Internal grip (recess)
+    value: 2" to 2-3/4"
+  - label: Also included
+    value: 50 mm faceplate ring, woodworm screw, hex key, fitted case
+  - label: Indexing
+    value: Built-in indexing plate on the chuck body
+  - label: Jaw compatibility
+    value: Record Power SC3 / SC4 jaw sets
+sections:
+  - heading: What it's for
+    bullets:
+      - Holding bowl and platter blanks by a tenon (jaws closed on the outside) or a recess (jaws expanded inside).
+      - Holding spindle and box stock by a short tenon so the tailstock can be removed for hollowing and end work.
+      - Mounting rough blanks on the woodworm screw for truing the outside and cutting a tenon, without a faceplate.
+      - The faceplate ring screws to a blank like a faceplate but is gripped by the standard jaws, so blanks can be swapped quickly.
+  - heading: Tenons and recesses for the 50 mm jaws
+    bullets:
+      - "Tenon: turn it about 2\" in diameter so the jaws close to a near-circle on it. The jaws grip best just short of fully closed. Depth about 1/4\" to 3/8\", shorter than the jaw height so the shoulder, not the tenon end, seats against the jaw face."
+      - Cut a slight dovetail on the tenon to match the jaw profile, and make the shoulder flat or very slightly concave so it bears on the top of the jaws.
+      - "Recess: about 2-1/8\" in diameter and 3/16\" to 1/4\" deep with a dovetailed wall. Leave at least 3/4\" of solid wood outside the recess in a bowl foot or the expansion can split it."
+      - Use the tailstock for support whenever the work allows, even with the chuck.
+  - heading: Mounting and removal
+    bullets:
+      - Clean the spindle threads and the insert, then thread the chuck on by hand until it seats firmly against the spindle shoulder. Do not let it spin on; the shoulder contact is what keeps it running true.
+      - Engage the spindle lock to tighten and loosen the chuck. Reverse rotation can unscrew it, so avoid running in reverse with the chuck unless the insert's grub screw is tightened.
+      - To change jaws, remove the two screws per slide, keep each jaw with its numbered slide, and reinstall in the same positions so the jaws stay concentric.
+      - Blow out shavings from the scroll regularly and add a drop of light oil to the key socket and slides.
+  - heading: Common mistakes
+    bullets:
+      - Turning the tenon too long so the end of the tenon bottoms in the chuck and the shoulder floats. The grip is then weak and the piece runs out of true.
+      - Closing the jaws fully on an undersized tenon. Only the corners of the jaws touch and the wood crushes.
+      - Expanding into a recess that is too close to the edge of the foot.

@@ -1,0 +1,34 @@
+name: 8" Tool Rest, 1" Post
+brand: Powermatic
+model: PM1-562
+category: tool-rest
+vendor: Included with Powermatic 2014B
+url: https://www.powermatic.com/14x20-inch-variable-speed-lathe-with-stand-pm2014b
+purchased: '2026-09-04'
+included_with: Powermatic 2014B lathe (PM1-482)
+image: powermatic-tool-rest-8.jpg
+summary: >-
+  The straight cast rest that ships with the lathe. Short and light, which makes it the handy choice for small
+  spindles, boxes, and tight spots near the headstock where the 12" Robust is too long.
+specs:
+  - label: Width
+    value: 8"
+  - label: Post diameter
+    value: 1"
+  - label: Material
+    value: Cast steel bar on steel post
+  - label: Lock
+    value: Bushing-style clamp in the tool rest base
+sections:
+  - heading: What it's for
+    bullets:
+      - Short spindles, pens, knobs, and box work where a long rest gets in the way of the tailstock.
+      - Working near the headstock or around the chuck.
+      - A spare rest to leave at a second height setting while another is in use.
+  - heading: Setting it
+    bullets:
+      - "Same height rules as any straight rest: about 1/8\" to 1/4\" below center for gouges and skews, at center for scrapers."
+      - The 2014B base clamps the post with a split bushing. Make sure the bushings are spread before inserting the post and tighten the small handle firmly.
+  - heading: Care
+    bullets:
+      - The cast top edge picks up nicks from catches. Dress it flat with a mill file and wax it so tools slide.

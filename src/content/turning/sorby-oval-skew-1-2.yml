@@ -1,0 +1,46 @@
+name: 1/2" Oval Skew Chisel
+brand: Robert Sorby
+model: 809 (CSUSA 1027410002)
+category: skew
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/robert-sorby-m2-hss-oval-skew-chisel
+purchased: '2026-09-30'
+image: sorby-oval-skew-1-2.jpg
+summary: >-
+  A small oval-section skew for fine spindle detail: small beads, V-cuts, pommels on thin stock, and finials.
+  The oval section rolls on the rest without the corners of a rectangular blade digging in.
+specs:
+  - label: Width
+    value: 1/2"
+  - label: Blade length
+    value: 6"
+  - label: Section
+    value: Oval
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Handle
+    value: Ash with brass ferrule
+  - label: Made in
+    value: Sheffield, England
+sections:
+  - heading: What it's for
+    bullets:
+      - Small beads, fine V-cuts, and crisp lines on pens, finials, and small spindles.
+      - Planing cuts on thin or small-diameter work where the 1" skew is clumsy.
+      - Cleaning up tight shoulders next to a bead or square section.
+  - heading: How to use it
+    bullets:
+      - Same cuts as the larger skews, scaled down. Keep the cut in the lower third of the edge for planing and use the long point for V-cuts.
+      - The oval section pivots freely on the rest, which makes rolling a bead easier, but it also means less registration. Keep a firm grip and light cuts.
+      - On very thin spindles, support the back of the work with your fingers to damp vibration.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Two equal bevels, about 40° included. The oval section needs a jig that holds it against rotation.
+    bullets:
+      - "Tormek: SVS-50 Multi Jig, closed seat, so the oval cannot roll while grinding. Same setting both sides."
+      - Hone to a polish. A small skew gets its finish quality entirely from the edge.
+  - heading: Common mistakes
+    bullets:
+      - Letting the oval roll in your hand during a planing cut, which changes the presentation angle and invites a catch.
+      - Using it for peeling cuts. The thin section flexes; use the 1" skew or the roughing gouge.

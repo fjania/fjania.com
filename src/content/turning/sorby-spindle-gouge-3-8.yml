@@ -1,0 +1,48 @@
+name: 3/8" Spindle Gouge
+brand: Robert Sorby
+model: 67HS set, Woodcraft 146162
+category: gouge
+vendor: Woodcraft (Raleigh store)
+url: https://www.woodcraft.com/products/sorby-intermediate-turning-tool-set-hss-6-piece
+purchased: September 2026, in store
+set: Sorby Intermediate 6-Piece HSS Turning Set
+image: sorby-spindle-gouge-3-8.jpg
+summary: >-
+  The detail tool for spindle work. A shallow flute and fingernail grind cut beads, coves, and the transitions
+  between them. Also handles small boxes, finials, and light face work.
+specs:
+  - label: Flute width
+    value: 3/8"
+  - label: Flute length
+    value: 4"
+  - label: Flute shape
+    value: Shallow, milled from round bar
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Handle
+    value: Ash with brass ferrule
+sections:
+  - heading: What it's for
+    bullets:
+      - Coves, beads, and fillets on spindles. The swept-back wings let the tool roll through a bead without the corners catching.
+      - Shaping finials, knobs, and small handles.
+      - Light cuts across end grain on small boxes and lids.
+  - heading: How to use it
+    bullets:
+      - "Coves: start with the flute at 90° to the work, touch the point, and roll the flute toward the bottom of the cove. Stop at the bottom. Cut the other side the same way from the opposite direction. Never cut uphill out of a cove."
+      - "Beads: start on the crest with the flute up, then roll the tool and drop the handle together so the edge rides down the side of the bead. Finish with the flute nearly on its side at the bottom."
+      - Always cut downhill, from larger diameter to smaller, so the fibers are supported.
+      - Keep the bevel rubbing. If the tool is scraping instead of slicing, the handle is too high.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        A fingernail profile with a bevel of about 35° to 40° at the nose and wings that sweep back a moderate amount.
+    bullets:
+      - "Tormek: SVD-186 R gouge jig. A projection of 65 mm and jig setting 4 gives a general-purpose spindle profile. Record the setting on a card so it repeats."
+      - Hone the flute lightly with a slip or the LA-120 profiled leather wheel to remove the burr.
+      - Keep the wings symmetrical. An uneven grind makes the tool pull to one side in a cove.
+  - heading: Common mistakes
+    bullets:
+      - Trying to rough with it. The shallow flute clogs and the small bar flexes.
+      - Pointing the flute straight up when entering a cove, which lets the wing catch and skate across the work.
+      - Running the point into the bottom of a bead from both sides and leaving a tear-out line. Finish each side separately.

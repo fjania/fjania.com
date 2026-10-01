@@ -1,0 +1,53 @@
+name: 1" x 3/8" Bowl Finishing Scraper, M2 Pro
+brand: Hurricane Turning Tools
+model: HTT-2565
+category: scraper
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/hurricane-htt-2565w-m2-hss-1-x-3-8-bowl-finishing-scraper/
+purchased: '2026-09-24'
+image: hurricane-htt-2565.jpg
+summary: >-
+  A heavy curved-profile scraper for the inside of bowls. The 3/8" thick section damps chatter when reaching
+  over the rest, and the radiused edge matches the curve of a bowl interior to remove gouge ridges.
+specs:
+  - label: Width
+    value: 1"
+  - label: Thickness
+    value: 3/8"
+  - label: Usable length
+    value: 6-1/2"
+  - label: Profile
+    value: Curved (radiused) edge for bowl interiors
+  - label: Handle
+    value: 14" stained beech with brass ferrule
+  - label: Overall length
+    value: 20-1/2"
+  - label: Steel
+    value: M2 HSS, Rc 62 to 64
+  - label: Made in
+    value: Sheffield, England (Crown Tools)
+sections:
+  - heading: What it's for
+    bullets:
+      - Final smoothing of bowl interiors after the gouge, removing the small ridges and the uneven transition at the bottom.
+      - Refining the curve of a bowl so the wall thickness is even from rim to foot.
+      - Shear scraping the outside of a bowl held on its edge.
+  - heading: How to use it
+    bullets:
+      - Set the rest at or slightly above center and as close to the wall as possible. Hold the tool flat with the handle a little higher than the edge so it trails.
+      - Work from the rim toward the center on the interior, taking very light passes. Only the part of the edge that matches the curve should touch.
+      - For end-grain areas at the bottom, lift the tool onto its edge and shear scrape at 45° for less tear-out.
+      - Slow the lathe for scraping. Around 500 to 800 RPM on a 10" bowl is plenty.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Single bevel of about 70° to 80° straight from the grinder, keeping the factory curve. The grinder burr is the
+        edge. Refresh it often; a scraper edge dulls in a few minutes of use.
+    bullets:
+      - "Tormek: SVD-110 platform at 75°, sweeping the tool across the wheel to follow the radius. Raise a fresh burr; do not hone it off."
+      - For a finer burr, grind, then hone the top face flat and raise a burr with a burnisher at about 5°.
+  - heading: Common mistakes
+    bullets:
+      - Presenting the edge above center or tipped upward on the inside of a bowl. That is the classic scraper catch.
+      - Pushing hard to remove material. This tool is for the last few thousandths, not shaping.
+      - Scraping long grain on the outside with the tool flat. Shear scrape instead.

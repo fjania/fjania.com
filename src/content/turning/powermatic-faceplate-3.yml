@@ -1,0 +1,40 @@
+name: 3" Faceplate, 1-1/4" x 8 TPI
+brand: Powermatic
+model: JT9-6294736
+category: faceplate
+vendor: Included with Powermatic 2014B
+url: https://www.powermatic.com/14x20-inch-variable-speed-lathe-with-stand-pm2014b
+purchased: '2026-09-04'
+included_with: Powermatic 2014B lathe (PM1-482)
+image: powermatic-faceplate-3.jpg
+summary: >-
+  The cast iron faceplate that ships with the lathe. Screws to a flat face of a blank for the most secure hold
+  available, with two set screws that lock it to the spindle so it can be run in reverse. Comes with a wrench.
+specs:
+  - label: Thread
+    value: 1-1/4" x 8 TPI, right hand
+  - label: Diameter
+    value: 3"
+  - label: Material
+    value: Cast iron
+  - label: Mounting screws
+    value: "Drilled for #12 screws"
+  - label: Spindle lock
+    value: Two set screws, 3 mm hex
+sections:
+  - heading: What it's for
+    bullets:
+      - Mounting bowl and platter blanks that are too big, too irregular, or too valuable to trust to a tenon alone. Screws into face grain hold far better than any chuck.
+      - Mounting a waste block for glue-block turning, where no screw holes are wanted in the finished piece.
+      - Holding a blank while the outside is shaped and a tenon or recess is cut for the chuck.
+  - heading: How to use it
+    bullets:
+      - "True one face of the blank flat. Use the faceplate as a template, drill pilot holes, and drive #12 sheet-metal or square-drive screws at least 3/4\" into sound face grain. Never screw into end grain or punky wood."
+      - Lift the spindle lock tab, thread the faceplate on hand-tight against the shoulder, and release the lock. Forward rotation snugs it further.
+      - If you will run in reverse for sanding, tighten both set screws against the spindle first, or the faceplate will unscrew.
+      - To remove, back off the set screws with a 3 mm hex key, lock the spindle, and turn the faceplate off with the supplied wrench.
+  - heading: Common mistakes
+    bullets:
+      - Forgetting the set screws before reversing the spindle.
+      - Trying to remove the faceplate with the set screws still tightened, which damages the spindle threads.
+      - Using drywall screws. They are brittle and snap under shock.

@@ -1,0 +1,47 @@
+name: 3/8" Bowl Gouge
+brand: Robert Sorby
+model: 67HS set, Woodcraft 146162
+category: gouge
+vendor: Woodcraft (Raleigh store)
+url: https://www.woodcraft.com/products/sorby-intermediate-turning-tool-set-hss-6-piece
+purchased: September 2026, in store
+set: Sorby Intermediate 6-Piece HSS Turning Set
+image: sorby-bowl-gouge-3-8.jpg
+summary: >-
+  A small, deep-fluted bowl gouge sized for smaller bowls, finishing cuts, and the tight area around the foot
+  where the 5/8" Hurricane is too big. Sorby sizes bowl gouges by flute width, so this is roughly 1/2" bar.
+specs:
+  - label: Flute width
+    value: 3/8" (nominal 1/2" bar)
+  - label: Flute length
+    value: 6"
+  - label: Flute shape
+    value: Deep U, milled from round bar
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Handle
+    value: Ash with brass ferrule
+sections:
+  - heading: What it's for
+    bullets:
+      - Bowls and plates up to about 8" in diameter, inside and out.
+      - Finishing cuts on larger bowls after roughing with the 5/8" Hurricane.
+      - Refining the foot and the transition into the base, where a smaller tool reaches without rubbing the chuck.
+  - heading: How to use it
+    bullets:
+      - "Outside: handle low and braced against your hip, flute rolled about 45° toward the direction of cut. Move your whole body, not just your arms, to keep the bevel riding."
+      - "Inside: start at center with the flute facing the rim, handle pointed toward four o'clock, and swing the handle toward you as the cut deepens. Work from rim toward the center in successive passes, letting the bevel guide the curve."
+      - Position the rest just below center on the inside and close to the work. Move it often as the bowl deepens.
+      - Start slow and watch for vibration before bringing the speed up.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        The set grind is a traditional profile. A 55° to 60° nose bevel with moderately swept wings suits bowl interiors
+        well. A 40/40 grind is an alternative if you want to use this mainly on the outside.
+    bullets:
+      - "Tormek: SVD-186 R gouge jig. Try projection 75 mm, jig setting 6 for a 55° to 60° bevel with a swept wing. Hone with the LA-120 wheel."
+      - Grind the heel back slightly so it does not bruise the inside of a tight curve.
+  - heading: Common mistakes
+    bullets:
+      - Entering an interior cut with the flute pointing up. The left wing catches and the tool skates toward the rim.
+      - Pushing too hard on a deep interior. Let the edge cut and keep passes light, especially near the bottom where the rest is far away.

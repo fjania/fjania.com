@@ -1,0 +1,50 @@
+name: 3/4" Skew Chisel
+brand: Robert Sorby
+model: 67HS set, Woodcraft 146162
+category: skew
+vendor: Woodcraft (Raleigh store)
+url: https://www.woodcraft.com/products/sorby-intermediate-turning-tool-set-hss-6-piece
+purchased: September 2026, in store
+set: Sorby Intermediate 6-Piece HSS Turning Set
+image: sorby-skew-3-4.jpg
+summary: >-
+  A rectangular-section skew for planing cylinders, cutting beads, V-cuts, and pommels on spindle work. Leaves a
+  surface that often needs no sanding. The most rewarding and least forgiving tool in the set.
+specs:
+  - label: Width
+    value: 3/4"
+  - label: Blade length
+    value: 6"
+  - label: Section
+    value: Rectangular, square edges
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Handle
+    value: Ash with brass ferrule
+sections:
+  - heading: What it's for
+    bullets:
+      - Planing cuts that leave a glass-smooth cylinder.
+      - V-cuts, beads, and crisp shoulders at the transition from square to round (pommels).
+      - Cleaning up end grain on spindle ends and small lids.
+      - Spindle turning only.
+  - heading: How to use it
+    bullets:
+      - "Planing: rest the bevel on the work with the edge clear, long point up and leading away from the direction of cut. Raise the handle until the lower half of the edge starts to cut. Keep the cutting point in the lower third of the edge and never let the long point or the heel touch the spinning wood."
+      - "V-cuts: use the long point only. Mark center, then enter at an angle with the bevel parallel to the wall of the V. Alternate sides to deepen."
+      - "Beads: start on the crest and roll the skew down each side, lifting the handle and rotating the tool together."
+      - Hold the handle low and the tool at about 45° to the axis. Light cuts, sharp edge.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Two equal bevels with an included angle around 40°, so about 20° per side. The edge is skewed about 70°
+        to the long edge of the blade.
+    bullets:
+      - "Tormek: SVS-50 Multi Jig in the open seat for a straight skew. The skew angle is set by the jig; grind both sides to the same setting so the edge stays centered."
+      - Hone both bevels. A skew benefits from a polished edge more than any other turning tool.
+      - Lightly round the two long edges of the blade with a file or stone so the rectangular section glides across the rest instead of dragging.
+  - heading: Common mistakes
+    bullets:
+      - Letting the long point touch the work during a planing cut. The result is a spiral catch that can ruin the piece.
+      - Cutting with the edge too far up toward the point. Keep the cut in the lower third.
+      - Trying to cut a cove with it. Coves belong to the spindle gouge.

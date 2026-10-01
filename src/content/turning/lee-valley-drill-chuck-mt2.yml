@@ -1,0 +1,36 @@
+name: "1/2\" Drill Chuck with #2 MT Adapter"
+brand: Lee Valley
+model: 58B0116
+category: center
+vendor: Lee Valley Tools
+url: https://www.leevalley.com/en-us/shop/tools/power-tool-accessories/chucks/49251-drill-chuck-with-morse-taper-adapter
+purchased: '2026-09-14'
+image: lee-valley-drill-chuck-mt2.jpg
+summary: >-
+  A keyed 1/2" three-jaw drill chuck on a #2 Morse taper arbor. Lives in the tailstock for drilling boxes,
+  pepper mills, lamps, and pen blanks on the lathe, and can hold small spigots in the headstock.
+specs:
+  - label: Taper
+    value: "#2 Morse, fits the 2014B headstock and tailstock"
+  - label: Capacity
+    value: 1/2" three-jaw, keyed
+  - label: Arbor
+    value: Drilled and tapped 1/4-20 for a draw bar (not included)
+sections:
+  - heading: What it's for
+    bullets:
+      - Drilling on the lathe axis from the tailstock. Depth holes in boxes, through-bores for pepper mills and lamps, pilot holes for finials and knobs.
+      - Holding Forstner bits, brad points, twist drills, and sanding mandrels.
+      - As a small headstock chuck for pen blanks, small spigots, and sanding drums.
+  - heading: How to use it
+    bullets:
+      - Clean the taper and the quill bore, push the arbor in firmly, and advance the quill until the bit touches. Lock the tailstock to the bed but leave the quill free to feed.
+      - Run slow for large Forstner bits and clear chips often by backing the bit out. Mark depth on the quill or the bit with tape.
+      - Feed with the handwheel, not by pushing the tailstock along the bed.
+      - "In the headstock, fit a 1/4-20 draw bar through the spindle bore into the arbor so the chuck cannot work loose; a Morse taper alone is not safe under load in the headstock."
+      - Eject from the tailstock by retracting the quill fully; it self-ejects like the live center.
+  - heading: Common mistakes
+    bullets:
+      - Using the chuck in the headstock without a draw bar.
+      - Drilling with the tailstock unlocked, which lets the bit wander and the tailstock creep.
+      - Forcing a dull bit. Heat swells the wood and seizes the bit in the hole.

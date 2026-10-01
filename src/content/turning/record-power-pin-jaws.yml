@@ -1,0 +1,39 @@
+name: Pin Jaws for SC3 / SC4
+brand: Record Power
+model: CSUSA 1056180001
+category: jaws
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/record-power-pin-jaws
+purchased: '2026-09-30'
+image: record-power-pin-jaws.jpg
+summary: >-
+  Long, narrow jaws for the SC4 that grip small tenons and reach inside pre-drilled stock. Made for pepper
+  mills, boxes, finials, ornaments, and anything where the standard jaws would get in the way of the tool.
+specs:
+  - label: Fits
+    value: Record Power SC3 and SC4 chucks only
+  - label: Compression (external) range
+    value: 3/8" to 1-1/8"
+  - label: Expansion (internal) range
+    value: 1-1/8" to 1-7/8"
+  - label: Profile
+    value: Dovetailed exterior, smooth interior for drilled bores
+sections:
+  - heading: What it's for
+    bullets:
+      - Holding small spindle tenons for lidded boxes, finials, knobs, and ornament parts, with clear access to the base of the work.
+      - Expanding into a pre-drilled hole, for example the bore of a pepper mill body, to turn the outside concentric with the hole.
+      - Gripping small end-grain blanks that would be lost inside the 50 mm jaws.
+  - heading: Tenons for pin jaws
+    bullets:
+      - Turn tenons between about 1/2" and 1" diameter so the jaws grip near the middle of their range. Keep the tenon no longer than the jaw depth and give it a square shoulder.
+      - The long jaws extend further from the chuck, so support the work with the tailstock when roughing and keep tool pressure light.
+      - For expansion in a drilled hole, the hole should be clean and at least 3/4" deep.
+  - heading: Fitting
+    bullets:
+      - Open the chuck fully, remove the standard jaws two screws at a time, and fit the pin jaws to the matching numbered slides.
+      - Snug the screws evenly. Close the jaws and confirm the four tips meet in a tight circle.
+  - heading: Common mistakes
+    bullets:
+      - Roughing a heavy blank held only by pin jaws without tailstock support.
+      - Mixing up slide numbers when swapping jaws, which puts the jaws out of concentric.

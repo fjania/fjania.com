@@ -1,0 +1,36 @@
+name: "Cone Live Center, #2 MT"
+brand: Powermatic
+model: PM9-PM2014-214 (live center kit)
+category: center
+vendor: Included with Powermatic 2014B
+url: https://www.powermatic.com/14x20-inch-variable-speed-lathe-with-stand-pm2014b
+purchased: '2026-09-04'
+included_with: Powermatic 2014B lathe (PM1-482)
+image: powermatic-live-center.jpg
+summary: >-
+  The ball-bearing tailstock center that ships with the lathe. A 60° cone rides in the end of the blank and
+  rotates with the work, so the tailstock can apply pressure without friction or burning.
+specs:
+  - label: Taper
+    value: "#2 Morse, fits the tailstock quill"
+  - label: Point
+    value: 60° solid cone
+  - label: Bearings
+    value: Two ball bearings on a steel shaft
+  - label: Replacement parts
+    value: Kit includes cap, bearings, and shaft (manual index 14A to 17A)
+sections:
+  - heading: What it's for
+    bullets:
+      - Supporting the tailstock end of every spindle and most bowl blanks during roughing.
+      - Supporting the base of a bowl blank between centers while the outside is trued and a tenon is cut.
+  - heading: How to use it
+    bullets:
+      - Clean the taper and the quill bore and push the center in firmly. It should resist being pulled out by hand.
+      - Advance the quill with the handwheel until the cone seats, then lock the quill. Use only enough pressure to hold the work; excess pressure heats the bearings and can split small stock.
+      - To remove, loosen the quill lock and retract the quill fully; the center self-ejects. Catch it.
+      - A cup center or a ring center is kinder to thin spindles than a cone. For now, a shallow pre-drilled dimple keeps the cone from splitting small stock.
+  - heading: Maintenance
+    bullets:
+      - Keep the taper clean and lightly oiled. Blow dust out of the bearing housing.
+      - If the cone stops spinning freely or feels gritty, replace the bearings from the kit.

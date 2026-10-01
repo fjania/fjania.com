@@ -1,0 +1,39 @@
+name: "7/8\" Stebcenter, #2 MT"
+brand: Robert Sorby
+model: Lee Valley 85S0902
+category: center
+vendor: Lee Valley Tools
+url: https://www.leevalley.com/en-us/shop/tools/power-tool-accessories/49904-sorby-stebcenters
+purchased: '2026-09-14'
+image: sorby-stebcenter-7-8.jpg
+summary: >-
+  A headstock drive center with a spring-loaded point surrounded by a ring of fine teeth. Tailstock pressure
+  sets the grip, and in a bad catch the teeth slip rather than throwing the piece. The safer, faster alternative
+  to the four-prong spur center for spindle work.
+specs:
+  - label: Taper
+    value: "#2 Morse, fits the 2014B headstock"
+  - label: Diameter
+    value: 7/8"
+  - label: Drive
+    value: Ring of sharp teeth with spring-loaded center point
+  - label: Grip control
+    value: Variable by tailstock pressure
+sections:
+  - heading: What it's for
+    bullets:
+      - Driving spindle blanks between centers. The 7/8" size suits most furniture parts, handles, and boxes.
+      - Quick setup. The spring point locates the blank without pre-drilling or driving the center in with a mallet.
+      - Teaching and risky cuts. With light tailstock pressure a severe dig-in stalls the blank instead of launching it.
+      - Remounting work. The toothed ring re-registers on its own marks, so a piece can be taken off and put back.
+  - heading: How to use it
+    bullets:
+      - Mark centers on the blank, clean the taper and the headstock bore, and push the Stebcenter in by hand. It should seat with a firm push.
+      - Hold the blank against the spring point, bring up the tailstock live center, and advance the quill until the teeth bite. Lock the quill.
+      - More tailstock pressure gives more drive. Use just enough to prevent slipping under normal cuts and no more.
+      - Remove with the knockout rod through the handwheel, catching the center so it does not fall.
+      - In very hard or end-grain stock, a light tap with a mallet or a shallow saw kerf helps the teeth engage.
+  - heading: Common mistakes
+    bullets:
+      - Cranking the tailstock hard to stop slipping. That defeats the safety feature and overheats the live center bearing. Sharpen the tool instead.
+      - Leaving the taper dirty. Chips in the Morse taper make the center run out and work loose.

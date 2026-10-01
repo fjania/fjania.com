@@ -1,0 +1,49 @@
+name: 1/8" Parting Tool
+brand: Robert Sorby
+model: 67HS set, Woodcraft 146162
+category: parting
+vendor: Woodcraft (Raleigh store)
+url: https://www.woodcraft.com/products/sorby-intermediate-turning-tool-set-hss-6-piece
+purchased: September 2026, in store
+set: Sorby Intermediate 6-Piece HSS Turning Set
+image: sorby-parting-tool-1-8.jpg
+summary: >-
+  A thin, straight parting tool for sizing cuts, cutting tenons to diameter, and parting finished work from the
+  waste. The narrow kerf wastes very little wood.
+specs:
+  - label: Width
+    value: 1/8"
+  - label: Blade length
+    value: 4-3/4"
+  - label: Section
+    value: Rectangular
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Handle
+    value: Ash with brass ferrule
+sections:
+  - heading: What it's for
+    bullets:
+      - Sizing cuts. With calipers in the other hand, set a precise diameter at several points along a spindle before shaping between them.
+      - Cutting chuck tenons and the shoulder beside them.
+      - Parting off boxes, lids, and finished spindles.
+      - Defining the walls of a bead before shaping with the skew or gouge.
+  - heading: How to use it
+    bullets:
+      - Hold the tool on edge with the bevel rubbing, then raise the handle to peel a cut straight toward the center. Keep the tool perpendicular to the axis.
+      - For deep cuts, widen the kerf with a second cut beside the first so the blade does not bind and burn.
+      - When parting off, slow the lathe, cradle the piece loosely in the other hand, and stop before cutting through. Finish with a saw for anything you care about.
+      - Use calipers only on a stopped lathe or with the caliper legs well clear of the cut. Spring calipers held in the cut can be grabbed.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Two bevels meeting at the center of the edge, about 45° included. Keep the edge square across so the kerf
+        walls stay flat.
+    bullets:
+      - "Tormek: SVD-110 platform set to about 22° per side, flipping the tool to grind each bevel. The edge is narrow, so a few seconds per side is plenty."
+      - Remove the burr with a few strokes on a stone.
+  - heading: Common mistakes
+    bullets:
+      - Scraping with the tool flat instead of cutting with the bevel rubbing. It still cuts, but tears the kerf walls and dulls quickly.
+      - Forcing a deep cut in a narrow kerf. If you smell burning, widen the cut.
+      - Parting all the way through on a long spindle and letting it drop onto the rest.

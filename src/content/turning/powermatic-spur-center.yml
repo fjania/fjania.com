@@ -1,0 +1,35 @@
+name: "1\" Spur Drive Center, #2 MT"
+brand: Powermatic
+model: JT9-JML-3
+category: center
+vendor: Included with Powermatic 2014B
+url: https://www.powermatic.com/14x20-inch-variable-speed-lathe-with-stand-pm2014b
+purchased: '2026-09-04'
+included_with: Powermatic 2014B lathe (PM1-482)
+image: powermatic-spur-center.jpg
+summary: >-
+  The standard four-prong drive center that ships with the lathe. A center point and four spurs driven into
+  the end of the blank transmit torque for spindle turning. Positive drive, no slip, which is both its strength
+  and its drawback.
+specs:
+  - label: Taper
+    value: "#2 Morse"
+  - label: Diameter
+    value: 1"
+  - label: Drive
+    value: 4 spurs and center point
+sections:
+  - heading: What it's for
+    bullets:
+      - Spindle turning between centers, especially larger blanks where maximum drive is wanted.
+      - Roughing heavy or out-of-balance stock where a Stebcenter might slip.
+  - heading: How to use it
+    bullets:
+      - Mark the center on the blank, then seat the spur center into the blank on the bench with a mallet. Never drive the blank onto the center while it is mounted in the lathe.
+      - In very hard wood, cut two shallow saw kerfs across the end on the diagonals for the spurs to sit in.
+      - Clean the taper and the spindle bore, insert the center with the blank attached, bring up the tailstock, and apply firm but moderate pressure.
+      - Remove with the knockout rod through the headstock handwheel. Hold the center so it does not fall and damage the point.
+  - heading: Common mistakes
+    bullets:
+      - Driving it into the blank with a steel hammer, which mushrooms the taper end.
+      - Relying on tailstock pressure alone in end grain. If the spurs are not seated, the blank spins in a catch and burns.

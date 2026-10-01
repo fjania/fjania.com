@@ -84,6 +84,31 @@ const specSheets = defineCollection({
   }),
 });
 
+
+const turning = defineCollection({
+  loader: glob({ pattern: '**/*.yml', base: './src/content/turning' }),
+  schema: z.object({
+    name: z.string(),
+    brand: z.string(),
+    model: z.string(),
+    category: z.enum(['gouge', 'skew', 'parting', 'scraper', 'chuck', 'jaws', 'center', 'tool-rest', 'faceplate']),
+    vendor: z.string(),
+    url: z.string().url(),
+    purchased: z.string(),
+    set: z.string().optional(),
+    included_with: z.string().optional(),
+    image: z.string(),
+    summary: z.string(),
+    specs: z.array(z.object({ label: z.string(), value: z.string() })),
+    sections: z.array(z.object({
+      heading: z.string(),
+      paragraphs: z.array(z.string()).optional(),
+      bullets: z.array(z.string()).optional(),
+      note: z.string().optional(),
+    })),
+  }),
+});
+
 const resume = defineCollection({
   loader: glob({ pattern: '**/*.yml', base: './src/content/resume' }),
   schema: z.object({
@@ -99,4 +124,4 @@ const resume = defineCollection({
   }),
 });
 
-export const collections = { bits, species, manuals, 'spec-sheets': specSheets, resume };
+export const collections = { bits, species, manuals, 'spec-sheets': specSheets, turning, resume };

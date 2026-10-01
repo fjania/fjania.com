@@ -1,0 +1,46 @@
+name: 1/2" Round Nose Scraper
+brand: Robert Sorby
+model: 67HS set, Woodcraft 146162
+category: scraper
+vendor: Woodcraft (Raleigh store)
+url: https://www.woodcraft.com/products/sorby-intermediate-turning-tool-set-hss-6-piece
+purchased: September 2026, in store
+set: Sorby Intermediate 6-Piece HSS Turning Set
+image: sorby-round-nose-scraper-1-2.jpg
+summary: >-
+  A light round nose scraper for smoothing the inside of small bowls and boxes and cleaning up concave shapes
+  where a gouge leaves ridges. Cuts with a burr, not a bevel.
+specs:
+  - label: Width
+    value: 1/2"
+  - label: Section
+    value: Rectangular, radiused end
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Handle
+    value: Ash with brass ferrule
+sections:
+  - heading: What it's for
+    bullets:
+      - Smoothing the inside of small bowls, boxes, and goblets after the gouge.
+      - Hollowing end-grain boxes where a gouge is awkward.
+      - Light shaping of coves and hollows in soft or figured wood that tears with a gouge.
+  - heading: How to use it
+    bullets:
+      - Rest the tool flat on the rest with the handle slightly higher than the edge, so the edge trails. Set the rest at or a touch above center for inside work.
+      - Take light, sweeping cuts. A scraper that is producing dust instead of fine shavings is dull.
+      - For a finer finish, tilt the tool 45° on its edge and shear scrape, letting only the burr touch the wood.
+      - Keep the tool moving. Dwelling in one spot in end grain burnishes the surface.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        A single bevel of about 70° to 80° ground straight from the grinder. The burr the wheel raises is the
+        cutting edge, so do not hone it off.
+    bullets:
+      - "Tormek: SVD-110 platform at 75°. Grind the bevel, then raise a fresh burr with the wheel or a burnisher."
+      - Resharpen often. The burr on a 1/2" scraper lasts a few minutes of cutting.
+  - heading: Common mistakes
+    bullets:
+      - Pointing the edge up into the work instead of trailing it. A scraper presented edge-first catches hard.
+      - Using it on the outside of a spindle for finishing. Scrapers tear long-grain fibers; use the skew.
+      - Expecting a gouge-quality surface. A scraper is a cleanup tool, followed by sanding.
