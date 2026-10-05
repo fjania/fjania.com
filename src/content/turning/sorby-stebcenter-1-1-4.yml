@@ -1,0 +1,41 @@
+name: "1-1/4\" Stebcenter, #2 MT"
+brand: Robert Sorby
+model: STB232 (Rockler 24263)
+category: center
+vendor: Rockler (store)
+url: https://www.rockler.com/robert-sorby-stebcentre-with-2-morse-taper
+purchased: October 2026, in store
+image: sorby-stebcenter-1-1-4.jpg
+summary: >-
+  The large Stebcenter. Same spring-loaded point and ring of teeth as the 7/8" version, on a 1-1/4" drive face
+  that spreads the grip over more wood. For heavy spindle blanks, roughing bowl blanks between centers, and
+  any job where the smaller center slips before the cut is done.
+specs:
+  - label: Taper
+    value: "#2 Morse, fits the 2014B headstock"
+  - label: Drive face diameter
+    value: 1-1/4"
+  - label: Drive
+    value: Ring of sharp teeth with spring-loaded stainless center point
+  - label: Grip control
+    value: Variable by tailstock pressure
+  - label: Made in
+    value: Sheffield, England
+sections:
+  - heading: What it's for
+    bullets:
+      - Driving large or heavy spindle blanks, table legs, bedposts, and mallet heads where the 7/8" center would need excessive tailstock pressure to stop slipping.
+      - Mounting bowl blanks between centers to true the outside and cut a chuck tenon. The wide ring of teeth bites into face grain and shrugs off the interrupted cuts of an out-of-round blank.
+      - Still slip-limited. With moderate tailstock pressure a severe catch stalls the blank instead of launching it, even at this size.
+      - Pick this one when the blank is over about 3" square or is a bowl blank; use the 7/8" for ordinary spindles so the teeth marks stay small.
+  - heading: How to use it
+    bullets:
+      - Mark centers, clean the taper and the headstock bore, and push the center in firmly by hand.
+      - Hold the blank against the spring point, bring up the live center, and advance the quill until all the teeth bite. Lock the quill. On bowl blanks give it a little more pressure than you would a spindle.
+      - For bowl blanks, flatten a spot on the top face first so the teeth seat evenly, and keep the speed low until the blank is round.
+      - Remove with the knockout rod through the handwheel, catching the center so it does not drop onto the bed.
+  - heading: Common mistakes
+    bullets:
+      - Using it on small spindles out of habit. The 1-1/4" ring leaves a wide circle of teeth marks that may run past the finished diameter.
+      - Overtightening the tailstock on a bowl blank. If the center still slips under reasonable pressure, the face is not flat or the gouge is dull.
+      - Leaving chips in the Morse taper, which lets the center run out and work loose under the heavier loads this size sees.
