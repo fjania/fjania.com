@@ -40,3 +40,15 @@ When adding router bits or linking to product pages, only use these sources:
 - rockler.com
 
 **Never use Amazon.** If none of the approved sources carry a product, ask the user before using any other source.
+
+## Turning Tools (`/workshop/turning/`)
+
+- Content collection `src/content/turning/*.yml` (one file per tool; schema in `src/content/config.ts`), images in `public/turning/{slug}.jpg`.
+- Pages are fully data-driven: `src/pages/workshop/turning/index.astro` (grouped listing) and `[slug].astro` (detail). Adding a tool needs only a YAML file and an image.
+- YAML gotchas: quote any value containing `#` (e.g. `"#2 Morse"`) or `: `, and quote ISO dates in `purchased`.
+- Sharpening guidance in these entries references the Tormek jigs documented under `/workshop/manuals/tormek-*`.
+
+## Manuals: videos and merged PDFs
+
+- Manual content pages may embed Tormek/vendor YouTube videos with the `.video` / `.video-row` markup styled in `src/styles/manuals.css` (youtube-nocookie iframes).
+- The three Tormek manuals host merged PDFs built with pypdf from Tormek's per-jig leaflets (plus the full HB-10 handbook on `tormek-t8`). Source PDFs are re-downloadable from each product page on tormek.com under `/download/`.
