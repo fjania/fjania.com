@@ -1,0 +1,50 @@
+name: 1/4" Spindle Gouge
+brand: Robert Sorby
+model: 840H (Rockler 47613)
+category: gouge
+vendor: Rockler (store)
+url: https://www.rockler.com/robert-sorby-spindle-gouges-standard-spindle-gouges
+purchased: October 2026, in store
+image: sorby-spindle-gouge-1-4.jpg
+summary: >-
+  The smallest spindle gouge in the rack. A shallow 1/4" flute for fine beads, tight coves, and the detail on
+  finials, pens, ornaments, and small boxes where the 3/8" gouge is too wide to get into the corner.
+specs:
+  - label: Flute width
+    value: 1/4"
+  - label: Flute shape
+    value: Shallow, milled from round bar
+  - label: Handle
+    value: 10" ash with brass ferrule
+  - label: Overall length
+    value: 16-1/2"
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Made in
+    value: Sheffield, England
+sections:
+  - heading: What it's for
+    bullets:
+      - Small beads and coves on finials, ornaments, pens, and box lids, and the fine fillets between them.
+      - Detail work on goblet stems, egg cups, and anything with features under about 1/2" wide.
+      - Cleaning up the tight corner where a bead meets a shoulder, which a wider gouge cannot reach.
+      - Light end-grain cuts on small boxes.
+  - heading: How to use it
+    bullets:
+      - "Coves: flute at 90° to the work, touch the point, and roll toward the bottom. Stop at the bottom and cut the other side from the opposite direction. Never cut uphill out of a cove."
+      - "Beads: start on the crest with the flute up, roll the tool and drop the handle together down each side. On small beads the roll is quick, so keep the bevel rubbing the whole way."
+      - Take very light cuts. The 1/4" bar flexes under load and the small flute clogs quickly in wet wood.
+      - On thin spindles, support the back of the work with your fingers to damp vibration and run the lathe faster than you would for larger stock.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        A fingernail profile with a bevel of about 35° to 40° at the nose and gently swept wings. Keep the grind
+        short so the small bar does not lose its stiffness.
+    bullets:
+      - "Tormek: SVD-186 R gouge jig at the same settings as the 3/8\" spindle gouge, projection 65 mm and jig setting 4, so the two tools share one profile. Light pressure; the thin bar heats and grinds away fast."
+      - Hone the flute with a small slipstone or the LA-120 profiled leather wheel to remove the burr.
+  - heading: Common mistakes
+    bullets:
+      - Using it to remove bulk on a small spindle. Rough with the roughing gouge, then detail with this.
+      - Letting the wing catch by presenting the flute straight up when entering a cove.
+      - Grinding too much off at each sharpening. A 1/4" gouge has little steel to spare.
