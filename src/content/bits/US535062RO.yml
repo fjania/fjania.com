@@ -1,0 +1,19 @@
+model: US535062RO
+name: Carbide-Tipped Roundover
+types:
+  - roundover
+brand: wp
+shank: '1/2"'
+max_rpm: 13600
+image: US535062RO.jpg
+url: 'https://woodpeck.com/products/ultra-shear-carbide-tipped-3-flute-roundover-router-bits'
+qty: 1
+status: in-stock
+status_date: null
+specs:
+  - label: Radius
+    value: '1/2"'
+  - label: Bearing
+    value: '5/8"'
+  - label: Flutes
+    value: '3'
