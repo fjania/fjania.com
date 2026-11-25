@@ -1,0 +1,56 @@
+name: Vortex Tool
+brand: Ashley Harwood
+model: AHVORUN (Detail Collet Handle Package AHDCHP)
+category: skew
+vendor: Ashley Harwood Woodturning
+url: https://www.ashleyharwood.com/shop/p/detail-collet-handle-package
+purchased: '2026-10-23'
+set: Detail Collet Handle Package
+image: harwood-vortex-tool.jpg
+summary: >-
+  A pointed detail tool ground on a 3/8" round bar of 10V steel, held in the 6" collet handle. It cuts the finest
+  detail on finials and jewelry and can put a bead on the side of a bowl. It does the point work you would
+  otherwise do with the toe of the Sorby skews, on a round bar that rolls easily on the rest.
+specs:
+  - label: Bar diameter
+    value: 3/8"
+  - label: Steel
+    value: CPM 10V powder metal, vacuum heat treated
+  - label: Factory grind
+    value: 20°, sharpened and ready to use
+  - label: Handle
+    value: AH Detail Collet Handle, machined aluminum with soft grip, 6" long, 1-1/4" diameter, 7 oz, hex shape
+  - label: Collet
+    value: 1/2" DA100 collet with the 3/8" reducer (the 1/4" reducer is also included)
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    bullets:
+      - The finest detail on finials. Ashley Harwood uses it on her sea urchin ornament finials.
+      - V cuts, crisp fillets, and very small beads that the 1/4" detail gouge is too wide for.
+      - Turned jewelry and other miniature work.
+      - Cutting a bead on the side of a bowl.
+  - heading: How to use it
+    bullets:
+      - Drop the 3/8" reducer into the collet, seat the bar, and tighten the nut by hand. Choke the handle up close to the point for control.
+      - Start every cut with the point, on center height, with a light touch. Let the point enter and then roll the bar so the edge beside the point slices downhill.
+      - "Small beads: mark the sides with V cuts, then roll from the crest down each side in one motion, a little at a time."
+      - Run small work fast and take thin cuts. A point this fine cuts cleanly only when it is sharp and lightly loaded.
+      - Watch one of her finial demonstrations before first use. The product page lists what it does, not the presentation.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Keep the 20° grind. Ashley Harwood uses the 20° face of her Angle Wrench for this tool, the same setting as
+        her negative rake scrapers.
+    bullets:
+      - "Bench grinder: none of the Raptor tools is 20°, so set the platform with the AH Angle Wrench from the Bowl Turning Package. Lay each ground face flat on the 320 grit CBN wheel and take one light pass, the same number on each face so the point stays centered."
+      - Do not use the 180 grit wheel. The point is thin and overheats or shortens in a moment.
+      - "Tormek: SVD-110 platform matched to the existing faces with the marker method. The slow wet wheel is a safe way to touch up a point this fine."
+      - 10V holds the edge well. Sharpen when the point stops entering cleanly, not on a schedule.
+  - heading: Common mistakes
+    bullets:
+      - Scraping with the point pushed straight in. It tears the fibers and dulls the tip.
+      - Letting the edge beside the point touch unsupported wood, which runs back like a skew catch.
+      - Grinding one face more than the others and moving the point off center.
+      - Dropping it. The collet handle is hex so it will not roll off the bench, but a bare bar will.

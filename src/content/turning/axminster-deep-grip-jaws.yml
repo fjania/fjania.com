@@ -1,0 +1,54 @@
+name: Deep Grip Jaws
+brand: Axminster Woodturning
+model: "502670"
+category: jaws
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/axminster-woodturning-deep-grip-jaws/
+purchased: '2026-10-10'
+image: axminster-deep-grip-jaws.jpg
+summary: >-
+  Tall stainless steel jaws for the SK100 with a 40 mm deep, ridged grip. They hold a long tenon on heavy,
+  wet, or unsupported work such as hollow forms, vases, and green bowl blanks, where a short dovetail tenon
+  would lever out. Axminster originally called them Piranha jaws.
+specs:
+  - label: Fits
+    value: Axminster SK100 (4") and SK114 (4-1/2") chucks only
+  - label: Jaw depth
+    value: 40 mm (1-9/16")
+  - label: Tenon, true circle
+    value: 62 mm (2-7/16")
+  - label: Tenon range
+    value: 57 mm to 72 mm (2-1/4" to 2-13/16")
+  - label: Recess, true circle
+    value: 85 mm (3-3/8")
+  - label: Recess range
+    value: 77 mm to 93 mm (3" to 3-11/16")
+  - label: Grip faces
+    value: Ridged inside and out
+  - label: Material
+    value: Stainless steel
+  - label: Made in
+    value: Axminster, England
+sections:
+  - heading: What it's for
+    bullets:
+      - Hollow forms, vases, and end-grain work that hangs a long way out from the chuck with no tailstock support during hollowing.
+      - Green and unseasoned wood. The ridges bite into soft wet fibers and the long tenon keeps its hold as the wood moves. Stainless steel does not rust from the sap.
+      - Heavy bowl blanks near the 2014B's 14" capacity, where the SC4's 50 mm jaws are undersized.
+  - heading: Tenons and recesses
+    bullets:
+      - "Tenon: aim for 62 mm (2-7/16\"), where the jaws form a true circle and all of each jaw bears on the wood. Anything from 57 mm to 72 mm will hold, with less contact toward the ends of the range."
+      - Make the tenon straight sided, not dovetailed, and long enough for the ridges to engage, up to about 1-1/2". Keep it a little shorter than the 40 mm jaw depth so the shoulder seats on the jaw tops and the tenon end does not bottom out.
+      - Cut the shoulder flat or slightly concave so it bears on the outer edge of the jaws.
+      - "Recess: 85 mm (3-3/8\") for a true circle, range 77 mm to 93 mm. Leave plenty of wood around a recess; these jaws can exert a lot of force."
+      - The ridges leave marks. Plan to turn the tenon away or leave it as waste.
+  - heading: Fitting
+    bullets:
+      - Bolt each jaw to the accessory mounting jaw with the matching number, 1 to 4, and tighten evenly.
+      - Keep these on one of the two SK100 bodies so the chuck is ready for roughing and hollowing.
+  - heading: Common mistakes
+    bullets:
+      - Cutting a short dovetail tenon as for the SC4. These jaws want a long, parallel tenon.
+      - Not re-tightening on green wood. Wet fibers compress; stop after the first few cuts and snug the chuck again.
+      - Letting the tenon bottom out in the chuck so the shoulder floats.
+      - Trusting the grip instead of the tailstock. Keep the tailstock up while roughing, and remove it only for hollowing.

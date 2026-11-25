@@ -1,0 +1,45 @@
+name: Rounded Jaws for SC1 / SC2 Mini Chucks
+brand: Record Power
+model: 62301 (CSUSA 1067280001)
+category: jaws
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/record-power-mini-chuck-rounded-jaws
+purchased: '2026-11-11'
+image: record-power-sc1-rounded-jaws.jpg
+summary: >-
+  Dome-shaped jaws for the SC1 that hold the smallest work. The smooth, rounded outside lets the tool and your
+  fingers get right up to the chuck, and the convex inner faces grip small, fragile spigots without marking
+  them the way dovetail jaws would.
+specs:
+  - label: Fits
+    value: Record Power SC1 and SC2 mini chucks only
+  - label: Compression (external) range on the SC1
+    value: 5/32" to 15/32"
+  - label: Compression (external) range on the SC2
+    value: 5/32" to 1"
+  - label: Expansion
+    value: Not used in expansion
+  - label: Profile
+    value: Domed exterior, convex internal radius on each jaw
+sections:
+  - heading: What it's for
+    bullets:
+      - Holding very small spigots for finials, icicles, ornament parts, miniature work, and small knobs and pulls.
+      - Thin, delicate pieces that need support as close to the cut as possible. The dome shape lets the rest and the tool come in right at the base of the work.
+      - Fragile stock that a dovetail or serrated jaw would crush or scar.
+  - heading: Spigots for rounded jaws
+    bullets:
+      - Turn a straight, parallel spigot between about 3/16" and 7/16" in diameter. These jaws grip along a smooth bore, not a dovetail, so do not undercut it.
+      - Make the spigot long enough to be supported along the full length of the jaws' inner surface. A short stub held only at the mouth of the jaws will lever out.
+      - Rough the blank between centers first and turn the spigot there, then move it to the chuck.
+      - Keep cuts light and use the tailstock with a cup or hollow cup point for as long as the shape allows.
+  - heading: Fitting
+    bullets:
+      - Open the chuck, remove the 1-1/2" dovetail jaws, and fit the rounded jaws to the matching numbered slides.
+      - Snug the screws evenly. Close the jaws and confirm the four segments meet in a clean dome with even gaps.
+  - heading: Common mistakes
+    bullets:
+      - Gripping a spigot that is too short, so the piece is held by a few millimeters at the tip of the jaws.
+      - Overtightening on a thin spigot. Small end-grain spigots crush or shear easily; snug is enough.
+      - Running the jaws open near the limit of their range, where the segments stand proud of the dome and can catch a knuckle.
+      - Trying to fit them to the SC4. Mini Chuck jaws and SC3 / SC4 jaws do not interchange.

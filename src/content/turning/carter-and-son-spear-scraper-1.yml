@@ -1,0 +1,70 @@
+name: 1" Spear Scraper, Mike Mahoney Signature, 12" Handle
+brand: Carter and Son Toolworks
+model: MMSP1-12
+category: scraper
+vendor: Carter and Son Toolworks
+url: https://carterandsontoolworks.com/products/1-spear-scraper
+purchased: '2026-11-23'
+image: carter-and-son-spear-scraper-1.jpg
+summary: >-
+  A 1" wide, 3/8" thick scraper ground to a spear point, in M42 cobalt steel with a removable 12" aluminum
+  handle. The point cuts crisp lines and cleans up corners, and the two long edges shear scrape the inside
+  and outside of bowls and platters.
+specs:
+  - label: Blade
+    value: 1" wide x 3/8" thick, 9-1/2" long overall
+  - label: Tang
+    value: 3/4" diameter, round
+  - label: Handle
+    value: 12" aluminum, removable, held by set screws
+  - label: Steel
+    value: M42 HSS, 10% cobalt
+  - label: Profile
+    value: Spear point, as ground by Mike Mahoney
+  - label: Set screw key
+    value: 5/32" hex
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    paragraphs:
+      - >-
+        The Hurricane finishing scraper and the Henry Taylor negative rake scraper have radiused edges for
+        blending curves. This one has a point and two straight-ish edges, so it does the things a round edge
+        cannot.
+    bullets:
+      - Detail lines and small V grooves on bowls, platters, and rims, cut with the point.
+      - Cleaning the corner where a tenon or recess meets its shoulder, and the inside corner at the bottom of a box or a flat-bottomed bowl.
+      - Shear scraping the outside of a bowl or the face of a platter with either long edge, tool tipped up on its side.
+      - Dovetailing a tenon or recess to match the chuck jaws, using the angled edge.
+  - heading: How to use it
+    bullets:
+      - "Flat scraping: rest at center for outside work and a little above center inside a bowl, handle slightly higher than the edge so the tool trails. Light cuts only."
+      - "Shear scraping: tip the tool onto its lower corner on the rest so the long edge meets the wood at about 45°, and draw it along the surface. The shavings should be fine and wispy. Left edge for cuts toward the headstock on the outside, right edge the other way."
+      - "Detail lines: tool flat, point on center, and push straight in a small amount. Sight from above to place it."
+      - "Corners: present one edge to each surface in turn rather than pushing the point in to full depth. The point is the weakest part of the edge."
+      - Keep the overhang short. The 12" handle is the compact option, good for control on detail work but with less leverage than the long wooden handles on the other scrapers, so this is not the tool to reach deep into a bowl.
+      - The round tang rests on its corners when tipped. Ease the pressure down onto the rest, not into the wood.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        It ships sharp with Mahoney's grind. Keep that shape and those bevel angles; set the platform to the
+        existing bevel with a marker rather than to a number. Grind each side of the spear as a separate
+        straight pass and let the two meet at the point. The burr from the grinder is the cutting edge.
+    bullets:
+      - "Tormek: SVD-110 platform matched to the factory bevel. Grind one side of the spear, then swing the tool and grind the other, with the top face up so the burr forms on top. Do not hone the burr off."
+      - "Bench grinder: Wolverine platform at the same angle on the 180 grit CBN wheel for a stronger burr, or the 320 for a finer one for finishing cuts. CBN suits M42 well and a single light pass per side is enough."
+      - M42 holds its edge longer than the M2 scrapers, but the burr still wears first. Refresh it when shavings turn to dust.
+      - Keep the point centered on the blade. Count passes or grind both sides the same amount.
+  - heading: Care
+    bullets:
+      - The handle clamps the 3/4" round tang with set screws. Tighten them with the 5/32" T-handle hex key bought with the tool, and check them at the start of a session. Keep the key with the tool.
+      - Seat the tang fully in the handle before tightening so the screws bear on the tang and not on its end.
+      - The handle is removable, so the blade can go to the grinder on its own if the handle gets in the way of the platform.
+      - Aluminum marks easily. Do not use the handle as a mallet or knock it against the lathe bed.
+  - heading: Common mistakes
+    bullets:
+      - Pushing the point straight into a corner with the tool tipped up or the handle low. It is still a scraper, and a scraper presented above the trailing position catches.
+      - Using the full length of a side edge flat on the wood. That is a wide scraping cut with a lot of grab. Tip it up and shear, or use a short section.
+      - Rounding the point on the grinder by sweeping around it. Two straight passes, one per side.
+      - Running with loose set screws, which lets the blade twist in the handle during a shear cut.

@@ -1,0 +1,52 @@
+name: "Deluxe Multi-Tip Revolving Center Set, #2 MT"
+brand: Robert Sorby
+model: CSUSA 1014010001
+category: center
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/robert-sorby-deluxe-multi-tip-revolving-center-7-piece-set
+purchased: '2026-10-04'
+image: sorby-multi-tip-revolving-center.jpg
+summary: >-
+  A tailstock live center with six interchangeable points, so the right support for the job is always in the
+  case. Cup points for general spindle work, cones for hollow and drilled work, and a 5/16" through hole for
+  boring down the axis of a piece. Seven pieces in a fitted locking case.
+specs:
+  - label: Taper
+    value: "#2 Morse, fits the 2014B tailstock"
+  - label: Pieces
+    value: Revolving center body plus 6 interchangeable points
+  - label: Points
+    value: Cup point, small cone point, large cone point, tapered cup point, cup chuck point, hollow cup point
+  - label: Through hole
+    value: 5/16" for boring
+  - label: Material
+    value: Precision machined high-grade steel
+  - label: Also included
+    value: Wrench for removing the points, locking storage case
+sections:
+  - heading: What it's for
+    bullets:
+      - General tailstock support between centers with the cup point. The ring spreads the load and the small center pin locates the blank, so it is far less likely to split stock than a plain 60° point.
+      - Supporting work that already has a hole in the end with the cone points. The small cone suits pen tubes, drilled pepper mill bodies, and small bores; the large cone centers itself in bigger openings such as vase necks and hollow forms.
+      - Holding rounded or delicate ends with the tapered cup and hollow cup points, which bear on the outside of the piece instead of pressing a point into it. Useful for finials, spheres, and finished ends you do not want to mark.
+      - Boring along the axis of a spindle, such as a lamp, with the through hole and the hollow point acting as a guide for a long auger passed through the tailstock.
+      - Extra support alongside the SC4, SC1, or the screw chuck whenever a piece overhangs.
+  - heading: How to use it
+    bullets:
+      - Wipe the taper and the tailstock quill bore clean, then seat the center with a firm push by hand.
+      - Push the chosen point into the nose of the center. Check that it is fully seated and runs true before bringing it up to the work.
+      - Advance the quill until the point bears with moderate pressure and lock the quill. The bearing should turn freely with the work; if the point is burning the wood it is not spinning or the pressure is far too high.
+      - To change points, use the supplied wrench to release the point from the body. Do not pry against the bearing.
+      - Eject the center by winding the quill fully back. Catch it so it does not fall on the ways.
+      - Recheck tailstock pressure a few minutes into turning green or soft wood. The point beds in and the grip loosens.
+  - heading: Care
+    bullets:
+      - Keep every point back in its slot in the case. They are small and identical in color to shavings.
+      - Keep dust and finish out of the bearing and the nose socket. Wipe the points' shanks before fitting them.
+      - A light film of oil on the taper and the points prevents rust. Wipe it off before use so the taper grips.
+  - heading: Common mistakes
+    bullets:
+      - Heavy tailstock pressure on thin spindles. It bows the work and causes chatter that looks like a tool problem.
+      - Using a cone point in solid end grain. It acts as a wedge and splits the blank. Use the cup point.
+      - Seating the taper over chips or dust, which makes the center run out and work loose.
+      - Using a through-bored center without checking that the tailstock quill is hollow all the way and clear of the knockout path.

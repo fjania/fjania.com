@@ -1,0 +1,57 @@
+name: 1/2" 10V Push Cut Bowl Gouge
+brand: Ashley Harwood
+model: AH10V12 (Bowl Turning Package AHBTP)
+category: gouge
+vendor: Ashley Harwood Woodturning
+url: https://www.ashleyharwood.com/shop/p/tww-guild-package-without-chuck
+purchased: '2026-10-23'
+set: Bowl Turning Package
+image: harwood-bowl-gouge-1-2.jpg
+summary: >-
+  The finishing gouge from the Bowl Turning Package. A true 1/2" bar of 10V powder-metal steel with a parabolic
+  flute and a 40/40 grind. About the same bar size as the Sorby 3/8" bowl gouge, but with a parabolic rather than
+  U flute and a 40° bevel instead of 55° to 60°, so it is the better tool for outside and upper-wall finishing cuts.
+specs:
+  - label: Bar diameter
+    value: 1/2" (true diameter)
+  - label: Flute shape
+    value: Parabolic, top edges rounded, inside polished
+  - label: Steel
+    value: CPM 10V powder metal, hardened to 62 to 64 Rockwell over the full length
+  - label: Factory grind
+    value: 40/40 (40° bevel, 40° wing sweep), sharpened by Ashley Harwood before shipping
+  - label: Bolster
+    value: AH 1/2" bolster with TDC (thin dense chrome) coating, supplied in the package
+  - label: Handle
+    value: AH carbon fiber, 16" (in the package), 1.4" diameter with a 1.5" hex end
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    bullets:
+      - Final shaping and finishing cuts on bowls after roughing with the 5/8" gouge.
+      - Small and mid-size bowls start to finish.
+      - Shaping and finishing cuts on spindles.
+      - A second identical gouge came with the Detail Collet Handle Package and lives in the collet handle for finials, so this one can stay set up for bowls.
+  - heading: How to use it
+    bullets:
+      - Use the 16" handle for bowl work. The gouge twists out of the handle for sharpening and stores point-first inside it afterward.
+      - "Push cut: handle against your body, flute at about 45° toward the cut, cutting just beside the nose. Steer with your body and keep the bevel floating behind the edge."
+      - "Finishing pass: take a thin cut at a steady feed and do not stop partway. A freshly ground edge and a light touch do more than speed."
+      - Keep the overhang short. A 1/2" bar starts to chatter when it hangs far over the rest, so move the rest in or switch to the 5/8".
+      - Stop at the transition on deeper bowls and pick up the bottom with the 3/4" Finisher.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Same 40/40 grind as the 5/8" gouge: a constant 40° bevel from nose through the wings, wings swept back 40°,
+        ground freehand on a flat platform.
+    bullets:
+      - "Bench grinder: platform at 40°, set with the Raptor 40/40 set-up tool or the 40° face of the AH Angle Wrench. Grind each wing with the bar swung about 40° to the wheel, then blend across the nose."
+      - Do not roll the flute too far closed when grinding the wings. It blunts the bevel and makes the sweep more aggressive.
+      - Touch up on the 320 grit CBN wheel before every finishing pass. One light sweep is enough. The smaller bar disappears quickly on the 180.
+      - "Tormek: fallback only. The SVD-186 R jig gives a fingernail profile rather than a true 40/40, and 10V grinds slowly on the standard stone."
+  - heading: Common mistakes
+    bullets:
+      - Hogging with it. Rough with the 5/8" and save this edge for the cuts that show.
+      - Riding the bevel hard on a thin wall, which sets up vibration and spiral marks.
+      - Taking it across the bottom of a deep bowl where the 40° bevel cannot stay in contact.

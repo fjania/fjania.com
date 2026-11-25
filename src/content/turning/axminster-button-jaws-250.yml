@@ -1,0 +1,51 @@
+name: 250 mm Button Jaws
+brand: Axminster Woodturning
+model: "340956"
+category: jaws
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/axminster-woodturning-button-jaws-250mm/
+purchased: '2026-10-10'
+image: axminster-button-jaws-250.jpg
+summary: >-
+  Four aluminum jaw plates with eight conical rubber buttons, for the SK100 chucks. They hold a finished bowl
+  by its rim, gently, so it can be reversed to turn away the tenon and finish the foot. At 250 mm (9-13/16")
+  across they fit inside the 2014B's 14" swing with room to spare.
+specs:
+  - label: Fits
+    value: Axminster SK100 (4") and SK114 (4-1/2") chucks only
+  - label: Plate diameter
+    value: 250 mm (9-13/16")
+  - label: Plates
+    value: Aluminum, with tapped holes on concentric rings and one slot per plate
+  - label: Buttons
+    value: 8 conical white rubber buttons
+  - label: Grip
+    value: External (closing on the rim) or internal (expanding inside the rim)
+  - label: Maximum speed
+    value: 1,000 rpm recommended
+  - label: Made in
+    value: Axminster, England
+sections:
+  - heading: What it's for
+    bullets:
+      - Reverse chucking a bowl or platter by the rim to remove the tenon and finish the bottom.
+      - Holding a previously turned piece for light rework or sanding without marking it.
+      - Odd shapes. The slot in each plate lets a button sit off the hole circles to suit an irregular rim.
+  - heading: How to use it
+    bullets:
+      - Move the eight buttons to the ring of holes just outside the rim (or just inside, for an expanding grip), two per plate, all on the same ring.
+      - Seat the rim flat against the plates, then close the chuck. The conical buttons pull the bowl back against the plates as they tighten. Snug is enough; the rubber grips, and over-tightening can crack a thin rim.
+      - Bring up the tailstock with the live center in the old center mark for as long as possible. Remove it only for the last light cuts on the nub.
+      - Keep the speed at or below 1,000 rpm, lower for bowls near the plate diameter, and take light cuts toward the headstock.
+      - Spin the assembly by hand before starting to confirm the plates and buttons clear the tool rest and banjo. The long chuck key helps reach past the plates.
+  - heading: Fitting
+    bullets:
+      - Bolt each plate to the accessory mounting jaw with the matching number, 1 to 4, and tighten evenly.
+      - Keep these on one of the two SK100 bodies permanently. Refitting four plates every time is slow.
+  - heading: Common mistakes
+    bullets:
+      - Using them for roughing or heavy cuts. This is a light finishing hold.
+      - Gripping a very thin or fragile rim. Axminster's own advice is that the buttons are not suitable for bowls with a very fine edge; use a jam chuck or tailstock pressure against a padded disc instead.
+      - Running too fast. A 10" disc of aluminum with projecting buttons deserves a slow speed.
+      - Buttons on different rings, which pushes the bowl off center.
+      - Reaching across the spinning plates. The gaps between the plates and the buttons are hard to see at speed.

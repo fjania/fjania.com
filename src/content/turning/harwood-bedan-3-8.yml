@@ -1,0 +1,53 @@
+name: 3/8" Bedan
+brand: Ashley Harwood
+model: AH38BED (Bowl Turning Package AHBTP)
+category: parting
+vendor: Ashley Harwood Woodturning
+url: https://www.ashleyharwood.com/shop/p/tww-guild-package-without-chuck
+purchased: '2026-10-23'
+set: Bowl Turning Package
+image: harwood-bedan-3-8.jpg
+summary: >-
+  A 3/8" wide bedan with a trapezoidal cross-section. Ashley Harwood uses it to cut the dovetailed recess in a
+  bowl blank so the chuck can grip in expansion. Three times the width of the Sorby 1/8" parting tool, so it sizes
+  recesses and tenons rather than parting off.
+specs:
+  - label: Width
+    value: 3/8"
+  - label: Cross-section
+    value: Trapezoidal, top corner rounded for grip
+  - label: Steel
+    value: M2 high-speed steel, hardened to 62 to 64 Rockwell over the full length, hand polished
+  - label: Bolster
+    value: AH 3/8" bolster for the AH handle system
+  - label: Handle
+    value: AH carbon fiber, 16" from the package (she recommends her 12" for this tool)
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    bullets:
+      - Cutting a dovetailed recess in the face of a bowl blank for dovetail jaws in expansion mode.
+      - Cutting and sizing tenons and squaring the shoulder the jaws seat against.
+      - Sizing cuts to a caliper setting on spindle work.
+  - heading: How to use it
+    bullets:
+      - Mark the recess diameter on the spinning blank with dividers set to the jaws, touching only the left point to the wood.
+      - Plunge straight in on center height in several light cuts to the depth the jaws need. Do not go deeper than that.
+      - Angle the tool to undercut the outer wall of the recess so it matches the dovetail on the jaws. The trapezoidal section gives the sides clearance so the tool does not bind in the cut.
+      - Leave the floor of the recess flat so the jaws seat evenly.
+      - For a tenon, work from the outside in and check the diameter against the jaws with the lathe stopped.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        A single flat bevel ground straight across. The product page does not give the bevel angle, so match the
+        angle it arrived with.
+    bullets:
+      - "Bench grinder: color the bevel with a marker, set the platform so the wheel removes the ink evenly, and note the angle for next time. Slide the tool straight across the 320 grit CBN wheel."
+      - "Tormek: SVD-110 platform or the SVS-50 with the open seat, matched to the existing bevel the same way."
+      - Keep the edge square to the sides. A skewed edge cuts a recess wall that is not concentric.
+  - heading: Common mistakes
+    bullets:
+      - Cutting the recess too deep or too close to the final wall thickness and running out of wood at the foot.
+      - Leaving the recess wall square instead of dovetailed, so the jaws hold on a line instead of a face.
+      - Levering the tool sideways in a deep plunge. Widen the cut with a second plunge instead.

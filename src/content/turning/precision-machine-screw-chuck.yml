@@ -1,0 +1,54 @@
+name: 3-in-1 Screw Chuck
+brand: Precision Machine
+model: CSUSA 1056600001
+category: chuck
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/precision-machine-3-in-1-screw-chuck
+purchased: '2026-10-04'
+image: precision-machine-screw-chuck.jpg
+summary: >-
+  A dedicated screw chuck that threads straight onto the 2014B's 1-1/4" x 8 TPI spindle. Drill one hole in a
+  blank, spin it onto the woodworm screw until it seats against the face, and turn. Two screw sizes and a
+  reversible collar give three face diameters, and work re-centers when it is taken off and remounted.
+specs:
+  - label: Spindle thread
+    value: 1-1/4" x 8 TPI direct thread (1" x 8 TPI adapter included, not needed on the 2014B)
+  - label: Body
+    value: Machined steel, 1-1/2" diameter face
+  - label: Screws
+    value: 1/4" and 3/8" diameter interchangeable woodworm screws, ground and hardened stainless steel
+  - label: Collar
+    value: Reversible aluminum collar with 2-1/2" and 3-1/2" faces
+  - label: Face
+    value: Recessed with a perimeter shoulder so uneven blanks seat on the rim
+  - label: Also included
+    value: Lever bar
+  - label: Optional
+    value: Jumbo reversible collar with 4-1/2" and 6-1/2" faces (not owned)
+sections:
+  - heading: What it's for
+    bullets:
+      - Mounting bowl and platter blanks by a single drilled hole in what will become the open side, to shape the outside and cut a tenon or recess for the SC4.
+      - Small face-grain and end-grain work such as knobs, box blanks, and stoppers, using the bare 1-1/2" face and the 1/4" screw.
+      - Holding shop-made jam chucks, sanding discs, and other wooden fixtures that need to come off and go back on running true.
+      - Any job where the SC4 with its woodworm screw would work but you want to leave the jaws set up for the next step.
+  - heading: How to use it
+    bullets:
+      - Pick the face first. Use the bare 1-1/2" body for small work, the collar's 2-1/2" side for medium blanks, and the 3-1/2" side for larger bowls. The wider the blank, the wider the face it needs to bear on.
+      - Use the 3/8" screw for bowls and anything heavy, and the 1/4" screw for small or thin pieces where a large hole would be in the way.
+      - Flatten the blank where it will meet the chuck, at least across the diameter of the face. Drill a pilot hole square to that surface, sized to the root of the screw and a little deeper than the screw projects.
+      - Thread the blank on by hand until it pulls up tight against the face all the way around. The shoulder contact, not the screw, is what keeps the work running true and resists the cut.
+      - Bring up the tailstock for roughing whenever the shape allows, and take it away only for the final cuts near center.
+      - Use the lever bar in the body to hold the chuck when tightening or breaking it loose from the spindle.
+  - heading: Care
+    bullets:
+      - Clean the spindle threads and the chuck's register before mounting, and seat it against the spindle shoulder by hand.
+      - Keep the screw threads clean of packed dust and resin so blanks pull up fully.
+      - Check that the screw's retaining set screw is snug before each session, especially after swapping screws.
+  - heading: Common mistakes
+    bullets:
+      - Leaving a gap between the blank and the face. A blank held only by the screw rocks, chatters, and eventually strips the hole.
+      - Mounting on a rough or bandsawn surface. Flatten it first, or use a face small enough to sit inside the flat area.
+      - Using the screw in soft, punky, or spalted wood, or in end grain of a heavy blank, without tailstock support. The threads have little to bite on.
+      - Drilling the pilot hole oversize or too shallow. Oversize strips out; too shallow stops the blank short of the face.
+      - Forgetting how deep the screw goes when hollowing. Leave enough thickness or the tool will find the hole.

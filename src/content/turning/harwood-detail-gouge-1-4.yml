@@ -1,0 +1,56 @@
+name: 1/4" 10V Detail Spindle Gouge
+brand: Ashley Harwood
+model: AHDSG (Detail Collet Handle Package AHDCHP)
+category: gouge
+vendor: Ashley Harwood Woodturning
+url: https://www.ashleyharwood.com/shop/p/detail-collet-handle-package
+purchased: '2026-10-23'
+set: Detail Collet Handle Package
+image: harwood-detail-gouge-1-4.jpg
+summary: >-
+  A short 1/4" detail gouge in 10V powder-metal steel, polished all over, for finials and fine spindle detail. Same
+  nominal size as the Sorby 1/4" spindle gouge, but it is a 5-3/4" unhandled bar held in the 6" collet handle, so
+  it is lighter in the hand and the edge lasts longer than M2.
+specs:
+  - label: Bar diameter
+    value: 1/4", precision ground
+  - label: Overall length
+    value: 5-3/4"
+  - label: Steel
+    value: CPM 10V powder metal, vacuum heat treated, entirely polished
+  - label: Factory grind
+    value: 40°
+  - label: Handle
+    value: AH Detail Collet Handle, machined aluminum with soft grip, 6" long, 1-1/4" diameter, 7 oz, hex shape
+  - label: Collet
+    value: 1/2" DA100 collet with the 1/4" reducer (the 3/8" reducer is also included)
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    bullets:
+      - Small coves, beads, and the transitions between them on finials. Ashley Harwood uses it on her sea urchin ornament finials.
+      - Fine detail on ornaments, box lids, goblet stems, and other small spindle work.
+      - The same jobs as the Sorby 1/4" spindle gouge, when you want a shorter, lighter tool close to the work.
+  - heading: How to use it
+    bullets:
+      - Drop the 1/4" reducer into the collet, seat the bar, and tighten the nut by hand. Keep the projection short. A 1/4" bar flexes if much of it hangs out of the handle or over the rest.
+      - "Coves: start with the flute on its side at the rim of the cove, touch the point, and roll the flute up as you cut down to the bottom. Stop at the bottom and cut the other side from the opposite direction."
+      - "Beads: start on the crest with the flute up, then roll the tool and swing the handle together down each side. Keep the bevel just behind the edge the whole way."
+      - Always cut downhill, from large diameter to small.
+      - Run small work fast and support thin sections from behind with your fingers.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Keep the 40° grind it ships with. That is a blunter angle than a typical spindle detail gouge, and it matches the
+        platform setting used for the 40/40 bowl gouges.
+    bullets:
+      - "Bench grinder: platform at 40° from the Raptor 40/40 set-up tool or the AH Angle Wrench, 320 grit CBN wheel. Roll the bar through its arc with almost no pressure. Copy the factory edge shape, which the product page does not describe beyond the angle."
+      - Sharpen it in the collet handle so there is something to hold. The bare bar is too short to control at the wheel.
+      - "Tormek: SVD-186 R jig set to match the existing bevel with the marker method. Save the setting once it is right."
+      - 10V holds an edge a long time. Touch it up lightly and often rather than regrinding. There is very little steel in a 1/4" bar.
+  - heading: Common mistakes
+    bullets:
+      - Removing bulk with it. Shape with the 1/2" gouge first, then detail with this.
+      - Entering a cove with the flute straight up, which lets the wing catch and skate.
+      - Grinding it on the 180 grit wheel and shortening an already short tool.

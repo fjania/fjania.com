@@ -1,0 +1,60 @@
+name: 5/8" 10V Push Cut Bowl Gouge
+brand: Ashley Harwood
+model: AH10V58 (Bowl Turning Package AHBTP)
+category: gouge
+vendor: Ashley Harwood Woodturning
+url: https://www.ashleyharwood.com/shop/p/tww-guild-package-without-chuck
+purchased: '2026-10-23'
+set: Bowl Turning Package
+image: harwood-bowl-gouge-5-8.jpg
+summary: >-
+  The roughing and shaping gouge from the Bowl Turning Package. A true 5/8" bar of 10V powder-metal steel with a
+  parabolic flute, ground 40/40 for push cuts. Same bar size as the Hurricane, but where the Hurricane's swept-back
+  side grind is a do-everything profile, this one is built around one cut and holds an edge much longer.
+specs:
+  - label: Bar diameter
+    value: 5/8" (true diameter)
+  - label: Flute shape
+    value: Parabolic, top edges rounded, inside hand polished
+  - label: Steel
+    value: CPM 10V powder metal, vacuum heat treated to 62 to 64 Rockwell over the full length
+  - label: Factory grind
+    value: 40/40 (40° bevel, 40° wing sweep), sharpened by Ashley Harwood before shipping
+  - label: Bolster
+    value: AH 5/8" bolster for the AH handle system, supplied in the package
+  - label: Handle
+    value: AH carbon fiber, 16" or 23" (both in the package), 1.4" diameter with a 1.5" hex end
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    bullets:
+      - Roughing and shaping bowls, outside and inside, with push cuts. This is the tool Ashley Harwood calls her workhorse.
+      - Bowls from mid-size up to the 2014B's full 14" swing, where the 1/2" gouge starts to flex over the rest.
+      - Roughing and shaping larger spindle work.
+      - Not the tool for the bottom of a deep bowl. The 40° bevel loses contact past the transition, which is the job of the 3/4" Finisher.
+  - heading: How to use it
+    bullets:
+      - Fit it in the 16" handle for most bowls. Move it to the 23" handle when the tool hangs a long way over the rest and you need the leverage.
+      - "Push cut, outside: handle against your body, flute rolled to about 45° toward the cut, cutting just to the side of the nose. Move with your legs and hips so the bevel stays lined up with the direction of travel."
+      - Let the bevel glide rather than press. Pushing the bevel into the wood is what causes bounce and ripples, especially on a thin wall.
+      - "Inside: enter at the rim with the flute at about 45° and push toward center, working in steps from the rim down so the wall stays supported by the wood below it."
+      - The handle system releases with a twist, so pull the gouge out of the handle to sharpen it. A bare bar is much easier to control on the platform.
+      - On a 12" to 14" blank stay under about 700 RPM until it is round and balanced.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Keep the 40/40 grind the tool ships with: a 40° bevel that stays the same from nose through the wings, and wings
+        swept back 40°. It is ground freehand on a flat platform, not in a jig.
+    bullets:
+      - "Bench grinder: set the Stuart Batty-style platform to 40° with the Raptor 40/40 set-up tool. The AH Angle Wrench from this package also has a 40° face and sticks to the platform by its magnets."
+      - Grind one wing with the bar swung about 40° to the wheel and the flute rolled partly closed, then the other wing, then blend across the nose with a light sweep. The parabolic flute makes the wing-to-nose blend easier than a V flute.
+      - Do not roll the flute too far closed on the wings. Harwood calls this the most common 40/40 mistake. It makes the bevel angle blunter and the sweep more aggressive.
+      - Use the 320 grit CBN wheel for touch-ups. Go to the 180 only to reshape. 10V is very wear resistant, so let the wheel work and keep the pressure light.
+      - "Tormek: treat it as the fallback. The SVD-186 R jig swings the gouge on a fixed pivot, which gives a fingernail profile rather than a true 40/40, and 10V grinds slowly on the standard stone."
+  - heading: Common mistakes
+    bullets:
+      - Using it like the Hurricane. The short wings are not made for pull cuts or heavy shear scraping.
+      - Forcing it around the transition and across the bottom of a deep bowl. The heel hits and the edge lifts off the wood.
+      - Dipping the edge beside the nose by dwelling there on the wheel, which leaves a hollow that catches.
+      - Regrinding it in a jig out of habit and slowly losing the 40/40 shape.

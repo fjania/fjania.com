@@ -1,0 +1,58 @@
+name: 1/2" x 1/4" Small Detail Skew, Maple Handle
+brand: Robust Tools
+model: SK-SM-WH
+category: skew
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/robust-sk-sm-wh-1-2-x-1-4-small-detail-skew-with-maple-handle/
+purchased: '2026-10-06'
+image: robust-detail-skew-1-2.jpg
+summary: >-
+  A small rectangular skew in nitrided high-speed steel. Same width as the Sorby oval skew, but the 1/4" thick
+  flat section sits firmly on the rest instead of rolling, so it suits V-cuts, shoulders, and small beads
+  where registration matters more than a free pivot. The nitrided surface holds an edge noticeably longer than
+  plain HSS.
+specs:
+  - label: Width
+    value: 1/2"
+  - label: Thickness
+    value: 1/4"
+  - label: Handle
+    value: 12" maple
+  - label: Overall length
+    value: 19"
+  - label: Steel
+    value: HSS hardened to 62-64 Rockwell C, then nitrided (surface about 1880 Vickers)
+  - label: Factory grind
+    value: 20° bevel, hollow ground on an 8" wheel and honed
+  - label: Section
+    value: Rectangular, flat milled on top for the full length
+  - label: Made in
+    value: Barneveld, Wisconsin, USA
+sections:
+  - heading: What it's for
+    bullets:
+      - Fine V-cuts, crisp shoulders, and small beads on finials, boxes, pens, and thin spindles.
+      - Cleaning up end grain and tight corners next to a bead or a square pommel, using the long point.
+      - Short planing cuts on small-diameter work where the 3/4" and 1" skews are clumsy.
+      - Spindle turning only.
+  - heading: How to use it
+    bullets:
+      - "V-cuts: long point down, edge vertical, and arc the point into the wood. Widen the V by taking a slice from each side with the bevel in line with the cut."
+      - "Small beads: start at the crest with the short point (heel) leading, and roll the tool while lifting the handle. Use only the last 1/8\" or so of the edge near the heel."
+      - "Planing: bevel rubbing, long point up and clear of the wood, cut in the lower third of the edge. On a 1/2\" tool that leaves a narrow sweet spot, so take light passes."
+      - The flat section registers on the rest, which gives more control than the oval skew in V-cuts and facing cuts. For rolling beads it pivots on its lower corner, so keep the Robust or Axminster rest waxed.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Two equal bevels. Robust ships it with a 20° bevel, hollow ground on an 8" wheel and honed. Match the
+        factory bevel rather than regrinding it. The nitrided layer is on the surface of the steel, and the tool
+        grinds like ordinary HSS.
+    bullets:
+      - "Tormek: SVS-50 Multi Jig in the closed seat, as for the Sorby 3/4\" skew. The flat milled top means the jig can clamp anywhere along the blade. Grind both sides at the same setting so the edge stays centered."
+      - "Bench grinder: Wolverine platform or skew attachment on the 180 grit CBN wheel to restore the bevel, then a light pass on the 320 grit wheel. The 8\" wheel matches the factory hollow grind."
+      - Hone both bevels between grinds. The hollow grind gives two contact points for a flat stone or diamond card, so honing is quick and a regrind is rarely needed.
+  - heading: Common mistakes
+    bullets:
+      - Using it for peeling or heavy planing cuts. It is a detail tool; reach for the 1" skew or the roughing gouge.
+      - Letting the long point touch the work during a planing cut, which causes a spiral catch.
+      - Grinding one bevel more than the other, which moves the edge off the center of the blade and makes the two sides cut differently.

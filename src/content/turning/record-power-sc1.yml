@@ -1,0 +1,55 @@
+name: SC1 2" Mini Chuck
+brand: Record Power
+model: SC1, 1-1/4" x 8 TPI insert (CSUSA 1067310004)
+category: chuck
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/record-power-sc1-2-inch-mini-chuck
+purchased: '2026-11-11'
+image: record-power-sc1.jpg
+summary: >-
+  A small four-jaw scroll chuck for small, intricate work. The 2" body is easy to work around, so the tool and
+  the rest can get close to finials, boxes, ornaments, and knobs that the SC4 would crowd. It takes the same
+  threaded insert as the SC4 and ships with 1-1/2" dovetail jaws and a woodworm screw.
+specs:
+  - label: Spindle thread
+    value: 1-1/4" x 8 TPI via threaded insert (same insert as the SC4)
+  - label: Body
+    value: 2" (53.5 mm) diameter, 1045 high tensile steel
+  - label: Jaw operation
+    value: Geared scroll with tightening key, right to tighten and left to loosen
+  - label: Included jaws
+    value: 1-1/2" (40 mm) dovetail jaws
+  - label: External grip (tenon)
+    value: 1-1/8" to 1-1/2"
+  - label: Internal grip (recess)
+    value: 1-9/16" to 1-15/16"
+  - label: Also included
+    value: Threaded insert, woodworm screw, tightening key, jaw screws
+  - label: Jaw compatibility
+    value: Record Power Mini Chuck (SC1 / SC2) jaws only. SC3 / SC4 jaws do not fit.
+sections:
+  - heading: What it's for
+    bullets:
+      - Small spindle and end-grain work held by a short tenon, such as boxes, finials, ornaments, knobs, and bottle stoppers, with room to get the tool in close to the chuck.
+      - Small bowls and dishes held by a tenon or a recess sized for the 1-1/2" jaws.
+      - A second chuck. Leave the SC4 set up with one jaw set and a work in progress, and put the SC1 on for the small parts of the same project.
+      - Very small work down to about 5/32" with the rounded jaws fitted.
+  - heading: Tenons and recesses for the 1-1/2" jaws
+    bullets:
+      - "Tenon: turn it about 1-1/4\" in diameter so the jaws close to a near-circle on it. Keep it shorter than the jaw depth so the shoulder, not the tenon end, seats on the jaw faces."
+      - Give the tenon a slight dovetail to match the jaws and make the shoulder flat or very slightly concave.
+      - "Recess: about 1-5/8\" in diameter with a dovetailed wall. Leave plenty of solid wood around it; on small pieces a tenon is usually the safer choice."
+      - This is a small chuck. Keep blanks small and light, and use the tailstock for support whenever the work allows.
+  - heading: Mounting and removal
+    bullets:
+      - Clean the spindle threads and the insert, then thread the chuck on by hand until it seats firmly against the spindle shoulder.
+      - Engage the spindle lock to tighten and loosen the chuck. Avoid running in reverse unless the insert's grub screw is tightened.
+      - The insert is interchangeable with the SC4's. Moving one insert between the two chucks works, but each chuck having its own saves time.
+      - To change jaws, remove the screws, keep each jaw with its numbered slide, and reinstall in the same positions so the jaws stay concentric.
+      - Blow shavings out of the scroll and slides regularly and add a drop of light oil to the slides.
+  - heading: Common mistakes
+    bullets:
+      - Treating it like the SC4. A bowl blank that is comfortable on the 50 mm jaws is too much for a 2" chuck.
+      - Trying to fit SC3 / SC4 jaws, including the pin jaws already in the shop. Only the Mini Chuck jaw sets fit.
+      - Turning the tenon too long so it bottoms in the chuck and the shoulder floats.
+      - Closing the jaws fully on an undersized tenon so only the corners grip and the wood crushes.

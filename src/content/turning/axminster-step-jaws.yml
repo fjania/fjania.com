@@ -1,0 +1,49 @@
+name: Internal Aluminum Step Jaws
+brand: Axminster Woodturning
+model: "107607"
+category: jaws
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/axminster-woodturning-internal-aluminum-step-jaws/
+purchased: '2026-10-10'
+image: axminster-step-jaws.jpg
+summary: >-
+  Stepped jaws shaped like the jaws of an engineer's chuck, for the SK100. They close down to 1/8" at the
+  center and have two further steps, so one set grips drills, dowels, and small round or square stock with
+  parallel faces. They sit low and narrow, which leaves good clearance around small work.
+specs:
+  - label: Fits
+    value: Axminster SK80, SK100, SK114 and older Axminster chucks
+  - label: Minimum capacity
+    value: 3 mm (1/8") at the center
+  - label: Step radii
+    value: 17 mm (11/16") and 34 mm (1-5/16")
+  - label: Step heights
+    value: 10 mm (3/8"), 16 mm (5/8") and 22 mm (7/8")
+  - label: Grip
+    value: Parallel (not dovetailed), internal or external
+  - label: Material
+    value: Aluminum
+  - label: Made in
+    value: Axminster, England
+sections:
+  - heading: What it's for
+    bullets:
+      - Holding small round stock, dowels, and pen-size blanks at the center of the jaws, below the range of the Record Power pin jaws.
+      - Holding a drill bit or a small mandrel in the headstock.
+      - Gripping small square stock on the steps. Four jaws close on the four faces of a square.
+      - Expanding one of the steps inside a ring, a napkin ring, or a small box to work on the outside.
+  - heading: How to use it
+    bullets:
+      - The grip faces are parallel, so turn tenons straight sided with a square shoulder, not dovetailed. Seat the shoulder against the face of a step.
+      - Choose the step that lets the jaws close to a near-circle on the work. A tenon that only just fits a step is held by four thin corners.
+      - These are aluminum. They hold well but will not bite like steel jaws, so use tailstock support for anything long and keep cuts light.
+      - Because they are aluminum they can be skimmed by an accidental touch of the tool without wrecking the edge, but do not make a habit of it.
+  - heading: Fitting
+    bullets:
+      - Bolt each jaw to the accessory mounting jaw with the matching number, 1 to 4, and tighten evenly.
+      - Close the chuck and check the four tips meet at the center before mounting work.
+  - heading: Common mistakes
+    bullets:
+      - Cutting a dovetail tenon out of habit. On parallel jaws a dovetail seats on one edge only.
+      - Overtightening on soft wood or on a thin-walled ring. Aluminum steps crush the fibers and the piece loosens.
+      - Holding a long spindle by a short stub in the center without the tailstock.

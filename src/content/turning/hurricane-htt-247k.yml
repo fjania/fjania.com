@@ -1,0 +1,63 @@
+name: 3/8" Beading and Parting Tool, M2 Cryo
+brand: Hurricane Turning Tools
+model: HTT-247K
+category: parting
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/hurricane-htt-247kw-m2-cryo-3-8-beading-and-parting-tool/
+purchased: '2026-11-16'
+image: hurricane-htt-247k.jpg
+summary: >-
+  A 3/8" square bar ground to a two-bevel chisel edge. It parts and sizes like the 1/8" Sorby but takes a kerf
+  three times as wide, and the square section and wide edge let it roll beads and peel tenons in one pass.
+  Cryogenically treated M2 from Crown Tools in Sheffield.
+specs:
+  - label: Width
+    value: 3/8"
+  - label: Thickness
+    value: 3/8"
+  - label: Usable length
+    value: 6-1/2"
+  - label: Handle
+    value: 10" ash, black with silver accents
+  - label: Overall length
+    value: 16-1/2"
+  - label: Steel
+    value: M2 HSS, cryogenically treated
+  - label: Made in
+    value: Sheffield, England (Crown Tools)
+sections:
+  - heading: What it's for
+    paragraphs:
+      - >-
+        The 1/8" Sorby parting tool is for narrow kerfs and parting off. This one is for everything where the
+        width helps: a tenon or a sizing cut that is 3/8" wide in a single plunge, and beads rolled with the
+        corners of the edge.
+    bullets:
+      - Sizing cuts and chuck tenons. One plunge gives a 3/8" flat, and two side by side give a tenon long enough for most jaws.
+      - Rolling small beads on spindles, used like a narrow skew with a square edge.
+      - Peeling cuts to bring a spindle section down to diameter quickly.
+      - Squaring shoulders and cleaning up the flat beside a bead or a tenon.
+      - Parting off where kerf width does not matter. Use the 1/8" tool when it does.
+  - heading: How to use it
+    bullets:
+      - "Parting and sizing: rest just below center, tool square to the axis, bevel rubbing, then raise the handle so the edge peels a shaving and arcs down toward the center. Calipers in the other hand for sizing cuts."
+      - "Peeling: the same cut taken wider. Keep the edge parallel to the axis and lift the handle steadily; the shaving should come off as a ribbon across the full 3/8\"."
+      - "Beads: mark the bead, start on the crest with one corner of the edge, then roll the tool and lift the handle together so that corner travels down the side of the bead. Only the corner cuts. Repeat from the crest for the other side."
+      - For a deep parting cut, step sideways and widen the kerf so the square bar does not rub on both walls and burn.
+      - Spindle speeds apply. Slow down before parting through, and finish with a saw on anything you care about.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Two flat bevels meeting on the centerline of the bar, edge square across. Keep the factory angle; use a
+        marker on the bevel to set the platform rather than a number. The two corners do the bead work, so
+        they need to stay sharp and square.
+    bullets:
+      - "Tormek: SVD-110 platform set to match the existing bevel, flipping the tool to grind each side equally so the edge stays on the centerline."
+      - "Bench grinder: Wolverine platform set to the same bevel, 320 grit CBN wheel for touch-ups and the 180 only if the edge needs reshaping. A light pass per side is enough."
+      - Remove the burr with a few strokes on a stone. A clean edge matters more here than on the 1/8" parting tool because it is also a beading tool.
+  - heading: Common mistakes
+    bullets:
+      - Rolling a bead with the whole edge in contact. The trailing corner catches and runs a spiral across the bead.
+      - Scraping straight in with the handle level. It works, but tears the end grain on the kerf walls and dulls the edge.
+      - Grinding one bevel more than the other, which moves the edge off center and makes the tool steer in a parting cut.
+      - Plunging a 3/8" cut on thin stock near the tailstock without slowing down. The wide edge puts a lot of load on a slender spindle.

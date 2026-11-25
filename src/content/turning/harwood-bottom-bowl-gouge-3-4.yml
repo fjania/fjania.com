@@ -1,0 +1,59 @@
+name: 3/4" Finisher Bottom Bowl Gouge
+brand: Ashley Harwood
+model: AH34BBG (Bowl Turning Package AHBTP)
+category: gouge
+vendor: Ashley Harwood Woodturning
+url: https://www.ashleyharwood.com/shop/p/tww-guild-package-without-chuck
+purchased: '2026-10-23'
+set: Bowl Turning Package
+image: harwood-bottom-bowl-gouge-3-4.jpg
+summary: >-
+  A heavy 3/4" bar with a short, small U flute and a blunt bevel, made for one job: cutting across the inside
+  bottom of a bowl or the face of a platter. It picks up where the 40/40 gouges lose bevel contact. Nothing else in
+  the rack does this. The Hurricane and the Sorby 3/8" can reach the bottom, but not with this much mass behind the edge.
+specs:
+  - label: Bar diameter
+    value: 3/4"
+  - label: Length
+    value: 15" (her standard gouges are 12")
+  - label: Flute shape
+    value: Small U, kept short to limit vibration
+  - label: Steel
+    value: M2 high-speed steel
+  - label: Factory grind
+    value: About 50° bevel, wings swept back about 5°
+  - label: Bolster
+    value: AH 3/4" bolster with TDC (thin dense chrome) coating, supplied in the package
+  - label: Handle
+    value: AH carbon fiber, 23" (in the package), 1.4" diameter with a 1.5" hex end
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    bullets:
+      - The inside of a bowl from the transition across the bottom to center.
+      - Facing cuts across a platter or a shallow dish.
+      - Deeper bowls where a lot of tool hangs over the rest. The thick bar and short flute keep it from chattering.
+  - heading: How to use it
+    bullets:
+      - Fit it in the 23" handle. The long handle against your side is what controls the overhang.
+      - Stop the 40/40 gouge at the transition, then pick up the same surface with this tool and carry the cut to center. Overlap the two cuts slightly so there is no ridge.
+      - Take light finishing cuts with the bevel gliding on the surface just cut. It is not a roughing tool and the small flute will not clear heavy shavings.
+      - Slow the feed as you approach center, where the wood is barely moving, and finish exactly on center so there is no nub.
+      - Move the rest in as close as the bowl allows, even though the bar tolerates overhang.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Keep the factory shape: a bevel of about 50° with the wings swept back only about 5°, so the edge is close to
+        straight across. Ashley Harwood lists 50° and 60° as the angles she uses on this tool.
+    bullets:
+      - "Bench grinder: there is no 50° Raptor tool, so set the platform to 50° with the AH Angle Wrench from this package, or match the existing bevel with a marker. Roll the bar on the platform with a slight swing to keep the 5° sweep."
+      - If you want it blunter for a steep-sided bowl, the Raptor 60° tool sets the other angle she uses.
+      - M2 grinds faster than the 10V gouges. Use the 320 grit CBN wheel and a light pass.
+      - "Tormek: workable on this tool because the grind is nearly straight across. Use the SVD-186 R jig set for a blunt, barely swept bevel, or roll it on the SVD-110 platform."
+      - Relieve the heel if it bruises the surface on a tight transition curve.
+  - heading: Common mistakes
+    bullets:
+      - Using it on the upper wall or the outside. The blunt bevel cuts poorly there. That is the 40/40 gouges' work.
+      - Sweeping the wings back at the grinder until it turns into an ordinary bowl gouge.
+      - Stopping short of center or running past it, which leaves a nub or a dimple.

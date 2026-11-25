@@ -1,0 +1,55 @@
+name: 3/4" Square End Scraper, Cryo M2
+brand: CryoTek
+model: CSUSA 1066520001
+category: scraper
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/cryotek-cryo-m2-hss-square-end-scraper
+purchased: '2026-10-12'
+image: cryotek-square-scraper-3-4.jpg
+summary: >-
+  A flat scraper with a straight, square end. It makes flat surfaces and crisp inside corners: the bottoms of
+  boxes, flat recesses, tenon shoulders, and straight sections on spindles. It is also a good blank to regrind
+  into whatever special scraper profile a job calls for.
+specs:
+  - label: Width
+    value: 3/4"
+  - label: Thickness
+    value: 1/4"
+  - label: Blade length
+    value: 6-1/2"
+  - label: Profile
+    value: Square end
+  - label: Handle
+    value: 12" solid beech with stainless steel bolster
+  - label: Steel
+    value: M2 HSS, cryogenically treated
+sections:
+  - heading: What it's for
+    bullets:
+      - Flattening the bottom of a box or a small end-grain vessel and squaring the corner where the bottom meets the wall.
+      - Cutting and cleaning up flat-bottomed recesses and square shoulders, including recesses and tenon shoulders for the chuck jaws.
+      - Truing flats and straight cylinders on spindle work where a light scrape is easier to control than a skew.
+      - A regrinding blank. Skew the end, round one corner, or grind a side relief to make a box scraper or a dovetail scraper for the SC4 jaws.
+  - heading: How to use it
+    bullets:
+      - Set the rest close to the work and at a height that puts the edge on center or a hair below on the outside of a piece, and on center or a hair above on the inside. Hold the tool flat on the rest with the handle slightly high so the edge trails.
+      - Present only part of the edge at a time. Engaging the full 3/4" width at once grabs; lead with one corner slightly back and sweep sideways in light passes.
+      - On a box bottom, work from the center out to the wall. Ease into the corner and stop as soon as the side of the tool touches the wall.
+      - Keep the overhang short. At 1/4" thick this tool flexes and chatters if it reaches more than an inch or two past the rest; use the heavier scrapers for deep work.
+      - Take featherlight cuts at moderate speed. It is a refining tool, not a shaping tool.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        Single bevel of about 70° to 80°, ground straight across so the end stays square to the sides. The burr
+        raised by grinding is the cutting edge. Refresh it often; it lasts only a few minutes of use.
+    bullets:
+      - "Tormek: SVD-110 platform at 75°. Slide the tool straight across the wheel with the blade flat on the platform and its side square to the wheel. Raise a fresh burr; do not hone it off."
+      - "Bench grinder: Wolverine platform set to the same 75° on the 180 grit CBN wheel, one light pass straight across. Use the 320 grit wheel for a finer burr on finishing cuts."
+      - For a finer, longer-lasting burr, hone the top face flat to remove the grinder burr, then raise a new one with a burnisher at about 5°.
+      - Relieve the sharp lower corners of the sides very slightly so the tool slides on the rest without digging into it.
+  - heading: Common mistakes
+    bullets:
+      - Pointing the edge upward into the wood. A scraper must trail, with the handle higher than the edge, or it will catch.
+      - Burying the full width of the edge, or letting a corner dig in while the side rubs the wall of a box. Both grab instantly.
+      - Hanging a 1/4" thick tool far over the rest and blaming the chatter on the wood.
+      - Scraping long-grain spindle surfaces heavily. It tears the fibers; take dust-fine passes or use a skew or gouge.

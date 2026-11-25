@@ -1,0 +1,62 @@
+name: Evolution SK100 SE Chuck Body, 1-1/4" x 8 TPI (No Jaws)
+brand: Axminster Woodturning
+model: 108570-SE
+category: chuck
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/axminster-woodturning-evolution-sk100-se-chuck-body-with-1-1-4-x-8-tpi-direct-thread-no-jaws/
+purchased: '2026-10-10'
+image: axminster-sk100.jpg
+summary: >-
+  A 100 mm (4") stainless steel geared scroll chuck, bought as a bare body to carry the Axminster jaw sets.
+  There are two of these bodies, so two jaw sets can stay mounted and ready, for example the button jaws on
+  one and the deep grip jaws on the other. The SE version is a Woodturning Store exclusive with a fixed
+  1-1/4" x 8 TPI insert for the 2014B spindle. It ships with accessory mounting jaws but no gripping jaws.
+specs:
+  - label: Quantity owned
+    value: "2"
+  - label: Body
+    value: 100 mm (4") diameter, stainless steel
+  - label: Spindle thread
+    value: 1-1/4" x 8 TPI, fixed insert fitted to the T02RL body
+  - label: Reverse locking
+    value: Three M8 set screws in the insert hub
+  - label: Jaw operation
+    value: Geared scroll, three pinions, 9 mm square key
+  - label: Jaw mounting
+    value: SafetyJaw accessory mounting jaws (included); gripping jaws sold separately
+  - label: Jaw compatibility
+    value: All Axminster accessory and dovetail jaws. Not compatible with other makers' jaws
+  - label: Jaw sets owned
+    value: 250 mm button jaws, internal aluminum step jaws, deep grip jaws
+  - label: Long key
+    value: Axminster 255 mm (10") long chuck key for SK114 / SK100 (600120), bought with the chucks
+  - label: Made in
+    value: Axminster, England
+sections:
+  - heading: What it's for
+    bullets:
+      - Carrying the Axminster jaw sets. The Record Power SC4 stays the everyday chuck with its 50 mm and pin jaws; these two bodies hold the specialty jaws so nothing has to be unbolted mid-project.
+      - "A typical bowl sequence: deep grip jaws on one body for the blank, button jaws on the other for reversing the bowl to finish the foot. Swap whole chucks on the spindle instead of swapping jaws."
+      - Green wood and wet work. The stainless body and jaws do not rust from sap or shop condensation.
+  - heading: Mounting and removal
+    bullets:
+      - Clean the spindle threads and the insert, then thread the chuck on by hand until it seats against the spindle shoulder. Do not spin it on under power.
+      - For reverse turning or sanding in reverse, tighten the three M8 set screws in the insert hub so the chuck cannot unscrew. Back them off before removing the chuck, or they will score the spindle.
+      - Use the spindle lock to break the chuck free. Lift it off with two hands; a 4" stainless chuck with large jaws fitted is heavy.
+  - heading: Fitting jaws
+    bullets:
+      - Jaw sets bolt onto the accessory mounting jaws, which stay in the chuck. Match the number on each jaw to the number on its slide (1 to 4) so the set closes concentric.
+      - Seat each jaw fully on its mounting jaw before tightening, and tighten the screws evenly. Close the chuck and check that the jaws meet in a true circle.
+      - The key is a 9 mm square, not a hex. Any of the three pinions will drive the scroll, so use whichever one is clear of the work.
+      - Use the 10" long key when a wide bowl or the button jaw plates block the standard key.
+  - heading: Care
+    bullets:
+      - Blow shavings and dust out of the scroll and slides after each session, especially after green wood.
+      - Keep the long key with the chucks. It only fits the SK100 and SK114; the SC4 uses a ball-end hex key.
+      - Store spare jaw sets with their screws in the same numbered order.
+  - heading: Common mistakes
+    bullets:
+      - Running in reverse without tightening the set screws.
+      - Forgetting that the set screws are tight and forcing the chuck off the spindle.
+      - Assuming Record Power jaws will fit. Axminster jaws fit only Axminster chucks, and the SC4 jaws fit only the SC3 and SC4.
+      - Mounting jaws on the wrong numbered slides.

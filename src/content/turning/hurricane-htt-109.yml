@@ -1,0 +1,62 @@
+name: 2" Spindle Roughing Gouge, Standard Series
+brand: Hurricane Turning Tools
+model: HTT-109
+category: gouge
+vendor: The Woodturning Store
+url: https://www.thewoodturningstore.com/hurricane-htt-108-hss-2-spindle-roughing-gouge/
+purchased: '2026-11-16'
+image: hurricane-htt-109.jpg
+summary: >-
+  A very wide forged roughing gouge for large spindle blanks. The 2" flute takes a broad, shallow cut that
+  brings big square stock to round faster than the 3/4" Sorby and leaves a flatter cylinder. Spindle work
+  only, never bowls.
+specs:
+  - label: Flute width
+    value: 2"
+  - label: Steel thickness
+    value: 1/5"
+  - label: Tool length
+    value: 5"
+  - label: Handle
+    value: 13" solid beech
+  - label: Overall length
+    value: 19"
+  - label: Steel
+    value: High-speed steel (Standard Series)
+sections:
+  - heading: What it's for
+    paragraphs:
+      - >-
+        Roughing large spindle blanks: table legs, baluster stock, rolling pins, and anything 3" square and up
+        where the 3/4" Sorby roughing gouge takes many narrow passes. The wide, shallow curve also works as a
+        planing tool, leaving a cylinder with much lower ridges than a narrow gouge.
+    bullets:
+      - Spindle work between centers only, with the grain running along the bed. It is forged from flat stock with a tang, and a catch on a bowl blank can bend or snap it.
+      - Knocking the corners off big squares. More edge is available, so you can roll to a fresh section as one dulls.
+      - Smoothing long cylinders and gentle tapers before the skew.
+      - Keep the 3/4" Sorby for small stock and for working close to a shoulder or the drive center, where 2" of flute does not fit.
+  - heading: How to use it
+    bullets:
+      - Set the rest just below center and close to the corners. Rotate the blank by hand to check clearance before starting.
+      - Handle against your hip, bevel on the wood with the edge clear, then raise the handle until it starts to cut. Keep the bevel rubbing.
+      - Start a couple of inches in from the end and cut off the end, then work back in overlapping passes. Never start a cut on the end of the blank.
+      - Cut with the lower third of the edge on the side facing the direction of travel, flute rolled slightly that way. Do not try to engage the whole 2" at once; it is a lot of edge for the motor and for your hands.
+      - Keep both corners of the flute out of the wood. On a tool this wide the upper corner is a long way from where you are looking.
+      - Big squares are heavy and out of balance. Start the 2014B at the bottom of the low range and bring the speed up only once the blank is round.
+      - "Planing: once round, hold the tool square to the axis with the flute straight up and take a light pass using the center of the edge."
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        A single bevel of about 45°, ground straight across so the edge is square to the tool when seen from
+        above. No swept-back wings.
+    bullets:
+      - "Tormek: SVD-110 platform, rolling the gouge across the stone from corner to corner in one smooth motion. Check that the 2\" flute fits the open seat of the SVS-50 before relying on that jig; the platform always works."
+      - "Bench grinder: Wolverine V-arm with the handle butt in the pocket, arm length set so the bevel sits flat on the wheel, then roll the tool from one corner to the other. Use the 180 grit CBN wheel; the roll takes a second or two."
+      - A fresh-from-the-grinder edge is fine. Honing is optional for a roughing tool.
+      - Keep the corners level with the center of the edge. If the middle grinds back faster the tool turns into a shallow fingernail and the corners start catching.
+  - heading: Common mistakes
+    bullets:
+      - Using it on a bowl or any faceplate blank. The size makes it look like a bowl tool. It is not.
+      - Hanging it far over the rest. A wide edge on a thin forged section has a lot of leverage on the tang, so move the rest in as the diameter drops.
+      - Taking a full-width cut on a square blank at speed. Light cuts with one side of the flute are faster in the end.
+      - Starting with the edge instead of the bevel. Bevel first, then lift into the cut.

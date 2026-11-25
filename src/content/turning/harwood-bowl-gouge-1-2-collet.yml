@@ -1,0 +1,56 @@
+name: 1/2" 10V Push Cut Bowl Gouge (collet handle)
+brand: Ashley Harwood
+model: AH10V12 (Detail Collet Handle Package AHDCHP)
+category: gouge
+vendor: Ashley Harwood Woodturning
+url: https://www.ashleyharwood.com/shop/p/detail-collet-handle-package
+purchased: '2026-10-23'
+set: Detail Collet Handle Package
+image: harwood-bowl-gouge-1-2-collet.jpg
+summary: >-
+  The second 1/2" Push Cut gouge, this one from the Detail Collet Handle Package. Same steel, flute, and 40/40
+  grind as the one in the Bowl Turning Package, but it came without a bolster and runs in the 6" aluminum collet
+  handle for finials and small spindle work, where the Sorby spindle gouges would otherwise do the shaping.
+specs:
+  - label: Bar diameter
+    value: 1/2" (true diameter)
+  - label: Flute shape
+    value: Parabolic, top edges rounded, inside hand polished
+  - label: Steel
+    value: CPM 10V powder metal, vacuum heat treated to 62 to 64 Rockwell over the full length
+  - label: Factory grind
+    value: 40/40 (40° bevel, 40° wing sweep)
+  - label: Handle
+    value: AH Detail Collet Handle, machined aluminum with soft grip, 6" long, 1-1/4" diameter, 7 oz, hex shape
+  - label: Collet
+    value: 1/2" DA100 collet (this tool fits it directly), with 1/4" and 3/8" reducers stored inside the handle
+  - label: Made in
+    value: USA
+sections:
+  - heading: What it's for
+    bullets:
+      - Roughing a small blank to a cylinder and shaping the long curves of a finial. It is one of the three tools Ashley Harwood uses for finials, with the 1/4" detail gouge and the Vortex Tool.
+      - Shaping and finishing cuts on small spindles, ornaments, and box lids.
+      - A spare bowl gouge. It can go in a carbon fiber handle if you add a 1/2" bolster.
+  - heading: How to use it
+    bullets:
+      - Seat the bar in the 1/2" collet with no reducer and tighten the nut by hand. The nut does not have to come off to change tool sizes. Use the AH Angle Wrench if it needs to be tighter.
+      - Slide the handle forward on the bar to choke up for fine work. The short, light handle is meant to swing in front of your body, not brace against your hip.
+      - Cut downhill, from large diameter to small, with the flute rolled toward the cut and the cut taken just beside the nose.
+      - On thin finials work from the tailstock end back toward the chuck, finishing each section before moving on, so there is always thick wood behind the cut.
+      - Keep it to small work in this handle. A 6" handle gives no leverage for bowl cuts.
+  - heading: Sharpening
+    paragraphs:
+      - >-
+        The same 40/40 grind as the other Push Cut gouges: a constant 40° bevel and wings swept back 40°, ground
+        freehand on a flat platform.
+    bullets:
+      - "Bench grinder: platform at 40° from the Raptor 40/40 set-up tool or the 40° face of the AH Angle Wrench, 320 grit CBN wheel, one light pass per wing and a blend across the nose."
+      - Loosen the collet and pull the bar out to sharpen, or leave it in. The handle is short enough to stay out of the way on the platform.
+      - Keep this one and the bowl-package gouge ground the same so either can stand in for the other.
+      - "Tormek: fallback only. The SVD-186 R jig gives a fingernail profile rather than a true 40/40."
+  - heading: Common mistakes
+    bullets:
+      - Trying to cut tight coves and small beads with it. The 40° wings are too short. Use the 1/4" detail gouge or the Vortex Tool.
+      - Leaving a reducer in the collet and clamping the 1/2" bar poorly, or losing the reducers. They store inside the handle.
+      - Pushing hard on a thin spindle. Support the work with your fingers and let the edge do the cutting.
