@@ -91,7 +91,7 @@ const turning = defineCollection({
     name: z.string(),
     brand: z.string(),
     model: z.string(),
-    category: z.enum(['gouge', 'skew', 'parting', 'scraper', 'chuck', 'jaws', 'center', 'tool-rest', 'faceplate']),
+    category: z.enum(['gouge', 'skew', 'parting', 'scraper', 'chuck', 'jaws', 'center', 'tool-rest', 'faceplate', 'handle', 'finishing']),
     vendor: z.string(),
     url: z.string().url(),
     purchased: z.string(),

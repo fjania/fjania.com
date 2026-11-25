@@ -1,0 +1,69 @@
+name: Three Step Buffing System
+brand: Artisan
+model: CSUSA 1065730001
+category: finishing
+vendor: Craft Supplies USA
+url: https://woodturnerscatalog.com/products/artisan-three-step-buffing-system
+purchased: '2026-10-05'
+image: artisan-buffing-system.jpg
+summary: >-
+  Three 8" buffing wheels on one shaft that runs between centers, so all three steps are ready without
+  changing wheels. A linen wheel for Tripoli, a linen and cotton wheel for White Diamond, and a cotton
+  flannel wheel for carnauba wax take a sanded and oiled piece to a polished, waxed surface in a few minutes.
+specs:
+  - label: Wheels
+    value: Three 8" buffs, numbered 1 to 3
+  - label: "Wheel #1"
+    value: All linen, for Tripoli compound
+  - label: "Wheel #2"
+    value: Linen and cotton, for White Diamond compound
+  - label: "Wheel #3"
+    value: All cotton flannel, for carnauba wax
+  - label: Mounting shaft
+    value: "Threaded rod on a #2 Morse taper, with washers, spacers, and hex nuts"
+  - label: Compounds
+    value: Tripoli, White Diamond, and carnauba wax bars
+  - label: Recommended speed
+    value: Roughly 1,725 RPM
+  - label: Tailstock
+    value: Revolving center required to support the free end of the shaft
+sections:
+  - heading: What it's for
+    bullets:
+      - A final polish on bowls, boxes, stoppers, and spindle work after sanding and an oil finish.
+      - Tripoli removes fine sanding scratches and evens the surface, White Diamond clears the Tripoli residue and brings up the polish, and carnauba adds a hard wax sheen.
+      - Pieces that are already off the lathe. You hold the work in your hands and bring it to the wheel, so it can be buffed after the foot is finished.
+      - The instructions note that carnauba is non-toxic, which makes this a reasonable finish over cured oil on bowls meant for food.
+  - heading: Setting it up
+    bullets:
+      - "Seat the shaft's #2 Morse taper in the 2014B headstock spindle. Clean the taper and the spindle bore first."
+      - Stack the washers, wheels, and spacers on the rod in the order shown in the instruction sheet, with the wheels in 1, 2, 3 order, and tighten the hex nuts.
+      - Bring up the tailstock and support the end of the shaft with a live center. The instructions are blunt that running without it may cause serious injury. The taper has nothing else holding it in.
+      - Move the banjo and tool rest out of the way, or take them off the bed.
+      - "Break in new wheels before first use: hold coarse sandpaper backed by a scrap of wood against the spinning buff, with a shop vac or dust collector hose in the other hand to catch the threads. They shed less once loaded with compound."
+  - heading: How to use it
+    bullets:
+      - Sand the piece to at least 220 grit. For a more durable finish, apply at least one coat of a penetrating oil and let it dry completely before buffing.
+      - Set the lathe to roughly 1,725 RPM.
+      - "Wheel #1: hold the Tripoli bar against the spinning buff to charge it, generously while the wheel is new, then buff the whole piece."
+      - "Wheel #2: charge with a small amount of White Diamond and buff lightly. This takes off the Tripoli residue and gives the final polish."
+      - "Wheel #3: touch the carnauba bar to the wheel for no more than a second, then buff very lightly. Too much wax dulls the finish."
+      - Work on the lower front quarter of the wheel, where the surface is moving down and away from you. Keep the piece moving and hold it with both hands.
+      - Present edges and rims so the wheel runs off the edge, never into it.
+      - Wear eye protection and an N95 dust mask. Tripoli contains silica. No loose sleeves, and tie back long hair.
+  - heading: Care
+    bullets:
+      - Keep each wheel for its own compound. The numbers are there so they do not get mixed.
+      - If Tripoli builds up on wheel 1, clean it with coarse sandpaper on a wood backer against the spinning buff. Do this only when needed, and make sure no abrasive grit stays in the wheel.
+      - The White Diamond and wax wheels should never need cleaning. Once they are loaded, add compound only when they stop working.
+      - Check the hex nuts every few uses.
+      - Store the wheels covered or bagged so they do not pick up shop grit that will scratch the next piece.
+  - heading: Common mistakes
+    bullets:
+      - Running the shaft without tailstock support.
+      - Letting the wheel catch an edge, a rim, or a natural edge. It will pull the piece out of your hands and throw it at the bed. Put something soft on the ways under the wheels.
+      - Buffing bare, unsealed wood, especially open-grained or light-colored wood. Tripoli packs into the pores and stains. Seal with oil first.
+      - Buffing over a finish that has not cured. The wheel heats it and drags it.
+      - Pressing hard. Heat builds quickly and can burn through or smear a finish. Let the wheel do the work.
+      - Loading on too much carnauba, which leaves streaks and a dull film.
+      - Carrying Tripoli onto the later wheels. Wipe the piece with a clean cloth between steps.

@@ -1,0 +1,58 @@
+name: Right Angle Drill, 3/8" Chuck, 9pc Power Sanding Kit
+brand: Klingspor's
+model: TZ29999
+category: finishing
+vendor: Klingspor's Woodworking Shop
+url: https://www.woodworkingshop.com/product/TZ29999/
+purchased: '2026-09-28'
+image: klingspor-right-angle-drill-sanding-kit.jpg
+summary: >-
+  A compact corded drill with its chuck angled at 55°, packaged with three soft sponge sanding pads and
+  hook and loop discs from 80 to 400 grit. The angled head reaches inside a bowl where a regular drill will
+  not fit, so the pad can sand the inside curve while the bowl turns on the lathe.
+specs:
+  - label: Chuck
+    value: 3/8", reversible, angled 55° to the body
+  - label: Speed
+    value: 0 to 1,400 RPM no load, variable
+  - label: Switch
+    value: Paddle switch
+  - label: Gears
+    value: Heat treated, precision cut
+  - label: Sanding pads
+    value: 1-1/2", 2", and 3" soft sponge hook and loop pads, each on its own mandrel
+  - label: Discs
+    value: Stearate hook and loop discs, one 10-pack per pad size in each of 80, 120, 180, 240, and 400 grit (150 discs)
+sections:
+  - heading: What it's for
+    bullets:
+      - Power sanding bowls and platters on the lathe, inside and out. The spinning pad cuts faster than hand sanding and its scratches cross the lathe's scratches, so rings and tearout come out sooner.
+      - Getting into the inside curve and the bottom of a bowl. The 55° head and short body fit where a pistol-grip drill hits the rim.
+      - Sanding with the lathe stopped to work on one patch of torn end grain without thinning the rest of the wall.
+      - Drilling in tight spots around the shop, which is what the drill was designed for in the first place.
+  - heading: How to use it
+    bullets:
+      - Pick the pad by the curve. The 3" pad for the outside and for wide open bowls, the 2" for most insides, and the 1-1/2" for small bowls and a tight transition.
+      - Turn the lathe down to a few hundred RPM. Sanding works better slow, and both the lathe and the drill should run well under their top speeds.
+      - Hold the drill with both hands and touch the pad to the lower left quarter of the inside of the bowl, or the lower front of the outside, where the wood is moving down past the pad. Take the tool rest away first.
+      - Tilt the pad so one side of the disc does the cutting and turns against the direction the wood is moving. A pad held dead flat skates and grabs.
+      - Keep the pad moving from rim to center and back. Use light pressure and let the grit cut.
+      - Work through the grits in order, 80, 120, 180, 240, 400. Start at 80 only if there are tool marks or tearout to remove. Off a clean cut, start at 120 or 180.
+      - Stop the lathe between grits and look at the surface in raking light. Do not move on until the scratches from the previous grit are gone. Blow or wipe the dust off before changing discs.
+      - If torn grain will not clear, stop the lathe and sand that spot with the drill alone, or run the lathe in reverse for a pass if the chuck is locked to the spindle with its set screws.
+      - Wear a dust mask and get dust collection close to the work. Power sanding makes far more fine dust than turning.
+  - heading: Care
+    bullets:
+      - Blow the dust out of the drill's vents after each session. Sanding dust is hard on a small motor.
+      - Change discs as soon as they stop cutting. A dull disc makes heat, not progress.
+      - Peel discs off gently and keep the pad's hook face clean. Heat and dust wear the hooks until discs fly off.
+      - Do not store pads with a disc pressed against the bench, which flattens the sponge.
+      - Sort used discs by grit. The grit is hard to tell by feel once they are worn.
+  - heading: Common mistakes
+    bullets:
+      - Running the lathe fast. Speed adds heat, which causes checks in end grain and melts the hook and loop.
+      - Pressing hard. The sponge collapses, the disc edge digs in, and the pad overheats.
+      - Skipping grits, or moving on with coarse scratches still showing. The finish will find every one.
+      - Holding the pad in one place, which sands a hollow, especially in the softer side grain between the end grain areas.
+      - Letting the edge of the pad or the mandrel touch the rim of the bowl. Keep the chuck clear of the work.
+      - Using sanding to fix shape. Take another light cut with the gouge or scraper before reaching for 80 grit.

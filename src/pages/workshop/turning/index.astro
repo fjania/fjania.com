@@ -14,11 +14,14 @@ const groups = [
   { id: 'centers', label: 'Centers & Tailstock', categories: ['center'] },
   { id: 'rests', label: 'Tool Rests', categories: ['tool-rest'] },
   { id: 'faceplates', label: 'Faceplates', categories: ['faceplate'] },
+  { id: 'handles', label: 'Handles', categories: ['handle'] },
+  { id: 'finishing', label: 'Finishing', categories: ['finishing'] },
 ];
 
 const categoryLabels: Record<string, string> = {
   gouge: 'Gouge', skew: 'Skew', parting: 'Parting Tool', scraper: 'Scraper',
   chuck: 'Chuck', jaws: 'Jaws', center: 'Center', 'tool-rest': 'Tool Rest', faceplate: 'Faceplate',
+  handle: 'Handle', finishing: 'Finishing',
 };
 
 const grouped = groups

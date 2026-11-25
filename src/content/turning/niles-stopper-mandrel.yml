@@ -1,0 +1,59 @@
+name: Bottle Stopper Mandrel, 1-1/4" x 8 TPI
+brand: Niles Bottle Stoppers
+model: 153 1.25x8 mandrel (no drill bit)
+category: chuck
+vendor: Niles Bottle Stoppers
+url: https://nilesbottlestoppers.com/product/1-25x8-niles-mandrel/
+purchased: '2026-11-15'
+image: niles-stopper-mandrel.jpg
+summary: >-
+  A small mandrel that threads straight onto the 2014B's 1-1/4" x 8 TPI spindle and holds a bottle stopper
+  blank on a 3/8" x 16 TPI stud. The stud has a tapered cutting flute so it taps its own thread in a drilled
+  hole, and its thread matches the stud on most stopper hardware, so the blank is turned on the same thread
+  it will be mounted on.
+specs:
+  - label: Spindle thread
+    value: 1-1/4" x 8 TPI direct thread, no draw bar
+  - label: Stud
+    value: 3/8" x 16 TPI with a tapered-cut flute, self-tapping
+  - label: Neck below the stud
+    value: 13/16" diameter, matching the top of Niles stoppers
+  - label: Wrench flats
+    value: Two flats, 1-3/8" wrench
+  - label: Finish
+    value: Black oxide
+  - label: Included
+    value: 2 nylon spacer washers (one is a spare)
+  - label: Drill size
+    value: 5/16" for most wood, 11/32" for dense wood, acrylic, and resin (bits not bought with it)
+sections:
+  - heading: What it's for
+    bullets:
+      - Turning bottle stopper tops. The blank threads onto the stud, gets turned and finished, then unthreads and goes onto the stopper's own 3/8" x 16 stud.
+      - Other small projects that mount on a 3/8" x 16 thread. Niles lists ice cream scoop handles, shaving brushes, and pizza cutter handles.
+      - Turning the base of the blank down to the 13/16" neck, which gives the diameter that meets the top of a Niles stopper.
+      - Stoppers can also be held on the screw chuck or in the SC1, but this gives the finished thread and a size reference in one mounting.
+  - heading: How to use it
+    bullets:
+      - Drill the blank on its axis with a 5/16" bit, or 11/32" in dense wood, acrylic, and resin. Drill a little deeper than the stud is long. The drill chuck in the tailstock keeps the hole on center.
+      - Thread the mandrel onto the spindle by hand until it seats against the shoulder.
+      - Slip a nylon spacer over the stud, then thread the blank on by hand until it seats against the spacer. The spacer keeps the wood from locking onto the mandrel.
+      - The stud will cut its own thread. For a cleaner thread in hard or brittle material, run the 3/8" tap from Craft Supplies into the hole first, as long as it is the standard 16 TPI.
+      - Rub a little beeswax or soap on the stud before threading on a blank that fits tightly.
+      - Bring up the tailstock with a live center for roughing, then back it off to shape and finish the top.
+      - Turn the base of the blank to match the 13/16" neck so it lines up with the stopper.
+      - Sand and finish on the mandrel, then unscrew the blank by hand.
+  - heading: Care
+    bullets:
+      - Clean the spindle threads and the mandrel's register before mounting.
+      - Use a 1-3/8" wrench on the flats to break the mandrel loose from the spindle.
+      - Keep the stud's flute clear of packed dust and glue so it keeps cutting.
+      - The black oxide resists rust but is not a coating to rely on. Wipe it down after wet or green wood.
+      - Keep the spare nylon spacer somewhere you will find it.
+  - heading: Common mistakes
+    bullets:
+      - Leaving the spacer off. The blank tightens under the cut and can lock onto the mandrel.
+      - Forcing a stuck blank. Niles suggests putting the mandrel and blank in the freezer for 10 to 15 minutes, after which the blank unthreads as the metal shrinks.
+      - Drilling 5/16" in acrylic or very dense wood. The stud can crack the blank or seize. Use 11/32".
+      - Drilling off axis or too shallow, so the blank wobbles or stops short of the spacer.
+      - Running in reverse to sand. Reverse works to unscrew the mandrel from the spindle and the blank from the stud.
